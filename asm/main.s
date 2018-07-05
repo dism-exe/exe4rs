@@ -3,7 +3,6 @@
 // this section declaration is crucial for linking, otherwise it won't overlay
 .section .f__main, "ax"
 
-
 .thumb
 // main routine here
 main_:
@@ -219,8 +218,6 @@ loc_800045C:
     push {r0}
     bl sub_80060AC
     bl sub_8006108
-// end of function main_8000456
-
     pop {r0}
     ldr r1, [pc, #0x80004f0-0x800046a-2] // =word_40
     tst r0, r0
@@ -267,3 +264,4 @@ loc_8000472:
 off_80004F0:    .word word_40
 off_80004F4:    .word byte_C0
 off_80004F8:    .word dword_200A338
+// end of function main_8000456
