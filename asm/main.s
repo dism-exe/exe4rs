@@ -1,12 +1,7 @@
-.include "externs/main.inc"
-
-// this section declaration is crucial for linking, otherwise it won't overlay
-.section .f__main, "ax"
-
 .thumb
 // main routine here
 main_:
-    bl main_8000456
+    bl main_static_8000456
     bl sub_8001AD8
     mov r7, r10
     ldr r0, [r7]
@@ -14,19 +9,19 @@ main_:
     strb r1, [r0]
     bl sub_802D6B8
 loc_80002B0:
-    bl main_800039C
-    bl main_800036C
-    bl sub_8000706
+    bl main_static_800039C
+    bl main_static_800036C
+    bl f500_8000706
     bl loc_8001EA0
     bl sub_8001CB8
     bl sub_8025BBC
-    bl sub_8000800
+    bl f800_8000800
     bl loc_800256C
     bl sub_8001D6E
     bl sub_80027DC
     bl sub_80029C0
     bl sub_8001B94
-    bl main_80003B0
+    bl main_static_80003B0
     mov r0, r10
     ldr r0, [r0,#0x24]
     ldrh r1, [r0]
@@ -51,7 +46,7 @@ loc_800030C:
     ldr r0, [pc, #0x8000324-0x8000318-4] // =loc_30063F8
     mov lr, pc
     bx r0
-    bl main_8000418
+    bl main_static_8000418
     b loc_80002B0
 off_8000324:    .word loc_30063F8+1
 off_8000328:    .word off_800032C
@@ -74,7 +69,7 @@ off_800032C:    .word loc_8025268+1
 // end of function main_
 
 .thumb
-main_800036C:
+main_static_800036C:
     push {lr}
 loc_800036E:
     ldr r0, [pc, #0x8000398-0x800036e-2] // =GeneralLCDStatus_STAT_LYC_
@@ -97,10 +92,10 @@ loc_8000372:
 off_8000390:    .word dword_200ACB0
 off_8000394:    .word dword_200A338
 off_8000398:    .word GeneralLCDStatus_STAT_LYC_
-// end of function main_800036C
+// end of function main_static_800036C
 
 .thumb
-main_800039C:
+main_static_800039C:
     push {lr}
     ldr r0, [pc, #0x80003ac-0x800039e-2] // =GeneralLCDStatus_STAT_LYC_
     mov r2, #1
@@ -111,10 +106,10 @@ loc_80003A2:
     pop {pc}
     .balign 4, 0x00
 off_80003AC:    .word GeneralLCDStatus_STAT_LYC_
-// end of function main_800039C
+// end of function main_static_800039C
 
 .thumb
-main_80003B0:
+main_static_80003B0:
     mov r7, r10
     ldr r0, [r7,#4]
     ldrb r7, [r0,#0x13]
@@ -172,10 +167,10 @@ loc_8000402:
     strh r4, [r0,#2]
     mov pc, lr
 off_8000414:    .word KeyStatus
-// end of function main_80003B0
+// end of function main_static_80003B0
 
 .thumb
-main_8000418:
+main_static_8000418:
     push {r4-r7,lr}
     bl sub_8005B5C
     beq locret_8000454
@@ -199,17 +194,17 @@ main_8000418:
     beq loc_8000452
     push {r1}
     bl start_800025C
-    bl main_8000456
+    bl main_static_8000456
     pop {r1}
     mov r4, #0xa
 loc_8000452:
     strb r4, [r1]
 locret_8000454:
     pop {r4-r7,pc}
-// end of function main_8000418
+// end of function main_static_8000418
 
 .thumb
-main_8000456:
+main_static_8000456:
     mov r0, #1
     b loc_800045C
     mov r0, #0
@@ -229,8 +224,8 @@ loc_8000472:
     strh r1, [r0]
     bl sub_8001D44
     bl sub_8001CB8
-    bl sub_80004FC
-    bl sub_80006FA
+    bl main_static_80004FC
+    bl file500_80006FA
     bl sub_8001E74
     bl sub_800262E
     bl sub_8003836
@@ -238,7 +233,7 @@ loc_8000472:
     bl sub_8002798
     bl sub_802525C
     bl sub_8025B60
-    bl sub_80007F8
+    bl f800_80007F8
     bl sub_804DF48
     bl sub_8025CDC
     bl sub_8004988
@@ -264,4 +259,38 @@ loc_8000472:
 off_80004F0:    .word word_40
 off_80004F4:    .word byte_C0
 off_80004F8:    .word dword_200A338
-// end of function main_8000456
+// end of function main_static_8000456
+
+.thumb
+main_static_80004FC:
+    push {lr}
+    bl sub_8112630
+    ldr r0, [pc, #0x8000528-0x8000502-2] // =0x93040D
+    bl sub_8112BCC
+    mov r0, #0x10
+    ldr r1, [pc, #0x8000534-0x800050a-2] // =0x30059C4
+    bl start_8000284
+    ldr r0, [pc, #0x800052c-0x8000510-4] // =GeneralLCDStatus_STAT_LYC_
+    ldrh r1, [r0]
+    mov r2, #0xff
+    and r1, r2
+    mov r2, #0x20 
+    orr r1, r2
+    mov r2, #0x50 
+    lsl r2, r2, #8
+    orr r1, r2
+    strh r1, [r0]
+    pop {pc}
+    .balign 4, 0x00
+dword_8000528:    .word 0x93040D
+off_800052C:    .word GeneralLCDStatus_STAT_LYC_
+    .word dword_3002000
+dword_8000534:    .word 0x30059C5
+// end of function main_static_80004FC
+
+    push {lr}
+    bl sub_81126A8
+    pop {pc}
+    .word unk_2007400
+    .word dword_8000548
+dword_8000548:    .word 0x4425121C, 0x0

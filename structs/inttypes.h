@@ -21,7 +21,7 @@ typedef signed short 	s16;
 typedef unsigned int	u32;
 typedef signed int		s32;
 
-typedef char            bool;
+typedef char            bool_t;
 #define TRUE            1
 #define FALSE           0
 

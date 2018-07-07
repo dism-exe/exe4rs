@@ -7,7 +7,6 @@ This is always found in r10, and accessed all throughout the code!
 [Size] 0x9C
 */
 typedef struct {
-
   void *ptr_00; // =0x0200A7E0
   void *ptr_04; // =0x0200A700
   void *ptr_08; // =0x0200B150
@@ -47,7 +46,6 @@ typedef struct {
   void *ptr_90; // =0x02005D74
   void *ptr_94; // =0x02005D7C
   void *ptr_98; // =0x02005E80
-
 }Toolkit;
 
 #endif // S_02009E70_H

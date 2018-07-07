@@ -1,8 +1,3 @@
-.include "externs/start.inc"
-
-// this section declaration is crucial for linking, otherwise it won't overlay
-.section .f__start, "ax"
-
 .arm
 start_:
     b start_init
@@ -41,14 +36,14 @@ start_init:
     str r1, [r0]
     mov r0, #0x3000000
     mov r1, #0x7e00
-    bl start_80001B0
+    bl start_static_80001B0
     mov r0, #0x2000000
     mov r1, #0x40000
-    bl start_80001B0
+    bl start_static_80001B0
     ldr r0, [pc, #0x80001f0-0x800012c-8] // =loc_8212700
     ldr r1, [pc, #0x80001f4-0x8000130-8] // =0x3005800
     ldr r2, [pc, #0x80001f8-0x8000134-8] // =dword_17C8
-    bl start_80001C4
+    bl start_static80001C4
     ldr r0, [pc, #0x80001fc-0x800013c-8] // =start_800025C
     mov lr, pc
     bx r0
@@ -81,21 +76,21 @@ start_init:
 // end of function start_
 
 .arm
-start_80001B0:
+start_static_80001B0:
     mov r2, #0
 loc_80001B4:
     subs r1, r1, #4
     str r2, [r0,r1]
     bne loc_80001B4
     bx lr
-// end of function start_80001B0
+// end of function start_static_80001B0
 
 .arm
-start_80001C4:
+start_static80001C4:
     subs r2, r2, #4
     ldr r3, [r0,r2]
     str r3, [r1,r2]
-    bne start_80001C4
+    bne start_static80001C4
     bx lr
 dword_80001D8:    .word 0x3007BA0
 off_80001DC:    .word loc_3007FFC
@@ -121,7 +116,7 @@ off_8000224:    .word sub_811104C+1
     .word 0x300593F, 0x300593D, 0x300593D, 0x300593D, 0x300593D
     .word 0x300593D, 0x300593D, 0x300593D, 0x300593D, 0x300593D
     .word 0x300593D, 0x300593D
-// end of function start_80001C4
+// end of function start_static80001C4
 
 .thumb
 start_800025C:
@@ -160,3 +155,4 @@ start_8000284:
 off_8000294:    .word dword_3002000
 off_8000298:    .word InterruptMasterEnableRegister
 // end of function start_8000284
+
