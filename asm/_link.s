@@ -20,7 +20,7 @@ This is the only compiled file that is overlaid over the binary
 .include "asm/main.s"
 // [0x08000550, 0x08000788)
 .section .f500, "ax"
-// .include "asm/f500.s"
+.include "asm/f500.s"
 // [0x08000788, 0x08000904)
 .section .f800, "ax"
 // .include "asm/f800.s"

@@ -12,4 +12,4 @@
 .equ main_, 0x800029C
 .equ sub_811103C, 0x811103C
 .equ sub_811104C, 0x811104C
-.equ loc_8212700, 0x8212700
+.equ sub_8212700, 0x8212700

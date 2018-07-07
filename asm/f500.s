@@ -52,7 +52,7 @@ f500_static_8000596:
     push {lr}
     mov r1, r10
     push {r1}
-    ldr r3, [pc, #0x8000758-0x800059c-4] // =sub_81126B4
+    ldr r3, [pc, #0x8000758-0x800059c-4] // sub_81126B4+1
     bl f500_static_8000734
     pop {r1}
     mov r10, r1
@@ -64,7 +64,7 @@ f500_static_80005A8:
     push {lr}
     mov r1, r10
     push {r1}
-    ldr r3, [pc, #0x800075c-0x80005ae-2] // =sub_81127E8
+    ldr r3, [pc, #0x800075c-0x80005ae-2] // sub_81127E8+1
     bl f500_static_8000734
     pop {r1}
     mov r10, r1
@@ -75,11 +75,11 @@ f500_static_80005A8:
 f500_80005BA:
     push {r4-r7,lr}
     lsl r0, r0, #2
-    ldr r7, [pc, #0x8000648-0x80005be-2] // =off_800064C
+    ldr r7, [pc, #0x8000648-0x80005be-2] // off_800064C
     ldr r0, [r7,r0]
     mov r3, r10
     push {r3}
-    ldr r3, [pc, #0x8000760-0x80005c6-2] // =sub_811365C
+    ldr r3, [pc, #0x8000760-0x80005c6-2] // sub_811365C+1
     bl f500_static_8000734
     pop {r3}
     mov r10, r3
@@ -89,12 +89,12 @@ f500_80005BA:
 .thumb
 f500_80005D2:
     push {r4-r7,lr}
-    ldr r7, [pc, #0x8000648-0x80005d4-4] // =off_800064C
+    ldr r7, [pc, #0x8000648-0x80005d4-4] // off_800064C
     lsl r0, r0, #2
     ldr r0, [r7,r0]
     mov r2, r10
     push {r2}
-    ldr r3, [pc, #0x8000764-0x80005de-2] // =sub_8112610
+    ldr r3, [pc, #0x8000764-0x80005de-2] // sub_8112610+1
     bl f500_static_8000734
     pop {r2}
     mov r10, r2
@@ -116,27 +116,27 @@ loc_80005F8:
     mov r6, r9
     mov r7, r10
     push {r4-r7}
-    ldr r7, [pc, #0x8000648-0x8000602-2] // =off_800064C
+    ldr r7, [pc, #0x8000648-0x8000602-2] // off_800064C
     lsl r2, r2, #2
     ldr r7, [r7,r2]
     add r4, r0, #0
     add r5, r1, #0
-    ldr r3, [pc, #0x8000768-0x800060c-4] // =sub_81126B4
+    ldr r3, [pc, #0x8000768-0x800060c-4] // sub_81126B4+1
     bl f500_static_8000734
     add r0, r7, #0
-    ldr r3, [pc, #0x800076c-0x8000614-4] // =sub_81128A4
+    ldr r3, [pc, #0x800076c-0x8000614-4] // sub_81128A4+1
     bl f500_static_8000734
     add r0, r7, #0
     mov r1, #0xff
     mov r2, #0
-    ldr r3, [pc, #0x8000770-0x8000620-4] // =sub_811365C
+    ldr r3, [pc, #0x8000770-0x8000620-4] // sub_811365C+1
     bl f500_static_8000734
     add r0, r4, #0
-    ldr r3, [pc, #0x8000774-0x8000628-4] // =sub_8112780
+    ldr r3, [pc, #0x8000774-0x8000628-4] // sub_8112780+1
     bl f500_static_8000734
     add r0, r7, #0
     add r1, r5, #0
-    ldr r3, [pc, #0x8000778-0x8000632-2] // =loc_811287C
+    ldr r3, [pc, #0x8000778-0x8000632-2] // loc_811287C+1
     bl f500_static_8000734
     pop {r4-r7}
     mov r12, r4
@@ -185,7 +185,7 @@ f500_80006CC:
     push {r7,lr}
     mov r1, r10
     push {r1}
-    ldr r3, [pc, #0x800077c-0x80006d2-2] // =sub_81127E8
+    ldr r3, [pc, #0x800077c-0x80006d2-2] // sub_81127E8+1
     bl f500_static_8000734
     pop {r1}
     mov r10, r1
@@ -202,7 +202,7 @@ f500_80006E8:
     push {r1-r7,lr}
     mov r1, r10
     push {r1}
-    ldr r3, [pc, #0x8000780-0x80006ee-2] // =sub_8112780
+    ldr r3, [pc, #0x8000780-0x80006ee-2] // sub_8112780+1
     bl f500_static_8000734
     pop {r1}
     mov r10, r1
@@ -210,18 +210,18 @@ f500_80006E8:
 // end of function f500_80006E8
 
 .thumb
-file500_80006FA:
+f500_80006FA:
     push {lr}
-    ldr r0, [pc, #0x8000750-0x80006fc-4] // =dword_200A800
-    ldr r1, [pc, #0x8000784-0x80006fe-2] // =dword_204
+    ldr r0, [pc, #0x8000750-0x80006fc-4] // dword_200A800
+    ldr r1, [pc, #0x8000784-0x80006fe-2] // dword_204
     bl sub_8000930
     pop {pc}
-// end of function file500_80006FA
+// end of function f500_80006FA
 
 .thumb
 f500_8000706:
     push {r4-r7,lr}
-    ldr r5, [pc, #0x8000750-0x8000708-4] // =dword_200A800
+    ldr r5, [pc, #0x8000750-0x8000708-4] // dword_200A800
     ldr r7, [r5]
     cmp r7, #0
     beq loc_8000728
@@ -231,7 +231,7 @@ loc_8000714:
     ldmia r6!, {r0-r3}
     mov r4, r10
     push {r4}
-    ldr r4, [pc, #0x8000721-0x800071a-2] // =0xBC10
+    ldr r4, [pc, #0x8000730-0x800071a-2] // loc_8000720+1
     mov lr, r4
     bx r3
 loc_8000720:
@@ -250,7 +250,7 @@ off_8000730:    .word loc_8000720+1
 .thumb
 f500_static_8000734:
     push {r4-r7,lr}
-    ldr r5, [pc, #0x8000750-0x8000736-2] // =dword_200A800
+    ldr r5, [pc, #0x8000750-0x8000736-2] // dword_200A800
     ldr r7, [r5]
     cmp r7, #0x20 
     blt loc_8000740

@@ -18,20 +18,20 @@ start_init:
     ldr sp, [pc, #0x80001d8-0x80000c8-8] // =0x3007BA0
     mov r0, #0x11
     msr cpsr_cf, r0
-    ldr sp, [pc, #0x80001dc-0x80000d4-8] // =loc_3007FFC
+    ldr sp, [pc, #0x80001dc-0x80000d4-8] // loc_3007FFC
     mov r0, #0x1b
     msr cpsr_cf, r0
-    ldr sp, [pc, #0x80001dc-0x80000e0-8] // =loc_3007FFC
+    ldr sp, [pc, #0x80001dc-0x80000e0-8] // loc_3007FFC
     mov r0, #0x17
     msr cpsr_cf, r0
-    ldr sp, [pc, #0x80001dc-0x80000ec-8] // =loc_3007FFC
+    ldr sp, [pc, #0x80001dc-0x80000ec-8] // loc_3007FFC
     mov r0, #0x13
     msr cpsr_cf, r0
     ldr sp, [pc, #0x80001e0-0x80000f8-8] // =0x3007FE0
     mov r0, #0x1f
     msr cpsr_cf, r0
     ldr sp, [pc, #0x80001e4-0x8000104-8] // =0x3007700
-    ldr r0, [pc, #0x80001e8-0x8000108-8] // =GamePakWaitstateControl
+    ldr r0, [pc, #0x80001e8-0x8000108-8] // GamePakWaitstateControl
     ldr r1, [pc, #0x80001ec-0x800010c-8] // =0x45B4
     str r1, [r0]
     mov r0, #0x3000000
@@ -40,37 +40,37 @@ start_init:
     mov r0, #0x2000000
     mov r1, #0x40000
     bl start_static_80001B0
-    ldr r0, [pc, #0x80001f0-0x800012c-8] // =loc_8212700
+    ldr r0, [pc, #0x80001f0-0x800012c-8] // sub_8212700
     ldr r1, [pc, #0x80001f4-0x8000130-8] // =0x3005800
-    ldr r2, [pc, #0x80001f8-0x8000134-8] // =dword_17C8
+    ldr r2, [pc, #0x80001f8-0x8000134-8] // dword_17C8+4
     bl start_static80001C4
-    ldr r0, [pc, #0x80001fc-0x800013c-8] // =start_800025C
+    ldr r0, [pc, #0x80001fc-0x800013c-8] // start_800025c+1
     mov lr, pc
     bx r0
-    ldr r0, [pc, #0x80001dc-0x8000148-8] // =loc_3007FFC
+    ldr r0, [pc, #0x80001dc-0x8000148-8] // loc_3007FFC
     ldr r1, [pc, #0x8000200-0x800014c-8] // =0x3005800
     str r1, [r0]
-    ldr r0, [pc, #0x8000204-0x8000154-8] // =InterruptEnableRegister
+    ldr r0, [pc, #0x8000204-0x8000154-8] // InterruptEnableRegister
     mov r1, #1
     orr r1, r1, #4
     orr r1, r1, #0x2000
     strh r1, [r0]
-    ldr r0, [pc, #0x8000208-0x8000168-8] // =dword_2008920
+    ldr r0, [pc, #0x8000208-0x8000168-8] // dword_2008920
     mov r1, #0
     strb r1, [r0]
-    ldr r0, [pc, #0x800020c-0x8000174-8] // =dword_200A338
+    ldr r0, [pc, #0x800020c-0x8000174-8] // dword_200A338
     mov r1, #1
     str r1, [r0]
-    ldr r0, [pc, #0x8000210-0x8000180-8] // =dword_200ACB0
+    ldr r0, [pc, #0x8000210-0x8000180-8] // dword_200ACB0
     mov r1, #0
     str r1, [r0]
-    ldr r0, [pc, #0x8000214-0x800018c-8] // =GeneralLCDStatus_STAT_LYC_
+    ldr r0, [pc, #0x8000214-0x800018c-8] // generallcdstatus_stat_lyc_
     mov r1, #8
     strh r1, [r0]
-    ldr r0, [pc, #0x8000218-0x8000198-8] // =KeyInterruptControl
+    ldr r0, [pc, #0x8000218-0x8000198-8] // KeyInterruptControl
     ldr r1, [pc, #0x800021c-0x800019c-8] // =0x83FF
     strh r1, [r0]
-    ldr r0, [pc, #0x8000220-0x80001a4-8] // =main_
+    ldr r0, [pc, #0x8000220-0x80001a4-8] // main_+1
     bx r0
     b start_
 // end of function start_
@@ -98,7 +98,7 @@ dword_80001E0:    .word 0x3007FE0
 dword_80001E4:    .word 0x3007700
 off_80001E8:    .word GamePakWaitstateControl
 dword_80001EC:    .word 0x45B4
-off_80001F0:    .word loc_8212700
+off_80001F0:    .word sub_8212700
 dword_80001F4:    .word 0x3005800
 off_80001F8:    .word dword_17C8+4
 off_80001FC:    .word start_800025C+1
@@ -121,12 +121,12 @@ off_8000224:    .word sub_811104C+1
 .thumb
 start_800025C:
     push {r4}
-    ldr r4, [pc, #0x8000298-0x800025e-2] // =InterruptMasterEnableRegister
+    ldr r4, [pc, #0x8000298-0x800025e-2] // InterruptMasterEnableRegister
     mov r0, #0
     strh r0, [r4]
     mov r0, #0
-    ldr r1, [pc, #0x8000280-0x8000266-2] // =off_8000224
-    ldr r2, [pc, #0x8000294-0x8000268-4] // =dword_3002000
+    ldr r1, [pc, #0x8000280-0x8000266-2] // off_8000224
+    ldr r2, [pc, #0x8000294-0x8000268-4] // dword_3002000
 loc_800026A:
     ldr r3, [r1]
     str r3, [r2]
@@ -144,10 +144,10 @@ off_8000280:    .word off_8000224
 
 .thumb
 start_8000284:
-    ldr r3, [pc, #0x8000298-0x8000284-4] // =InterruptMasterEnableRegister
+    ldr r3, [pc, #0x8000298-0x8000284-4] // InterruptMasterEnableRegister
     mov r2, #0
     strh r2, [r3]
-    ldr r2, [pc, #0x8000294-0x800028a-2] // =dword_3002000
+    ldr r2, [pc, #0x8000294-0x800028a-2] // dword_3002000
     str r1, [r2,r0]
     mov r2, #1
     strh r2, [r3]
