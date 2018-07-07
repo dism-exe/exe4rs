@@ -9,6 +9,7 @@ This is the only compiled file that is overlaid over the binary
 .include "externs/main.inc"
 .include "externs/f500.inc"
 .include "externs/f800.inc"
+.include "externs/f900.inc"
 
 /* Range [0x08000000, 0x08000550) */
 .section .r__start, "ax"
@@ -24,3 +25,6 @@ This is the only compiled file that is overlaid over the binary
 // [0x08000788, 0x08000904)
 .section .f800, "ax"
 .include "asm/f800.s"
+// [0x08000904, 0x08000A1C)
+.section .f900, "ax"
+.include "asm/f900.s"

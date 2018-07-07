@@ -104,7 +104,7 @@ loc_800083C:
     ldr r0, [r2]
     ldr r1, [r2,#4]
     ldr r2, [r2,#8]
-    bl sub_800098C
+    bl f900_800098C
     mov r1, r8
     mov r2, r9
     b loc_800085A
@@ -112,7 +112,7 @@ loc_800084C:
     ldr r0, [r2]
     ldr r1, [r2,#4]
     ldr r2, [r2,#8]
-    bl sub_80009A0
+    bl f900_80009A0
     mov r1, r8
     mov r2, r9
 loc_800085A:

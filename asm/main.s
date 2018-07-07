@@ -253,7 +253,7 @@ loc_8000472:
     mov r0, r10
     ldr r0, [r0]
     mov r1, #8
-    bl sub_8000930
+    bl f900_8000930
     pop {r5,pc}
     .byte 0, 0
 off_80004F0:    .word word_40

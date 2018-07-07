@@ -12,5 +12,5 @@
 .equ DMA2WordCount, 0x40000D0
 .equ DMA3SourceAddress, 0x40000D4
 .equ DMA3WordCount, 0x40000DC
-.equ sub_800098C, 0x800098C
-.equ sub_80009A0, 0x80009A0
+.equ f900_800098C, 0x800098C
+.equ f900_80009A0, 0x80009A0

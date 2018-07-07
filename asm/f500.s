@@ -214,7 +214,7 @@ f500_80006FA:
     push {lr}
     ldr r0, [pc, #0x8000750-0x80006fc-4] // dword_200A800
     ldr r1, [pc, #0x8000784-0x80006fe-2] // dword_204
-    bl sub_8000930
+    bl f900_8000930
     pop {pc}
 // end of function f500_80006FA
 
