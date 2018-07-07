@@ -5,7 +5,7 @@ f800_static_8000788:
     ldr r5, [pc, #0x80007a4-0x800078c-4] // off_80007A8
     ldr r5, [r5,r3]
     mov r3, #8
-    ldr r7, dword_80007F4
+    ldr r7, [pc, #0x80007f4-0x8000792-2] // =0x80000000
 loc_8000794:
     ldr r6, [r5,r3]
     and r6, r7
@@ -31,28 +31,28 @@ loc_80007BC:
     mov r4, #1
     tst r0, r4
     beq loc_80007C8
-    ldr r2, [r3,#(dma0wordcount - 0x40000b0)]
+    ldr r2, [r3,#(DMA0WordCount - 0x40000b0)]
     orr r1, r2
 loc_80007C8:
     mov r4, #2
     tst r0, r4
     beq loc_80007D2
-    ldr r2, [r3,#(dma1wordcount - 0x40000b0)]
+    ldr r2, [r3,#(DMA1WordCount - 0x40000b0)]
     orr r1, r2
 loc_80007D2:
     mov r4, #4
     tst r0, r4
     beq loc_80007DC
-    ldr r2, [r3,#(dma2wordcount - 0x40000b0)]
+    ldr r2, [r3,#(DMA2WordCount - 0x40000b0)]
     orr r1, r2
 loc_80007DC:
     mov r4, #8
     tst r0, r4
     beq loc_80007E6
-    ldr r2, [r3,#(dma3wordcount - 0x40000b0)]
+    ldr r2, [r3,#(DMA3WordCount - 0x40000b0)]
     orr r1, r2
 loc_80007E6:
-    ldr r2, dword_80007F4
+    ldr r2, [pc, #0x80007f4-0x80007e6-2] // =0x80000000
     and r1, r2
     bne loc_80007BC
     pop {r4,pc}

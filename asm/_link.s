@@ -23,4 +23,4 @@ This is the only compiled file that is overlaid over the binary
 .include "asm/f500.s"
 // [0x08000788, 0x08000904)
 .section .f800, "ax"
-// .include "asm/f800.s"
+.include "asm/f800.s"
