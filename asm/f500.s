@@ -1,13 +1,3 @@
-.include "externs/f500.inc"
-
-// this section declaration is crucial for linking, otherwise it won't overlay
-.section .f__f500, "ax"
-
-.equ f500_static_8000734, 0x7000734
-.equ loc_8000728, 0x08000728
-.equ f500_static_8000596, 0x08000596
-.equ f500_static_80005A8, 0x080005A8
-
 .thumb
 f500_8000550:
     push {lr}
@@ -62,9 +52,8 @@ f500_static_8000596:
     push {lr}
     mov r1, r10
     push {r1}
-    ldr r3, [pc, #0x8000758-0x800059c-4] // =sub_81126B4 // [ERROR >>>>>>>>>>>>>>>>>]
+    ldr r3, [pc, #0x8000758-0x800059c-4] // =sub_81126B4
     bl f500_static_8000734
-    /*
     pop {r1}
     mov r10, r1
     pop {pc}
@@ -115,7 +104,7 @@ f500_80005D2:
 .thumb
 f500_80005EA:
     push {r4-r7,lr}
-    cmp r0, #0x21
+    cmp r0, #0x21 
     bgt loc_80005F8
     mov r7, r10
     ldr r7, [r7,#0x40]
@@ -242,7 +231,7 @@ loc_8000714:
     ldmia r6!, {r0-r3}
     mov r4, r10
     push {r4}
-    ldr r4, [pc, #0x8000721-0x800071a-3] // =0xBC10
+    ldr r4, [pc, #0x8000721-0x800071a-2] // =0xBC10
     mov lr, r4
     bx r3
 loc_8000720:
@@ -263,7 +252,7 @@ f500_static_8000734:
     push {r4-r7,lr}
     ldr r5, [pc, #0x8000750-0x8000736-2] // =dword_200A800
     ldr r7, [r5]
-    cmp r7, #0x20
+    cmp r7, #0x20 
     blt loc_8000740
     b locret_800074C
 loc_8000740:
@@ -291,4 +280,4 @@ off_800077C:    .word sub_81127E8+1
 off_8000780:    .word sub_8112780+1
 off_8000784:    .word dword_204
 // end of function f500_static_8000734
-*/
+
