@@ -1,3 +1,0 @@
-.equ LCDControl, 0x4000000
-.equ sub_81116E8, 0x81116E8
-.equ sub_81116EC, 0x81116EC

@@ -17,12 +17,15 @@ pt.env(dismProjPath= '../../Mods/GBA/exe4rs/')
 pt.env(asmPath= 'asm/')
 pt.env(externsPath= 'externs/')
 pt.env(asmFiles={
-    'start':    (0x08000000, 0x0800029C),
-    'main':     (0x0800029C, 0x08000550),
-    'f500':     (0x08000550, 0x08000788),
-    'f800':     (0x08000788, 0x08000904),
-    'f900':     (0x08000904, 0x08000A1C),
-    'fA00':     (0x08000A1C, 0x08000C98),
+    ## matching test
+    'sect0':    (0x08000000, 0x8000910), # progress: 0.22% ((end-0x08000000)/0x01000000)
+    #'sect1':    (0x08100000, 0x08200000),
+    #'sect2':    (0x08200000, 0x08300000),
+    #'sect3':    (0x08300000, 0x08400000),
+    #'sect4':    (0x08400000, 0x08500000),
+    #'sect5':    (0x08500000, 0x08600000),
+    #'sect6':    (0x08600000, 0x08700000),
+    #'sect7':    (0x08700000, 0x08800000),
 })
 
 print("Environment set!")
