@@ -81,7 +81,7 @@ def main():
 
     # display output
     if foundDiff:
-        print("Found diff #%d @ %07X: bin1=0x%X bin2=0x%0X" % (d-1, diffAddr, concatBytes(p1), concatBytes(p2)))
+        print("Found diff #%d @ %06X: bin1=0x%X bin2=0x%0X" % (d-1, diffAddr, concatBytes(p1), concatBytes(p2)))
     else:
         print("Files are identical!")
 
