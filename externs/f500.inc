@@ -1,4 +1,3 @@
-.equ dword_204, 0x0000204
 .equ dword_200A800, 0x200A800
 .equ unk_2010BB0, 0x2010BB0
 .equ unk_20116A0, 0x20116A0

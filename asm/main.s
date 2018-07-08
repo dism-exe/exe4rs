@@ -27,7 +27,7 @@ game_routine:
     ldrh r1, [r0]
     add r1, #1
     strh r1, [r0]
-    bl sub_8000C24
+    bl fA00_8000C24
     ldr r0, [pc, #0x8000328-0x80002f2-2] // off_800032C
     mov r7, r10
     ldr r1, [r7]
@@ -214,10 +214,10 @@ loc_800045C:
     bl sub_80060AC
     bl sub_8006108
     pop {r0}
-    ldr r1, [pc, #0x80004f0-0x800046a-2] // word_40
+    ldr r1, [pc, #0x80004f0-0x800046a-2] // =0x40
     tst r0, r0
     beq loc_8000472
-    ldr r1, [pc, #0x80004f4-0x8000470-4] // byte_C0
+    ldr r1, [pc, #0x80004f4-0x8000470-4] // =0xC0
 loc_8000472:
     mov r0, r10
     ldr r0, [r0,#8]
@@ -256,8 +256,8 @@ loc_8000472:
     bl f900_8000930
     pop {r5,pc}
     .byte 0, 0
-off_80004F0:    .word word_40
-off_80004F4:    .word byte_C0
+off_80004F0:    .word 0x40
+off_80004F4:    .word 0xC0
 off_80004F8:    .word dword_200A338
 // end of function main_static_8000456
 

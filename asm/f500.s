@@ -213,7 +213,7 @@ f500_80006E8:
 f500_80006FA:
     push {lr}
     ldr r0, [pc, #0x8000750-0x80006fc-4] // dword_200A800
-    ldr r1, [pc, #0x8000784-0x80006fe-2] // dword_204
+    ldr r1, [pc, #0x8000784-0x80006fe-2] // =0x204
     bl f900_8000930
     pop {pc}
 // end of function f500_80006FA
@@ -278,6 +278,6 @@ off_8000774:    .word sub_8112780+1
 off_8000778:    .word loc_811287C+1
 off_800077C:    .word sub_81127E8+1
 off_8000780:    .word sub_8112780+1
-off_8000784:    .word dword_204
+off_8000784:    .word 0x204
 // end of function f500_static_8000734
 

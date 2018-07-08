@@ -89,12 +89,12 @@ f900_8000970:
 .thumb
 f900_800097A:
     push {r0-r3,lr}
-    ldr r3, [pc, #0x8000988-0x800097c-4] // byte_0
+    ldr r3, [pc, #0x8000988-0x800097c-4] // =0x0
     lsr r2, r2, #1
     orr r2, r3
     bl sub_81116EC
     pop {r0-r3,pc}
-dword_8000988:    .word 0
+dword_8000988:    .word 0x0
 // end of function f900_800097A
 
 .thumb
@@ -112,13 +112,13 @@ off_800099C:    .word LCDControl
 .thumb
 f900_80009A0:
     push {r0-r3,lr}
-    ldr r3, [pc, #0x80009b0-0x80009a2-2] // byte_0
+    ldr r3, [pc, #0x80009b0-0x80009a2-2] // =0x0
     lsr r2, r2, #2
     orr r2, r3
     bl sub_81116E8
     pop {r0-r3,pc}
     .byte 0, 0
-dword_80009B0:    .word 0
+dword_80009B0:    .word 0x0
 // end of function f900_80009A0
 
 .thumb

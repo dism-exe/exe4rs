@@ -1,4 +1,3 @@
-.equ dword_17C8, 0x00017C8
 .equ dword_2008920, 0x2008920
 .equ dword_200A338, 0x200A338
 .equ dword_200ACB0, 0x200ACB0

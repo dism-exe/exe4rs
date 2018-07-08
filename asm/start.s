@@ -42,7 +42,7 @@ start_init:
     bl start_static_80001B0
     ldr r0, [pc, #0x80001f0-0x800012c-8] // sub_8212700
     ldr r1, [pc, #0x80001f4-0x8000130-8] // =0x3005800
-    ldr r2, [pc, #0x80001f8-0x8000134-8] // dword_17C8+4
+    ldr r2, [pc, #0x80001f8-0x8000134-8] // =0x17C8
     bl start_static80001C4
     ldr r0, [pc, #0x80001fc-0x800013c-8] // start_800025c+1
     mov lr, pc
@@ -100,7 +100,7 @@ off_80001E8:    .word GamePakWaitstateControl
 dword_80001EC:    .word 0x45B4
 off_80001F0:    .word sub_8212700
 dword_80001F4:    .word 0x3005800
-off_80001F8:    .word dword_17C8+4
+off_80001F8:    .word 0x17CC
 off_80001FC:    .word start_800025C+1
 dword_8000200:    .word 0x3005800
 off_8000204:    .word InterruptEnableRegister
