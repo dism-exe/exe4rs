@@ -46,7 +46,9 @@
 .equ dword_3002000, 0x3002000
 .equ loc_30063F8, 0x30063F8
 .equ loc_3007FFC, 0x3007FFC
+.equ LCDControl, 0x4000000
 .equ GeneralLCDStatus_STAT_LYC_, 0x4000004
+.equ VerticalCounter_LY_, 0x4000006
 .equ DMA0SourceAddress, 0x40000B0
 .equ DMA0WordCount, 0x40000B8
 .equ DMA1SourceAddress, 0x40000BC
@@ -60,11 +62,10 @@
 .equ InterruptEnableRegister, 0x4000200
 .equ GamePakWaitstateControl, 0x4000204
 .equ InterruptMasterEnableRegister, 0x4000208
-.equ f900_8000930, 0x8000930
-.equ f900_800098C, 0x800098C
-.equ f900_80009A0, 0x80009A0
-.equ fA00_8000C24, 0x8000C24
 .equ sub_8001AD8, 0x8001AD8
+.equ sub_8001AE0, 0x8001AE0
+.equ sub_8001AF6, 0x8001AF6
+.equ sub_8001B26, 0x8001B26
 .equ sub_8001B78, 0x8001B78
 .equ sub_8001B94, 0x8001B94
 .equ sub_8001CB8, 0x8001CB8
@@ -94,6 +95,8 @@
 .equ sub_8006108, 0x8006108
 .equ loc_8006AF4, 0x8006AF4
 .equ sub_8007BD0, 0x8007BD0
+.equ sub_8024FF0, 0x8024FF0
+.equ sub_8024FF4, 0x8024FF4
 .equ sub_802525C, 0x802525C
 .equ loc_8025268, 0x8025268
 .equ sub_8025B60, 0x8025B60
@@ -106,6 +109,10 @@
 .equ sub_802D6B8, 0x802D6B8
 .equ loc_802D6D2, 0x802D6D2
 .equ loc_802DECC, 0x802DECC
+.equ sub_80372BC, 0x80372BC
+.equ sub_8037304, 0x8037304
+.equ sub_8037364, 0x8037364
+.equ sub_8037404, 0x8037404
 .equ loc_80405E4, 0x80405E4
 .equ loc_8043238, 0x8043238
 .equ loc_8043864, 0x8043864
@@ -121,6 +128,9 @@
 .equ sub_8110BF4, 0x8110BF4
 .equ sub_811103C, 0x811103C
 .equ sub_811104C, 0x811104C
+.equ sub_81116E8, 0x81116E8
+.equ sub_81116EC, 0x81116EC
+.equ sub_81116F0, 0x81116F0
 .equ sub_8111FD4, 0x8111FD4
 .equ sub_8112610, 0x8112610
 .equ sub_8112630, 0x8112630

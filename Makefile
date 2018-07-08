@@ -2,9 +2,11 @@
 # (devkitpro/devkitARM/bin should be in path)
 MAKE = make
 CC = arm-none-eabi-gcc
+AS = arm-none-eabi-as
 LD = arm-none-eabi-ld
 OBJCOPY = arm-none-eabi-objcopy
 SHA1SUM = sha1sum
+PY = py
 
 # project paths
 SRCDIR = asm
@@ -14,11 +16,12 @@ EXTERNS = externs
 OBJ =
 
 # build flags
-COMPLIANCE_FLAGS =
+COMPLIANCE_FLAGS = -O0 -g0
 WFLAGS =
 ARCH = -march=armv4t -mtune=arm7tdmi -mabi=aapcs -mthumb -mthumb-interwork
 CDEBUG =
 CFLAGS = $(ARCH) $(WFLAGS) $(COMPLIANCE_FLAGS) $(CDEBUG)
+ASFLAGS =
 LDFLAGS = -g -Map exe6f.map
 LIB =
 ROM_OBJ_FLAGS = -O elf32-littlearm -B arm --rename-section .data=.f__rom --set-section-flags .f__rom="r,c,a"
@@ -36,6 +39,7 @@ rom: $(ROM)
 $(ROM):
 	$(OBJCOPY) -I binary $(ROM_OBJ_FLAGS) $(BIN)/$(ROM).bin rom.o
 	$(CC) $(CFLAGS) -c $(SFILES)
+	# $(AS) $(ASFLAGS) -c $(SFILES)
 	$(LD) $(LDFLAGS) -o $(ROM).elf -T ld_script.x $(OFILES) rom.o $(LIB)
 	$(OBJCOPY) --set-section-flags .f__rom="r,c,a" $(ROM).elf
 	$(OBJCOPY) -O binary $(ROM).elf $(ROM).gba
@@ -43,9 +47,13 @@ $(ROM):
 checksum:
 	$(SHA1SUM) -b $(BIN)/$(ROM).bin $(ROM).gba
 
+fdiff:
+	$(PY) tools/fdiff.py bin/$(ROM).bin $(ROM).gba -s2
+
 clean:
 	rm -f *.preout
 	rm -f *.o
+	rm -f *.out
 	rm -f *.d
 	rm -f *.map
 	rm -f *.elf
