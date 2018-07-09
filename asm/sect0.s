@@ -476,6 +476,43 @@
 .equ sub_8002008, 0x08002008
 .equ off_8002014, 0x08002014
 .equ sub_8002018, 0x08002018
+.equ off_8002024, 0x08002024
+.equ loc_8002028, 0x08002028
+.equ loc_8002054, 0x08002054
+.equ off_8002074, 0x08002074
+.equ sub_8002078, 0x08002078
+.equ sub_8002090, 0x08002090
+.equ loc_80020A0, 0x080020A0
+.equ loc_80020AE, 0x080020AE
+.equ loc_80020B4, 0x080020B4
+.equ loc_80020BE, 0x080020BE
+.equ loc_80020E4, 0x080020E4
+.equ loc_80020E8, 0x080020E8
+.equ loc_80020FA, 0x080020FA
+.equ loc_8002100, 0x08002100
+.equ off_800210C, 0x0800210C
+.equ off_8002110, 0x08002110
+.equ dword_8002114, 0x08002114
+.equ off_800212C, 0x0800212C
+.equ off_8002144, 0x08002144
+.equ sub_8002148, 0x08002148
+.equ sub_8002156, 0x08002156
+.equ loc_800216E, 0x0800216E
+.equ off_8002194, 0x08002194
+.equ loc_8002198, 0x08002198
+.equ off_80021E8, 0x080021E8
+.equ off_80021EC, 0x080021EC
+.equ dword_80021F0, 0x080021F0
+.equ sub_800249C, 0x0800249C
+.equ sub_80024B6, 0x080024B6
+.equ locret_80024C2, 0x080024C2
+.equ sub_80024C4, 0x080024C4
+.equ loc_80024D4, 0x080024D4
+.equ locret_80024DE, 0x080024DE
+.equ sub_80024E0, 0x080024E0
+.equ loc_80024E4, 0x080024E4
+.equ locret_80024F2, 0x080024F2
+.equ sub_80024F4, 0x080024F4
 
 .arm
 start_:
@@ -4441,5 +4478,323 @@ sub_8002018:
     .balign 4, 0x00
 off_8002024:    .word off_8001F98
 // end of function sub_8002018
+
+loc_8002028:
+    push {r4-r7,lr}
+    mov r1, r8
+    mov r2, r9
+    mov r3, r12
+    push {r1-r3}
+    ldr r7, [pc, #0x8002144-0x8002032-2] // byte_2009F50
+    ldrb r1, [r0,#9]
+    mov r2, #0x18
+    mul r2, r1
+    add r7, r7, r2
+    strb r1, [r7,#1]
+    ldr r1, [r0]
+    str r1, [r7,#0xc]
+    ldr r2, [r0,#4]
+    str r2, [r7,#0x10]
+    ldr r3, [r0,#8]
+    str r3, [r7,#0x14]
+    add r0, #0xc
+    mov r6, #1
+    cmp r3, #8
+    beq loc_8002054
+    ldr r6, [r0,#4]
+loc_8002054:
+    strh r6, [r7,#2]
+    mov r6, #1
+    strb r6, [r7]
+    str r0, [r7,#4]
+    str r0, [r7,#8]
+    ldr r6, [pc, #0x8002074-0x800205e-2] // off_800212C
+    ldrb r1, [r7,#0x14]
+    ldr r6, [r6,r1]
+    mov lr, pc
+    bx r6
+    pop {r1-r3}
+    mov r8, r1
+    mov r9, r2
+    mov r12, r3
+    pop {r4-r7,pc}
+    .balign 4, 0x00
+off_8002074:    .word off_800212C
+.thumb
+sub_8002078:
+    push {r4-r7,lr}
+    push {r0}
+    ldr r7, [pc, #0x8002144-0x800207c-4] // byte_2009F50
+    mov r1, #0x18
+    mul r1, r0
+    add r7, r7, r1
+    mov r0, #0
+    strb r0, [r7]
+    pop {r0}
+    bl sub_8002526
+    pop {r4-r7,pc}
+// end of function sub_8002078
+
+.thumb
+sub_8002090:
+    push {r4-r7,lr}
+    ldr r7, [pc, #0x8002144-0x8002092-2] // byte_2009F50
+    mov r1, #0x18
+    mul r1, r0
+    add r7, r7, r1
+    ldrb r0, [r7]
+    tst r0, r0
+    pop {r4-r7,pc}
+// end of function sub_8002090
+
+loc_80020A0:
+    push {r4-r7,lr}
+    mov r1, r8
+    mov r2, r9
+    mov r3, r12
+    push {r1-r3}
+    ldr r7, [pc, #0x8002144-0x80020aa-2] // byte_2009F50
+    mov r4, #0
+loc_80020AE:
+    ldrb r1, [r7]
+    tst r1, r1
+    bne loc_80020BE
+loc_80020B4:
+    add r7, #0x18
+    add r4, #1
+    cmp r4, #0x12
+    bge loc_8002100
+    b loc_80020AE
+loc_80020BE:
+    ldrh r1, [r7,#2]
+    sub r1, #1
+    strh r1, [r7,#2]
+    cmp r1, #0
+    bgt loc_80020B4
+    ldr r0, [r7,#8]
+    ldr r1, [pc, #0x800210c-0x80020ca-2] // dword_8002114
+    ldrb r2, [r7,#0x14]
+    ldr r1, [r1,r2]
+    add r0, r0, r1
+    ldr r1, [r0]
+    cmp r1, #0
+    beq loc_80020FA
+    cmp r1, #2
+    beq loc_80020E4
+    cmp r1, #1
+    bne loc_80020E8
+    ldr r0, [r7,#4]
+    b loc_80020E8
+loc_80020E4:
+    ldr r0, [r0,#4]
+    str r0, [r7,#4]
+loc_80020E8:
+    str r0, [r7,#8]
+    ldr r1, [r0,#4]
+    strh r1, [r7,#2]
+    ldr r6, [pc, #0x8002110-0x80020ee-2] // off_800212C
+    ldrb r1, [r7,#0x14]
+    ldr r6, [r6,r1]
+    mov lr, pc
+    bx r6
+    .byte 0xDC, 0xE7
+loc_80020FA:
+    mov r1, #0
+    strb r1, [r7]
+    b loc_80020B4
+loc_8002100:
+    pop {r1-r3}
+    mov r8, r1
+    mov r9, r2
+    mov r12, r3
+    pop {r4-r7,pc}
+    .balign 4, 0x00
+off_800210C:    .word dword_8002114
+off_8002110:    .word off_800212C
+dword_8002114:    .word 0x8, 0x8, 0x8, 0x8, 0x8, 0x8
+off_800212C:    .word sub_8002148+1
+    .word loc_8002198+1
+    .word sub_8002156+1
+    .word sub_800249C+1
+    .word sub_80024B6+1
+    .word sub_80024C4+1
+off_8002144:    .word byte_2009F50
+.thumb
+sub_8002148:
+    push {lr}
+    ldr r0, [r0]
+    ldr r1, [r7,#0xc]
+    ldr r2, [r7,#0x10]
+    bl loc_8000874
+    pop {pc}
+// end of function sub_8002148
+
+.thumb
+sub_8002156:
+    push {lr}
+    ldr r5, [pc, #0x8002194-0x8002158-4] // byte_200D8E0
+    ldr r5, [r5,#(dword_200D8EC - 0x200d8e0)]
+    ldrb r2, [r7,#0x17]
+    lsl r2, r2, #2
+    add r2, #4
+    ldr r2, [r5,r2]
+    add r5, r5, r2
+    mov r6, #0xf0
+    lsl r6, r6, #8
+    ldrb r2, [r7,#0x16]
+    mov r8, r7
+loc_800216E:
+    ldr r1, [r0]
+    ldr r7, [r0,#4]
+    ldrh r3, [r5,r1]
+    and r3, r6
+    orr r3, r7
+    strh r3, [r5,r1]
+    add r0, #8
+    sub r2, #1
+    bgt loc_800216E
+    mov r7, r8
+    push {r4,r7}
+    ldr r5, [pc, #0x8002194-0x8002184-4] // byte_200D8E0
+    bl loc_8026460
+    pop {r4,r7}
+    mov r0, #0
+    strb r0, [r7]
+    pop {pc}
+    .balign 4, 0x00
+off_8002194:    .word byte_200D8E0
+// end of function sub_8002156
+
+loc_8002198:
+    push {r4,r7,lr}
+    ldr r6, [r0]
+    ldr r5, [pc, #0x80021e8-0x800219c-4] // off_8001F98
+    ldrb r4, [r7,#0x17]
+    lsl r4, r4, #2
+    ldr r5, [r5,r4]
+    ldr r4, [r7,#0xc]
+    mov r1, #0
+    push {r0}
+    ldrh r2, [r6,r1]
+    lsl r3, r2, #0x16
+    lsr r3, r3, #0x16
+    lsl r3, r3, #5
+    push {r4,r6}
+    add r4, r4, r3
+    ldr r0, [pc, #0x80021ec-0x80021b6-2] // dword_80021F0
+    lsr r2, r2, #0xa
+    lsl r2, r2, #2
+    ldr r0, [r0,r2]
+    mov lr, pc
+    bx r0
+    .hword 0xBC50
+    .word 0x31023520, 0x527DBA, 0xDBEC4291, 0x4805BC01, 0x897DF9
+    .word 0x69395840, 0x1527DBA, 0xFB48F7FE, 0xBD90
+off_80021E8:    .word off_8001F98
+off_80021EC:    .word dword_80021F0
+dword_80021F0:    .word 0x8002201, 0x8002223, 0x800234B, 0x800236D, 0x60286820
+    .word 0x60686860, 0x60A868A0, 0x60E868E0, 0x61286920, 0x61686960
+    .word 0x61A869A0, 0x61E869E0, 0x4A9D46F7, 0x4A9B4691, 0x68204690
+    .word 0x40020A13, 0xA104003, 0x4318021B, 0x41D02210, 0x913464A
+    .word 0x40034002, 0x11B0910, 0x60284318, 0x46426860, 0x40020A13
+    .word 0xA104003, 0x4318021B, 0x41D02210, 0x913464A, 0x40034002
+    .word 0x11B0910, 0x60684318, 0x464268A0, 0x40020A13, 0xA104003
+    .word 0x4318021B, 0x41D02210, 0x913464A, 0x40034002, 0x11B0910
+    .word 0x60A84318, 0x464268E0, 0x40020A13, 0xA104003, 0x4318021B
+    .word 0x41D02210, 0x913464A, 0x40034002, 0x11B0910, 0x60E84318
+    .word 0x46426920, 0x40020A13, 0xA104003, 0x4318021B, 0x41D02210
+    .word 0x913464A, 0x40034002, 0x11B0910, 0x61284318, 0x46426960
+    .word 0x40020A13, 0xA104003, 0x4318021B, 0x41D02210, 0x913464A
+    .word 0x40034002, 0x11B0910, 0x61684318, 0x464269A0, 0x40020A13
+    .word 0xA104003, 0x4318021B, 0x41D02210, 0x913464A, 0x40034002
+    .word 0x11B0910, 0x61A84318, 0x464269E0, 0x40020A13, 0xA104003
+    .word 0x4318021B, 0x41D02210, 0x913464A, 0x40034002, 0x11B0910
+    .word 0x61E84318, 0x682046F7, 0x686061E8, 0x68A061A8, 0x68E06168
+    .word 0x69206128, 0x696060E8, 0x69A060A8, 0x69E06068, 0x46F76028
+    .word 0x46914A4A, 0x46904A48, 0xA136820, 0x40034002, 0x21B0A10
+    .word 0x22104318, 0x464A41D0, 0x40020913, 0x9104003, 0x4318011B
+    .word 0x686061E8, 0xA134642, 0x40034002, 0x21B0A10, 0x22104318
+    .word 0x464A41D0, 0x40020913, 0x9104003, 0x4318011B, 0x68A061A8
+    .word 0xA134642, 0x40034002, 0x21B0A10, 0x22104318, 0x464A41D0
+    .word 0x40020913, 0x9104003, 0x4318011B, 0x68E06168, 0xA134642
+    .word 0x40034002, 0x21B0A10, 0x22104318, 0x464A41D0, 0x40020913
+    .word 0x9104003, 0x4318011B, 0x69206128, 0xA134642, 0x40034002
+    .word 0x21B0A10, 0x22104318, 0x464A41D0, 0x40020913, 0x9104003
+    .word 0x4318011B, 0x696060E8, 0xA134642, 0x40034002, 0x21B0A10
+    .word 0x22104318, 0x464A41D0, 0x40020913, 0x9104003, 0x4318011B
+    .word 0x69A060A8, 0xA134642, 0x40034002, 0x21B0A10, 0x22104318
+    .word 0x464A41D0, 0x40020913, 0x9104003, 0x4318011B, 0x69E06068
+    .word 0xA134642, 0x40034002, 0x21B0A10, 0x22104318, 0x464A41D0
+    .word 0x40020913, 0x9104003, 0x4318011B, 0x46F76028, 0xFF00FF00
+    .word 0xF0F0F0F0
+.thumb
+sub_800249C:
+    push {lr}
+    push {r4,r7}
+    ldr r1, [r0]
+    lsl r1, r1, #1
+    lsr r1, r1, #1
+    ldrb r0, [r7,#0xc]
+    ldrb r2, [r7,#0x16]
+    ldrb r3, [r7,#1]
+    ldr r4, [r7,#0x10]
+    bl sub_8002504
+    pop {r4,r7}
+    pop {pc}
+// end of function sub_800249C
+
+.thumb
+sub_80024B6:
+    push {lr}
+    ldr r0, [r0]
+    cmp r0, #0
+    blt locret_80024C2
+    bl f500_8000558
+locret_80024C2:
+    pop {pc}
+// end of function sub_80024B6
+
+.thumb
+sub_80024C4:
+    push {lr}
+    ldr r0, [r0]
+    cmp r0, #0
+    blt loc_80024D4
+    add r0, r0, #0
+    bl sub_8024FA0
+    b locret_80024DE
+loc_80024D4:
+    lsl r0, r0, #1
+    lsr r0, r0, #1
+    add r0, r0, #0
+    bl sub_8024FBC
+locret_80024DE:
+    pop {pc}
+// end of function sub_80024C4
+
+.thumb
+sub_80024E0:
+    push {r5,lr}
+    add r5, r0, #0
+loc_80024E4:
+    ldr r0, [r5]
+    cmp r0, #0
+    blt locret_80024F2
+    bl loc_8002028
+    add r5, #4
+    b loc_80024E4
+locret_80024F2:
+    pop {r5,pc}
+// end of function sub_80024E0
+
+.thumb
+sub_80024F4:
+    push {lr}
+    ldr r0, [pc, #0x80025f0-0x80024f6-2] // byte_200A230
+    ldr r1, [pc, #0x8002500-0x80024f8-4] // =0x108
+    bl f900_8000930
+    pop {pc}
+off_8002500:    .word 0x108
+// end of function sub_80024F4
 
 /*For debugging purposes, connect comment at any range!*/

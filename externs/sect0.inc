@@ -26,8 +26,13 @@
 .equ unk_2007400, 0x2007400
 .equ dword_2008920, 0x2008920
 .equ byte_2009F50, 0x2009F50
+.equ word_2009F52, 0x2009F52
+.equ dword_2009F54, 0x2009F54
+.equ dword_2009F58, 0x2009F58
+.equ byte_2009F64, 0x2009F64
 .equ dword_200A150, 0x200A150
 .equ dword_200A154, 0x200A154
+.equ byte_200A230, 0x200A230
 .equ dword_200A338, 0x200A338
 .equ byte_200A3C8, 0x200A3C8
 .equ dword_200A4D0, 0x200A4D0
@@ -42,6 +47,8 @@
 .equ dword_200D128, 0x200D128
 .equ dword_200D12C, 0x200D12C
 .equ dword_200D130, 0x200D130
+.equ byte_200D8E0, 0x200D8E0
+.equ dword_200D8EC, 0x200D8EC
 .equ unk_200F780, 0x200F780
 .equ word_200F980, 0x200F980
 .equ unk_200FB80, 0x200FB80
@@ -111,10 +118,11 @@
 .equ InterruptEnableRegister, 0x4000200
 .equ GamePakWaitstateControl, 0x4000204
 .equ InterruptMasterEnableRegister, 0x4000208
-.equ loc_80020A0, 0x80020A0
-.equ off_8002144, 0x8002144
-.equ sub_80024F4, 0x80024F4
+.equ off_8002500, 0x8002500
+.equ sub_8002504, 0x8002504
+.equ sub_8002526, 0x8002526
 .equ loc_800256C, 0x800256C
+.equ off_80025F0, 0x80025F0
 .equ sub_800262E, 0x800262E
 .equ sub_8002798, 0x8002798
 .equ sub_80027DC, 0x80027DC
@@ -136,6 +144,7 @@
 .equ sub_8024F9C, 0x8024F9C
 .equ sub_8024FA0, 0x8024FA0
 .equ sub_8024FB8, 0x8024FB8
+.equ sub_8024FBC, 0x8024FBC
 .equ sub_8024FF0, 0x8024FF0
 .equ sub_8024FF4, 0x8024FF4
 .equ sub_802525C, 0x802525C
@@ -143,6 +152,7 @@
 .equ sub_8025B60, 0x8025B60
 .equ sub_8025BBC, 0x8025BBC
 .equ sub_8025CDC, 0x8025CDC
+.equ loc_8026460, 0x8026460
 .equ off_8029184, 0x8029184
 .equ dword_802919C, 0x802919C
 .equ loc_80297F0, 0x80297F0

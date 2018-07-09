@@ -1,7 +1,7 @@
 import sys
 
 def err():
-    fprint(stderr, "Usage: <binpath> <binpath> [-s1|-s2|-s4] [-d<diffnum>]")
+    sys.stderr.write(stderr, "Usage: <binpath> <binpath> [-s1|-s2|-s4] [-d<numDiffs>]")
     exit(1)
 
 def parseSize(arg):
@@ -13,13 +13,13 @@ def parseSize(arg):
         err()
     return size
 
-def parseDiffnum(arg):
+def parseNumDiffs(arg):
     if len(arg) != 3 or arg[:2] != '-d' or not arg[2].isdigit():
         err()
     # parse digit
-    diffnum = int(arg[2])
+    diffnum = int(arg[2:])
     if diffnum < 0:
-        fprint(stderr, "diffnum must be unsigned")
+        sys.stderr.write("diffnum must be positive")
     return diffnum
 
 def concatBytes(bytes):
@@ -30,6 +30,21 @@ def concatBytes(bytes):
     for i in range(len(bytes)):
         output |= bytes[i] << (8*i)
     return output
+
+class Diff:
+    def __init__(self, ea, diffNum, packet1, packet2):
+        """
+        Represents one detected difference in the binaries
+        :param ea: the address the difference was found in
+        :param diffNum: the nth difference this is
+        :param packet1: the data in the first binary
+        :param packet2: the data in the second
+        """
+        self.ea = ea
+        self.diffNum = diffNum
+        self.packet1 = packet1
+        self.packet2 = packet2
+
 
 def main():
     """
@@ -44,34 +59,34 @@ def main():
 
     # parse switches for packet size and the difference to display
     size = 4
-    diff = 0
+    numDiffs = -1 # display all diffs by default
     for i in range(3,5):
         if len(sys.argv) > i:
             if '-s' in sys.argv[i]:
                 size = parseSize(sys.argv[i])
             elif '-d' in sys.argv[i]:
-                diff = parseDiffnum(sys.argv[i])
+                numDiffs = parseNumDiffs(sys.argv[i])
             else:
                 err()
 
     # find difference
     p1 = p2 = 0
     packet1 = packet2 = 0
-    d = 0
+    currDiffNum = 0
     addr = diffAddr = 0
     foundDiff = False
+    diffs = []
     while packet1 != b'' and packet2 != b'':
         packet1 = bin1.read(size)
         packet2 = bin2.read(size)
         if packet1 != packet2:
-            # store last diff packets
-            p1 = packet1
-            p2 = packet2
-            diffAddr = addr
+            # detected a diff!
             foundDiff = True
-            d += 1
-            # stop comparing when we find the requested difference to display
-            if d-1 == diff:
+            diffs.append(Diff(addr, currDiffNum, packet1, packet2))
+            # store last diff packets
+            currDiffNum += 1
+            # stop comparing when we find the requested number of differences to display
+            if currDiffNum == numDiffs:
                 break
         addr += size
 
@@ -81,7 +96,9 @@ def main():
 
     # display output
     if foundDiff:
-        print("Found diff #%d @ %06X: bin1=0x%X bin2=0x%0X" % (d-1, diffAddr, concatBytes(p1), concatBytes(p2)))
+        for diff in diffs:
+            print("Found diff #%d @ %06X: bin1=0x%X bin2=0x%0X" %
+                  (diff.diffNum, diff.ea, concatBytes(diff.packet1), concatBytes(diff.packet2)))
     else:
         print("Files are identical!")
 
