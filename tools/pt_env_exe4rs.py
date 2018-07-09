@@ -19,9 +19,9 @@ pt.env(externsPath= 'externs/')
 pt.env(asmFiles={
     ## matching test
     # progress:
-    # compile: 0.78% (0x2020/0x100000)
+    # compile: 6.25% (0x10000/0x100000)
     # checksum: 0.32% (0xD20/0x100000)
-    'sect0':    (0x08000000, 0x08000000+0x5000),
+    'sect0':    (0x08000000, 0x08000000+0x10000),
     #'sect1':    (0x08100000, 0x08200000),
     #'sect2':    (0x08200000, 0x08300000),
     #'sect3':    (0x08300000, 0x08400000),
