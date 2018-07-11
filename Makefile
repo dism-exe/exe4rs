@@ -2,8 +2,11 @@
 # (devkitpro/devkitARM/bin should be in path)
 MAKE = make
 CC = arm-none-eabi-gcc
+# CC = "/c/Program Files (x86)/GNU Tools Arm Embedded/7 2018-q2-update/bin/arm-none-eabi-gcc"
 AS = arm-none-eabi-as
 LD = arm-none-eabi-ld
+# CC = "/c/Program Files (x86)/GNU Tools Arm Embedded/7 2018-q2-update/bin/arm-none-eabi-ld"
+
 OBJCOPY = arm-none-eabi-objcopy
 SHA1SUM = sha1sum
 PY = py
@@ -16,7 +19,7 @@ EXTERNS = externs
 OBJ =
 
 # build flags
-COMPLIANCE_FLAGS = -O0 -g0
+COMPLIANCE_FLAGS = -O0
 WFLAGS =
 ARCH = -march=armv4t -mtune=arm7tdmi -mabi=aapcs -mthumb -mthumb-interwork
 CDEBUG =
