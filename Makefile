@@ -16,7 +16,11 @@ SRCDIR = asm
 BIN = bin
 CONST = constants
 EXTERNS = externs
-OBJ =
+
+# project files
+SFILES = $(SRCDIR)/_link.s
+OFILES = $(addprefix $(OBJ),$(notdir $(SFILES:.s=.o)))
+ROM = exe4rs
 
 # build flags
 COMPLIANCE_FLAGS = -O0
@@ -25,14 +29,9 @@ ARCH = -march=armv4t -mtune=arm7tdmi -mabi=aapcs -mthumb -mthumb-interwork
 CDEBUG =
 CFLAGS = $(ARCH) $(WFLAGS) $(COMPLIANCE_FLAGS) $(CDEBUG)
 ASFLAGS =
-LDFLAGS = -g -Map exe6f.map
+LDFLAGS = -g -Map $(ROM).map
 LIB =
 ROM_OBJ_FLAGS = -O elf32-littlearm -B arm --rename-section .data=.f__rom --set-section-flags .f__rom="r,c,a"
-
-# project files
-SFILES = $(SRCDIR)/_link.s #$(wildcard $(SRCDIR)/*.s)
-OFILES = $(addprefix $(OBJ),$(notdir $(SFILES:.s=.o)))
-ROM = exe4rs
 
 all:
 

@@ -13,7 +13,7 @@ pt.env(compareBinPath= '')
 
 ## disassembly utils
 # TODO set this to your project path relative to your analysis idb path
-pt.env(dismProjPath= '../../Mods/GBA/exe4rs/')
+pt.env(dismProjPath= '../Disassembly/exe4rs/')
 pt.env(asmPath= 'asm/')
 pt.env(binPath='bin/')
 pt.env(externsPath= 'externs/')
