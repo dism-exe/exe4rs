@@ -122,11 +122,11 @@ sub_80694FC:
     pop {r4-r7,pc}
     .balign 4, 0x00
 off_8069538:    .word off_806953C
-off_806953C:    .word locret_8001F94+1
-    .word loc_8001EB2+1
+off_806953C:    .word nullsub_88+1
+    .word sub_8001EB2+1
     .word 0x300593D, 0x0
-    .word locret_8001F94+1
-    .word loc_8001EB2+1
+    .word nullsub_88+1
+    .word sub_8001EB2+1
     .word 0x300593D, 0x0
 off_806955C:    .word off_8069560
 off_8069560:    .word off_8069568

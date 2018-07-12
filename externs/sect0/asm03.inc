@@ -205,7 +205,7 @@
 .equ sub_80028D2, 0x80028D2
 .equ sub_800293C, 0x800293C
 .equ sub_8002998, 0x8002998
-.equ loc_8002D9E, 0x8002D9E
+.equ sub_8002D9E, 0x8002D9E
 .equ sub_8002DF0, 0x8002DF0
 .equ sub_8002E36, 0x8002E36
 .equ sub_80037E8, 0x80037E8
@@ -304,6 +304,7 @@
 .equ loc_80383F4, 0x80383F4
 .equ sub_8038510, 0x8038510
 .equ sub_80388E0, 0x80388E0
+.equ dword_803B324, 0x803B324
 .equ sub_803D618, 0x803D618
 .equ loc_8041D72, 0x8041D72
 .equ loc_80429E8, 0x80429E8
@@ -486,3 +487,5 @@
 .equ dword_876E0F4, 0x876E0F4
 .equ dword_87780F4, 0x87780F4
 .equ dword_8780664, 0x8780664
+.equ dword_879E71C, 0x879E71C
+.equ dword_87A2700, 0x87A2700

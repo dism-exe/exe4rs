@@ -160,8 +160,8 @@ sub_806A9C4:
     pop {r4-r7,pc}
     .byte 0, 0
 off_806AA00:    .word off_806AA04
-off_806AA04:    .word locret_8001F94+1
-    .word loc_8001F20+1
+off_806AA04:    .word nullsub_88+1
+    .word sub_8001F20+1
     .word 0x300593D, 0x800, 0x8001F95, 0x8001F21, 0x300593D
     .word 0x800, 0x8001F95, 0x8001F21, 0x300593D, 0x800
     .word 0x8001F95, 0x8001ECF, 0x300593D, 0x800

@@ -80,8 +80,8 @@ sub_807731C:
     pop {r4-r7,pc}
     .balign 4, 0x00
 off_8077358:    .word off_807735C
-off_807735C:    .word locret_8001F94+1
-    .word loc_8001ECE+1
+off_807735C:    .word nullsub_88+1
+    .word sub_8001ECE+1
     .word 0x300593D, 0x800, 0x8001F95, 0x8001ECF, 0x300593D
     .word 0x800, 0x8001F95, 0x8001ECF, 0x300593D, 0x800
 off_807738C:    .word off_8077390

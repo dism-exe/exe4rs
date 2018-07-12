@@ -1,7 +1,7 @@
 .equ unk_2012800, 0x2012800
 .equ sub_8001E5C, 0x8001E5C
-.equ loc_8001ECE, 0x8001ECE
-.equ locret_8001F94, 0x8001F94
+.equ sub_8001ECE, 0x8001ECE
+.equ nullsub_88, 0x8001F94
 .equ sub_80024E0, 0x80024E0
 .equ sub_80034C4, 0x80034C4
 .equ sub_8026188, 0x8026188

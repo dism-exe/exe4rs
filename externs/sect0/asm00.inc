@@ -143,7 +143,7 @@
 .equ dword_200ACF0, 0x200ACF0
 .equ dword_200ACF4, 0x200ACF4
 .equ dword_200ACF8, 0x200ACF8
-.equ unk_200AE50, 0x200AE50
+.equ dword_200AE50, 0x200AE50
 .equ dword_200B130, 0x200B130
 .equ dword_200B134, 0x200B134
 .equ dword_200B140, 0x200B140
@@ -277,6 +277,7 @@
 .equ word_2036412, 0x2036412
 .equ word_2036414, 0x2036414
 .equ word_2036416, 0x2036416
+.equ word_2036418, 0x2036418
 .equ word_203641A, 0x203641A
 .equ dword_203641C, 0x203641C
 .equ dword_2036430, 0x2036430
@@ -926,7 +927,7 @@
 .equ sub_80CF924, 0x80CF924
 .equ sub_80CF946, 0x80CF946
 .equ loc_80CF968, 0x80CF968
-.equ loc_80CFAA0, 0x80CFAA0
+.equ sub_80CFAA0, 0x80CFAA0
 .equ loc_80CFC38, 0x80CFC38
 .equ loc_80CFD4C, 0x80CFD4C
 .equ loc_80CFE70, 0x80CFE70
@@ -1153,7 +1154,7 @@
 .equ sub_81128A4, 0x81128A4
 .equ sub_8112BCC, 0x8112BCC
 .equ sub_811365C, 0x811365C
-.equ sub_8212700, 0x8212700
+.equ function_chunks_loc_8212700, 0x8212700
 .equ dword_82212BC, 0x82212BC
 .equ off_82A07D0, 0x82A07D0
 .equ unk_82B04B0, 0x82B04B0

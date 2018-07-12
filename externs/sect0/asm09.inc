@@ -2,8 +2,8 @@
 .equ unk_2038800, 0x2038800
 .equ unk_3002BB0, 0x3002BB0
 .equ sub_8001E5C, 0x8001E5C
-.equ loc_8001ECE, 0x8001ECE
-.equ locret_8001F94, 0x8001F94
+.equ sub_8001ECE, 0x8001ECE
+.equ nullsub_88, 0x8001F94
 .equ sub_8002028, 0x8002028
 .equ sub_80029F8, 0x80029F8
 .equ sub_8002A2A, 0x8002A2A
