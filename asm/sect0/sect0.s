@@ -46,25 +46,25 @@
 .include "asm/sect0/asm11.s"
 .incbin  "bin/sect0/bin11.bin"
 
-.section sect0_asm12, "ax"
+// .section sect0_asm12, "ax"
 .include "asm/sect0/asm12.s"
-.incbin  "bin/sect0/bin12.bin"
+.incbin  "bin/sect0/bin12.bin" // OUT OF SYNC
 
-.section sect0_asm13, "ax"
-.include "asm/sect0/asm13.s"
-.incbin  "bin/sect0/bin13.bin"
+// .section sect0_asm13, "ax"
+// .include "asm/sect0/asm13.s"
+// .incbin  "bin/sect0/bin13.bin"
 
-.section sect0_asm14, "ax"
-.include "asm/sect0/asm14.s"
-.incbin  "bin/sect0/bin14.bin"
+// .section sect0_asm14, "ax"
+// .include "asm/sect0/asm14.s"
+// .incbin  "bin/sect0/bin14.bin"
 
-.section sect0_asm15, "ax"
-.include "asm/sect0/asm15.s"
-.incbin  "bin/sect0/bin15.bin"
+// .section sect0_asm15, "ax"
+// .include "asm/sect0/asm15.s"
+// .incbin  "bin/sect0/bin15.bin"
 // <--->
-.section sect0_asm16, "ax"
-.include "asm/sect0/asm16.s"
-.incbin  "bin/sect0/bin16.bin"
+// .section sect0_asm16, "ax"
+// .include "asm/sect0/asm16.s"
+// .incbin  "bin/sect0/bin16.bin"
 
 // .section sect0_asm17, "ax"
 // .include "asm/sect0/asm17.s"
