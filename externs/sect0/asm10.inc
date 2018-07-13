@@ -1,30 +1,49 @@
+.include "sect0/asm00.inc"
+// .equ sub_8001E5C, 0x8001E5C
+// .equ nullsub_88, 0x8001F94
+// .equ sub_80029F8, 0x80029F8
+// .equ sub_80034C4, 0x80034C4
+
+.include "sect0/asm02.inc"
+// .equ sub_8025CFC, 0x8025CFC
+// .equ sub_802610E, 0x802610E
+// .equ sub_80261BA, 0x80261BA
+// .equ sub_802A28C, 0x802A28C
+
+
 .equ unk_2012800, 0x2012800
 .equ unk_2038800, 0x2038800
-.equ sub_8001E5C, 0x8001E5C
+.equ unk_3002BB0, 0x3002BB0
 .equ sub_8001ECE, 0x8001ECE
-.equ nullsub_88, 0x8001F94
-.equ sub_80029F8, 0x80029F8
+.equ sub_8002028, 0x8002028
 .equ sub_8002A2A, 0x8002A2A
-.equ sub_80034C4, 0x80034C4
-.equ sub_8025CFC, 0x8025CFC
+.equ sub_8024F9C, 0x8024F9C
 .equ sub_8026098, 0x8026098
-.equ sub_802610E, 0x802610E
 .equ sub_8026188, 0x8026188
-.equ sub_80261BA, 0x80261BA
 .equ sub_80266E0, 0x80266E0
-.equ sub_802A28C, 0x802A28C
 .equ sub_804DF5C, 0x804DF5C
-.equ off_80738D0, 0x80738D0
-.equ dword_8073C1C, 0x8073C1C
-.equ dword_8073C20, 0x8073C20
-.equ dword_8073C24, 0x8073C24
-.equ dword_8073C28, 0x8073C28
-.equ dword_8073CE0, 0x8073CE0
-.equ dword_8073E50, 0x8073E50
-.equ dword_8073F08, 0x8073F08
-.equ dword_8073FC0, 0x8073FC0
-.equ dword_8074078, 0x8074078
-.equ dword_807407C, 0x807407C
-.equ dword_8074080, 0x8074080
-.equ dword_8074084, 0x8074084
+.equ dword_806E9C0, 0x806E9C0
+.equ dword_806E9C0, 0x806E9C0
+.equ dword_806E9C0, 0x806E9C0
+.equ dword_806F1C0, 0x806F1C0
+.equ dword_806F340, 0x806F340
+.equ dword_806F340, 0x806F340
+.equ dword_806F340, 0x806F340
+.equ dword_806F340, 0x806F340
+.equ dword_8071618, 0x8071618
+.equ dword_807161C, 0x807161C
+.equ dword_8071620, 0x8071620
+.equ dword_8071624, 0x8071624
+.equ dword_8071718, 0x8071718
+.equ dword_807171C, 0x807171C
+.equ dword_8071720, 0x8071720
+.equ dword_8071724, 0x8071724
+.equ dword_8071728, 0x8071728
+.equ dword_807172C, 0x807172C
+.equ dword_8071730, 0x8071730
+.equ dword_8071734, 0x8071734
+.equ dword_8071738, 0x8071738
+.equ dword_807178C, 0x807178C
+.equ dword_8071790, 0x8071790
+.equ dword_8071794, 0x8071794
 .equ off_8619ABC, 0x8619ABC

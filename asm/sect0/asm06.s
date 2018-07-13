@@ -1,38 +1,10 @@
-// forward references
-.equ sub_8069450, 0x08069450
-.equ off_80694A8, 0x080694A8
-.equ off_80694AC, 0x080694AC
-.equ off_80694B0, 0x080694B0
-.equ off_80694B4, 0x080694B4
-.equ dword_80694BC, 0x080694BC
-.equ sub_80694CA, 0x080694CA
-.equ off_80694D8, 0x080694D8
-.equ off_80694DC, 0x080694DC
-.equ off_80694E4, 0x080694E4
-.equ off_80694F0, 0x080694F0
-.equ sub_80694FC, 0x080694FC
-.equ off_8069538, 0x08069538
-.equ off_806953C, 0x0806953C
-.equ off_806955C, 0x0806955C
-.equ off_8069560, 0x08069560
-.equ off_8069568, 0x08069568
-.equ sub_806958C, 0x0806958C
-.equ off_80695A0, 0x080695A0
-.equ off_80695A4, 0x080695A4
-.equ nullsub_71, 0x080695AC
-.equ nullsub_72, 0x080695AE
-.equ sub_80695B0, 0x080695B0
-.equ off_80695C4, 0x080695C4
-.equ off_80695C8, 0x080695C8
-.equ dword_80695D0, 0x080695D0
-.equ dword_80695FC, 0x080695FC
-.equ off_8069638, 0x08069638
+.include "sect0/asm06.inc"
 
 .thumb
-sub_8069450:
+dead_805D4F8:
     push {r4-r7,lr}
     mov r7, r10
-    ldr r0, [pc, #0x80694a8-0x8069454-4] // dword_80691D8+40
+    ldr r0, [pc, #0x805d554-0x805d4fc-4] // dword_805C800+1960
     ldr r1, [r7,#0x14]
     ldrb r2, [r5,#5]
     lsl r4, r2, #2
@@ -52,142 +24,56 @@ sub_8069450:
     ldrb r4, [r5,#5]
     bl sub_8025CFC
     bl sub_802610E
-    bl sub_80694FC
-    ldr r0, [pc, #0x80694ac-0x8069488-4] // unk_2038800
+    ldr r0, [pc, #0x805d558-0x805d52c-4] // unk_2038800
     bl sub_80029F8
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
-    ldr r0, [pc, #0x80694b0-0x8069492-2] // off_80694B4
+    ldr r0, [pc, #0x805d560-0x805d536-2] // off_805D564
     ldr r0, [r0,r1]
     bl sub_8002A2A
     bl sub_804DF5C
-    bl sub_80695B0
-    bl sub_802A28C
-    pop {r4-r7,pc}
-off_80694A8:    .word dword_80691D8+0x28
-off_80694AC:    .word unk_2038800
-off_80694B0:    .word off_80694B4
-off_80694B4:    .word dword_80694BC
-    .word 0x80694C2
-dword_80694BC:    .word 0x41C031C, 0x31CFFFF, 0xA1C041C
-    .byte 0xFF, 0xFF
-// end of function sub_8069450
-
-.thumb
-sub_80694CA:
-    push {lr}
-    lsl r1, r1, #2
-    ldr r0, [pc, #0x80694d8-0x80694ce-2] // off_80694DC
-    ldr r0, [r0,r1]
-    bl sub_80024E0
-    pop {pc}
-off_80694D8:    .word off_80694DC
-off_80694DC:    .word off_80694E4
-    .word off_80694F0
-off_80694E4:    .word off_8069238
-    .word off_80693C8
-    .word 0xFFFFFFFF
-off_80694F0:    .word off_8069238
-    .word off_80693C8
-    .word 0xFFFFFFFF
-// end of function sub_80694CA
-
-.thumb
-sub_80694FC:
-    push {r4-r7,lr}
-    mov r5, r10
-    ldr r5, [r5,#0x40]
-    ldrb r1, [r5,#5]
-    lsl r1, r1, #4
-    ldr r7, [pc, #0x8069538-0x8069506-2] // off_806953C
-    add r7, r7, r1
-    ldr r0, [r7]
-    ldr r1, [r7,#4]
-    ldr r2, [r7,#8]
-    bl sub_8001E5C
-    mov r1, r10
-    ldr r1, [r1,#8]
-    ldrh r2, [r1]
-    ldr r0, [r7,#0xc]
-    orr r2, r0
-    strh r2, [r1]
-    ldr r0, [pc, #0x806955c-0x8069520-4] // off_8069560
+    bl sub_805D60C
+    ldr r0, [pc, #0x805d55c-0x805d546-2] // off_805D868
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
     ldr r0, [r0,r1]
-    add r4, r0, #0
-    bl sub_8026188
-    add r0, r4, #0
-    bl sub_80261BA
+    str r0, [r5,#0x7c]
     pop {r4-r7,pc}
     .balign 4, 0x00
-off_8069538:    .word off_806953C
-off_806953C:    .word nullsub_88+1
-    .word sub_8001EB2+1
-    .word 0x300593D, 0x0
-    .word nullsub_88+1
-    .word sub_8001EB2+1
-    .word 0x300593D, 0x0
-off_806955C:    .word off_8069560
-off_8069560:    .word off_8069568
-    .word off_8069568
-off_8069568:    .word dword_860EF60
-    .word unk_2012800
-    .word 0x600BC00, 0x860EFB0, 0x2012C00, 0x3000800, 0x860F1D4
-    .word 0x3002A50, 0x20
-// end of function sub_80694FC
+off_805D554:    .word dword_805C800+0x7A8
+off_805D558:    .word unk_2038800
+off_805D55C:    .word off_805D868
+off_805D560:    .word off_805D564
+off_805D564:    .word dword_805D57C
+    .word 0x805D582, 0x805D592, 0x805D596, 0x805D5A2, 0x805D5B4
+dword_805D57C:    .word 0x6C1C051C, 0x1A1CFFFF, 0x1C1C1B1C, 0x2E182D18, 0x30182F18
+    .word 0x2818FFFF, 0xC1CFFFF, 0x231C0D1C, 0x28182C18, 0x1E1CFFFF
+    .word 0x471C1F1C, 0x2D18641C, 0x30182F18, 0xFFFF2C18, 0x181C171C
+    .word 0x37183018, 0xB500FFFF, 0x48020089, 0xF7A45840, 0xBD00FF8B
+    .word 0x805D5D0, 0x805D5E8, 0x805D5EC, 0x805D5F0, 0x805D5F4
+    .word 0x805D5FC, 0x805D600, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
+    .word 0x805D0D0, 0xFFFFFFFF, 0xFFFFFFFF, 0x805D318, 0x805D3A8
+    .word 0xFFFFFFFF
+// end of function dead_805D4F8
 
 .thumb
-sub_806958C:
-    push {r4-r7,lr}
-    mov r5, r10
-    ldr r5, [r5,#0x40]
-    ldrb r6, [r5,#5]
-    lsl r6, r6, #2
-    ldr r7, [pc, #0x80695a0-0x8069596-2] // off_80695A4
-    ldr r7, [r7,r6]
-    mov lr, pc
-    bx r7
-    pop {r4-r7,pc}
-off_80695A0:    .word off_80695A4
-off_80695A4:    .word nullsub_71+1
-    .word nullsub_72+1
-// end of function sub_806958C
-
-.thumb
-nullsub_71:
-    mov pc, lr
-// end of function nullsub_71
-
-.thumb
-nullsub_72:
-    mov pc, lr
-// end of function nullsub_72
-
-.thumb
-sub_80695B0:
+sub_805D60C:
     push {lr}
     mov r0, r10
     ldr r0, [r0,#0x40]
     ldrb r0, [r0,#5]
     lsl r0, r0, #2
-    ldr r1, [pc, #0x80695c4-0x80695ba-2] // off_80695C8
+    ldr r1, [pc, #0x805d620-0x805d616-2] // off_805D624
     ldr r0, [r1,r0]
     bl sub_80034C4
     pop {pc}
-off_80695C4:    .word off_80695C8
-off_80695C8:    .word dword_80695D0  // <endpool>
-// end of function sub_80695B0
+off_805D620:    .word off_805D624
+off_805D624:    .word dword_805D63C  // <endpool>
+// end of function sub_805D60C
 
-    .word dword_80695FC
-dword_80695D0:    .word 0x5, 0x240000, 0xFFDC0000, 0x0
-    .word 0x2, 0x405, 0xD40000, 0xFFCE0000, 0x0
-    .word 0x20005, 0xFF
-dword_80695FC:    .word 0x5, 0xFFA40000, 0xC0000, 0x0
-    .word 0x2, 0x405, 0xF40000, 0xFFFE0000, 0x0
-    .word 0x20006, 0xFF, 0x806966C, 0x8069730, 0x8069690, 0x8069823
-off_8069638:    .word off_80698D4
-    .word dword_8069A24
-    .word dword_8069648
-    .word dword_8069658
+    .word dword_805D640  // <filepool>
+    .word dword_805D680
+    .word dword_805D684
+    .word dword_805D6B0
+    .word dword_805D718
 /*For debugging purposes, connect comment at any range!*/

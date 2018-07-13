@@ -6,7 +6,6 @@ CC = arm-none-eabi-gcc
 AS = arm-none-eabi-as
 LD = arm-none-eabi-ld
 # CC = "/c/Program Files (x86)/GNU Tools Arm Embedded/7 2018-q2-update/bin/arm-none-eabi-ld"
-
 OBJCOPY = arm-none-eabi-objcopy
 SHA1SUM = sha1sum
 PY = py
@@ -16,6 +15,7 @@ SRCDIR = asm
 BIN = bin
 CONST = constants
 EXTERNS = externs
+INC = inc
 
 # project files
 SFILES = $(SRCDIR)/_link.s
@@ -23,7 +23,7 @@ OFILES = $(addprefix $(OBJ),$(notdir $(SFILES:.s=.o)))
 ROM = exe4rs
 
 # build flags
-COMPLIANCE_FLAGS = -O0
+COMPLIANCE_FLAGS = -O0 -I$(INC)
 WFLAGS =
 ARCH = -march=armv4t -mtune=arm7tdmi -mabi=aapcs -mthumb -mthumb-interwork
 CDEBUG =
@@ -41,7 +41,6 @@ rom: $(ROM)
 $(ROM):
 	$(OBJCOPY) -I binary $(ROM_OBJ_FLAGS) $(BIN)/$(ROM).bin rom.o
 	$(CC) $(CFLAGS) -c $(SFILES)
-	# $(AS) $(ASFLAGS) -c $(SFILES)
 	$(LD) $(LDFLAGS) -o $(ROM).elf -T ld_script.x $(OFILES) rom.o $(LIB)
 	$(OBJCOPY) --set-section-flags .f__rom="r,c,a" $(ROM).elf
 	$(OBJCOPY) -O binary $(ROM).elf $(ROM).gba
@@ -69,7 +68,8 @@ clean:
 	$(CC) $(CFLAGS) -c $<
 	echo done compiling $<
 
-# Rule for how to generate the dependencies for the given files. -M gcc option generates dependencies.
+# Rule for how to generate the dependencies for the given files.
+# -M gcc option generates dependencies.
 %.d : %.c
 	@set -e; rm -f $@; \
 	$(CC) $(COMPLIANCE_FLAGS ) -M $< > $@.$$$$; \

@@ -9,4 +9,6 @@ This is the only compiled file that is overlaid over the binary
 
 /* Range [0x08000000, ???) */
 .section .r__start, "ax"
+
+.section .sect0, "ax"
 .include "asm/sect0/sect0.s"

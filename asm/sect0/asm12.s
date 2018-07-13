@@ -1,63 +1,68 @@
-// forward references
-.equ sub_80772DA, 0x080772DA
-.equ off_80772E8, 0x080772E8
-.equ off_80772EC, 0x080772EC
-.equ off_80772F8, 0x080772F8
-.equ off_8077304, 0x08077304
-.equ off_8077310, 0x08077310
-.equ sub_807731C, 0x0807731C
-.equ off_8077358, 0x08077358
-.equ off_807735C, 0x0807735C
-.equ off_807738C, 0x0807738C
-.equ off_8077390, 0x08077390
-.equ off_807739C, 0x0807739C
-.equ loc_80773C0, 0x080773C0
-.equ off_80773D4, 0x080773D4
-.equ off_80773D8, 0x080773D8
-.equ locret_80773E4, 0x080773E4
-.equ locret_80773E6, 0x080773E6
-.equ locret_80773E8, 0x080773E8
-.equ sub_80773EA, 0x080773EA
-.equ off_8077400, 0x08077400
-.equ off_8077404, 0x08077404
-.equ dword_8077410, 0x08077410
-.equ dword_8077450, 0x08077450
-.equ dword_807747C, 0x0807747C
-.equ off_80774D4, 0x080774D4
-.equ dword_80774EC, 0x080774EC
-.equ dword_80774FC, 0x080774FC
+.include "sect0/asm12.inc"
 
 .thumb
-sub_80772DA:
-    push {lr}
+dead_80758A4:
+    push {r4-r7,lr}
+    mov r7, r10
+    ldr r0, [pc, #0x80758fc-0x80758a8-4] // off_8075564
+    ldr r1, [r7,#0x14]
+    ldrb r2, [r5,#5]
+    lsl r4, r2, #2
+    add r0, r0, r4
+    ldr r0, [r0]
+    str r0, [r1,#0x14]
+    ldrb r0, [r5,#4]
+    ldrb r1, [r5,#5]
+    bl sub_8026098
+    ldrb r0, [r5,#4]
+    ldrb r1, [r5,#5]
+    bl sub_80266E0
+    ldr r0, [r5,#0x38]
+    ldr r1, [r5,#0x3c]
+    ldr r2, [r5,#0x40]
+    ldrb r3, [r5,#4]
+    ldrb r4, [r5,#5]
+    bl sub_8025CFC
+    bl sub_802610E
+    bl sub_8075A0C
+    ldr r0, [pc, #0x8075900-0x80758dc-4] // unk_2038800
+    bl sub_80029F8
+    ldrb r1, [r5,#5]
     lsl r1, r1, #2
-    ldr r0, [pc, #0x80772e8-0x80772de-2] // off_80772EC
+    ldr r0, [pc, #0x8075904-0x80758e6-2] // off_8075908
     ldr r0, [r0,r1]
-    bl sub_80024E0
-    pop {pc}
-off_80772E8:    .word off_80772EC
-off_80772EC:    .word off_80772F8
-    .word off_8077304
-    .word off_8077310
-off_80772F8:    .word off_8076FB8
-    .word dword_8076FBC+0x5C
-    .word 0xFFFFFFFF
-off_8077304:    .word off_8076FB8
-    .word dword_8076FBC+0x5C
-    .word 0xFFFFFFFF
-off_8077310:    .word off_8076FB8
-    .word dword_8076FBC+0x5C
-    .word 0xFFFFFFFF
-// end of function sub_80772DA
+    bl sub_8002A2A
+    bl sub_804DF5C
+    bl sub_8075C0E
+    bl sub_802A28C
+    pop {r4-r7,pc}
+off_80758FC:    .word off_8075564
+off_8075900:    .word unk_2038800
+off_8075904:    .word off_8075908
+off_8075908:    .word dword_8075948
+    .word 0x807594E, 0x8075954, 0x807595A, 0x8075960, 0x8075966
+    .word 0x807596C, 0x8075972, 0x8075978, 0x807597E, 0x8075984
+    .word 0x807598A, 0x8075990, 0x8075996, 0x807599C, 0x80759A2
+dword_8075948:    .word 0x221C6A1C, 0x6A1CFFFF, 0xFFFF221C, 0x221C6A1C, 0x6A1CFFFF
+    .word 0xFFFF221C, 0x221C6A1C, 0x6A1CFFFF, 0xFFFF221C, 0x221C6A1C
+    .word 0x6A1CFFFF, 0xFFFF221C, 0x221C6A1C, 0x6A1CFFFF, 0xFFFF221C
+    .word 0x221C6A1C, 0x6A1CFFFF, 0xFFFF221C, 0x221C6A1C, 0x6A1CFFFF
+    .word 0xFFFF221C, 0x221C6A1C, 0x6A1CFFFF, 0xFFFF4E1C, 0x89B500
+    .word 0x58404802, 0xFD96F78C, 0xBD00, 0x80759BC, 0x80759FC
+    .word 0x80759FC, 0x80759FC, 0x80759FC, 0x80759FC, 0x80759FC
+    .word 0x80759FC, 0x80759FC, 0x80759FC, 0x80759FC, 0x80759FC
+    .word 0x80759FC, 0x80759FC, 0x80759FC, 0x80759FC, 0x80759FC
+    .word 0x8070ED4, 0x8070F7C, 0x8071004, 0xFFFFFFFF
+// end of function dead_80758A4
 
 .thumb
-sub_807731C:
+sub_8075A0C:
     push {r4-r7,lr}
     mov r5, r10
     ldr r5, [r5,#0x40]
     ldrb r1, [r5,#5]
     lsl r1, r1, #4
-    ldr r7, [pc, #0x8077358-0x8077326-2] // off_807735C
+    ldr r7, [pc, #0x8075a48-0x8075a16-2] // off_8075A4C
     add r7, r7, r1
     ldr r0, [r7]
     ldr r1, [r7,#4]
@@ -69,7 +74,7 @@ sub_807731C:
     ldr r0, [r7,#0xc]
     orr r2, r0
     strh r2, [r1]
-    ldr r0, [pc, #0x807738c-0x8077340-4] // off_8077390
+    ldr r0, [pc, #0x8075b4c-0x8075a30-4] // off_8075B50
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
     ldr r0, [r0,r1]
@@ -79,78 +84,104 @@ sub_807731C:
     bl sub_80261BA
     pop {r4-r7,pc}
     .balign 4, 0x00
-off_8077358:    .word off_807735C
-off_807735C:    .word nullsub_88+1
+off_8075A48:    .word off_8075A4C
+off_8075A4C:    .word nullsub_88+1
     .word sub_8001ECE+1
     .word 0x300593D, 0x800, 0x8001F95, 0x8001ECF, 0x300593D
     .word 0x800, 0x8001F95, 0x8001ECF, 0x300593D, 0x800
-off_807738C:    .word off_8077390
-off_8077390:    .word off_807739C
-    .word off_807739C
-    .word off_807739C
-off_807739C:    .word off_861A250
+    .word 0x8001F95, 0x8001ECF, 0x300593D, 0x800, 0x8001F95
+    .word 0x8001ECF, 0x300593D, 0x800, 0x8001F95, 0x8001ECF
+    .word 0x300593D, 0x800, 0x8001F95, 0x8001ECF, 0x300593D
+    .word 0x800, 0x8001F95, 0x8001ECF, 0x300593D, 0x800
+    .word 0x8001F95, 0x8001ECF, 0x300593D, 0x800, 0x8001F95
+    .word 0x8001ECF, 0x300593D, 0x800, 0x8001F95, 0x8001ECF
+    .word 0x300593D, 0x800, 0x8001F95, 0x8001ECF, 0x300593D
+    .word 0x800, 0x8001F95, 0x8001ECF, 0x300593D, 0x800
+    .word 0x8001F95, 0x8001ECF, 0x300593D, 0x800, 0x8001F95
+    .word 0x8001ECF, 0x300593D, 0x800, 0x8001F95, 0x8001ECF
+    .word 0x300593D, 0x800
+off_8075B4C:    .word off_8075B50
+off_8075B50:    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+    .word off_8075B90
+off_8075B90:    .word off_8619ABC
     .word unk_2012800
-    .word 0x600CC80, 0x861A34C, 0x2012C00, 0x3001800, 0x861A59C
+    .word 0x600CC80, 0x8619B60, 0x2012C00, 0x3001800, 0x8619D84
     .word 0x3002A50, 0x20
-// end of function sub_807731C
+// end of function sub_8075A0C
 
-loc_80773C0:
+loc_8075BB4:
     push {r4-r7,lr}
     mov r5, r10
     ldr r5, [r5,#0x40]
     ldrb r6, [r5,#5]
     lsl r6, r6, #2
-    ldr r7, [pc, #0x80773d4-0x80773ca-2] // off_80773D8
+    ldr r7, [pc, #0x8075bc8-0x8075bbe-2] // off_8075BCC
     ldr r7, [r7,r6]
     mov lr, pc
     bx r7
     pop {r4-r7,pc}
-off_80773D4:    .word off_80773D8
-off_80773D8:    .word locret_80773E4+1
-    .word locret_80773E6+1
-    .word locret_80773E8+1
-locret_80773E4:
-    mov pc, lr
-locret_80773E6:
-    mov pc, lr
-locret_80773E8:
+off_8075BC8:    .word off_8075BCC
+off_8075BCC:    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+    .word locret_8075C0C+1
+locret_8075C0C:
     mov pc, lr
 .thumb
-sub_80773EA:
+sub_8075C0E:
     push {lr}
     mov r0, r10
     ldr r0, [r0,#0x40]
     ldrb r0, [r0,#5]
     lsl r0, r0, #2
-    ldr r1, [pc, #0x8077400-0x80773f4-4] // off_8077404
+    ldr r1, [pc, #0x8075c24-0x8075c18-4] // off_8075C28
     ldr r0, [r1,r0]
     bl sub_80034C4
     pop {pc}
-    .byte 0, 0
-off_8077400:    .word off_8077404
-off_8077404:    .word dword_8077410  // <endpool>
-// end of function sub_80773EA
+    .balign 4, 0x00
+off_8075C24:    .word off_8075C28
+off_8075C28:    .word dword_8075C68  // <endpool>
+// end of function sub_8075C0E
 
-    .word dword_8077450  // <filepool>
-    .word dword_807747C
-dword_8077410:    .word 0x305, 0xFFFC0000, 0xFF860000, 0x0, 0x0
-    .word 0x405, 0xFFCE0000, 0xA80000, 0x0
-    .word 0x20000, 0x405, 0xC80000, 0x460000, 0x0
-    .word 0x20001, 0xFF
-dword_8077450:    .word 0x305, 0xB00000, 0xFE840000, 0x0
-    .word 0x1, 0x405, 0x17A0000, 0xFF720000, 0x0
-    .word 0x20102, 0xFF
-dword_807747C:    .word 0x305, 0xFF940000, 0xFFB20000, 0x0
-    .word 0x2, 0x405, 0x1220000, 0x400000, 0x0
-    .word 0x20303, 0x405, 0xFF220000, 0xFF5E0000, 0x0
-    .word 0x20104, 0xFF, 0x8077520, 0x80776FC, 0x8077970, 0x8077584
-    .word 0x807781A, 0x8077A09
-off_80774D4:    .word off_8077B0C
-    .word off_8078140
-    .word off_8078B60
-    .word dword_80774EC
-    .word dword_80774FC
-    .word dword_807750C
-dword_80774EC:    .word 0xFF020100, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
-dword_80774FC:    .word 0xFFFF0100, 0xFFFFFF04, 0xFFFFFFFF, 0xFFFFFFFF
+    .word dword_8075C94  // <filepool>
+    .word dword_8075CC0
+    .word dword_8075CEC
+    .word dword_8075D18
+    .word dword_8075D44
+    .word dword_8075D70
+    .word dword_8075D9C
+    .word dword_8075DC8
+    .word dword_8075DCC
+    .word dword_8075DF8
+    .word dword_8075E24
+    .word dword_8075E28
+    .word dword_8075E54
+    .word dword_8075E80
+    .word dword_8075E98
 /*For debugging purposes, connect comment at any range!*/

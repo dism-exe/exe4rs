@@ -13,3 +13,4 @@
 .include "externs/sect0/asm12.inc"
 .include "externs/sect0/asm13.inc"
 .include "externs/sect0/asm14.inc"
+.include "externs/sect0/asm15.inc"

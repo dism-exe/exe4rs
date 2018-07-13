@@ -1,45 +1,10 @@
-// forward references
-.equ sub_806A87C, 0x0806A87C
-.equ off_806A8D4, 0x0806A8D4
-.equ off_806A8D8, 0x0806A8D8
-.equ off_806A8DC, 0x0806A8DC
-.equ off_806A8E0, 0x0806A8E0
-.equ dword_806A8F0, 0x0806A8F0
-.equ sub_806A91E, 0x0806A91E
-.equ off_806A92C, 0x0806A92C
-.equ off_806A930, 0x0806A930
-.equ off_806A940, 0x0806A940
-.equ off_806A964, 0x0806A964
-.equ off_806A988, 0x0806A988
-.equ off_806A9AC, 0x0806A9AC
-.equ sub_806A9C4, 0x0806A9C4
-.equ off_806AA00, 0x0806AA00
-.equ off_806AA04, 0x0806AA04
-.equ off_806AA44, 0x0806AA44
-.equ off_806AA48, 0x0806AA48
-.equ off_806AA58, 0x0806AA58
-.equ off_806AA7C, 0x0806AA7C
-.equ loc_806AAA0, 0x0806AAA0
-.equ off_806AAB4, 0x0806AAB4
-.equ off_806AAB8, 0x0806AAB8
-.equ locret_806AAC8, 0x0806AAC8
-.equ locret_806AACA, 0x0806AACA
-.equ locret_806AACC, 0x0806AACC
-.equ locret_806AACE, 0x0806AACE
-.equ sub_806AAD0, 0x0806AAD0
-.equ off_806AAE4, 0x0806AAE4
-.equ off_806AAE8, 0x0806AAE8
-.equ dword_806AAF8, 0x0806AAF8
-.equ dword_806AAFC, 0x0806AAFC
-.equ dword_806AB00, 0x0806AB00
-.equ dword_806AB04, 0x0806AB04
-.equ off_806AB28, 0x0806AB28
+.include "sect0/asm07.inc"
 
 .thumb
-sub_806A87C:
+sub_8069450:
     push {r4-r7,lr}
     mov r7, r10
-    ldr r0, [pc, #0x806a8d4-0x806a880-4] // dword_8069A24+1732
+    ldr r0, [pc, #0x80694a8-0x8069454-4] // dword_80691D8+40
     ldr r1, [r7,#0x14]
     ldrb r2, [r5,#5]
     lsl r4, r2, #2
@@ -59,85 +24,54 @@ sub_806A87C:
     ldrb r4, [r5,#5]
     bl sub_8025CFC
     bl sub_802610E
-    bl sub_806A9C4
-    ldr r0, [pc, #0x806a8d8-0x806a8b4-4] // unk_2038800
+    bl sub_80694FC
+    ldr r0, [pc, #0x80694ac-0x8069488-4] // unk_2038800
     bl sub_80029F8
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
-    ldr r0, [pc, #0x806a8dc-0x806a8be-2] // off_806A8E0
+    ldr r0, [pc, #0x80694b0-0x8069492-2] // off_80694B4
     ldr r0, [r0,r1]
     bl sub_8002A2A
     bl sub_804DF5C
-    bl sub_806AAD0
+    bl sub_80695B0
     bl sub_802A28C
     pop {r4-r7,pc}
-off_806A8D4:    .word dword_8069A24+0x6C4
-off_806A8D8:    .word unk_2038800
-off_806A8DC:    .word off_806A8E0
-off_806A8E0:    .word dword_806A8F0
-    .word 0x806A8FA, 0x806A904, 0x806A90E
-dword_806A8F0:    .word 0x151C141C, 0x271C161C, 0x141CFFFF, 0x161C151C, 0xFFFF271C
-    .word 0x151C141C, 0x271C161C, 0x141CFFFF, 0x161C151C, 0x221C0A1C
-    .word 0x211C271C
+off_80694A8:    .word dword_80691D8+0x28
+off_80694AC:    .word unk_2038800
+off_80694B0:    .word off_80694B4
+off_80694B4:    .word dword_80694BC
+    .word 0x80694C2
+dword_80694BC:    .word 0x41C031C, 0x31CFFFF, 0xA1C041C
     .byte 0xFF, 0xFF
-// end of function sub_806A87C
+// end of function sub_8069450
 
 .thumb
-sub_806A91E:
+sub_80694CA:
     push {lr}
     lsl r1, r1, #2
-    ldr r0, [pc, #0x806a92c-0x806a922-2] // off_806A930
+    ldr r0, [pc, #0x80694d8-0x80694ce-2] // off_80694DC
     ldr r0, [r0,r1]
     bl sub_80024E0
     pop {pc}
-off_806A92C:    .word off_806A930
-off_806A930:    .word off_806A940
-    .word off_806A964
-    .word off_806A988
-    .word off_806A9AC
-off_806A940:    .word dword_806A208+0x10
-    .word dword_806A208+0x40
-    .word dword_806A208+0x78
-    .word dword_806A208+0xB0
-    .word off_806A310
-    .word dword_806A314+0x4C
-    .word dword_806A314+0x9C
-    .word dword_806A314+0xD4
+off_80694D8:    .word off_80694DC
+off_80694DC:    .word off_80694E4
+    .word off_80694F0
+off_80694E4:    .word off_8069238
+    .word off_80693C8
     .word 0xFFFFFFFF
-off_806A964:    .word dword_806A208+0x10
-    .word dword_806A208+0x40
-    .word dword_806A208+0x78
-    .word dword_806A208+0xB0
-    .word off_806A310
-    .word dword_806A314+0x4C
-    .word dword_806A314+0x9C
-    .word dword_806A314+0xD4
+off_80694F0:    .word off_8069238
+    .word off_80693C8
     .word 0xFFFFFFFF
-off_806A988:    .word dword_806A208+0x10
-    .word dword_806A208+0x40
-    .word dword_806A208+0x78
-    .word dword_806A208+0xB0
-    .word off_806A310
-    .word dword_806A314+0x4C
-    .word dword_806A314+0x9C
-    .word dword_806A314+0xD4
-    .word 0xFFFFFFFF
-off_806A9AC:    .word dword_806A6A0+4
-    .word dword_806A6A0+0x34
-    .word dword_806A6A0+0x6C
-    .word dword_806A6A0+0xA4
-    .word dword_806A6A0+0x144
-    .word 0xFFFFFFFF
-// end of function sub_806A91E
+// end of function sub_80694CA
 
 .thumb
-sub_806A9C4:
+sub_80694FC:
     push {r4-r7,lr}
     mov r5, r10
     ldr r5, [r5,#0x40]
     ldrb r1, [r5,#5]
     lsl r1, r1, #4
-    ldr r7, [pc, #0x806aa00-0x806a9ce-2] // off_806AA04
+    ldr r7, [pc, #0x8069538-0x8069506-2] // off_806953C
     add r7, r7, r1
     ldr r0, [r7]
     ldr r1, [r7,#4]
@@ -149,7 +83,7 @@ sub_806A9C4:
     ldr r0, [r7,#0xc]
     orr r2, r0
     strh r2, [r1]
-    ldr r0, [pc, #0x806aa44-0x806a9e8-4] // off_806AA48
+    ldr r0, [pc, #0x806955c-0x8069520-4] // off_8069560
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
     ldr r0, [r0,r1]
@@ -158,81 +92,74 @@ sub_806A9C4:
     add r0, r4, #0
     bl sub_80261BA
     pop {r4-r7,pc}
-    .byte 0, 0
-off_806AA00:    .word off_806AA04
-off_806AA04:    .word nullsub_88+1
-    .word sub_8001F20+1
-    .word 0x300593D, 0x800, 0x8001F95, 0x8001F21, 0x300593D
-    .word 0x800, 0x8001F95, 0x8001F21, 0x300593D, 0x800
-    .word 0x8001F95, 0x8001ECF, 0x300593D, 0x800
-off_806AA44:    .word off_806AA48
-off_806AA48:    .word off_806AA58
-    .word off_806AA58
-    .word off_806AA58
-    .word off_806AA7C
-off_806AA58:    .word dword_860F4E4+0xF8
+    .balign 4, 0x00
+off_8069538:    .word off_806953C
+off_806953C:    .word nullsub_88+1
+    .word sub_8001EB2+1
+    .word 0x300593D, 0x0
+    .word nullsub_88+1
+    .word sub_8001EB2+1
+    .word 0x300593D, 0x0
+off_806955C:    .word off_8069560
+off_8069560:    .word off_8069568
+    .word off_8069568
+off_8069568:    .word dword_860EF60
     .word unk_2012800
-    .word 0x600C020, 0x860F7C4, 0x2013000, 0x3001800, 0x860FAF4
+    .word 0x600BC00, 0x860EFB0, 0x2012C00, 0x3000800, 0x860F1D4
     .word 0x3002A50, 0x20
-off_806AA7C:    .word dword_860F4E4+0xF8
-    .word unk_2012800
-    .word 0x600C020, 0x8610AA8, 0x2013000, 0x3001800, 0x8610CFC
-    .word 0x3002A50, 0x20
-// end of function sub_806A9C4
+// end of function sub_80694FC
 
-loc_806AAA0:
+.thumb
+sub_806958C:
     push {r4-r7,lr}
     mov r5, r10
     ldr r5, [r5,#0x40]
     ldrb r6, [r5,#5]
     lsl r6, r6, #2
-    ldr r7, [pc, #0x806aab4-0x806aaaa-2] // off_806AAB8
+    ldr r7, [pc, #0x80695a0-0x8069596-2] // off_80695A4
     ldr r7, [r7,r6]
     mov lr, pc
     bx r7
     pop {r4-r7,pc}
-off_806AAB4:    .word off_806AAB8
-off_806AAB8:    .word locret_806AAC8+1
-    .word locret_806AACA+1
-    .word locret_806AACC+1
-    .word locret_806AACE+1
-locret_806AAC8:
-    mov pc, lr
-locret_806AACA:
-    mov pc, lr
-locret_806AACC:
-    mov pc, lr
-locret_806AACE:
-    mov pc, lr
+off_80695A0:    .word off_80695A4
+off_80695A4:    .word nullsub_71+1
+    .word nullsub_72+1
+// end of function sub_806958C
+
 .thumb
-sub_806AAD0:
+nullsub_71:
+    mov pc, lr
+// end of function nullsub_71
+
+.thumb
+nullsub_72:
+    mov pc, lr
+// end of function nullsub_72
+
+.thumb
+sub_80695B0:
     push {lr}
     mov r0, r10
     ldr r0, [r0,#0x40]
     ldrb r0, [r0,#5]
     lsl r0, r0, #2
-    ldr r1, [pc, #0x806aae4-0x806aada-2] // off_806AAE8
+    ldr r1, [pc, #0x80695c4-0x80695ba-2] // off_80695C8
     ldr r0, [r1,r0]
     bl sub_80034C4
     pop {pc}
-off_806AAE4:    .word off_806AAE8
-off_806AAE8:    .word dword_806AAF8  // <endpool>
-// end of function sub_806AAD0
+off_80695C4:    .word off_80695C8
+off_80695C8:    .word dword_80695D0  // <endpool>
+// end of function sub_80695B0
 
-    .word dword_806AAFC  // <filepool>
-    .word dword_806AB00
-    .word dword_806AB04
-dword_806AAF8:    .word 0xFF
-dword_806AAFC:    .word 0xFF
-dword_806AB00:    .word 0xFF
-dword_806AB04:    .word 0xFF, 0x806AB8C, 0x806AD98, 0x806AFC4, 0x806B244, 0x806ABE6
-    .word 0x806ADF2, 0x806B01E, 0x806B358
-off_806AB28:    .word off_806B774
-    .word off_806BAC8
-    .word off_806BFA4
-    .word dword_806C888
-    .word dword_806AB48
-    .word dword_806AB58
-    .word dword_806AB68
-    .word dword_806AB78
+    .word dword_80695FC
+dword_80695D0:    .word 0x5, 0x240000, 0xFFDC0000, 0x0
+    .word 0x2, 0x405, 0xD40000, 0xFFCE0000, 0x0
+    .word 0x20005, 0xFF
+dword_80695FC:    .word 0x5, 0xFFA40000, 0xC0000, 0x0
+    .word 0x2, 0x405, 0xF40000, 0xFFFE0000, 0x0
+    .word 0x20006, 0xFF, 0x806966C, 0x8069730, 0x8069690, 0x8069823
+off_8069638:    .word off_80698D4
+    .word dword_8069A24
+    .word dword_8069648
+    .word dword_8069658
 /*For debugging purposes, connect comment at any range!*/
