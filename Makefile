@@ -50,7 +50,7 @@ fdiff:
 
 tail: $(ROM)
 	@# Create tail.bin using the tail location in current elf then compile again
-	$(PY) tools/gen_obj_tail.py $(ROM).elf bin/$(ROM).bin bin/tail.bin
+	$(PY) tools/gen_obj_tail.py $(ROM).elf bin/$(ROM).bin bin/tail.bin 'tail'
 	@echo "Updated tail.bin!"
 
 clean:

@@ -61,18 +61,19 @@ sect0_asm14:
 sect0_asm15:
 .include "asm/sect0/asm15.s"
 .incbin  "bin/sect0/bin15.bin"
+
+sect0_asm16:
+.include "asm/sect0/asm16.s"
+.incbin  "bin/sect0/bin16.bin"
 // <--->
-// sect0_asm16:
-// .include "asm/sect0/asm16.s"
-// .incbin  "bin/sect0/bin16.bin"
 
-// sect0_asm17:
-// .include "asm/sect0/asm17.s"
-// .incbin  "bin/sect0/bin17.bin"
+sect0_asm17:
+.include "asm/sect0/asm17.s"
+.incbin  "bin/sect0/bin17.bin"
 
-// sect0_asm18:
-// .include "asm/sect0/asm18.s"
-// .incbin  "bin/sect0/bin18.bin"
+sect0_asm18:
+.include "asm/sect0/asm18.s"
+.incbin  "bin/sect0/bin18.bin"
 
 // sect0_asm19:
 // .include "asm/sect0/asm19.s"

@@ -13,18 +13,20 @@ import re
 file_name = 'gen_obj_tail'
 
 def err():
-    print("Usage: %s <elfPath> <binPath> <tailPath>" % file_name)
+    print("Usage: %s <elfPath> <binPath> <tailPath> <tailSymbolName>" % file_name)
     sys.exit(1)
 
-def main(elfPath, binPath, tailPath):
+def main(elfPath, binPath, tailPath, tailSymbolName):
     """
     Reads the elf file, determines the location of the tail symbol, and creates tail.bin based on that
     :param elfPath: the path to the elf file to find the tail symbol in
     :param binPath: the path to the original file to extract tail.bin from
     :param tailPath: the path to the tail file to overwrite or create
+    :param tailSymbolName: this is the name of the last label before the tail bin file is bin included.
+                           (Ex. 'tail' in 'tail: .incbin "bin/tail")
     """
     # extract the symbol and make it relative to the rom segment
-    tail_ea = getSymbol(elfPath, 'tail') - 0x08000000
+    tail_ea = getSymbol(elfPath, tailSymbolName) - 0x08000000
     # extract just the tail.bin portion from the bin file: [tail_ea:)
     bin = open(binPath, 'rb')
     bin.seek(tail_ea)
@@ -66,6 +68,6 @@ def getSymbol(elfPath, symbolName):
     return output
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         err()
-    main(sys.argv[1], sys.argv[2], sys.argv[3])
+    main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
