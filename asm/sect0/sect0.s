@@ -54,13 +54,13 @@ sect0_asm13:
 .include "asm/sect0/asm13.s"
 .incbin  "bin/sect0/bin13.bin"
 
-// sect0_asm14:
-// .include "asm/sect0/asm14.s"
-// .incbin  "bin/sect0/bin14.bin"
+sect0_asm14:
+.include "asm/sect0/asm14.s"
+.incbin  "bin/sect0/bin14.bin"
 
-// sect0_asm15:
-// .include "asm/sect0/asm15.s"
-// .incbin  "bin/sect0/bin15.bin"
+sect0_asm15:
+.include "asm/sect0/asm15.s"
+.incbin  "bin/sect0/bin15.bin"
 // <--->
 // sect0_asm16:
 // .include "asm/sect0/asm16.s"
