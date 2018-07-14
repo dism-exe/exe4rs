@@ -23,7 +23,7 @@ OFILES = $(addprefix $(OBJ),$(notdir $(SFILES:.s=.o)))
 ROM = exe4rs
 
 # build flags
-COMPLIANCE_FLAGS = -O0 -I$(INC)
+COMPLIANCE_FLAGS = -O0 -g3 -I$(INC)
 WFLAGS =
 ARCH = -march=armv4t -mtune=arm7tdmi -mabi=aapcs -mthumb -mthumb-interwork
 CDEBUG =
@@ -31,7 +31,6 @@ CFLAGS = $(ARCH) $(WFLAGS) $(COMPLIANCE_FLAGS) $(CDEBUG)
 ASFLAGS =
 LDFLAGS = -g -Map $(ROM).map
 LIB =
-ROM_OBJ_FLAGS = -O elf32-littlearm -B arm --rename-section .data=.f__rom --set-section-flags .f__rom="r,c,a"
 
 all:
 
@@ -39,10 +38,8 @@ rom: $(ROM)
 	@# TODO: this tab is needed or ROM is executed weirdly?? oops!
 
 $(ROM):
-	$(OBJCOPY) -I binary $(ROM_OBJ_FLAGS) $(BIN)/$(ROM).bin rom.o
 	$(CC) $(CFLAGS) -c $(SFILES)
-	$(LD) $(LDFLAGS) -o $(ROM).elf -T ld_script.x $(OFILES) rom.o $(LIB)
-	$(OBJCOPY) --set-section-flags .f__rom="r,c,a" $(ROM).elf
+	$(LD) $(LDFLAGS) -o $(ROM).elf -T ld_script.x $(OFILES) $(LIB)
 	$(OBJCOPY) -O binary $(ROM).elf $(ROM).gba
 
 checksum:
@@ -50,6 +47,11 @@ checksum:
 
 fdiff:
 	$(PY) tools/fdiff.py bin/$(ROM).bin $(ROM).gba -s2
+
+tail: $(ROM)
+	@# Create tail.bin using the tail location in current elf then compile again
+	$(PY) tools/gen_obj_tail.py $(ROM).elf bin/$(ROM).bin bin/tail.bin
+	@echo "Updated tail.bin!"
 
 clean:
 	rm -f *.preout

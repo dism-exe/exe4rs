@@ -10,7 +10,6 @@ pt.env(ROMPath= '')
 ## search utils
 pt.env(compareBinPath= '')
 
-
 ## disassembly utils
 # TODO set this to your project path relative to your analysis idb path
 pt.env(dismProjPath= './GameDev/Disassembly/exe4rs/')
@@ -53,7 +52,6 @@ pt.env(asmFiles={
     #'sect7':    (0x08700000, 0x08800000),
 })
 pt.env(binFiles={
-    'rom':                (0x8000000, 0x8800000),
     'sect0/bin00':        (0x8017C08, 0x8019010),
     'sect0/bin01':        (0x801972C, 0x801DA08),
     'sect0/bin02':        (0x8045538, 0x8046C98),

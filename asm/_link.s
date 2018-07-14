@@ -10,5 +10,10 @@ This is the only compiled file that is overlaid over the binary
 /* Range [0x08000000, ???) */
 .section .r__start, "ax"
 
-.section .sect0, "ax"
+sect0:
 .include "asm/sect0/sect0.s"
+
+// include parts of the ROM not disassembled yet
+// run 'make tail' if the location of this label change to re-compute tail.bin
+tail:
+.incbin "bin/tail.bin"
