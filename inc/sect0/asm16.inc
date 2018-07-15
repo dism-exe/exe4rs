@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM16
+.equ INC_SECT0_ASM16, 0
+
 // Public Interface
 
 // Forward Reference
@@ -12,3 +15,5 @@
 .equ off_807FD44, 0x807FD44
 .equ off_807FD48, 0x807FD48
 
+
+.endif // INC_SECT0_ASM16

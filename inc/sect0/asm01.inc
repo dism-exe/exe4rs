@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM01
+.equ INC_SECT0_ASM01, 0
+
 // Public Interface
 .equ sub_8019010, 0x8019010
 .equ sub_8019020, 0x8019020
@@ -124,3 +127,5 @@
 .equ off_8019724, 0x8019724
 .equ off_8019728, 0x8019728
 
+
+.endif // INC_SECT0_ASM01

@@ -1,12 +1,15 @@
+.ifndef EXT_SECT0_ASM04
+.equ EXT_SECT0_ASM04, 0
+
+.include "sect0/asm02.inc"
+// .equ sub_8025BD8, 0x8025BD8
+
 .include "sect0/asm00.inc"
 // .equ loc_8000874, 0x8000874
 // .equ f900_8000950, 0x8000950
 // .equ fA00_8000A30, 0x8000A30
 // .equ sub_800280C, 0x800280C
 // .equ sub_8002998, 0x8002998
-
-.include "sect0/asm02.inc"
-// .equ sub_8025BD8, 0x8025BD8
 
 
 .equ byte_2008BB0, 0x2008BB0
@@ -37,7 +40,7 @@
 .equ off_80542AC, 0x80542AC
 .equ dword_80542BC, 0x80542BC
 .equ off_80542CC, 0x80542CC
-.equ loc_8102E9C, 0x8102E9C
+.equ sub_8102E9C, 0x8102E9C
 .equ loc_8103ED0, 0x8103ED0
 .equ loc_81045E0, 0x81045E0
 .equ loc_81048C0, 0x81048C0
@@ -116,3 +119,5 @@
 .equ loc_810E5C4, 0x810E5C4
 .equ loc_810E760, 0x810E760
 .equ loc_810E968, 0x810E968
+
+.endif // EXT_SECT0_ASM04

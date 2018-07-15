@@ -1,12 +1,15 @@
+.ifndef EXT_SECT0_ASM18
+.equ EXT_SECT0_ASM18, 0
+
+.include "sect0/asm02.inc"
+// .equ sub_8026188, 0x8026188
+
 .include "sect0/asm00.inc"
 // .equ f900_8000904, 0x8000904
 // .equ nullsub_87, 0x8001EB0
 // .equ sub_8001EFC, 0x8001EFC
 // .equ sub_8001F44, 0x8001F44
 // .equ nullsub_88, 0x8001F94
-
-.include "sect0/asm02.inc"
-// .equ sub_8026188, 0x8026188
 
 .include "sect0/asm10.inc"
 // .equ dword_8070ED8, 0x8071004
@@ -60,3 +63,5 @@
 .equ dword_8085CE0, 0x8085CE0
 .equ dword_8085CF0, 0x8085CF0
 .equ off_8085D00, 0x8085D00
+
+.endif // EXT_SECT0_ASM18

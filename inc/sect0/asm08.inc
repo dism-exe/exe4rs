@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM08
+.equ INC_SECT0_ASM08, 0
+
 // Public Interface
 .equ sub_806A9C4, 0x806A9C4
 .equ off_806AB28, 0x806AB28
@@ -37,3 +40,5 @@
 .equ dword_806AB00, 0x806AB00
 .equ dword_806AB04, 0x806AB04
 
+
+.endif // INC_SECT0_ASM08

@@ -1,10 +1,13 @@
-.include "sect0/asm00.inc"
-// .equ sub_80029F8, 0x80029F8
-// .equ sub_80034C4, 0x80034C4
+.ifndef EXT_SECT0_ASM05
+.equ EXT_SECT0_ASM05, 0
 
 .include "sect0/asm02.inc"
 // .equ sub_8026098, 0x8026098
 // .equ sub_80266E0, 0x80266E0
+
+.include "sect0/asm00.inc"
+// .equ sub_80029F8, 0x80029F8
+// .equ sub_80034C4, 0x80034C4
 
 
 .equ unk_2038800, 0x2038800
@@ -18,3 +21,5 @@
 .equ dword_80593C0, 0x80593C0
 .equ dword_80593D8, 0x80593D8
 .equ off_8059484, 0x8059484
+
+.endif // EXT_SECT0_ASM05

@@ -1,44 +1,5 @@
-.include "sect0/asm00.inc"
-// .equ f500_8000558, 0x8000558
-// .equ f500_80005D2, 0x80005D2
-// .equ f500_80006CC, 0x80006CC
-// .equ f900_8000904, 0x8000904
-// .equ f900_8000930, 0x8000930
-// .equ f900_8000970, 0x8000970
-// .equ f900_800098C, 0x800098C
-// .equ f900_80009B4, 0x80009B4
-// .equ fA00_8000A30, 0x8000A30
-// .equ sub_8001AD8, 0x8001AD8
-// .equ sub_8001AF6, 0x8001AF6
-// .equ sub_8001D04, 0x8001D04
-// .equ sub_8001D60, 0x8001D60
-// .equ sub_8001DDC, 0x8001DDC
-// .equ sub_8001E74, 0x8001E74
-// .equ sub_8002534, 0x8002534
-// .equ sub_800280C, 0x800280C
-// .equ sub_800282E, 0x800282E
-// .equ sub_80028D2, 0x80028D2
-// .equ sub_8002998, 0x8002998
-// .equ sub_8002E36, 0x8002E36
-// .equ sub_8003836, 0x8003836
-// .equ sub_800425A, 0x800425A
-// .equ sub_8005524, 0x8005524
-// .equ sub_8005754, 0x8005754
-// .equ sub_80057A8, 0x80057A8
-// .equ sub_8005838, 0x8005838
-// .equ sub_8005ADC, 0x8005ADC
-// .equ sub_8006084, 0x8006084
-// .equ sub_8006108, 0x8006108
-// .equ sub_8006318, 0x8006318
-// .equ sub_8006348, 0x8006348
-// .equ sub_800D742, 0x800D742
-
-.include "sect0/asm01.inc"
-// .equ sub_8019010, 0x8019010
-// .equ sub_8019108, 0x8019108
-// .equ sub_8019154, 0x8019154
-// .equ sub_8019196, 0x8019196
-// .equ ho_8019288, 0x8019288
+.ifndef EXT_SECT0_ASM03
+.equ EXT_SECT0_ASM03, 0
 
 .include "sect0/asm02.inc"
 // .equ sub_8024FA0, 0x8024FA0
@@ -77,6 +38,54 @@
 // .equ sub_8042FB4, 0x8042FB4
 // .equ sub_8043E48, 0x8043E48
 
+.include "sect0/asm20.inc"
+// .equ off_8089EC8, 0x8089EC8
+
+.include "sect0/asm01.inc"
+// .equ sub_8019010, 0x8019010
+// .equ sub_8019108, 0x8019108
+// .equ sub_8019154, 0x8019154
+// .equ sub_8019196, 0x8019196
+// .equ ho_8019288, 0x8019288
+
+.include "sect0/asm28.inc"
+// .equ loc_80C1008, 0x80C1008
+
+.include "sect0/asm00.inc"
+// .equ f500_8000558, 0x8000558
+// .equ f500_80005D2, 0x80005D2
+// .equ f500_80006CC, 0x80006CC
+// .equ f900_8000904, 0x8000904
+// .equ f900_8000930, 0x8000930
+// .equ f900_8000970, 0x8000970
+// .equ f900_800098C, 0x800098C
+// .equ f900_80009B4, 0x80009B4
+// .equ fA00_8000A30, 0x8000A30
+// .equ sub_8001AD8, 0x8001AD8
+// .equ sub_8001AF6, 0x8001AF6
+// .equ sub_8001D04, 0x8001D04
+// .equ sub_8001D60, 0x8001D60
+// .equ sub_8001DDC, 0x8001DDC
+// .equ sub_8001E74, 0x8001E74
+// .equ sub_8002534, 0x8002534
+// .equ sub_800280C, 0x800280C
+// .equ sub_800282E, 0x800282E
+// .equ sub_80028D2, 0x80028D2
+// .equ sub_8002998, 0x8002998
+// .equ sub_8002E36, 0x8002E36
+// .equ sub_8003836, 0x8003836
+// .equ sub_800425A, 0x800425A
+// .equ sub_8005524, 0x8005524
+// .equ sub_8005754, 0x8005754
+// .equ sub_80057A8, 0x80057A8
+// .equ sub_8005838, 0x8005838
+// .equ sub_8005ADC, 0x8005ADC
+// .equ sub_8006084, 0x8006084
+// .equ sub_8006108, 0x8006108
+// .equ sub_8006318, 0x8006318
+// .equ sub_8006348, 0x8006348
+// .equ sub_800D742, 0x800D742
+
 .include "sect0/asm04.inc"
 // .equ sub_8053980, 0x8053980
 // .equ sub_80539A0, 0x80539A0
@@ -85,8 +94,15 @@
 // .equ sub_8054054, 0x8054054
 // .equ sub_80540EC, 0x80540EC
 
-.include "sect0/asm20.inc"
-// .equ off_8089EC8, 0x8089EC8
+.include "sect0/asm27.inc"
+// .equ sub_809F280, 0x809F280
+// .equ sub_80A6D16, 0x80A6D16
+// .equ sub_80A6D9E, 0x80A6D9E
+// .equ sub_80A6DC8, 0x80A6DC8
+// .equ sub_80A6E74, 0x80A6E74
+
+.include "sect0/asm22.inc"
+// .equ sub_808EC76, 0x808EC76
 
 
 .equ unk_2000000, 0x2000000
@@ -334,25 +350,18 @@
 .equ unk_8053700, 0x8053700
 .equ unk_8053840, 0x8053840
 .equ sub_8053990, 0x8053990
-.equ unk_80539B0, 0x80539B0
+.equ sub_80539B0, 0x80539B0
 .equ sub_8053A04, 0x8053A04
-.equ loc_8054018, 0x8054018
+.equ sub_8054018, 0x8054018
 .equ sub_80540BA, 0x80540BA
 .equ sub_805411A, 0x805411A
 .equ sub_808EC68, 0x808EC68
-.equ sub_808EC76, 0x808EC76
 .equ sub_809ED3C, 0x809ED3C
-.equ sub_809F280, 0x809F280
 .equ sub_809F2B4, 0x809F2B4
-.equ sub_80A6D16, 0x80A6D16
 .equ sub_80A6D2E, 0x80A6D2E
-.equ sub_80A6D9E, 0x80A6D9E
 .equ sub_80A6DB8, 0x80A6DB8
-.equ sub_80A6DC8, 0x80A6DC8
 .equ sub_80A6DE2, 0x80A6DE2
-.equ sub_80A6E74, 0x80A6E74
 .equ sub_80A8ECE, 0x80A8ECE
-.equ loc_80C1008, 0x80C1008
 .equ sub_80F5304, 0x80F5304
 .equ sub_8110BF4, 0x8110BF4
 .equ sub_8110C04, 0x8110C04
@@ -422,3 +431,5 @@
 .equ loc_8753EF4, 0x8753EF4
 .equ loc_87540D4, 0x87540D4
 .equ dword_87548F4, 0x87548F4
+
+.endif // EXT_SECT0_ASM03

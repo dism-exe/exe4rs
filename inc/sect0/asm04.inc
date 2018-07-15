@@ -1,15 +1,18 @@
+.ifndef INC_SECT0_ASM04
+.equ INC_SECT0_ASM04, 0
+
 // Public Interface
 .equ sub_8053980, 0x8053980
 .equ sub_8053990, 0x8053990
 .equ sub_80539A0, 0x80539A0
-.equ unk_80539B0, 0x80539B0
+.equ sub_80539B0, 0x80539B0
 .equ unk_80539C4, 0x80539C4
 .equ sub_8053A04, 0x8053A04
 .equ function_chunks__function_chunks_loc_8053A28, 0x8053A28
 .equ sub_8053A30, 0x8053A30
 .equ sub_8053A6C, 0x8053A6C
 .equ sub_8053FFC, 0x8053FFC
-.equ loc_8054018, 0x8054018
+.equ sub_8054018, 0x8054018
 .equ sub_8054054, 0x8054054
 .equ sub_80540BA, 0x80540BA
 .equ sub_80540C6, 0x80540C6
@@ -19,6 +22,7 @@
 
 // Forward Reference
 .equ off_80539AC, 0x80539AC
+.equ off_80539C0, 0x80539C0
 .equ off_8053A24, 0x8053A24
 .equ loc_8053A36, 0x8053A36
 .equ off_8053A64, 0x8053A64
@@ -96,3 +100,5 @@
 .equ loc_80541DE, 0x80541DE
 .equ loc_80541E8, 0x80541E8
 
+
+.endif // INC_SECT0_ASM04

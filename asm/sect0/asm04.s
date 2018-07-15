@@ -35,26 +35,20 @@ sub_80539A0:
     pop {r1}
     mov pc, lr
 off_80539AC:    .word dword_200A600
-unk_80539B0:    .byte 2
-    .byte 0xB4
-    .byte 3
-    .byte 0x49 
-    .byte 9
-    .byte 0x68 
-    .byte 7
-    .byte 0x20
-    .byte 8
-    .byte 0x40 
-    .byte 2
-    .byte 0xBC
-    .byte 0xF7
-    .byte 0x46 
+// end of function sub_80539A0
+
+.thumb
+sub_80539B0:
+    push {r1}
+    ldr r1, [pc, #0x80539c0-0x80539b2-2] // dword_200A600
+    ldr r1, [r1]
+    mov r0, #7
+    and r0, r1
+    pop {r1}
+    mov pc, lr
     .byte 0
     .byte 0
-    .byte 0
-    .byte 0xA6
-    .byte 0
-    .byte 2
+off_80539C0:    .word dword_200A600
 unk_80539C4:    .byte 0
     .byte 0xB5
     .byte 0
@@ -119,7 +113,7 @@ unk_80539C4:    .byte 0
     .byte 0x46 
     .byte 0
     .byte 0
-// end of function sub_80539A0
+// end of function sub_80539B0
 
 .thumb
 sub_8053A04:
@@ -670,7 +664,7 @@ loc_8053E74:
     pop {r3,pc}
     .byte 0, 0
 dword_8053E90:    .word 0x11111111
-off_8053E94:    .word loc_8102E9C+1
+off_8053E94:    .word sub_8102E9C+1
     .word loc_8103ED0+1
     .word loc_81045E0+1
     .word loc_81048C0+1
@@ -795,7 +789,8 @@ locret_8054016:
     pop {r4-r7,pc}
 // end of function sub_8053FFC
 
-loc_8054018:
+.thumb
+sub_8054018:
     push {r4-r7,lr}
     mov r4, r8
     mov r5, r9
@@ -827,6 +822,8 @@ loc_805403E:
     mov r12, r6
     pop {r4-r7,pc}
 off_8054050:    .word off_8053E94
+// end of function sub_8054018
+
 .thumb
 sub_8054054:
     push {r4-r7,lr}

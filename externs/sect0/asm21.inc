@@ -1,3 +1,9 @@
+.ifndef EXT_SECT0_ASM21
+.equ EXT_SECT0_ASM21, 0
+
+.include "sect0/asm27.inc"
+// .equ sub_80A2798, 0x80A2798
+
 .include "sect0/asm00.inc"
 // .equ start_, 0x8000000
 // .equ sub_8001D60, 0x8001D60
@@ -12,5 +18,6 @@
 .equ off_80679B8, 0x80679B8
 .equ off_8067A28, 0x8067A28
 .equ off_8067AC8, 0x8067AC8
-.equ sub_80A2798, 0x80A2798
 .equ off_80CFF24, 0x80CFF24
+
+.endif // EXT_SECT0_ASM21

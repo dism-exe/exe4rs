@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM13
+.equ INC_SECT0_ASM13, 0
+
 // Public Interface
 .equ sub_80772DA, 0x80772DA
 .equ sub_807731C, 0x807731C
@@ -29,3 +32,5 @@
 .equ dword_80774EC, 0x80774EC
 .equ dword_80774FC, 0x80774FC
 
+
+.endif // INC_SECT0_ASM13

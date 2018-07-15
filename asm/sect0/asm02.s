@@ -5868,7 +5868,7 @@ sub_8020968:
     ldrb r0, [r5,#3]
     cmp r0, #1
     bne loc_80209A8
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #1
     beq loc_80209A8
     mov r1, #0x14
@@ -6421,7 +6421,7 @@ loc_8020F62:
     bl sub_80539A0
     cmp r0, #0
     bne locret_8020F8C
-    bl unk_80539B0
+    bl sub_80539B0
     ldr r1, [pc, #0x8020f90-0x8020f70-4] // loc_8020F94
     ldrb r0, [r1,r0]
     strb r0, [r5,#1]
@@ -6470,7 +6470,7 @@ loc_8020FC0:
     bl sub_80539A0
     cmp r0, #0
     bne locret_8020FDA
-    bl unk_80539B0
+    bl sub_80539B0
     add r0, #1
     strb r0, [r5,#6]
 loc_8020FD2:
@@ -6513,7 +6513,7 @@ loc_802100C:
     bl sub_80539A0
     cmp r0, #0
     bne locret_802103C
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #3
     bne loc_8021028
     mov r0, #4
@@ -8903,7 +8903,7 @@ sub_8022424:
     strh r0, [r6,#6]
     strh r0, [r6,#0xa]
     strh r0, [r6,#8]
-    ldr r0, [pc, #0x8022448-0x802243a-2] // =0x13C
+    ldr r0, [pc, #0x8022448-0x802243a-2] // =0x13B
     str r0, [r6,#0xc]
     mov r0, #0x25 
     bl sub_800C960
@@ -14806,7 +14806,7 @@ cb_8025518:
     mov r0, #0xc
     mov r1, #0xff
     bl sub_8005ADC
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #2
     beq loc_8025540
     cmp r0, #1
@@ -21702,7 +21702,7 @@ sub_8029F04:
     mov r1, #0x6a 
     bl sub_8024FF0
     beq loc_8029F3E
-    ldr r0, [pc, #0x8029f8c-0x8029f34-4] // loc_809DAAC
+    ldr r0, [pc, #0x8029f8c-0x8029f34-4] // dword_809DAAC
     bl sub_802BC60
     mov r0, #0
     pop {r5,r7,pc}
@@ -21743,7 +21743,7 @@ loc_8029F82:
     pop {r5,r7,pc}
     .balign 4, 0x00
 off_8029F88:    .word dword_809DA9C
-off_8029F8C:    .word loc_809DAAC
+off_8029F8C:    .word dword_809DAAC
 // end of function sub_8029F04
 
 .thumb
@@ -22556,7 +22556,7 @@ loc_802A632:
     .hword 0x1c00 // add r0, r0, #0  // <mkdata>
     bl sub_8024FF4
     bne loc_802A658
-    ldr r0, [pc, #0x802a6b0-0x802a646-2] // loc_809D4BC
+    ldr r0, [pc, #0x802a6b0-0x802a646-2] // dword_809D4BC
     ldr r1, [r4,#8]
     bl sub_802BC60
     mov r0, #0
@@ -22578,7 +22578,7 @@ dword_802A670:    .word 0x10020A
     .word 0x1B, 0x15D1, 0x11020A, 0x17, 0x15D2, 0x12020A, 0x19
     .word 0x15D3, 0x13020A, 0x1C, 0x15D4, 0x14020A, 0x1A, 0x15D5
     .word 0x15020A
-off_802A6B0:    .word loc_809D4BC
+off_802A6B0:    .word dword_809D4BC
 // end of function sub_802A61C
 
 .thumb
@@ -25397,7 +25397,7 @@ loc_802C686:
     mov r0, #1
     pop {pc}
     push {lr}
-    bl unk_80539B0
+    bl sub_80539B0
     lsl r0, r0, #2
     add r0, #1
     add r6, r0, #0
@@ -25438,13 +25438,13 @@ dead_ho_802C6C8:
 off_802C6E0:    .word jt_802C6E4
 jt_802C6E4:    .word sub_80A6D2E+1
     .word sub_80A6D9E+1
-    .word loc_80A6D7A+1
-    .word loc_80A6D90+1
+    .word sub_80A6D7A+1
+    .word sub_80A6D90+1
     .word sub_80A6E7C+1
     .word sub_80A6E88+1
     .word sub_80A6E94+1
     .word sub_80A6EA0+1
-    .word loc_80A6EB6+1
+    .word sub_80A6EB6+1
     .word sub_80A6EC2+1
     .word sub_80A6ED0+1
     .word sub_80A6EDE+1
@@ -25967,7 +25967,7 @@ loc_802D080:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .balign 4, 0x00
@@ -27150,7 +27150,7 @@ ho_802D9A0:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_802DBE0
     bl sub_802DBFC
@@ -28175,7 +28175,7 @@ sub_802E318:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#2]
 // end of function sub_802E318
@@ -29616,7 +29616,7 @@ sub_802EC90:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#0xc]
     strb r0, [r5,#0xd]
@@ -31642,7 +31642,7 @@ loc_802FC70:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrh r0, [r5,#0x38]
     mov r1, #1
@@ -31827,7 +31827,7 @@ sub_802FDD8:
     mov r0, #0x28 
     bl sub_80539A0
     beq locret_802FE26
-    bl unk_80539B0
+    bl sub_80539B0
     tst r0, r0
     beq loc_802FE0C
     bl sub_8030620
@@ -35317,7 +35317,7 @@ sub_80318CC:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#2]
 // end of function sub_80318CC
@@ -35969,7 +35969,7 @@ loc_8031E50:
     mov lr, pc
     bx r0
     bl sub_80321E4
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#2]
     cmp r0, #0x1c
@@ -36079,7 +36079,7 @@ sub_8031F3C:
     tst r0, r0
     bne loc_8031F6E
     mov r7, #0x10
-    bl unk_80539B0
+    bl sub_80539B0
     tst r0, r0
     beq loc_8031F54
     mov r7, #4
@@ -37379,7 +37379,7 @@ sub_803297C:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#2]
 // end of function sub_803297C
@@ -38534,7 +38534,7 @@ sub_80334A4:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#2]
 // end of function sub_80334A4
@@ -39635,7 +39635,7 @@ loc_8033E22:
     orr r7, r1
     cmp r7, #3
     bne loc_8033E30
-    bl unk_80539B0
+    bl sub_80539B0
     add r7, r0, #1
 loc_8033E30:
     mov r0, #0xc
@@ -39740,7 +39740,7 @@ sub_8033EF0:
     mov r0, #0x20 
     bl sub_80539A0
     beq locret_8033F46
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     beq loc_8033F12
     mov r0, #0x1c
@@ -42289,7 +42289,7 @@ sub_803532C:
     mov r0, #0
     bl sub_8035ABC
 loc_8035342:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42315,7 +42315,7 @@ sub_8035350:
     ldr r0, [pc, #0x803538c-0x8035374-4] // dword_803511C+48
     bl sub_8053FFC
 loc_803537A:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42340,7 +42340,7 @@ sub_8035390:
     mov r0, #1
     bl sub_8046CD8
 loc_80353AE:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42362,7 +42362,7 @@ sub_80353C0:
     mov r0, #0xa
     bl sub_8035EF4
 loc_80353D6:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42378,7 +42378,7 @@ sub_80353E8:
     bl sub_805411A
     bne loc_8035434
     bl sub_80359A8
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     beq loc_8035410
     mov r0, #4
@@ -42405,7 +42405,7 @@ loc_8035410:
     pop {r5}
     bl sub_80471E8
 loc_8035434:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42426,7 +42426,7 @@ sub_803544C:
     bl sub_80540EC
     ldr r0, [pc, #0x80354d8-0x8035460-4] // dword_803511C+88
     bl sub_8053FFC
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     beq loc_8035474
     ldrb r0, [r5,#0x15]
@@ -42471,7 +42471,7 @@ loc_80354C2:
     sub r0, r0, r2
     strh r0, [r5,#0x22]
 loc_80354C8:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42485,7 +42485,7 @@ off_80354D8:    .word dword_803511C+0x58
 .thumb
 sub_80354E0:
     push {lr}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42528,7 +42528,7 @@ sub_803552C:
     mov r0, #0x14
     bl sub_8035C6C
 loc_8035542:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42560,7 +42560,7 @@ sub_8035558:
     mov r0, #1
     bl sub_8046CD8
 loc_803558A:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42602,7 +42602,7 @@ loc_80355D4:
     strb r0, [r5,#1]
     b loc_80355DA
 loc_80355DA:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -42630,7 +42630,7 @@ sub_80355EC:
     mov r0, #1
     bl sub_8046CD8
 loc_8035612:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44502,7 +44502,7 @@ loc_80364D8:
     ldr r0, [pc, #0x8036500-0x80364e2-2] // dword_803511C+72
     bl sub_8053FFC
 loc_80364E8:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44542,7 +44542,7 @@ sub_8036518:
     strb r0, [r5,#0xc]
     bl sub_8047240
 loc_8036548:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44601,7 +44601,7 @@ loc_80365B0:
     mov r2, #0x20 
     bl f900_800098C
 loc_80365D4:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44647,14 +44647,14 @@ sub_80365F8:
     bl sub_803575C
     mov r0, #1
     bl sub_8046CD8
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
     mov r0, #0
     pop {pc}
 loc_803664C:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44686,7 +44686,7 @@ loc_8036682:
     mov r0, #0
     strb r0, [r5,#0xc]
 loc_803668A:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44705,7 +44705,7 @@ sub_80366A0:
     mov r0, #0xa
     bl sub_805411A
     bne loc_80366E8
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     beq loc_80366C4
     bl sub_80359A8
@@ -44729,7 +44729,7 @@ loc_80366C4:
     bl sub_8001DDC
     pop {r5}
 loc_80366E8:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44757,7 +44757,7 @@ loc_8036714:
     tst r1, r0
     beq loc_803671A
 loc_803671A:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44787,7 +44787,7 @@ sub_8036740:
     ldr r0, [pc, #0x803676c-0x8036750-4] // dword_803511C+104
     bl sub_8053FFC
 loc_8036756:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44808,7 +44808,7 @@ sub_8036770:
     mov r0, #0x1e
     mov r1, #0
     bl sub_8036A54
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44830,7 +44830,7 @@ sub_803679C:
     mov r0, #0x28 
     strb r0, [r5,#2]
 loc_80367AC:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44860,7 +44860,7 @@ sub_80367C4:
     ldr r0, [pc, #0x8036800-0x80367e2-2] // dword_803511C+80
     bl sub_8053FFC
 loc_80367E8:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -44887,7 +44887,7 @@ sub_8036804:
     mov r0, #0x30 
     strb r0, [r5,#0xc]
 loc_803681C:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     mov r3, #0
     strb r3, [r5,#0xf]
@@ -46603,7 +46603,7 @@ loc_80377B8:
     add r6, #4
 loc_80377CC:
     add r4, #1
-    ldr r0, [pc, #0x8037a50-0x80377ce-2] // =0x13C
+    ldr r0, [pc, #0x8037a50-0x80377ce-2] // =0x13F
     cmp r4, r0
     ble loc_803774A
     add r0, r5, #0
@@ -46693,7 +46693,7 @@ loc_803786C:
     add r6, #4
 loc_8037880:
     add r4, #1
-    ldr r0, [pc, #0x8037a50-0x8037882-2] // =0x13C
+    ldr r0, [pc, #0x8037a50-0x8037882-2] // =0x13F
     cmp r4, r0
     ble loc_80377FE
     add r0, r5, #0
@@ -46772,7 +46772,7 @@ loc_803790A:
     add r6, #4
 loc_8037920:
     add r4, #1
-    ldr r0, [pc, #0x8037a50-0x8037922-2] // =0x13C
+    ldr r0, [pc, #0x8037a50-0x8037922-2] // =0x13F
     cmp r4, r0
     ble loc_80378B6
     ldr r6, [pc, #0x803795c-0x8037928-4] // dword_201B800
@@ -46799,7 +46799,7 @@ loc_8037946:
 loc_803794C:
     add r6, #4
     add r4, #1
-    ldr r0, [pc, #0x8037968-0x8037950-4] // =0x13C
+    ldr r0, [pc, #0x8037968-0x8037950-4] // =0x13F
     cmp r4, r0
     blt loc_803792E
     add r0, r5, #0
@@ -46911,7 +46911,7 @@ loc_8037A24:
 loc_8037A2A:
     add r6, #4
     add r4, #1
-    ldr r0, [pc, #0x8037a44-0x8037a2e-2] // =0x13C
+    ldr r0, [pc, #0x8037a44-0x8037a2e-2] // =0x13F
     cmp r4, r0
     blt loc_8037A0C
     add r0, r5, #0
@@ -47931,7 +47931,7 @@ off_8038250:    .word dword_8036C70+0x178
 .thumb
 sub_8038254:
     push {r5,lr}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r3, [r5,#0xe]
     cmp r3, #0
@@ -49142,7 +49142,7 @@ loc_80394EC:
     bx r0
     bl sub_803A74C
     bl sub_803A800
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .balign 4, 0x00
@@ -49169,7 +49169,7 @@ sub_8039530:
     mov r0, #8
     bl sub_80539A0
     beq locret_8039568
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #1
     beq loc_8039554
     mov r0, #0
@@ -49203,7 +49203,7 @@ loc_803956C:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_803A74C
     bl sub_803A780
@@ -49293,7 +49293,7 @@ loc_8039628:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_803A74C
     bl sub_803A780
@@ -49566,7 +49566,7 @@ loc_8039854:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_803A74C
     bl sub_803A780
@@ -50133,7 +50133,7 @@ loc_8039CD8:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_803A74C
     bl sub_803A780
@@ -50556,7 +50556,7 @@ loc_803A034:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_803A74C
     bl sub_803A780
@@ -50765,7 +50765,7 @@ loc_803A1DC:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_803A74C
     bl sub_803A780
@@ -51187,7 +51187,7 @@ locret_803A532:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#2]
     cmp r0, #8
@@ -51260,7 +51260,7 @@ loc_803A5C4:
 
     bl sub_803A780
     bl sub_803A800
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .balign 4, 0x00
@@ -51287,7 +51287,7 @@ loc_803A600:
 
     bl sub_803A780
     bl sub_803A800
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .balign 4, 0x00
@@ -51323,7 +51323,7 @@ loc_803A664:
     bl sub_803A74C
     bl sub_803A780
     bl sub_803A800
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .balign 4, 0x00
@@ -51340,7 +51340,7 @@ loc_803A68C:
 // end of function sub_803A67C
 
     bl sub_803A800
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .byte 0, 0
@@ -51353,7 +51353,7 @@ loc_803A6A0:
     bx r0
     bl sub_803A74C
     bl sub_803A800
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .byte 0, 0
@@ -53950,7 +53950,7 @@ sub_803BC74:
     mov r0, #0x20 
     bl sub_80539A0
     beq locret_803BCBE
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     bne loc_803BC98
     mov r0, #0
@@ -54455,12 +54455,12 @@ sub_803BFF0:
     mov r1, #4
     ldr r2, [pc, #0x803c018-0x803c00e-2] // unk_2016268
     bl sub_803C148
-// end of function sub_803BFF0
-
     pop {r4-r7,pc}
     .balign 4, 0x00
 off_803C018:    .word unk_2016268
 off_803C01C:    .word dword_201A000
+// end of function sub_803BFF0
+
 .thumb
 sub_803C020:
     push {r4-r7,lr}
@@ -54831,7 +54831,7 @@ off_803C300:    .word 0x300
 .thumb
 sub_803C304:
     push {lr}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#0xf]
     tst r0, r0
@@ -58779,7 +58779,7 @@ locret_80402B2:
     pop {r5,pc}
 off_80402B4:    .word 0x300
     push {lr}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r0, [r5,#0xf]
     tst r0, r0
@@ -59383,7 +59383,7 @@ sub_8040850:
     bl sub_80413B4
     strb r2, [r5,#0x1e]
 loc_804087E:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
 off_8040888:    .word off_804088C
@@ -59863,7 +59863,7 @@ sub_8040C6C:
     mov r0, #0x20 
     bl sub_80539A0
     beq locret_8040C9E
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     beq loc_8040C84
     mov r0, #0x14
@@ -60331,7 +60331,7 @@ locret_8041014:
 .thumb
 sub_8041018:
     push {lr}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_8005B5C
     beq locret_80410A2
@@ -61043,7 +61043,7 @@ loc_804158A:
     mov r0, #8
     strb r0, [r5,#1]
 loc_8041598:
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_80417DC
     pop {pc}
@@ -65447,7 +65447,7 @@ sub_80435DC:
     ldr r0, [r0,r1]
     mov lr, pc
     bx r0
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {pc}
     .balign 4, 0x00
@@ -65831,7 +65831,7 @@ sub_8043990:
     ldrb r1, [r5,#5]
     cmp r1, #3
     beq loc_80439AE
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
 loc_80439AE:
     ldrb r0, [r5,#1]
@@ -68671,7 +68671,7 @@ loc_8044FA8:
     mov lr, pc
     bx r0
     bl sub_8043864
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     pop {r4-r7,pc}
 off_8044FC4:    .word byte_20015E0
@@ -69039,7 +69039,7 @@ sub_8045240:
     ldrb r1, [r5,#8]
     cmp r1, #0xf
     bne loc_8045258
-    bl unk_80539B0
+    bl sub_80539B0
     tst r0, r0
     beq loc_804526A
 loc_8045258:
@@ -69123,7 +69123,7 @@ locret_80452E4:
 sub_80452E8:
     push {lr}
     bl sub_8043864
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_8005B5C
     beq locret_8045352

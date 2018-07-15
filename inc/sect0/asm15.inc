@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM15
+.equ INC_SECT0_ASM15, 0
+
 // Public Interface
 .equ sub_807CB92, 0x807CB92
 .equ sub_807CBEC, 0x807CBEC
@@ -27,3 +30,5 @@
 .equ dword_807CCF8, 0x807CCF8
 .equ dword_807CD24, 0x807CD24
 
+
+.endif // INC_SECT0_ASM15

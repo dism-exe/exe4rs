@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM20
+.equ INC_SECT0_ASM20, 0
+
 // Public Interface
 .equ off_8089EC8, 0x8089EC8
 
@@ -70,3 +73,5 @@
 .equ loc_808A1EA, 0x808A1EA
 .equ off_808A1F0, 0x808A1F0
 
+
+.endif // INC_SECT0_ASM20

@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM21
+.equ INC_SECT0_ASM21, 0
+
 // Public Interface
 .equ dword_808D348, 0x808D348
 .equ dword_808D638, 0x808D638
@@ -8,5 +11,8 @@
 .equ sub_808CE04, 0x808CE04
 .equ sub_808CE14, 0x808CE14
 .equ off_808CE24, 0x808CE24
+.equ dword_808D3D8, 0x808D3D8
 .equ sub_808D62C, 0x808D62C
 
+
+.endif // INC_SECT0_ASM21

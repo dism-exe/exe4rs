@@ -1,19 +1,17 @@
 /*
 This file specifies how all of the asm files link together into the ROM.
-This is the only compiled file that is overlaid over the binary
+This is the only compiled file.
 */
 
-// to prevent duplicate symbols, expose file external symbols
-// range .r__start
+// to prevent redefinition of symbols, expose all external symbols first
 .include "externs/sect0/sect0.inc"
 
-/* Range [0x08000000, ???) */
+// assign section to be set to 0x08000000
 .section .r__start, "ax"
-
 sect0:
 .include "asm/sect0/sect0.s"
 
 // include parts of the ROM not disassembled yet
-// run 'make tail' if the location of this label change to re-compute tail.bin
+// run 'make tail' if this label's location changes to re-compute bin/tail.bin
 tail:
 .incbin "bin/tail.bin"

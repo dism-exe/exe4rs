@@ -1,3 +1,6 @@
+.ifndef EXT_SECT0_ASM17
+.equ EXT_SECT0_ASM17, 0
+
 .include "sect0/asm00.inc"
 // .equ sub_80034C4, 0x80034C4
 
@@ -10,3 +13,5 @@
 .equ dword_80828AC, 0x80828AC
 .equ dword_8082928, 0x8082928
 .equ dword_8082954, 0x8082954
+
+.endif // EXT_SECT0_ASM17

@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM18
+.equ INC_SECT0_ASM18, 0
+
 // Public Interface
 .equ sub_8085444, 0x8085444
 .equ sub_808547C, 0x808547C
@@ -70,3 +73,5 @@
 .equ off_8085C18, 0x8085C18
 .equ pt_8085C1C, 0x8085C1C
 
+
+.endif // INC_SECT0_ASM18

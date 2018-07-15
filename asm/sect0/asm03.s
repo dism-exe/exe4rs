@@ -4752,7 +4752,7 @@ loc_80493EE:
 .thumb
 sub_80493F8:
     push {r5,lr}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r3, [r5,#0xb]
     cmp r3, #0
@@ -5913,7 +5913,7 @@ loc_8049EB6:
     mov r0, #0x20 
     bl sub_80539A0
     beq loc_8049EEC
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     beq loc_8049ED4
     ldr r0, [r5,#0x24]
@@ -5957,7 +5957,7 @@ loc_8049F10:
     bne loc_8049F1A
     b loc_804A052
 loc_8049F1A:
-    bl unk_80539B0
+    bl sub_80539B0
     cmp r0, #0
     beq loc_8049F3C
     ldrb r0, [r5,#7]
@@ -6224,7 +6224,7 @@ sub_804A130:
 // end of function sub_804A130
 
     pop {r5}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     bl sub_804A398
     bne loc_804A16C
@@ -8682,7 +8682,7 @@ sub_804BFD0:
     bne loc_804C028
     bl sub_8005B5C
     beq loc_804C028
-    bl unk_80539B0
+    bl sub_80539B0
     tst r0, r0
     beq loc_804C01C
     mov r0, #4
@@ -8881,7 +8881,7 @@ locret_804C15A:
 .thumb
 sub_804C15C:
     push {r5,lr}
-    bl loc_8054018
+    bl sub_8054018
     bl sub_8054054
     ldrb r3, [r5,#0x11]
     cmp r3, #0

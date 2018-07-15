@@ -1,3 +1,6 @@
+.ifndef INC_SECT0_ASM10
+.equ INC_SECT0_ASM10, 0
+
 // Public Interface
 .equ pt_807016C, 0x807016C
 
@@ -97,3 +100,5 @@
 .equ off_80715D4, 0x80715D4
 .equ off_80715D8, 0x80715D8
 
+
+.endif // INC_SECT0_ASM10
