@@ -1,6 +1,9 @@
 .ifndef EXT_ASM28
 .equ EXT_ASM28, 0
 
+.include "start.inc"
+// .equ start_, 0x8000000
+
 .include "asm02.inc"
 // .equ ho_801E02C, 0x801E02C
 // .equ sub_8022182, 0x8022182
@@ -47,7 +50,6 @@
 // .equ dword_8097370, 0x8097370
 
 .include "asm00.inc"
-// .equ start_, 0x8000000
 // .equ f500_8000558, 0x8000558
 // .equ loc_8000874, 0x8000874
 // .equ f900_8000910, 0x8000910

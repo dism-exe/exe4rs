@@ -4,6 +4,21 @@
 .include "asm30.inc"
 // .equ sub_81118D8, 0x81118D8
 
+.include "main.inc"
+// .equ sub_8000538, 0x8000538
+
+.include "asm02.inc"
+// .equ off_8025B20, 0x8025B20
+// .equ ho_802724E, 0x802724E
+
+.include "asm00.inc"
+// .equ loc_8000874, 0x8000874
+// .equ f900_8000970, 0x8000970
+// .equ fA00_8000A30, 0x8000A30
+// .equ sub_80035C0, 0x80035C0
+// .equ word_8005DF8, 0x8005DF8
+// .equ sub_8006084, 0x8006084
+
 
 .equ unk_2001770, 0x2001770
 .equ unk_2001780, 0x2001780
@@ -61,23 +76,14 @@
 .equ DMA0SourceAddress, 0x40000B0
 .equ DMA0DestinationAddress, 0x40000B4
 .equ DMA0WordCount, 0x40000B8
-.equ sub_8000538, 0x8000538
 .equ f500_8000550, 0x8000550
-.equ loc_8000874, 0x8000874
 .equ f900_8000930, 0x8000930
-.equ f900_8000970, 0x8000970
 .equ f900_80009DC, 0x80009DC
-.equ fA00_8000A30, 0x8000A30
 .equ fA00_8000A8C, 0x8000A8C
-.equ sub_80035C0, 0x80035C0
 .equ word_8005D78, 0x8005D78
-.equ word_8005DF8, 0x8005DF8
 .equ sub_8006078, 0x8006078
-.equ sub_8006084, 0x8006084
 .equ sub_800609C, 0x800609C
-.equ off_8025B20, 0x8025B20
 .equ dword_8025B24, 0x8025B24
-.equ ho_802724E, 0x802724E
 .equ sub_80481B2, 0x80481B2
 
 .endif // EXT_ASM31

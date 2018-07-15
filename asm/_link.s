@@ -4,6 +4,8 @@ This is the only compiled file.
 */
 
 // to prevent redefinition of symbols, expose all external symbols first
+.include "externs/start.inc"
+.include "externs/main.inc"
 .include "externs/asm00.inc"
 .include "externs/asm01.inc"
 .include "externs/asm02.inc"
@@ -38,6 +40,11 @@ This is the only compiled file.
 
 // assign section to be set to 0x08000000
 .section .r__start, "ax"
+
+start:
+.include "asm/start.s"
+main:
+.include "asm/main.s"
 
 asm00:
 .include "asm/asm00.s"

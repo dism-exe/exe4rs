@@ -2,19 +2,21 @@
 .equ EXT_ASM00, 0
 
 .include "asm03.inc"
-// .equ sub_804722C, 0x804722C
-// .equ sub_80476D8, 0x80476D8
-// .equ sub_8048104, 0x8048104
-// .equ sub_8048164, 0x8048164
-// .equ sub_80481EC, 0x80481EC
-// .equ sub_80486EC, 0x80486EC
-// .equ sub_80487E8, 0x80487E8
-// .equ loc_80489EC, 0x80489EC
-// .equ loc_804903C, 0x804903C
-// .equ loc_8049CE8, 0x8049CE8
+// .equ sub_804720C, 0x804720C
+// .equ sub_8047608, 0x8047608
+// .equ sub_80480B4, 0x80480B4
+// .equ sub_8048120, 0x8048120
+// .equ sub_80481C8, 0x80481C8
+// .equ sub_8048660, 0x8048660
+// .equ sub_8048714, 0x8048714
+// .equ sub_80489E0, 0x80489E0
+// .equ sub_8049CB0, 0x8049CB0
 // .equ sub_804BDD4, 0x804BDD4
-// .equ loc_804DFC4, 0x804DFC4
 // .equ sub_804E448, 0x804E448
+
+.include "start.inc"
+// .equ start_, 0x8000000
+// .equ dword_8000004, 0x8000028
 
 .include "asm18.inc"
 // .equ sub_8085444, 0x8085444
@@ -64,8 +66,7 @@
 // .equ sub_8024FBC, 0x8024FBC
 // .equ sub_8024FF4, 0x8024FF4
 // .equ sub_802512A, 0x802512A
-// .equ ho_cb_8025268, 0x8025268
-// .equ loc_8025B64, 0x8025B64
+// .equ sub_8025B60, 0x8025B60
 // .equ sub_8025BD8, 0x8025BD8
 // .equ sub_8025C1A, 0x8025C1A
 // .equ sub_8025CDC, 0x8025CDC
@@ -76,33 +77,28 @@
 // .equ dword_8027CEC, 0x8028124
 // .equ dword_802919C, 0x802919C
 // .equ sub_80297E0, 0x80297E0
-// .equ sub_8029E74, 0x8029E74
-// .equ sub_802BCA4, 0x802BCA4
-// .equ sub_802BCF2, 0x802BCF2
-// .equ sub_802CFF2, 0x802CFF2
+// .equ sub_802BC60, 0x802BC60
+// .equ sub_802BCE0, 0x802BCE0
+// .equ sub_802CFE4, 0x802CFE4
 // .equ sub_802D3F8, 0x802D3F8
 // .equ sub_802D424, 0x802D424
-// .equ sub_802D6B8, 0x802D6B8
-// .equ loc_802D6D2, 0x802D6D2
+// .equ loc_802D6BC, 0x802D6BC
 // .equ sub_802D938, 0x802D938
 // .equ sub_802D970, 0x802D970
 // .equ sub_802DEA4, 0x802DEA4
-// .equ sub_802F604, 0x802F604
-// .equ sub_8034ED4, 0x8034ED4
-// .equ sub_80372BC, 0x80372BC
-// .equ sub_8037364, 0x8037364
-// .equ sub_803A974, 0x803A974
-// .equ sub_803AA54, 0x803AA54
-// .equ dword_80404B0, 0x80404B0
-// .equ sub_80405D8, 0x80405D8
+// .equ sub_8034EC0, 0x8034EC0
+// .equ sub_8035044, 0x8035044
+// .equ sub_8037304, 0x8037304
+// .equ sub_8037404, 0x8037404
+// .equ byte_803A9C4, 0x803A9C4
+// .equ sub_803C48E, 0x803C48E
+// .equ sub_8040560, 0x8040560
 // .equ sub_8042ECC, 0x8042ECC
 // .equ sub_8043104, 0x8043104
 // .equ sub_80431E4, 0x80431E4
-// .equ sub_80437CC, 0x80437CC
-// .equ sub_8043864, 0x8043864
+// .equ sub_8043800, 0x8043800
 // .equ sub_80444FC, 0x80444FC
 // .equ sub_80449B8, 0x80449B8
-// .equ loc_8044FA8, 0x8044FA8
 
 .include "asm27.inc"
 // .equ unk_809D414, 0x809D414
@@ -324,18 +320,15 @@
 
 .include "asm30.inc"
 // .equ sub_810FFF4, 0x810FFF4
-// .equ sub_8110A48, 0x8110A48
-// .equ sub_811103C, 0x811103C
-// .equ sub_8111698, 0x8111698
-// .equ sub_81116B8, 0x81116B8
-// .equ loc_81116EC, 0x81116EC
-// .equ dword_81116FC, 0x81116FC
-// .equ dword_8111704, 0x8111704
-// .equ sub_8112610, 0x8112610
-// .equ sub_81126A8, 0x81126A8
-// .equ sub_8112780, 0x8112780
-// .equ loc_811287C, 0x811287C
-// .equ sub_8112BCC, 0x8112BCC
+// .equ sub_8110A8C, 0x8110A8C
+// .equ sub_81116AC, 0x81116AC
+// .equ loc_81116E8, 0x81116E8
+// .equ loc_81116F0, 0x81116F0
+// .equ dword_8111700, 0x8111700
+// .equ sub_8111FD4, 0x8111FD4
+// .equ sub_81126B4, 0x81126B4
+// .equ sub_81127E8, 0x81127E8
+// .equ sub_81128A4, 0x81128A4
 
 
 .equ unk_2000000, 0x2000000
@@ -389,7 +382,6 @@
 .equ unk_2007230, 0x2007230
 .equ unk_20073A0, 0x20073A0
 .equ word_20073D0, 0x20073D0
-.equ unk_2007400, 0x2007400
 .equ byte_2007408, 0x2007408
 .equ byte_2007409, 0x2007409
 .equ dword_2007808, 0x2007808
@@ -422,7 +414,6 @@
 .equ byte_200A232, 0x200A232
 .equ dword_200A234, 0x200A234
 .equ dword_200A238, 0x200A238
-.equ dword_200A338, 0x200A338
 .equ unk_200A380, 0x200A380
 .equ byte_200A3C8, 0x200A3C8
 .equ unk_200A430, 0x200A430
@@ -475,7 +466,6 @@
 .equ byte_200AB11, 0x200AB11
 .equ byte_200AB14, 0x200AB14
 .equ byte_200AB15, 0x200AB15
-.equ dword_200ACB0, 0x200ACB0
 .equ byte_200ACC0, 0x200ACC0
 .equ byte_200ACC5, 0x200ACC5
 .equ byte_200ACC6, 0x200ACC6
@@ -786,7 +776,6 @@
 .equ unk_203F6E0, 0x203F6E0
 .equ unk_203F6F0, 0x203F6F0
 .equ unk_3000000, 0x3000000
-.equ dword_3002000, 0x3002000
 .equ dword_3002038, 0x3002038
 .equ unk_3002640, 0x3002640
 .equ word_3002780, 0x3002780
@@ -820,11 +809,8 @@
 .equ loc_300602C, 0x300602C
 .equ loc_300632C, 0x300632C
 .equ loc_3006376, 0x3006376
-.equ loc_30063F8, 0x30063F8
 .equ sub_3006FA4, 0x3006FA4
-.equ loc_3007FFC, 0x3007FFC
 .equ LCDControl, 0x4000000
-.equ GeneralLCDStatus_STAT_LYC_, 0x4000004
 .equ VerticalCounter_LY_, 0x4000006
 .equ BG0Control, 0x4000008
 .equ Window0HorizontalDimensions, 0x4000040
@@ -839,11 +825,8 @@
 .equ DMA2WordCount, 0x40000D0
 .equ DMA3SourceAddress, 0x40000D4
 .equ DMA3WordCount, 0x40000DC
-.equ KeyStatus, 0x4000130
-.equ KeyInterruptControl, 0x4000132
-.equ InterruptEnableRegister, 0x4000200
-.equ GamePakWaitstateControl, 0x4000204
-.equ InterruptMasterEnableRegister, 0x4000208
+.equ dword_8000004, 0x8000004
+.equ start_8000284, 0x8000284
 .equ dword_8017C08, 0x8017C08
 .equ dword_8017ED8, 0x8017ED8
 .equ dword_8017FA8, 0x8017FA8
@@ -904,8 +887,7 @@
 .equ sub_8024FF0, 0x8024FF0
 .equ sub_802500A, 0x802500A
 .equ sub_8025148, 0x8025148
-.equ sub_8025B60, 0x8025B60
-.equ sub_8025BBC, 0x8025BBC
+.equ loc_8025B64, 0x8025B64
 .equ sub_8025BF8, 0x8025BF8
 .equ sub_8025C2A, 0x8025C2A
 .equ sub_8025CFC, 0x8025CFC
@@ -915,45 +897,38 @@
 .equ dword_8027CEC, 0x8027CEC
 .equ off_8029184, 0x8029184
 .equ ho_8029308, 0x8029308
-.equ loc_80297F0, 0x80297F0
-.equ sub_802BC60, 0x802BC60
-.equ sub_802BCE0, 0x802BCE0
-.equ sub_802CFE4, 0x802CFE4
+.equ sub_8029E74, 0x8029E74
+.equ sub_802BCA4, 0x802BCA4
+.equ sub_802BCF2, 0x802BCF2
 .equ sub_802D360, 0x802D360
 .equ sub_802D414, 0x802D414
 .equ sub_802D684, 0x802D684
-.equ loc_802D6BC, 0x802D6BC
 .equ sub_802D92C, 0x802D92C
 .equ sub_802D944, 0x802D944
 .equ ho_802D9A0, 0x802D9A0
-.equ loc_802DECC, 0x802DECC
-.equ sub_8034EC0, 0x8034EC0
-.equ sub_8035044, 0x8035044
-.equ sub_8037304, 0x8037304
-.equ sub_8037404, 0x8037404
-.equ byte_803A9C4, 0x803A9C4
-.equ sub_803C48E, 0x803C48E
-.equ sub_8040560, 0x8040560
-.equ loc_80405E4, 0x80405E4
+.equ sub_802F604, 0x802F604
+.equ sub_8034ED4, 0x8034ED4
+.equ sub_80372BC, 0x80372BC
+.equ sub_8037364, 0x8037364
+.equ sub_803A974, 0x803A974
+.equ sub_803AA54, 0x803AA54
+.equ dword_80404B0, 0x80404B0
+.equ sub_80405D8, 0x80405D8
 .equ sub_8042FA0, 0x8042FA0
 .equ sub_8043120, 0x8043120
-.equ loc_8043238, 0x8043238
-.equ sub_8043800, 0x8043800
+.equ sub_80437CC, 0x80437CC
 .equ sub_8043E30, 0x8043E30
 .equ sub_8044798, 0x8044798
 .equ sub_80449E8, 0x80449E8
-.equ sub_804720C, 0x804720C
-.equ sub_8047608, 0x8047608
-.equ sub_80480B4, 0x80480B4
-.equ sub_8048120, 0x8048120
-.equ sub_80481C8, 0x80481C8
-.equ sub_8048660, 0x8048660
-.equ sub_8048714, 0x8048714
-.equ sub_80489E0, 0x80489E0
+.equ sub_804722C, 0x804722C
+.equ sub_80476D8, 0x80476D8
+.equ sub_8048104, 0x8048104
+.equ sub_8048164, 0x8048164
+.equ sub_80481EC, 0x80481EC
+.equ sub_80486EC, 0x80486EC
+.equ sub_80487E8, 0x80487E8
 .equ sub_8049010, 0x8049010
-.equ sub_8049CB0, 0x8049CB0
 .equ sub_804BA5C, 0x804BA5C
-.equ loc_804BDFC, 0x804BDFC
 .equ sub_804E2A4, 0x804E2A4
 .equ sub_8050D7C, 0x8050D7C
 .equ sub_8053A04, 0x8053A04
@@ -1164,20 +1139,16 @@
 .equ sub_80F5628, 0x80F5628
 .equ dword_80FA7D4, 0x80FA7D4
 .equ dword_80FC00C, 0x80FC00C
-.equ loc_8110000, 0x8110000
-.equ sub_8110A8C, 0x8110A8C
-.equ sub_811104C, 0x811104C
-.equ sub_81116AC, 0x81116AC
-.equ loc_81116E8, 0x81116E8
-.equ loc_81116F0, 0x81116F0
-.equ dword_8111700, 0x8111700
-.equ sub_8111FD4, 0x8111FD4
-.equ sub_8112630, 0x8112630
-.equ sub_81126B4, 0x81126B4
-.equ sub_81127E8, 0x81127E8
-.equ sub_81128A4, 0x81128A4
+.equ sub_8110A48, 0x8110A48
+.equ sub_8111698, 0x8111698
+.equ sub_81116B8, 0x81116B8
+.equ loc_81116EC, 0x81116EC
+.equ dword_81116FC, 0x81116FC
+.equ dword_8111704, 0x8111704
+.equ sub_8112610, 0x8112610
+.equ sub_8112780, 0x8112780
+.equ loc_811287C, 0x811287C
 .equ sub_811365C, 0x811365C
-.equ function_chunks_loc_8212700, 0x8212700
 .equ dword_82212BC, 0x82212BC
 .equ off_82A07D0, 0x82A07D0
 .equ unk_82B04B0, 0x82B04B0

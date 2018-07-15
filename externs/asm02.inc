@@ -32,6 +32,9 @@
 .include "asm11.inc"
 // .equ sub_8073B88, 0x8073B88
 
+.include "start.inc"
+// .equ start_, 0x8000000
+
 .include "asm15.inc"
 // .equ loc_807CC90, 0x807CC90
 // .equ off_807CD54, 0x807CD54
@@ -148,7 +151,6 @@
 // .equ sub_80F5944, 0x80F5944
 
 .include "asm00.inc"
-// .equ start_, 0x8000000
 // .equ f500_8000558, 0x8000558
 // .equ f500_800057E, 0x800057E
 // .equ f500_80005D2, 0x80005D2
