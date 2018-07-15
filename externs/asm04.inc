@@ -1,0 +1,124 @@
+.ifndef EXT_ASM04
+.equ EXT_ASM04, 0
+
+.include "asm30.inc"
+// .equ sub_8102E9C, 0x8102E9C
+// .equ loc_81048C0, 0x81048C0
+// .equ loc_8104E58, 0x8104E58
+// .equ sub_81052F4, 0x81052F4
+// .equ loc_8105858, 0x8105858
+// .equ loc_81063F4, 0x81063F4
+// .equ loc_8106BEC, 0x8106BEC
+// .equ loc_8106EE8, 0x8106EE8
+// .equ loc_8107030, 0x8107030
+// .equ loc_8107248, 0x8107248
+// .equ loc_8107418, 0x8107418
+// .equ loc_8107A4C, 0x8107A4C
+// .equ loc_81081FC, 0x81081FC
+// .equ loc_8108754, 0x8108754
+// .equ loc_81089D8, 0x81089D8
+// .equ loc_8108C78, 0x8108C78
+// .equ loc_8108F44, 0x8108F44
+// .equ loc_81099F0, 0x81099F0
+// .equ loc_8109E78, 0x8109E78
+// .equ loc_810A02C, 0x810A02C
+// .equ loc_810A434, 0x810A434
+// .equ loc_810A768, 0x810A768
+// .equ loc_810AB80, 0x810AB80
+// .equ loc_810ADE0, 0x810ADE0
+// .equ loc_810B23C, 0x810B23C
+// .equ loc_810B6A0, 0x810B6A0
+// .equ loc_810B9EC, 0x810B9EC
+// .equ loc_810BB84, 0x810BB84
+// .equ loc_810BDE8, 0x810BDE8
+// .equ loc_810C338, 0x810C338
+// .equ sub_810CEB0, 0x810CEB0
+// .equ loc_810D1B8, 0x810D1B8
+// .equ loc_810D414, 0x810D414
+// .equ loc_810D8A8, 0x810D8A8
+// .equ loc_810DA9C, 0x810DA9C
+// .equ loc_810DE14, 0x810DE14
+// .equ loc_810E116, 0x810E116
+// .equ loc_810E340, 0x810E340
+// .equ loc_810E760, 0x810E760
+
+.include "asm02.inc"
+// .equ sub_8025BD8, 0x8025BD8
+
+.include "asm00.inc"
+// .equ loc_8000874, 0x8000874
+// .equ f900_8000950, 0x8000950
+// .equ fA00_8000A30, 0x8000A30
+// .equ sub_800280C, 0x800280C
+// .equ sub_8002998, 0x8002998
+
+
+.equ byte_2008BB0, 0x2008BB0
+.equ byte_2008BB1, 0x2008BB1
+.equ byte_2008BB2, 0x2008BB2
+.equ byte_2008BB3, 0x2008BB3
+.equ dword_200A600, 0x200A600
+.equ byte_200A6C0, 0x200A6C0
+.equ byte_200A6C1, 0x200A6C1
+.equ byte_200A6C3, 0x200A6C3
+.equ dword_200A6D4, 0x200A6D4
+.equ dword_200A6D8, 0x200A6D8
+.equ dword_200A6DC, 0x200A6DC
+.equ dword_200A6E0, 0x200A6E0
+.equ byte_200A6F4, 0x200A6F4
+.equ loc_300677C, 0x300677C
+.equ f900_8000930, 0x8000930
+.equ f900_80009FC, 0x80009FC
+.equ fA00_8000A8C, 0x8000A8C
+.equ sub_800293C, 0x800293C
+.equ sub_8002D9E, 0x8002D9E
+.equ dword_80515B8, 0x80515B8
+.equ dword_80515B8, 0x80515B8
+.equ dword_805420C, 0x805420C
+.equ off_805426C, 0x805426C
+.equ dword_805428C, 0x805428C
+.equ off_805429C, 0x805429C
+.equ off_80542AC, 0x80542AC
+.equ dword_80542BC, 0x80542BC
+.equ off_80542CC, 0x80542CC
+.equ loc_81045E0, 0x81045E0
+.equ loc_8104C58, 0x8104C58
+.equ loc_81050B0, 0x81050B0
+.equ loc_81056D0, 0x81056D0
+.equ loc_81059C0, 0x81059C0
+.equ loc_81064E8, 0x81064E8
+.equ loc_8106E34, 0x8106E34
+.equ loc_8106FB4, 0x8106FB4
+.equ loc_810719C, 0x810719C
+.equ loc_8107368, 0x8107368
+.equ loc_8107660, 0x8107660
+.equ loc_8107E98, 0x8107E98
+.equ loc_8108608, 0x8108608
+.equ loc_8108934, 0x8108934
+.equ loc_8108BDC, 0x8108BDC
+.equ loc_8108DE0, 0x8108DE0
+.equ loc_810939C, 0x810939C
+.equ loc_8109DC4, 0x8109DC4
+.equ loc_8109F48, 0x8109F48
+.equ loc_810A2E4, 0x810A2E4
+.equ loc_810A500, 0x810A500
+.equ loc_810A8EC, 0x810A8EC
+.equ loc_810AC44, 0x810AC44
+.equ loc_810B014, 0x810B014
+.equ loc_810B31C, 0x810B31C
+.equ loc_810B8F4, 0x810B8F4
+.equ loc_810BAB4, 0x810BAB4
+.equ loc_810BC5C, 0x810BC5C
+.equ loc_810BEB8, 0x810BEB8
+.equ loc_810CDC0, 0x810CDC0
+.equ loc_810D078, 0x810D078
+.equ loc_810D260, 0x810D260
+.equ loc_810D7B0, 0x810D7B0
+.equ sub_810D9E8, 0x810D9E8
+.equ sub_810DB44, 0x810DB44
+.equ loc_810DF10, 0x810DF10
+.equ loc_810E190, 0x810E190
+.equ loc_810E5C4, 0x810E5C4
+.equ loc_810E968, 0x810E968
+
+.endif // EXT_ASM04
