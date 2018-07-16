@@ -1,37 +1,43 @@
 .ifndef INC_ASM07
 .equ INC_ASM07, 0
 
-// Public Interface
+/* Public Interface */
 .extern off_8069638
 
-// Forward Reference
-.extern sub_8069450
-.extern off_80694A8
-.extern off_80694AC
-.extern off_80694B0
-.extern off_80694B4
-.extern dword_80694BC
-.extern sub_80694CA
-.extern off_80694D8
-.extern off_80694DC
-.extern off_80694E4
-.extern off_80694F0
-.extern sub_80694FC
-.extern off_8069538
-.extern off_806953C
-.extern off_806955C
-.extern off_8069560
-.extern off_8069568
-.extern sub_806958C
-.extern off_80695A0
-.extern off_80695A4
-.extern nullsub_71
-.extern nullsub_72
-.extern sub_80695B0
-.extern off_80695C4
-.extern off_80695C8
-.extern dword_80695D0
-.extern dword_80695FC
 
+/* External Symbols */
+.include "asm03.inc"
+// .extern sub_804DF5C
+
+.include "asm02.inc"
+// .extern sub_8025CFC
+// .extern sub_8026098
+// .extern sub_802610E
+// .extern sub_8026188
+// .extern sub_80261BA
+// .extern sub_80266E0
+// .extern sub_802A28C
+
+.include "asm00.inc"
+// .extern sub_8001E5C
+// .extern sub_8001EB2
+// .extern nullsub_88
+// .extern sub_80024E0
+// .extern sub_80029F8
+// .extern sub_8002A2A
+// .extern sub_80034C4
+
+
+/* Undeclared Symbols */
+.equ unk_2012800, 0x2012800
+.equ unk_2038800, 0x2038800
+.equ dword_80691D8, 0x80691D8
+.equ off_8069238, 0x8069238
+.equ off_80693C8, 0x80693C8
+.equ dword_8069648, 0x8069648
+.equ dword_8069658, 0x8069658
+.equ off_80698D4, 0x80698D4
+.equ dword_8069A24, 0x8069A24
+.equ dword_860EF60, 0x860EF60
 
 .endif // INC_ASM07

@@ -1,77 +1,51 @@
 .ifndef INC_ASM20
 .equ INC_ASM20, 0
 
-// Public Interface
+/* Public Interface */
 .extern off_8089EC8
 
-// Forward Reference
-.extern dead_80886F8
-.extern sub_8088C8C
-.extern dword_8088CA8
-.extern sub_8088CAC
-.extern sub_8089880
-.extern off_8089894
-.extern off_8089898
-.extern sub_80898E8
-.extern off_80898FC
-.extern off_8089900
-.extern sub_8089904
-.extern sub_8089910
-.extern loc_8089920
-.extern off_8089AFC
-.extern sub_8089B70
-.extern off_8089B84
-.extern off_8089B88
-.extern sub_8089B8C
-.extern sub_8089B98
-.extern sub_8089C00
-.extern off_8089C10
-.extern dead_8089C5C
-.extern off_8089C80
-.extern word_8089C84
-.extern word_8089C86
-.extern sub_8089C88
-.extern unk_8089D0C
-.extern dword_8089ED8
-.extern dword_8089EDC
-.extern off_8089EE0
-.extern off_8089EE8
-.extern sub_8089FDC
-.extern off_8089FF0
-.extern off_8089FF4
-.extern sub_8089FF8
-.extern loc_808A036
-.extern loc_808A042
-.extern off_808A048
-.extern dword_808A04C
-.extern sub_808A054
-.extern loc_808A07A
-.extern off_808A088
-.extern off_808A08C
-.extern off_808A09C
-.extern off_808A0A0
-.extern off_808A0B0
-.extern byte_808A0B4
-.extern dead_808A0BC
-.extern loc_808A0E2
-.extern loc_808A0FC
-.extern off_808A104
-.extern off_808A108
-.extern sub_808A10C
-.extern sub_808A118
-.extern loc_808A136
-.extern loc_808A13A
-.extern sub_808A140
-.extern loc_808A152
-.extern loc_808A16C
-.extern sub_808A170
-.extern loc_808A18A
-.extern loc_808A1A0
-.extern sub_808A1A4
-.extern loc_808A1BA
-.extern loc_808A1D4
-.extern loc_808A1EA
-.extern off_808A1F0
 
+/* External Symbols */
+.include "asm28.inc"
+// .extern off_80CFF24
+
+.include "asm08.inc"
+// .extern sub_806A9C4
+
+.include "asm02.inc"
+// .extern sub_8024F9C
+// .extern sub_8024FA0
+// .extern sub_8024FB8
+// .extern sub_8024FF0
+// .extern sub_8024FF4
+// .extern loc_802500E
+// .extern sub_8025F1E
+// .extern sub_802669C
+// .extern sub_802A6B4
+
+.include "asm27.inc"
+// .extern sub_809F2B4
+
+.include "asm00.inc"
+// .extern sub_8001C94
+// .extern sub_8001D60
+
+
+/* Undeclared Symbols */
+.equ dword_200AA90, 0x200AA90
+.equ dword_200AAB8, 0x200AAB8
+.equ unk_201FF00, 0x201FF00
+.equ off_806B77C, 0x806B77C
+.equ dword_806B7C0, 0x806B7C0
+.equ off_806BAD0, 0x806BAD0
+.equ dword_806BB20, 0x806BB20
+.equ off_806BFAC, 0x806BFAC
+.equ dword_806BFB0, 0x806BFB0
+.equ dword_806C038, 0x806C038
+.equ dword_806C038, 0x806C038
+.equ dword_806C888, 0x806C888
+.equ dword_806C888, 0x806C888
+.equ dword_806C888, 0x806C888
+.equ dword_806C888, 0x806C888
 
 .endif // INC_ASM20

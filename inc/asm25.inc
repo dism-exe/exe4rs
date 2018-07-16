@@ -1,21 +1,24 @@
 .ifndef INC_ASM25
 .equ INC_ASM25, 0
 
-// Public Interface
+/* Public Interface */
 .extern dword_8097370
 
-// Forward Reference
-.extern sub_8097328
-.extern off_809733C
-.extern dword_8097340
-.extern sub_809739C
-.extern loc_80973AC
-.extern sub_80973B8
-.extern loc_80973D4
-.extern loc_80973E6
-.extern loc_80973F6
-.extern off_809740C
-.extern sub_8097410
 
+/* External Symbols */
+.include "asm27.inc"
+// .extern sub_80A6DB8
+// .extern sub_80A6F0E
+// .extern sub_80A6F18
+
+.include "asm00.inc"
+// .extern f500_8000558
+
+
+/* Undeclared Symbols */
+.equ unk_20005E0, 0x20005E0
+.equ byte_20005E1, 0x20005E1
+.equ word_20005E2, 0x20005E2
+.equ word_20005E4, 0x20005E4
 
 .endif // INC_ASM25

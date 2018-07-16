@@ -9,6 +9,5 @@ it compiles and outputs a matching ROM.
 pt.fix.remFuncChunks()
 pt.fix.removeStackVarUsages(0x8000000, 0x8800000)
 # this just needs to repeat a few times to remove new ARM guesses
-for i in range(3):
-    pt.fix.makeThumb(0x800036C, 0x8800000)
+while pt.fix.makeThumb(0x800036C, 0x8800000): pass
 print("Finished running fixes!")

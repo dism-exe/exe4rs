@@ -1,11 +1,13 @@
 .ifndef INC_ASM29
 .equ INC_ASM29, 0
 
-// Public Interface
+/* Public Interface */
 .extern sub_80F8944
 
-// Forward Reference
-.extern off_80F8950
 
+/* External Symbols */
+
+/* Undeclared Symbols */
+.equ dword_80F8954, 0x80F8954
 
 .endif // INC_ASM29

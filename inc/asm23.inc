@@ -1,11 +1,12 @@
 .ifndef INC_ASM23
 .equ INC_ASM23, 0
 
-// Public Interface
+/* Public Interface */
 
-// Forward Reference
-.extern sub_8091404
-.extern loc_8091414
+
+/* External Symbols */
+.include "asm00.inc"
+// .extern f500_8000558
 
 
 .endif // INC_ASM23

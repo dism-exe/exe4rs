@@ -3,41 +3,6 @@ This file specifies how all of the asm files link together into the ROM.
 This is the only compiled file.
 */
 
-// to prevent redefinition of symbols, expose all external symbols first
-.include "externs/start.inc"
-.include "externs/main.inc"
-.include "externs/asm00.inc"
-.include "externs/asm01.inc"
-.include "externs/asm02.inc"
-.include "externs/asm03.inc"
-.include "externs/asm04.inc"
-.include "externs/asm05.inc"
-.include "externs/asm06.inc"
-.include "externs/asm07.inc"
-.include "externs/asm08.inc"
-.include "externs/asm09.inc"
-.include "externs/asm10.inc"
-.include "externs/asm11.inc"
-.include "externs/asm12.inc"
-.include "externs/asm13.inc"
-.include "externs/asm14.inc"
-.include "externs/asm15.inc"
-.include "externs/asm16.inc"
-.include "externs/asm17.inc"
-.include "externs/asm18.inc"
-.include "externs/asm19.inc"
-.include "externs/asm20.inc"
-.include "externs/asm21.inc"
-.include "externs/asm24.inc"
-.include "externs/asm25.inc"
-.include "externs/asm26.inc"
-.include "externs/asm27.inc"
-.include "externs/asm28.inc"
-.include "externs/asm29.inc"
-.include "externs/asm30.inc"
-.include "externs/asm31.inc"
-
-
 // assign section to be set to 0x08000000
 .section .r__start, "ax"
 

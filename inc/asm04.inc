@@ -1,7 +1,7 @@
 .ifndef INC_ASM04
 .equ INC_ASM04, 0
 
-// Public Interface
+/* Public Interface */
 .extern sub_8053980
 .extern sub_8053990
 .extern sub_80539A0
@@ -20,85 +20,127 @@
 .extern sub_80540EC
 .extern sub_805411A
 
-// Forward Reference
-.extern off_80539AC
-.extern off_80539C0
-.extern off_8053A24
-.extern loc_8053A36
-.extern off_8053A64
-.extern off_8053A68
-.extern loc_8053A96
-.extern dword_8053AE8
-.extern off_8053AEC
-.extern loc_8053AF0
-.extern off_8053B28
-.extern sub_8053B84
-.extern loc_8053BB6
-.extern loc_8053BCE
-.extern loc_8053BDA
-.extern loc_8053BE6
-.extern off_8053BF0
-.extern off_8053BF4
-.extern sub_8053BF8
-.extern loc_8053C42
-.extern loc_8053C7C
-.extern off_8053C94
-.extern off_8053C98
-.extern off_8053C9C
-.extern sub_8053CA4
-.extern loc_8053CC4
-.extern loc_8053CD4
-.extern loc_8053CD8
-.extern loc_8053D1C
-.extern off_8053D54
-.extern sub_8053D58
-.extern sub_8053D62
-.extern loc_8053D80
-.extern loc_8053D8A
-.extern dword_8053DAC
-.extern loc_8053DE6
-.extern loc_8053DEC
-.extern loc_8053E04
-.extern loc_8053E12
-.extern loc_8053E22
-.extern loc_8053E30
-.extern loc_8053E36
-.extern loc_8053E4C
-.extern off_8053E54
-.extern off_8053E58
-.extern off_8053E5C
-.extern sub_8053E60
-.extern loc_8053E74
-.extern dword_8053E90
-.extern off_8053E94
-.extern sub_8053FD8
-.extern loc_8053FE6
-.extern off_8053FF8
-.extern loc_8053FFE
-.extern locret_8054016
-.extern loc_8054026
-.extern loc_805403E
-.extern off_8054050
-.extern loc_8054062
-.extern loc_8054064
-.extern loc_805408A
-.extern loc_805409A
-.extern loc_80540A8
-.extern sub_8054100
-.extern loc_8054106
-.extern loc_8054110
-.extern off_8054128
-.extern sub_805412C
-.extern loc_8054144
-.extern loc_8054152
-.extern loc_805416C
-.extern loc_805417E
-.extern loc_805419C
-.extern loc_80541B0
-.extern loc_80541B8
-.extern loc_80541D2
-.extern loc_80541DE
-.extern loc_80541E8
 
+/* External Symbols */
+.include "asm30.inc"
+// .extern sub_8102E9C
+// .extern loc_81045E0
+// .extern loc_81048C0
+// .extern loc_8104C58
+// .extern loc_8104E58
+// .extern loc_81050B0
+// .extern sub_81052F4
+// .extern loc_81056D0
+// .extern loc_8105858
+// .extern loc_81059C0
+// .extern loc_81063F4
+// .extern loc_81064E8
+// .extern loc_8106BEC
+// .extern loc_8106E34
+// .extern loc_8106EE8
+// .extern loc_8106FB4
+// .extern loc_8107030
+// .extern loc_810719C
+// .extern loc_8107248
+// .extern loc_8107368
+// .extern loc_8107418
+// .extern loc_8107660
+// .extern loc_8107A4C
+// .extern loc_8107E98
+// .extern loc_81081FC
+// .extern loc_8108608
+// .extern loc_8108754
+// .extern loc_8108934
+// .extern loc_81089D8
+// .extern loc_8108BDC
+// .extern loc_8108C78
+// .extern loc_8108DE0
+// .extern loc_8108F44
+// .extern loc_810939C
+// .extern loc_81099F0
+// .extern loc_8109DC4
+// .extern loc_8109E78
+// .extern loc_8109F48
+// .extern loc_810A02C
+// .extern loc_810A2E4
+// .extern loc_810A434
+// .extern loc_810A500
+// .extern loc_810A768
+// .extern loc_810A8EC
+// .extern loc_810AB80
+// .extern loc_810AC44
+// .extern loc_810ADE0
+// .extern loc_810B014
+// .extern loc_810B23C
+// .extern loc_810B31C
+// .extern loc_810B6A0
+// .extern loc_810B8F4
+// .extern loc_810B9EC
+// .extern loc_810BAB4
+// .extern loc_810BB84
+// .extern loc_810BC5C
+// .extern loc_810BDE8
+// .extern loc_810BEB8
+// .extern loc_810C338
+// .extern loc_810CDC0
+// .extern sub_810CEB0
+// .extern loc_810D078
+// .extern loc_810D1B8
+// .extern loc_810D260
+// .extern loc_810D414
+// .extern loc_810D7B0
+// .extern loc_810D8A8
+// .extern sub_810D9E8
+// .extern loc_810DA9C
+// .extern sub_810DB44
+// .extern loc_810DE14
+// .extern loc_810DF10
+// .extern loc_810E116
+// .extern loc_810E190
+// .extern loc_810E340
+// .extern loc_810E5C4
+// .extern loc_810E760
+// .extern loc_810E968
+
+.include "asm02.inc"
+// .extern sub_8025BD8
+
+.include "asm00.inc"
+// .extern loc_8000874
+// .extern f900_8000930
+// .extern f900_8000950
+// .extern f900_80009FC
+// .extern fA00_8000A30
+// .extern fA00_8000A8C
+// .extern sub_800280C
+// .extern sub_800293C
+// .extern sub_8002998
+// .extern sub_8002D9E
+
+
+/* Undeclared Symbols */
+.equ byte_2008BB0, 0x2008BB0
+.equ byte_2008BB1, 0x2008BB1
+.equ byte_2008BB2, 0x2008BB2
+.equ byte_2008BB3, 0x2008BB3
+.equ dword_200A600, 0x200A600
+.equ byte_200A6C0, 0x200A6C0
+.equ byte_200A6C1, 0x200A6C1
+.equ byte_200A6C3, 0x200A6C3
+.equ dword_200A6D4, 0x200A6D4
+.equ dword_200A6D8, 0x200A6D8
+.equ dword_200A6DC, 0x200A6DC
+.equ dword_200A6E0, 0x200A6E0
+.equ byte_200A6F4, 0x200A6F4
+.equ loc_300677C, 0x300677C
+.equ dword_80515B8, 0x80515B8
+.equ dword_80515B8, 0x80515B8
+.equ dword_805420C, 0x805420C
+.equ off_805426C, 0x805426C
+.equ dword_805428C, 0x805428C
+.equ off_805429C, 0x805429C
+.equ off_80542AC, 0x80542AC
+.equ dword_80542BC, 0x80542BC
+.equ off_80542CC, 0x80542CC
 
 .endif // INC_ASM04

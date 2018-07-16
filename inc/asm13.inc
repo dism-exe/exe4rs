@@ -1,36 +1,33 @@
 .ifndef INC_ASM13
 .equ INC_ASM13, 0
 
-// Public Interface
+/* Public Interface */
 .extern sub_80772DA
 .extern sub_807731C
 .extern off_80774D4
 
-// Forward Reference
-.extern off_80772E8
-.extern off_80772EC
-.extern off_80772F8
-.extern off_8077304
-.extern off_8077310
-.extern off_8077358
-.extern off_807735C
-.extern off_807738C
-.extern off_8077390
-.extern off_807739C
-.extern loc_80773C0
-.extern off_80773D4
-.extern off_80773D8
-.extern locret_80773E4
-.extern locret_80773E6
-.extern locret_80773E8
-.extern sub_80773EA
-.extern off_8077400
-.extern off_8077404
-.extern dword_8077410
-.extern dword_8077450
-.extern dword_807747C
-.extern dword_80774EC
-.extern dword_80774FC
 
+/* External Symbols */
+.include "asm02.inc"
+// .extern sub_8026188
+// .extern sub_80261BA
+
+.include "asm00.inc"
+// .extern sub_8001E5C
+// .extern sub_8001ECE
+// .extern nullsub_88
+// .extern sub_80024E0
+// .extern sub_80034C4
+
+
+/* Undeclared Symbols */
+.equ unk_2012800, 0x2012800
+.equ off_8076FB8, 0x8076FB8
+.equ dword_8076FBC, 0x8076FBC
+.equ dword_807750C, 0x807750C
+.equ off_8077B0C, 0x8077B0C
+.equ off_8078140, 0x8078140
+.equ off_8078B60, 0x8078B60
+.equ off_861A250, 0x861A250
 
 .endif // INC_ASM13

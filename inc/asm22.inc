@@ -1,18 +1,33 @@
 .ifndef INC_ASM22
 .equ INC_ASM22, 0
 
-// Public Interface
+/* Public Interface */
 .extern sub_808EC76
 .extern sub_808F45C
 
-// Forward Reference
-.extern sub_808EC68
-.extern loc_808EC7E
-.extern loc_808EC84
-.extern dword_808F468
-.extern sub_808F46C
-.extern loc_808F482
-.extern sub_808FF00
 
+/* External Symbols */
+.include "asm03.inc"
+// .extern sub_80511C0
+
+.include "asm13.inc"
+// .extern sub_80772DA
+// .extern sub_807731C
+
+.include "asm28.inc"
+// .extern off_80CFF24
+
+.include "asm27.inc"
+// .extern sub_80A02AE
+
+.include "asm00.inc"
+// .extern f900_80009B4
+// .extern sub_8000C98
+// .extern sub_8001C94
+// .extern sub_8001D60
+
+
+/* Undeclared Symbols */
+.equ LCDControl, 0x4000000
 
 .endif // INC_ASM22

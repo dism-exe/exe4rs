@@ -1,23 +1,22 @@
 .ifndef INC_ASM17
 .equ INC_ASM17, 0
 
-// Public Interface
+/* Public Interface */
 
-// Forward Reference
-.extern ho_null_8082728
-.extern off_808273C
-.extern jt_null_8082740
-.extern nullsub_98
-.extern nullsub_99
-.extern nullsub_100
-.extern nullsub_101
-.extern nullsub_102
-.extern nullsub_103
-.extern nullsub_104
-.extern nullsub_105
-.extern sub_8082770
-.extern off_8082784
-.extern off_8082788
 
+/* External Symbols */
+.include "asm00.inc"
+// .extern sub_80034C4
+
+
+/* Undeclared Symbols */
+.equ dword_80827A8, 0x80827A8
+.equ dword_80827C0, 0x80827C0
+.equ dword_80827D8, 0x80827D8
+.equ dword_8082804, 0x8082804
+.equ dword_8082880, 0x8082880
+.equ dword_80828AC, 0x80828AC
+.equ dword_8082928, 0x8082928
+.equ dword_8082954, 0x8082954
 
 .endif // INC_ASM17

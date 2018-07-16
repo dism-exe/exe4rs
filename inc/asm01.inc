@@ -1,7 +1,7 @@
 .ifndef INC_ASM01
 .equ INC_ASM01, 0
 
-// Public Interface
+/* Public Interface */
 .extern sub_8019010
 .extern sub_8019020
 .extern sub_801904C
@@ -19,113 +19,49 @@
 .extern sub_80195DC
 .extern sub_8019648
 
-// Forward Reference
-.extern off_801901C
-.extern loc_8019038
-.extern off_8019064
-.extern off_8019068
-.extern off_801906C
-.extern sub_8019070
-.extern dword_801907C
-.extern loc_8019090
-.extern loc_80190CC
-.extern sub_80190EA
-.extern loc_80190FE
-.extern off_8019104
-.extern loc_8019114
-.extern loc_8019140
-.extern loc_8019150
-.extern loc_8019168
-.extern loc_8019192
-.extern loc_801919C
-.extern loc_80191B2
-.extern loc_80191D2
-.extern loc_80191DC
-.extern off_80191E0
-.extern dword_80191E4
-.extern off_80191F8
-.extern loc_801920C
-.extern loc_801921A
-.extern loc_8019230
-.extern loc_8019248
-.extern loc_801926E
-.extern loc_8019274
-.extern off_8019284
-.extern loc_80192B4
-.extern locret_80192B6
-.extern off_80192B8
-.extern dword_80192BC
-.extern jt_80192C0
-.extern sub_801938C
-.extern loc_80193A6
-.extern loc_80193B4
-.extern loc_80193C4
-.extern loc_80193C8
-.extern locret_80193DC
-.extern sub_80193DE
-.extern loc_801940C
-.extern loc_801941A
-.extern loc_801941C
-.extern loc_801941E
-.extern off_801942C
-.extern off_8019430
-.extern sub_8019458
-.extern loc_8019478
-.extern loc_80194B0
-.extern loc_80194B4
-.extern loc_80194CE
-.extern loc_80194E0
-.extern locret_80194EC
-.extern sub_80194EE
-.extern locret_801950C
-.extern sub_801950E
-.extern loc_8019532
-.extern locret_801953E
-.extern loc_8019540
-.extern sub_8019546
-.extern loc_801956A
-.extern locret_8019576
-.extern loc_8019578
-.extern sub_801957E
-.extern locret_8019592
-.extern sub_8019594
-.extern loc_80195AA
-.extern loc_80195B8
-.extern loc_80195C2
-.extern loc_80195D0
-.extern locret_80195DA
-.extern loc_80195FA
-.extern loc_8019608
-.extern loc_8019616
-.extern off_801961C
-.extern off_8019620
-.extern loc_80196AC
-.extern off_80196BC
-.extern off_80196C0
-.extern dword_80196C4
-.extern dword_80196C8
-.extern off_80196CC
-.extern off_80196D0
-.extern off_80196D4
-.extern off_80196D8
-.extern off_80196DC
-.extern dword_80196E0
-.extern off_80196E4
-.extern off_80196E8
-.extern off_80196EC
-.extern off_80196F0
-.extern dword_80196F4
-.extern dword_80196F8
-.extern off_8019704
-.extern off_8019708
-.extern off_801970C
-.extern dword_8019710
-.extern off_8019714
-.extern dword_8019718
-.extern off_801971C
-.extern off_8019720
-.extern off_8019724
-.extern off_8019728
 
+/* External Symbols */
+.include "asm02.inc"
+// .extern sub_8022CDE
+// .extern sub_8024FA0
+// .extern sub_80405D8
+// .extern sub_80430D4
+// .extern sub_80430F8
+
+.include "asm00.inc"
+// .extern f900_8000930
+// .extern f900_8000950
+// .extern f900_800098C
+// .extern f900_80009A0
+// .extern f900_80009DC
+// .extern f900_80009FC
+// .extern fA00_8000BB4
+// .extern sub_8006394
+// .extern sub_80063A8
+// .extern sub_80063C8
+// .extern sub_8007E16
+// .extern sub_8009F0C
+// .extern sub_800C41A
+// .extern sub_8016812
+
+
+/* Undeclared Symbols */
+.equ unk_20008A0, 0x20008A0
+.equ unk_2000DE0, 0x2000DE0
+.equ unk_2000E00, 0x2000E00
+.equ unk_2000E80, 0x2000E80
+.equ unk_20013C0, 0x20013C0
+.equ unk_20013E0, 0x20013E0
+.equ unk_2001610, 0x2001610
+.equ unk_2001770, 0x2001770
+.equ unk_2001780, 0x2001780
+.equ unk_2001E9C, 0x2001E9C
+.equ byte_20364A8, 0x20364A8
+.equ unk_2037C80, 0x2037C80
+.equ dword_203BE70, 0x203BE70
+.equ word_203DB70, 0x203DB70
+.equ dword_8018928, 0x8018928
+.equ dword_801972C, 0x801972C
+.equ dword_873DDB8, 0x873DDB8
 
 .endif // INC_ASM01

@@ -3220,11 +3220,9 @@ sub_8001DF8:
     ldr r7, [pc, #0x8001e0c-0x8001dfa-2] // loc_3005A5C+1
     mov lr, pc
     bx r7
-    pop {r6,r7,pc}
 // end of function sub_8001DF8
 
-.thumb
-sub_8001E02:
+    pop {r6,r7,pc}
     push {r6,r7,lr}
     ldr r7, [pc, #0x8001e10-0x8001e04-4] // loc_3005A92+1
     mov lr, pc
@@ -3232,8 +3230,6 @@ sub_8001E02:
     pop {r6,r7,pc}
 off_8001E0C:    .word loc_3005A5C+1
 off_8001E10:    .word loc_3005A92+1
-// end of function sub_8001E02
-
 .thumb
 sub_8001E14:
     push {r6,r7,lr}
@@ -6845,19 +6841,19 @@ sub_80037E8:
     mov r1, #0x48 
     bl f900_8000930
     pop {r0}
-    strb r0, [r5,#1]
+    strb r0, [r5,#0x1] // (byte_20004D1 - 0x20004d0)
     ldr r7, [pc, #0x80038ac-0x80037fa-2] // off_800375C
     mov r1, #0x10
-    ldrb r0, [r5,#1]
+    ldrb r0, [r5,#0x1] // (byte_20004D1 - 0x20004d0)
     mul r0, r1
     add r7, r7, r0
     ldr r0, [r7,#8]
-    str r0, [r5,#4]
+    str r0, [r5,#0x4] // (dword_20004D4 - 0x20004d0)
     ldr r0, [r7,#0xc]
-    strb r0, [r5,#2]
+    strb r0, [r5,#0x2] // (byte_20004D2 - 0x20004d0)
     mov r0, #1
     strb r0, [r5]
-    strb r0, [r5,#3]
+    strb r0, [r5,#0x3] // (byte_20004D3 - 0x20004d0)
     pop {r4-r7,pc}
 // end of function sub_80037E8
 

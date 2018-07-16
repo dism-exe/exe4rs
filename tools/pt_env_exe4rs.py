@@ -16,7 +16,6 @@ pt.env(dismProjPath= 'GameDev/Disassembly/exe4rs/')
 pt.env(asmPath= 'asm/')
 pt.env(binPath='bin/')
 pt.env(incPath='inc/')
-pt.env(externsPath= 'externs/')
 pt.env(gameFiles={
     'start.s':        (0x8000000, 0x800029C),
     'main.s':         (0x800029C, 0x8000550),

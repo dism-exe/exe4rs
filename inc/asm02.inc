@@ -1,7 +1,7 @@
 .ifndef INC_ASM02
 .equ INC_ASM02, 0
 
-// Public Interface
+/* Public Interface */
 .extern off_801DA10
 .extern sub_801DB04
 .extern sub_801DB68
@@ -213,7656 +213,1474 @@
 .extern sub_80449B8
 .extern sub_80449E8
 
-// Forward Reference
-.extern sub_801DA08
-.extern dword_801DA5C
-.extern loc_801DB26
-.extern loc_801DB42
-.extern loc_801DB50
-.extern off_801DB64
-.extern loc_801DBA2
-.extern loc_801DBAE
-.extern loc_801DBE4
-.extern loc_801DBF2
-.extern loc_801DC02
-.extern loc_801DC42
-.extern loc_801DC58
-.extern loc_801DC86
-.extern loc_801DC9C
-.extern loc_801DCAC
-.extern dword_801DCC8
-.extern off_801DCCC
-.extern byte_801DCD0
-.extern byte_801DCD1
-.extern byte_801DCD2
-.extern byte_801DCD3
-.extern byte_801DCD4
-.extern byte_801DCD5
-.extern dword_801DD68
-.extern dword_801DD6C
-.extern dword_801DD70
-.extern off_801DD78
-.extern off_801DD7C
-.extern dword_801DD80
-.extern off_801DD84
-.extern off_801DD88
-.extern off_801DD8C
-.extern off_801DD90
-.extern off_801DD94
-.extern sub_801DD98
-.extern off_801DDA4
-.extern off_801DDA8
-.extern sub_801DDD0
-.extern loc_801DE0A
-.extern loc_801DE20
-.extern loc_801DE28
-.extern loc_801DE54
-.extern loc_801DE66
-.extern loc_801DE70
-.extern off_801DE74
-.extern sub_801DE78
-.extern loc_801DE86
-.extern loc_801DE98
-.extern loc_801DEA8
-.extern loc_801DEBE
-.extern loc_801DED4
-.extern locret_801DED6
-.extern off_801DED8
-.extern off_801DEDC
-.extern dword_801DEF4
-.extern off_801DEF8
-.extern sub_801DEFC
-.extern loc_801DF1A
-.extern loc_801DF46
-.extern loc_801DF7C
-.extern sub_801DF80
-.extern loc_801DF92
-.extern loc_801DF9E
-.extern locret_801DFA2
-.extern sub_801DFA4
-.extern loc_801DFAA
-.extern loc_801DFC2
-.extern loc_801DFC6
-.extern off_801DFD0
-.extern off_801DFD4
-.extern off_801DFD8
-.extern off_801DFDC
-.extern dword_801DFE4
-.extern dword_801DFEC
-.extern sub_801DFF4
-.extern locret_801E010
-.extern sub_801E014
-.extern off_801E024
-.extern off_801E028
-.extern off_801E03C
-.extern jt_801E040
-.extern sub_801E050
-.extern loc_801E066
-.extern loc_801E078
-.extern loc_801E096
-.extern loc_801E098
-.extern off_801E0B4
-.extern dword_801E0B8
-.extern off_801E0BC
-.extern sub_801E0C0
-.extern loc_801E0CC
-.extern dword_801E0F0
-.extern sub_801E0F4
-.extern loc_801E13A
-.extern locret_801E146
-.extern off_801E148
-.extern off_801E14C
-.extern ho_cb_801E150
-.extern off_801E164
-.extern jt_801E168
-.extern sub_801E184
-.extern loc_801E1B8
-.extern loc_801E1C6
-.extern loc_801E1DA
-.extern loc_801E23E
-.extern loc_801E246
-.extern locret_801E258
-.extern off_801E25C
-.extern off_801E260
-.extern sub_801E264
-.extern loc_801E274
-.extern loc_801E288
-.extern locret_801E2D2
-.extern off_801E2D4
-.extern dword_801E2D8
-.extern dword_801E314
-.extern ho_cb_801E318
-.extern loc_801E340
-.extern loc_801E34E
-.extern loc_801E35E
-.extern locret_801E368
-.extern off_801E36C
-.extern jt_801E370
-.extern jt_801E394
-.extern sub_801E3B8
-.extern loc_801E3D8
-.extern loc_801E3EC
-.extern loc_801E3F0
-.extern loc_801E426
-.extern locret_801E458
-.extern off_801E45C
-.extern dword_801E460
-.extern off_801E464
-.extern sub_801E468
-.extern loc_801E4B4
-.extern dword_801E4BC
-.extern off_801E4C0
-.extern loc_801E4C4
-.extern sub_801E4DC
-.extern loc_801E50C
-.extern loc_801E536
-.extern locret_801E53E
-.extern off_801E544
-.extern ho_cb_801E548
-.extern off_801E55C
-.extern jt_801E560
-.extern sub_801E580
-.extern sub_801E596
-.extern loc_801E5AA
-.extern locret_801E5AE
-.extern sub_801E5B0
-.extern off_801E5C4
-.extern off_801E5C8
-.extern sub_801E5CC
-.extern loc_801E5E0
-.extern locret_801E5EC
-.extern sub_801E5EE
-.extern loc_801E5FE
-.extern loc_801E60E
-.extern locret_801E610
-.extern sub_801E612
-.extern locret_801E6BC
-.extern sub_801E6BE
-.extern loc_801E6CC
-.extern locret_801E6F0
-.extern sub_801E6F2
-.extern locret_801E72A
-.extern sub_801E72C
-.extern loc_801E780
-.extern locret_801E798
-.extern off_801E79C
-.extern dword_801E7A4
-.extern off_801E7AC
-.extern dword_801E7B0
-.extern off_801E7B4
-.extern sub_801E7C4
-.extern locret_801E7DA
-.extern sub_801E7DC
-.extern loc_801E7F6
-.extern locret_801E7FA
-.extern sub_801E7FC
-.extern loc_801E838
-.extern loc_801E852
-.extern loc_801E858
-.extern loc_801E860
-.extern locret_801E87C
-.extern off_801E880
-.extern off_801E884
-.extern off_801E888
-.extern off_801E88C
-.extern off_801E890
-.extern off_801E894
-.extern off_801E8A0
-.extern sub_801E8AC
-.extern loc_801E8D4
-.extern loc_801E910
-.extern loc_801E930
-.extern locret_801E934
-.extern loc_801E936
-.extern dword_801E950
-.extern off_801E954
-.extern off_801E958
-.extern loc_801E95C
-.extern sub_801E95E
-.extern loc_801E96E
-.extern loc_801E9AC
-.extern loc_801E9D0
-.extern loc_801E9D6
-.extern sub_801E9DA
-.extern loc_801EA00
-.extern loc_801EA12
-.extern loc_801EA1E
-.extern locret_801EA24
-.extern dword_801EA28
-.extern off_801EA2C
-.extern off_801EA30
-.extern dword_801EA34
-.extern byte_801EA44
-.extern byte_801EA45
-.extern sub_801EA46
-.extern loc_801EA52
-.extern loc_801EA72
-.extern locret_801EA76
-.extern off_801EA78
-.extern off_801EA7C
-.extern off_801EA80
-.extern dword_801EA98
-.extern loc_801EAB4
-.extern loc_801EAF0
-.extern dword_801EB30
-.extern loc_801EB70
-.extern dword_801EBB0
-.extern loc_801EBF0
-.extern dword_801EC30
-.extern sub_801EC70
-.extern loc_801EC7A
-.extern loc_801EC8A
-.extern loc_801EC90
-.extern loc_801ECA8
-.extern loc_801ECAA
-.extern off_801ECB0
-.extern sub_801ECB4
-.extern off_801ECC0
-.extern dword_801ECC4
-.extern sub_801ECE4
-.extern off_801ECF0
-.extern dword_801ECF4
-.extern sub_801ED14
-.extern off_801ED24
-.extern unk_801ED28
-.extern sub_801ED48
-.extern off_801ED54
-.extern unk_801ED58
-.extern sub_801ED78
-.extern loc_801ED9A
-.extern dword_801EDA8
-.extern sub_801EDAC
-.extern loc_801EDC6
-.extern locret_801EDD6
-.extern off_801EDD8
-.extern loc_801EDDC
-.extern sub_801EDF8
-.extern sub_801EE0C
-.extern locret_801EE30
-.extern dword_801EE34
-.extern dword_801EE38
-.extern dword_801EE3C
-.extern sub_801EE40
-.extern loc_801EE68
-.extern locret_801EE74
-.extern dword_801EE78
-.extern dword_801EE7C
-.extern off_801EE80
-.extern dword_801EE84
-.extern off_801EE88
-.extern sub_801EE8C
-.extern locret_801EEA6
-.extern loc_801EEA8
-.extern loc_801EEB0
-.extern off_801EEB8
-.extern sub_801EEBC
-.extern loc_801EEC0
-.extern loc_801EEC4
-.extern loc_801EEC8
-.extern loc_801EECC
-.extern loc_801EED0
-.extern loc_801EED4
-.extern loc_801EED8
-.extern loc_801EEDC
-.extern loc_801EEE0
-.extern loc_801EEE4
-.extern loc_801EEE8
-.extern loc_801EEEA
-.extern loc_801EEEC
-.extern loc_801EEF0
-.extern loc_801EEF4
-.extern locret_801EEF8
-.extern loc_801EEFA
-.extern sub_801EF02
-.extern loc_801EF0A
-.extern loc_801EF1C
-.extern off_801EF20
-.extern off_801EF24
-.extern sub_801EF28
-.extern loc_801EF36
-.extern loc_801EF42
-.extern loc_801EF48
-.extern loc_801EF52
-.extern loc_801EF5C
-.extern locret_801EF68
-.extern off_801EF6C
-.extern off_801EF70
-.extern __801EF74
-.extern loc_801EF8C
-.extern loc_801EFA2
-.extern loc_801EFCE
-.extern loc_801EFD8
-.extern loc_801EFEC
-.extern loc_801EFF0
-.extern loc_801F000
-.extern loc_801F012
-.extern loc_801F03E
-.extern loc_801F046
-.extern loc_801F050
-.extern loc_801F066
-.extern loc_801F06A
-.extern loc_801F076
-.extern loc_801F07A
-.extern loc_801F08C
-.extern loc_801F0B0
-.extern loc_801F0B6
-.extern loc_801F0D0
-.extern loc_801F0EC
-.extern loc_801F0F0
-.extern loc_801F0FA
-.extern loc_801F10A
-.extern loc_801F116
-.extern sub_801F13E
-.extern sub_801F150
-.extern locret_801F164
-.extern sub_801F166
-.extern loc_801F16C
-.extern loc_801F17C
-.extern locret_801F180
-.extern sub_801F182
-.extern loc_801F1C0
-.extern locret_801F1D8
-.extern sub_801F1DA
-.extern loc_801F1EE
-.extern loc_801F1FC
-.extern loc_801F200
-.extern loc_801F20C
-.extern locret_801F220
-.extern loc_801F222
-.extern loc_801F234
-.extern loc_801F24C
-.extern loc_801F25E
-.extern loc_801F262
-.extern loc_801F274
-.extern loc_801F29E
-.extern loc_801F2A4
-.extern loc_801F2AC
-.extern off_801F2B4
-.extern off_801F2B8
-.extern off_801F2BC
-.extern off_801F2C0
-.extern off_801F2C4
-.extern sub_801F2D0
-.extern loc_801F2E0
-.extern loc_801F2F8
-.extern loc_801F2FE
-.extern loc_801F302
-.extern loc_801F314
-.extern loc_801F318
-.extern loc_801F35E
-.extern loc_801F378
-.extern loc_801F384
-.extern loc_801F396
-.extern loc_801F3A6
-.extern sub_801F3AA
-.extern loc_801F3B0
-.extern loc_801F3CE
-.extern loc_801F3E0
-.extern loc_801F3EE
-.extern sub_801F3F2
-.extern loc_801F3FC
-.extern loc_801F40E
-.extern off_801F418
-.extern dword_801F41C
-.extern off_801F420
-.extern sub_801F424
-.extern off_801F440
-.extern off_801F444
-.extern unk_801F448
-.extern sub_801F488
-.extern loc_801F494
-.extern locret_801F4B6
-.extern off_801F4B8
-.extern off_801F4BC
-.extern sub_801F4C0
-.extern sub_801F4CC
-.extern sub_801F4DC
-.extern loc_801F4EA
-.extern off_801F4F4
-.extern dword_801F4F8
-.extern sub_801F4FC
-.extern sub_801F50C
-.extern loc_801F516
-.extern loc_801F51E
-.extern off_801F524
-.extern off_801F528
-.extern sub_801F52C
-.extern loc_801F546
-.extern loc_801F56A
-.extern loc_801F570
-.extern loc_801F578
-.extern locret_801F57A
-.extern sub_801F57C
-.extern loc_801F588
-.extern loc_801F596
-.extern locret_801F59C
-.extern loc_801F59E
-.extern off_801F5A4
-.extern off_801F5A8
-.extern dword_801F5AC
-.extern off_801F5B0
-.extern sub_801F5B4
-.extern loc_801F5C2
-.extern loc_801F5D8
-.extern loc_801F5F4
-.extern loc_801F602
-.extern loc_801F616
-.extern loc_801F636
-.extern loc_801F640
-.extern loc_801F64C
-.extern locret_801F652
-.extern off_801F654
-.extern off_801F658
-.extern off_801F65C
-.extern off_801F660
-.extern dword_801F664
-.extern sub_801F668
-.extern dword_801F678
-.extern sub_801F67C
-.extern loc_801F69C
-.extern loc_801F6C0
-.extern loc_801F73C
-.extern loc_801F740
-.extern loc_801F744
-.extern loc_801F760
-.extern loc_801F77C
-.extern loc_801F780
-.extern loc_801F782
-.extern loc_801F794
-.extern loc_801F7B0
-.extern loc_801F7B8
-.extern loc_801F7BC
-.extern loc_801F7C0
-.extern loc_801F7C4
-.extern off_801F7D0
-.extern off_801F7D4
-.extern sub_801F7D8
-.extern sub_801F7FC
-.extern loc_801F812
-.extern sub_801F816
-.extern loc_801F82C
-.extern loc_801F858
-.extern loc_801F87A
-.extern loc_801F87E
-.extern loc_801F88A
-.extern loc_801F8A8
-.extern loc_801F8AC
-.extern loc_801F8B0
-.extern loc_801F8C2
-.extern loc_801F8CE
-.extern loc_801F8E0
-.extern loc_801F8EE
-.extern loc_801F90A
-.extern dword_801F91C
-.extern sub_801F920
-.extern loc_801F942
-.extern loc_801F95C
-.extern loc_801F962
-.extern loc_801F982
-.extern loc_801F990
-.extern loc_801F99E
-.extern loc_801F9A2
-.extern loc_801F9CA
-.extern loc_801F9E6
-.extern loc_801F9EA
-.extern loc_801F9EC
-.extern sub_801F9F8
-.extern loc_801FA06
-.extern sub_801FA0C
-.extern dword_801FA1C
-.extern sub_801FA20
-.extern sub_801FA38
-.extern loc_801FA40
-.extern loc_801FA58
-.extern loc_801FA60
-.extern loc_801FA86
-.extern loc_801FA8E
-.extern locret_801FA94
-.extern off_801FA98
-.extern dword_801FA9C
-.extern dword_801FAA0
-.extern off_801FAA4
-.extern dword_801FAA8
-.extern sub_801FAAE
-.extern loc_801FAC8
-.extern locret_801FB14
-.extern off_801FB18
-.extern dword_801FB1C
-.extern dword_801FB2C
-.extern off_801FB30
-.extern dword_801FB34
-.extern dword_801FB38
-.extern off_801FB3C
-.extern sub_801FB40
-.extern loc_801FB52
-.extern loc_801FB5E
-.extern loc_801FB76
-.extern locret_801FB7A
-.extern off_801FB7C
-.extern sub_801FB80
-.extern loc_801FB96
-.extern loc_801FC58
-.extern off_801FC8C
-.extern off_801FCAC
-.extern dword_801FCB0
-.extern off_801FCB4
-.extern off_801FCB8
-.extern dword_801FCBC
-.extern loc_801FCD2
-.extern off_801FCD8
-.extern off_801FCDC
-.extern off_801FCE0
-.extern sub_801FCE4
-.extern loc_801FD04
-.extern loc_801FD16
-.extern off_801FD1C
-.extern off_801FD20
-.extern off_801FD24
-.extern off_801FD28
-.extern sub_801FD2C
-.extern loc_801FD32
-.extern sub_801FD3E
-.extern loc_801FD54
-.extern off_801FD74
-.extern off_801FD78
-.extern off_801FD80
-.extern sub_801FD84
-.extern off_801FDB0
-.extern off_801FDB4
-.extern sub_801FDB8
-.extern off_801FDF8
-.extern dword_801FDFC
-.extern off_801FE00
-.extern off_801FE04
-.extern off_801FE08
-.extern dword_801FE0C
-.extern off_801FE10
-.extern dword_801FE14
-.extern off_801FE18
-.extern off_801FE1C
-.extern dword_801FE20
-.extern sub_801FE24
-.extern loc_801FE26
-.extern loc_801FE3C
-.extern loc_801FE42
-.extern loc_801FE4E
-.extern sub_801FE54
-.extern loc_801FE68
-.extern loc_801FE6A
-.extern off_801FE8C
-.extern off_801FE90
-.extern off_801FE94
-.extern word_801FEA0
-.extern word_801FEA2
-.extern word_801FEA4
-.extern word_801FEA6
-.extern word_801FEA8
-.extern word_801FEAA
-.extern word_801FEAC
-.extern word_801FEAE
-.extern word_801FEB0
-.extern word_801FEB2
-.extern word_801FEB4
-.extern word_801FEB6
-.extern word_801FEB8
-.extern word_801FEBA
-.extern word_801FEBC
-.extern word_801FEBE
-.extern word_801FEC0
-.extern word_801FEC2
-.extern sub_801FEC4
-.extern loc_801FEF6
-.extern loc_801FF08
-.extern loc_801FF14
-.extern loc_801FF34
-.extern loc_801FF38
-.extern locret_801FF3C
-.extern loc_801FF3E
-.extern off_801FF44
-.extern dword_801FF48
-.extern off_801FF54
-.extern dword_801FF58
-.extern off_801FF64
-.extern sub_801FF68
-.extern loc_801FFA8
-.extern locret_801FFAA
-.extern off_801FFAC
-.extern off_801FFB0
-.extern off_801FFB4
-.extern off_801FFB8
-.extern loc_8020004
-.extern loc_8020010
-.extern loc_802001C
-.extern loc_8020028
-.extern sub_8020034
-.extern loc_8020058
-.extern loc_8020066
-.extern loc_8020080
-.extern loc_8020086
-.extern loc_802009E
-.extern loc_80200B0
-.extern loc_80200CA
-.extern loc_80200D0
-.extern sub_80200DE
-.extern loc_8020104
-.extern loc_8020118
-.extern loc_802011E
-.extern loc_802015A
-.extern loc_802016E
-.extern sub_8020172
-.extern loc_802018A
-.extern loc_802019E
-.extern loc_80201A4
-.extern loc_80201BC
-.extern loc_80201C6
-.extern off_80201CC
-.extern off_80201D0
-.extern dword_80201D4
-.extern off_80201E0
-.extern sub_80201E4
-.extern loc_80201F0
-.extern locret_8020214
-.extern sub_8020216
-.extern loc_802023E
-.extern loc_8020242
-.extern sub_8020246
-.extern loc_802026E
-.extern loc_8020272
-.extern off_8020278
-.extern dword_802027C
-.extern sub_8020280
-.extern sub_8020290
-.extern loc_80202B0
-.extern loc_80202C4
-.extern loc_80202CC
-.extern loc_80202DC
-.extern loc_80202E6
-.extern loc_8020306
-.extern loc_8020312
-.extern loc_8020324
-.extern loc_8020330
-.extern loc_8020338
-.extern loc_8020356
-.extern loc_8020382
-.extern loc_8020392
-.extern loc_802039E
-.extern loc_80203B0
-.extern loc_80203CA
-.extern loc_80203CC
-.extern loc_80203DA
-.extern loc_80203E4
-.extern loc_80203E8
-.extern off_80203F4
-.extern dword_80203F8
-.extern off_80203FC
-.extern off_8020400
-.extern dword_8020428
-.extern off_8020454
-.extern off_8020458
-.extern dword_8020480
-.extern off_80204A4
-.extern off_80204A8
-.extern dword_80204D0
-.extern sub_80204F8
-.extern sub_8020506
-.extern loc_8020512
-.extern loc_802052C
-.extern loc_8020532
-.extern loc_802053A
-.extern off_8020554
-.extern off_8020558
-.extern loc_802055C
-.extern sub_8020560
-.extern loc_802057A
-.extern loc_80205A0
-.extern loc_80205BE
-.extern loc_80205CA
-.extern loc_80205D6
-.extern loc_80205EE
-.extern loc_80205F8
-.extern loc_8020600
-.extern loc_802062E
-.extern loc_8020634
-.extern locret_802063E
-.extern off_8020640
-.extern dword_8020644
-.extern off_8020648
-.extern off_802064C
-.extern dword_8020654
-.extern off_8020660
-.extern off_8020664
-.extern sub_8020668
-.extern loc_802068C
-.extern loc_8020698
-.extern loc_80206A4
-.extern loc_80206C6
-.extern loc_80206CE
-.extern loc_80206D4
-.extern loc_80206DE
-.extern loc_80206E6
-.extern loc_8020714
-.extern loc_802071A
-.extern locret_8020724
-.extern off_8020728
-.extern dword_802072C
-.extern off_8020730
-.extern off_8020734
-.extern dword_802073C
-.extern off_8020750
-.extern sub_8020754
-.extern off_8020764
-.extern off_8020768
-.extern sub_8020784
-.extern dword_80207B8
-.extern off_80207BC
-.extern off_80207C0
-.extern sub_80207C4
-.extern locret_80207D8
-.extern sub_80207DA
-.extern locret_8020802
-.extern sub_8020804
-.extern locret_802081A
-.extern sub_802081C
-.extern locret_8020832
-.extern sub_8020834
-.extern loc_802084C
-.extern loc_802086A
-.extern locret_802089C
-.extern sub_802089E
-.extern loc_80208BC
-.extern locret_80208C0
-.extern loc_80208C2
-.extern sub_80208D8
-.extern loc_80208FA
-.extern loc_8020908
-.extern loc_802090C
-.extern loc_8020924
-.extern locret_8020936
-.extern sub_8020938
-.extern locret_8020948
-.extern sub_802094A
-.extern off_802095C
-.extern off_8020960
-.extern sub_8020968
-.extern loc_80209A8
-.extern locret_80209AC
-.extern off_80209B0
-.extern off_80209B4
-.extern sub_80209B8
-.extern off_80209CC
-.extern off_80209D0
-.extern sub_80209E4
-.extern sub_80209EC
-.extern loc_8020A16
-.extern loc_8020A2A
-.extern loc_8020A3E
-.extern off_8020A64
-.extern off_8020A68
-.extern off_8020A6C
-.extern off_8020A70
-.extern dword_8020A80
-.extern dword_8020AD4
-.extern dword_8020B18
-.extern dword_8020B30
-.extern off_8020B58
-.extern off_8020B5C
-.extern sub_8020B6C
-.extern locret_8020B82
-.extern sub_8020B84
-.extern loc_8020B98
-.extern loc_8020BAE
-.extern loc_8020BBA
-.extern loc_8020BCA
-.extern loc_8020BDA
-.extern loc_8020BF0
-.extern loc_8020BF2
-.extern locret_8020BFC
-.extern off_8020C00
-.extern off_8020C04
-.extern dword_8020C14
-.extern dword_8020C18
-.extern dword_8020C1C
-.extern off_8020C20
-.extern dword_8020C44
-.extern dword_8020C48
-.extern dword_8020C4C
-.extern dword_8020C50
-.extern dword_8020C54
-.extern off_8020C6C
-.extern dword_8020C7C
-.extern dword_8020C80
-.extern dword_8020C84
-.extern off_8020C94
-.extern dword_8020C98
-.extern off_8020C9C
-.extern dword_8020CA4
-.extern dword_8020CA8
-.extern sub_8020CAC
-.extern loc_8020CBE
-.extern sub_8020CCC
-.extern loc_8020CDA
-.extern sub_8020CFC
-.extern sub_8020D10
-.extern sub_8020D22
-.extern locret_8020D3E
-.extern dword_8020D40
-.extern dword_8020D44
-.extern sub_8020D48
-.extern sub_8020D50
-.extern locret_8020D62
-.extern sub_8020D64
-.extern locret_8020D80
-.extern dword_8020D9C
-.extern dword_8020DDC
-.extern dword_8020E1C
-.extern sub_8020E82
-.extern off_8020EB4
-.extern jt_8020EB8
-.extern sub_8020EC4
-.extern loc_8020EF8
-.extern loc_8020F0E
-.extern dword_8020F14
-.extern sub_8020F18
-.extern ho_cb_8020F24
-.extern off_8020F3C
-.extern jt_8020F40
-.extern sub_8020F50
-.extern loc_8020F62
-.extern locret_8020F8C
-.extern off_8020F90
-.extern loc_8020F94
-.extern sub_8020F96
-.extern loc_8020FC0
-.extern loc_8020FD2
-.extern locret_8020FDA
-.extern sub_8020FDC
-.extern loc_8021008
-.extern loc_802100C
-.extern loc_8021028
-.extern loc_802102E
-.extern locret_802103C
-.extern off_8021040
-.extern dword_8021044
-.extern sub_8021048
-.extern off_8021058
-.extern off_802105C
-.extern sub_8021064
-.extern loc_8021078
-.extern sub_802107E
-.extern locret_80210A2
-.extern dword_80210A4
-.extern dword_80210A8
-.extern sub_80210AC
-.extern sub_80210BC
-.extern loc_80210E4
-.extern locret_80210E6
-.extern off_80210E8
-.extern off_80210EC
-.extern byte_80210F0
-.extern byte_80210F1
-.extern word_80210FA
-.extern dword_80210FC
-.extern off_80211F0
-.extern off_80212C4
-.extern off_80212C8
-.extern off_80212D4
-.extern off_80212D8
-.extern sub_80212DC
-.extern sub_80212E8
-.extern off_80212FC
-.extern off_8021300
-.extern sub_8021310
-.extern off_8021320
-.extern off_8021324
-.extern sub_802132C
-.extern sub_8021356
-.extern loc_8021370
-.extern locret_8021386
-.extern sub_80213B0
-.extern off_80213C0
-.extern off_80213C4
-.extern sub_80213D4
-.extern off_80213E4
-.extern off_80213E8
-.extern sub_80213F4
-.extern loc_8021408
-.extern loc_8021414
-.extern locret_802141A
-.extern sub_802141C
-.extern locret_802142A
-.extern sub_802142C
-.extern loc_8021448
-.extern loc_802144A
-.extern loc_8021454
-.extern locret_8021464
-.extern off_8021468
-.extern sub_802146C
-.extern off_802147C
-.extern off_8021480
-.extern sub_802148C
-.extern loc_8021492
-.extern loc_80214C2
-.extern loc_80214CC
-.extern loc_80214DA
-.extern loc_80214E0
-.extern loc_80214F8
-.extern loc_8021500
-.extern loc_8021504
-.extern dword_802152C
-.extern off_8021530
-.extern off_8021534
-.extern off_8021538
-.extern off_802153C
-.extern off_8021540
-.extern off_8021544
-.extern off_8021548
-.extern off_802154C
-.extern off_8021550
-.extern off_8021554
-.extern off_8021558
-.extern off_802155C
-.extern dword_8021560
-.extern sub_8021564
-.extern loc_8021580
-.extern loc_80215BA
-.extern off_80215C0
-.extern sub_80215C4
-.extern loc_8021602
-.extern loc_8021606
-.extern loc_802161E
-.extern loc_802162A
-.extern loc_802162E
-.extern loc_802163C
-.extern loc_8021656
-.extern loc_8021674
-.extern loc_802168C
-.extern locret_8021690
-.extern dword_8021694
-.extern dword_8021698
-.extern dword_802169C
-.extern sub_80216A0
-.extern loc_80216CA
-.extern loc_80216CE
-.extern loc_80216E0
-.extern loc_80216F0
-.extern locret_80216F4
-.extern loc_80216FC
-.extern off_802170C
-.extern off_8021710
-.extern sub_8021718
-.extern loc_802171E
-.extern off_802173C
-.extern sub_8021740
-.extern loc_8021754
-.extern loc_802176C
-.extern loc_80217A0
-.extern off_80217A4
-.extern sub_80217A8
-.extern loc_80217CA
-.extern locret_80217D6
-.extern off_80217D8
-.extern sub_80217DC
-.extern locret_8021802
-.extern sub_8021804
-.extern off_8021888
-.extern off_802188C
-.extern off_8021890
-.extern off_80218B4
-.extern off_80218B8
-.extern off_80218BC
-.extern off_80218C0
-.extern off_80218C4
-.extern off_80218C8
-.extern off_80218D4
-.extern off_80218D8
-.extern off_80218DC
-.extern dword_80218E0
-.extern off_80218E4
-.extern sub_80218EC
-.extern loc_8021902
-.extern loc_8021906
-.extern locret_802191A
-.extern sub_802191C
-.extern loc_802192C
-.extern loc_8021936
-.extern loc_802193E
-.extern sub_8021942
-.extern loc_8021954
-.extern loc_8021956
-.extern off_8021970
-.extern sub_8021974
-.extern loc_8021988
-.extern loc_8021996
-.extern dword_80219C4
-.extern off_80219CC
-.extern off_80219D0
-.extern dword_80219D4
-.extern sub_80219D8
-.extern loc_80219EC
-.extern loc_80219F8
-.extern loc_8021A04
-.extern loc_8021A0C
-.extern locret_8021A0E
-.extern dword_8021A10
-.extern sub_8021A14
-.extern loc_8021A18
-.extern dword_8021A24
-.extern sub_8021A28
-.extern loc_8021A2C
-.extern dword_8021A38
-.extern sub_8021A3C
-.extern sub_8021A72
-.extern loc_8021A80
-.extern loc_8021AA8
-.extern sub_8021AD2
-.extern loc_8021AE0
-.extern loc_8021B08
-.extern off_8021B34
-.extern off_8021B38
-.extern off_8021B3C
-.extern dword_8021B40
-.extern dword_8021B44
-.extern off_8021B48
-.extern loc_8021B50
-.extern sub_8021B78
-.extern loc_8021B82
-.extern loc_8021B8C
-.extern loc_8021BB0
-.extern loc_8021BBA
-.extern dword_8021BE4
-.extern sub_8021BE8
-.extern off_8021C4C
-.extern off_8021C50
-.extern off_8021C58
-.extern dword_8021C5C
-.extern off_8021C60
-.extern loc_8021C78
-.extern sub_8021C9C
-.extern off_8021CB4
-.extern off_8021CB8
-.extern loc_8021CC0
-.extern loc_8021CD4
-.extern sub_8021CE8
-.extern locret_8021D0E
-.extern off_8021D10
-.extern off_8021D14
-.extern loc_8021D1C
-.extern loc_8021D2C
-.extern loc_8021D52
-.extern loc_8021D5C
-.extern sub_8021D60
-.extern locret_8021D74
-.extern sub_8021D76
-.extern loc_8021D96
-.extern loc_8021DA4
-.extern loc_8021DDA
-.extern loc_8021DE6
-.extern loc_8021DEE
-.extern loc_8021DF4
-.extern sub_8021DF8
-.extern loc_8021E32
-.extern loc_8021E42
-.extern loc_8021E46
-.extern loc_8021E68
-.extern locret_8021E7C
-.extern off_8021E80
-.extern off_8021E84
-.extern off_8021E88
-.extern off_8021E8C
-.extern off_8021E90
-.extern off_8021E94
-.extern off_8021E98
-.extern off_8021E9C
-.extern off_8021EA0
-.extern dword_8021EA4
-.extern loc_8021EBE
-.extern loc_8021ED6
-.extern off_8021EE4
-.extern off_8021F00
-.extern jt_8021F04
-.extern off_8021F10
-.extern sub_8021F14
-.extern sub_8021F2C
-.extern off_8021F3C
-.extern off_8021F40
-.extern sub_8021F4C
-.extern loc_8021F62
-.extern sub_8021F70
-.extern off_8021F80
-.extern loc_8021F84
-.extern loc_8021FBE
-.extern loc_8021FC2
-.extern dword_8021FCC
-.extern loc_8021FE0
-.extern loc_8021FFC
-.extern loc_8022002
-.extern locret_802200A
-.extern sub_802200C
-.extern loc_8022020
-.extern locret_802202C
-.extern sub_802202E
-.extern loc_8022176
-.extern locret_8022180
-.extern loc_802218C
-.extern locret_8022198
-.extern loc_80221B6
-.extern loc_80221C2
-.extern locret_80221CA
-.extern loc_80221D6
-.extern loc_80221E6
-.extern off_80221EC
-.extern locret_8022204
-.extern loc_8022248
-.extern loc_802224A
-.extern loc_8022264
-.extern loc_8022270
-.extern off_8022274
-.extern off_8022278
-.extern off_8022284
-.extern off_8022288
-.extern off_8022294
-.extern dword_8022298
-.extern off_80222A4
-.extern off_80222D8
-.extern off_802230C
-.extern dword_8022340
-.extern loc_80223B8
-.extern sub_80223BC
-.extern sub_80223DC
-.extern sub_80223FC
-.extern off_8022420
-.extern sub_8022424
-.extern off_8022448
-.extern sub_802244C
-.extern sub_802246E
-.extern loc_8022480
-.extern loc_8022488
-.extern sub_802248C
-.extern loc_802249E
-.extern loc_80224A6
-.extern sub_80224AA
-.extern sub_80224CC
-.extern sub_80224EE
-.extern sub_802250E
-.extern sub_802252E
-.extern sub_802254C
-.extern sub_802256A
-.extern sub_8022588
-.extern off_80225B0
-.extern dword_80225B4
-.extern aStKlmnopqrstux
-.extern loc_802281A
-.extern locret_802282E
-.extern sub_8022840
-.extern loc_8022852
-.extern loc_8022864
-.extern loc_802286C
-.extern loc_8022884
-.extern loc_8022898
-.extern loc_80228AE
-.extern loc_80228B4
-.extern loc_80228C0
-.extern loc_80228CC
-.extern loc_8022910
-.extern loc_802292E
-.extern loc_802293E
-.extern loc_8022942
-.extern loc_8022946
-.extern loc_8022948
-.extern loc_802295C
-.extern loc_8022962
-.extern loc_802298E
-.extern loc_80229CC
-.extern loc_80229D0
-.extern locret_80229D4
-.extern off_80229D8
-.extern off_80229DC
-.extern dword_80229E8
-.extern dword_80229EC
-.extern dword_80229F0
-.extern sub_8022A00
-.extern loc_8022A18
-.extern loc_8022A26
-.extern loc_8022A30
-.extern locret_8022A3A
-.extern off_8022A3C
-.extern word_8022A40
-.extern dword_8022A42
-.extern sub_8022A50
-.extern loc_8022AB6
-.extern loc_8022AC6
-.extern loc_8022AD0
-.extern loc_8022AD2
-.extern sub_8022AD6
-.extern loc_8022AF6
-.extern locret_8022AF8
-.extern loc_8022B18
-.extern locret_8022B56
-.extern loc_8022BC0
-.extern locret_8022BD8
-.extern off_8022BDC
-.extern jt_8022BE0
-.extern locret_8022BF4
-.extern locret_8022BFE
-.extern locret_8022C0A
-.extern locret_8022C16
-.extern locret_8022C24
-.extern locret_8022C90
-.extern sub_8022CA0
-.extern loc_8022CB8
-.extern loc_8022CD0
-.extern sub_8022CEA
-.extern off_8022D28
-.extern unk_8022D2C
-.extern loc_8022D62
-.extern locret_8022D8E
-.extern loc_8022D9E
-.extern loc_8022DA8
-.extern loc_8022DC6
-.extern loc_8022DD0
-.extern loc_8022DDA
-.extern loc_8022DEA
-.extern loc_8022DF6
-.extern locret_8022E00
-.extern locret_8022E1C
-.extern unk_8022E2C
-.extern a02x02x04x
-.extern sub_8022E60
-.extern locret_8022E6E
-.extern locret_8022EAC
-.extern dword_8022ECC
-.extern off_8022ED0
-.extern dword_8022ED4
-.extern off_8022ED8
-.extern dword_8022EDC
-.extern off_8022EE0
-.extern off_8022EE4
-.extern off_8022EE8
-.extern off_8022EEC
-.extern off_8022EF0
-.extern off_8022EF4
-.extern off_8022EF8
-.extern locret_8022F6E
-.extern loc_8022F86
-.extern locret_8022F9A
-.extern loc_8022FDA
-.extern loc_8022FF6
-.extern locret_802301A
-.extern off_802301C
-.extern off_8023020
-.extern off_8023024
-.extern off_8023028
-.extern off_802302C
-.extern off_8023030
-.extern off_8023034
-.extern dword_8023038
-.extern off_802303C
-.extern off_8023040
-.extern sub_8023044
-.extern loc_8023056
-.extern sub_802305A
-.extern loc_8023068
-.extern loc_802308E
-.extern loc_8023092
-.extern loc_8023096
-.extern dword_802309C
-.extern sub_80230A0
-.extern off_80230B0
-.extern jt_80230B4
-.extern sub_80230BC
-.extern loc_80230E8
-.extern loc_8023100
-.extern loc_802310C
-.extern loc_8023110
-.extern sub_8023120
-.extern loc_8023134
-.extern sub_8023148
-.extern off_8023158
-.extern jt_802315C
-.extern sub_8023164
-.extern loc_8023188
-.extern loc_802318C
-.extern sub_802319C
-.extern off_80231AC
-.extern jt_80231B0
-.extern sub_80231B8
-.extern loc_80231F2
-.extern loc_8023202
-.extern loc_8023206
-.extern sub_8023218
-.extern off_8023228
-.extern jt_802322C
-.extern sub_8023234
-.extern loc_802326A
-.extern loc_802326E
-.extern sub_8023280
-.extern off_8023290
-.extern jt_8023294
-.extern sub_802329C
-.extern loc_80232D0
-.extern loc_80232E0
-.extern loc_80232EC
-.extern loc_80232F0
-.extern locret_80232FE
-.extern sub_8023300
-.extern sub_802330C
-.extern loc_802332A
-.extern locret_8023340
-.extern sub_8023344
-.extern loc_802335C
-.extern sub_8023370
-.extern loc_80233A4
-.extern locret_80233BA
-.extern sub_80233BC
-.extern loc_80233CC
-.extern loc_80233E8
-.extern loc_80233EA
-.extern sub_80233EE
-.extern loc_8023402
-.extern loc_802341C
-.extern loc_8023420
-.extern off_8023424
-.extern dword_8023428
-.extern sub_8023430
-.extern off_8023440
-.extern jt_8023444
-.extern sub_802344C
-.extern loc_8023474
-.extern loc_8023486
-.extern loc_802348A
-.extern locret_8023498
-.extern sub_802349A
-.extern sub_80234A4
-.extern loc_80234BC
-.extern loc_80234FC
-.extern loc_8023518
-.extern sub_802351C
-.extern loc_8023546
-.extern loc_802354A
-.extern ho_8023552
-.extern loc_8023572
-.extern off_8023574
-.extern jt_8023578
-.extern sub_8023584
-.extern loc_8023594
-.extern loc_802359C
-.extern sub_80235A0
-.extern loc_80235B0
-.extern loc_80235B8
-.extern sub_80235BC
-.extern loc_80235DC
-.extern loc_80235E0
-.extern sub_80235E4
-.extern off_80235F4
-.extern jt_80235F8
-.extern sub_8023600
-.extern loc_802361A
-.extern loc_802361E
-.extern sub_802362E
-.extern loc_802364C
-.extern loc_8023698
-.extern loc_80236B8
-.extern off_80236BC
-.extern off_80236C0
-.extern sub_80236C8
-.extern off_80236D8
-.extern jt_80236DC
-.extern sub_80236E4
-.extern loc_802371A
-.extern loc_802371E
-.extern sub_802372E
-.extern loc_802374C
-.extern loc_8023780
-.extern loc_80237A0
-.extern sub_80237B0
-.extern loc_80237D4
-.extern loc_80237E6
-.extern loc_8023810
-.extern loc_8023830
-.extern sub_8023834
-.extern locret_802384E
-.extern sub_8023850
-.extern off_8023860
-.extern jt_8023864
-.extern sub_802386C
-.extern loc_8023890
-.extern loc_802389C
-.extern loc_80238A0
-.extern sub_80238B0
-.extern off_80238C0
-.extern jt_80238C4
-.extern sub_80238D4
-.extern loc_80238EC
-.extern loc_80238FA
-.extern loc_8023902
-.extern sub_8023906
-.extern loc_802391A
-.extern loc_802393E
-.extern loc_8023956
-.extern loc_8023962
-.extern loc_8023966
-.extern sub_8023976
-.extern loc_802398A
-.extern loc_80239AC
-.extern locret_80239B6
-.extern off_80239B8
-.extern dword_80239BC
-.extern sub_80239C8
-.extern off_80239D8
-.extern jt_80239DC
-.extern sub_80239E4
-.extern loc_80239F8
-.extern loc_8023A08
-.extern locret_8023A16
-.extern sub_8023A18
-.extern off_8023A34
-.extern off_8023A38
-.extern sub_8023A48
-.extern off_8023A58
-.extern jt_8023A5C
-.extern sub_8023A64
-.extern loc_8023A78
-.extern loc_8023A7C
-.extern sub_8023A8C
-.extern sub_8023A96
-.extern loc_8023AAE
-.extern loc_8023AE6
-.extern loc_8023B02
-.extern sub_8023B08
-.extern off_8023B18
-.extern jt_8023B1C
-.extern sub_8023B24
-.extern loc_8023B36
-.extern locret_8023B4C
-.extern sub_8023B4E
-.extern off_8023B6C
-.extern dword_8023B70
-.extern ho_8023B80
-.extern off_8023B90
-.extern jt_8023B94
-.extern sub_8023B9C
-.extern loc_8023BAE
-.extern locret_8023BC4
-.extern sub_8023BC6
-.extern off_8023BE4
-.extern dword_8023BE8
-.extern sub_8023BF8
-.extern off_8023C08
-.extern off_8023C0C
-.extern sub_8023C14
-.extern loc_8023C2A
-.extern locret_8023C40
-.extern sub_8023C42
-.extern loc_8023C5C
-.extern loc_8023C6C
-.extern loc_8023C88
-.extern off_8023C94
-.extern off_8023C98
-.extern off_8023C9C
-.extern off_8023CA0
-.extern off_8023CA4
-.extern dword_8023CAC
-.extern off_8023CB4
-.extern loc_8023CBC
-.extern sub_8023CC4
-.extern off_8023CD4
-.extern off_8023CD8
-.extern sub_8023CE0
-.extern loc_8023CF4
-.extern loc_8023CFE
-.extern sub_8023D0E
-.extern sub_8023D18
-.extern loc_8023D36
-.extern loc_8023D70
-.extern loc_8023D90
-.extern dword_8023D94
-.extern sub_8023D98
-.extern loc_8023DAC
-.extern locret_8023DC2
-.extern sub_8023DC4
-.extern loc_8023DD6
-.extern loc_8023DE4
-.extern loc_8023DF0
-.extern sub_8023DF4
-.extern loc_8023E0A
-.extern locret_8023E20
-.extern sub_8023E22
-.extern off_8023E3C
-.extern dword_8023E40
-.extern sub_8023E50
-.extern loc_8023E64
-.extern locret_8023E7A
-.extern sub_8023E7C
-.extern loc_8023E82
-.extern loc_8023E84
-.extern loc_8023E9C
-.extern loc_8023EAC
-.extern sub_8023EB0
-.extern loc_8023EC6
-.extern locret_8023EDC
-.extern sub_8023EE0
-.extern loc_8023EF6
-.extern locret_8023F0C
-.extern sub_8023F10
-.extern loc_8023F24
-.extern locret_8023F3A
-.extern sub_8023F3C
-.extern loc_8023F50
-.extern locret_8023F66
-.extern sub_8023F68
-.extern loc_8023F70
-.extern loc_8023F7E
-.extern loc_8023F88
-.extern sub_8023F8C
-.extern off_8023F9C
-.extern off_8023FA0
-.extern sub_8023FA8
-.extern loc_8023FC0
-.extern loc_8023FC4
-.extern sub_8023FD4
-.extern loc_8023FEC
-.extern loc_802402C
-.extern loc_8024048
-.extern sub_802404C
-.extern loc_802406C
-.extern loc_8024072
-.extern locret_8024088
-.extern sub_802408C
-.extern off_802409C
-.extern off_80240A0
-.extern sub_80240A8
-.extern loc_80240C2
-.extern loc_80240C6
-.extern sub_80240D6
-.extern loc_80240E4
-.extern loc_80240E6
-.extern loc_8024110
-.extern loc_802412E
-.extern dword_8024134
-.extern sub_8024138
-.extern loc_802414C
-.extern locret_8024162
-.extern sub_8024164
-.extern loc_802416A
-.extern loc_802416C
-.extern loc_802418A
-.extern loc_802418C
-.extern dword_8024190
-.extern sub_8024194
-.extern off_80241A4
-.extern off_80241A8
-.extern sub_80241B0
-.extern loc_80241CA
-.extern loc_80241CE
-.extern sub_80241DE
-.extern loc_80241EC
-.extern loc_8024228
-.extern loc_8024246
-.extern off_802424C
-.extern dword_8024250
-.extern dword_8024260
-.extern sub_8024264
-.extern off_8024274
-.extern off_8024278
-.extern sub_8024280
-.extern loc_802429A
-.extern loc_802429E
-.extern sub_80242AE
-.extern loc_80242C6
-.extern loc_802431C
-.extern loc_8024338
-.extern sub_802433C
-.extern loc_802434C
-.extern loc_802436C
-.extern loc_8024370
-.extern off_8024374
-.extern off_8024378
-.extern dword_8024380
-.extern sub_8024384
-.extern off_8024394
-.extern off_8024398
-.extern sub_80243A0
-.extern loc_80243B6
-.extern loc_80243BC
-.extern locret_80243CA
-.extern sub_80243CC
-.extern off_80243E8
-.extern off_80243EC
-.extern sub_80243FC
-.extern off_802440C
-.extern off_8024410
-.extern sub_8024418
-.extern loc_802442E
-.extern loc_8024434
-.extern locret_8024442
-.extern sub_8024444
-.extern off_8024460
-.extern dword_8024464
-.extern sub_8024474
-.extern off_8024484
-.extern off_8024488
-.extern sub_8024490
-.extern loc_80244B0
-.extern loc_80244CE
-.extern loc_80244E8
-.extern loc_80244F6
-.extern locret_8024504
-.extern off_8024508
-.extern sub_802450C
-.extern loc_8024520
-.extern locret_8024536
-.extern sub_8024538
-.extern off_8024548
-.extern off_802454C
-.extern sub_8024554
-.extern loc_8024564
-.extern locret_802457C
-.extern sub_802457E
-.extern off_8024598
-.extern off_802459C
-.extern sub_80245AC
-.extern off_80245BC
-.extern off_80245C0
-.extern sub_80245C8
-.extern loc_80245DC
-.extern loc_80245E6
-.extern sub_80245F6
-.extern loc_802460E
-.extern loc_802465E
-.extern loc_802467A
-.extern dword_8024680
-.extern sub_8024684
-.extern off_8024694
-.extern off_8024698
-.extern sub_80246A0
-.extern loc_80246AE
-.extern loc_80246B4
-.extern loc_80246CA
-.extern sub_80246DA
-.extern sub_80246E4
-.extern loc_80246F2
-.extern loc_8024712
-.extern loc_8024730
-.extern sub_8024734
-.extern loc_8024742
-.extern loc_8024762
-.extern loc_8024780
-.extern sub_8024784
-.extern loc_8024788
-.extern loc_80247A0
-.extern sub_80247A4
-.extern loc_80247A8
-.extern loc_80247C0
-.extern sub_80247C4
-.extern off_80247D4
-.extern off_80247D8
-.extern sub_80247E0
-.extern loc_80247F4
-.extern loc_8024802
-.extern sub_8024812
-.extern loc_8024832
-.extern loc_802484E
-.extern loc_802486C
-.extern sub_8024870
-.extern off_8024880
-.extern off_8024884
-.extern sub_802488C
-.extern loc_802489C
-.extern locret_80248B4
-.extern sub_80248B6
-.extern loc_80248DA
-.extern loc_80248FC
-.extern loc_80248FE
-.extern off_8024904
-.extern off_8024908
-.extern dword_8024910
-.extern sub_8024914
-.extern off_8024924
-.extern off_8024928
-.extern sub_8024930
-.extern loc_802494E
-.extern loc_802495C
-.extern sub_802496C
-.extern loc_802497C
-.extern loc_80249C8
-.extern loc_80249CC
-.extern loc_80249E2
-.extern off_80249E8
-.extern byte_80249EC
-.extern byte_80249ED
-.extern dword_8024A00
-.extern sub_8024A04
-.extern off_8024A14
-.extern off_8024A18
-.extern sub_8024A20
-.extern loc_8024A3E
-.extern loc_8024A4C
-.extern sub_8024A5C
-.extern loc_8024AAA
-.extern dword_8024AB0
-.extern sub_8024AB4
-.extern off_8024AC4
-.extern off_8024AC8
-.extern sub_8024AD0
-.extern loc_8024AF4
-.extern loc_8024AF8
-.extern sub_8024B08
-.extern loc_8024B3A
-.extern loc_8024B5C
-.extern loc_8024B90
-.extern loc_8024BA2
-.extern loc_8024BBA
-.extern off_8024BC4
-.extern dword_8024BC8
-.extern off_8024F60
-.extern dword_8024F78
-.extern dword_8024F7C
-.extern off_8024F94
-.extern dword_8024F98
-.extern loc_8025016
-.extern loc_8025040
-.extern loc_802506A
-.extern loc_8025098
-.extern loc_80250B0
-.extern loc_80250BE
-.extern off_80250EC
-.extern off_8025140
-.extern off_8025144
-.extern off_8025194
-.extern off_8025198
-.extern off_802519C
-.extern off_80251A0
-.extern off_80251A4
-.extern off_80251A8
-.extern off_80251AC
-.extern off_80251B0
-.extern off_80251B4
-.extern off_80251B8
-.extern off_80251BC
-.extern dword_80251C0
-.extern dword_8025210
-.extern ho_cb_8025268
-.extern off_8025284
-.extern jt_8025288
-.extern off_802529C
-.extern ho_cb_80252A0
-.extern loc_80252F6
-.extern ho_cb_802530C
-.extern off_802531C
-.extern jt_8025320
-.extern sub_8025324
-.extern off_8025338
-.extern ho_cb_802533C
-.extern off_8025350
-.extern jt_8025354
-.extern cb_8025368
-.extern dword_80253A4
-.extern off_80253A8
-.extern off_80253AC
-.extern cb_80253B0
-.extern loc_80253CA
-.extern loc_80253E2
-.extern locret_8025402
-.extern off_8025404
-.extern dword_8025408
-.extern cb_802540C
-.extern cb_8025420
-.extern loc_8025430
-.extern loc_802544C
-.extern loc_8025460
-.extern loc_8025462
-.extern loc_8025466
-.extern loc_802547A
-.extern locret_802547E
-.extern cb_8025480
-.extern loc_8025490
-.extern locret_80254B0
-.extern ho_80254B2
-.extern off_80254C0
-.extern jt_80254C4
-.extern cb_80254D4
-.extern cb_80254EC
-.extern loc_8025504
-.extern locret_8025512
-.extern off_8025514
-.extern cb_8025518
-.extern loc_802553A
-.extern loc_8025540
-.extern locret_8025544
-.extern cb_8025546
-.extern loc_8025566
-.extern locret_8025574
-.extern off_8025578
-.extern off_802557C
-.extern sub_8025580
-.extern loc_8025598
-.extern loc_80255D6
-.extern loc_80255EA
-.extern locret_80255FC
-.extern off_8025600
-.extern sub_8025604
-.extern loc_8025612
-.extern loc_8025622
-.extern loc_802562E
-.extern loc_8025632
-.extern locret_802563A
-.extern _function_chunks_loc_802563C
-.extern loc_8025654
-.extern loc_802566A
-.extern loc_802569E
-.extern loc_80256C8
-.extern loc_80256DC
-.extern loc_80256EA
-.extern loc_80256FE
-.extern loc_8025700
-.extern loc_8025712
-.extern loc_8025716
-.extern off_8025724
-.extern unk_8025728
-.extern sub_802572C
-.extern locret_8025754
-.extern off_8025758
-.extern off_802575C
-.extern sub_8025760
-.extern loc_802578C
-.extern loc_80257A6
-.extern loc_80257B4
-.extern loc_80257CA
-.extern locret_80257D6
-.extern sub_80257DC
-.extern loc_80257EE
-.extern loc_80257F8
-.extern loc_8025800
-.extern loc_802582E
-.extern loc_8025830
-.extern loc_8025834
-.extern off_802583C
-.extern dword_8025840
-.extern unk_8025844
-.extern sub_8025854
-.extern sub_8025864
-.extern off_8025890
-.extern off_8025894
-.extern off_8025898
-.extern dword_802589C
-.extern off_80258A0
-.extern off_80258A4
-.extern off_80258A8
-.extern off_80258E0
-.extern dword_80258E4
-.extern loc_8025912
-.extern loc_802592E
-.extern loc_8025944
-.extern loc_8025948
-.extern locret_802594C
-.extern sub_802594E
-.extern sub_8025962
-.extern sub_802596C
-.extern loc_802597A
-.extern loc_8025992
-.extern loc_80259AC
-.extern loc_80259C0
-.extern loc_8025A00
-.extern off_8025A04
-.extern off_8025A08
-.extern dword_8025A78
-.extern off_8025B1C
-.extern dword_8025B2C
-.extern loc_8025B66
-.extern loc_8025B7E
-.extern off_8025BA0
-.extern off_8025BA4
-.extern off_8025BAC
-.extern off_8025BB0
-.extern off_8025BB4
-.extern off_8025BB8
-.extern off_8025BCC
-.extern dword_8025BD0
-.extern off_8025BD4
-.extern off_8025BE4
-.extern sub_8025BE8
-.extern off_8025BF4
-.extern loc_8025C02
-.extern loc_8025C10
-.extern loc_8025C16
-.extern off_8025CB8
-.extern off_8025CBC
-.extern sub_8025CC0
-.extern loc_8025CCC
-.extern loc_8025CD6
-.extern off_8025CF0
-.extern off_8025CF4
-.extern off_8025CF8
-.extern loc_8025D5A
-.extern loc_8025D60
-.extern loc_8025D64
-.extern loc_8025D6A
-.extern off_8025D88
-.extern off_8025D8C
-.extern off_8025D90
-.extern off_8025DD0
-.extern off_8025DD4
-.extern off_8025DDC
-.extern jt_8025DE0
-.extern sub_8025DF4
-.extern off_8025E04
-.extern loc_8025E08
-.extern loc_8025E56
-.extern loc_8025E5E
-.extern loc_8025E72
-.extern loc_8025E7C
-.extern loc_8025E8E
-.extern loc_8025E9A
-.extern sub_8025EA4
-.extern nullsub_54
-.extern sub_8025EB0
-.extern sub_8025EC0
-.extern sub_8025EE2
-.extern sub_8025F00
-.extern sub_8025F34
-.extern loc_8025F4E
-.extern loc_8025F86
-.extern loc_8025FA0
-.extern off_8025FB4
-.extern off_8025FB8
-.extern unk_8025FBC
-.extern sub_8025FEA
-.extern off_8025FF8
-.extern loc_8025FFC
-.extern loc_80260AE
-.extern loc_80260B4
-.extern off_80260F4
-.extern off_80260F8
-.extern off_80260FC
-.extern off_8026100
-.extern loc_802612E
-.extern off_802617C
-.extern dword_8026180
-.extern off_8026184
-.extern loc_80261B0
-.extern loc_80261F8
-.extern loc_802623A
-.extern loc_8026244
-.extern loc_8026256
-.extern loc_802625C
-.extern off_8026268
-.extern sub_802626C
-.extern loc_8026272
-.extern loc_802627A
-.extern loc_8026280
-.extern loc_8026288
-.extern loc_8026290
-.extern loc_80262AA
-.extern sub_80262B0
-.extern loc_80262B4
-.extern sub_80262CE
-.extern sub_80262E2
-.extern sub_80262F6
-.extern loc_8026306
-.extern loc_802630A
-.extern locret_802634E
-.extern sub_8026350
-.extern loc_8026360
-.extern loc_8026364
-.extern locret_80263A8
-.extern sub_80263AA
-.extern loc_80263BA
-.extern loc_80263BE
-.extern locret_8026402
-.extern loc_8026404
-.extern loc_8026414
-.extern loc_8026418
-.extern dword_802645C
-.extern loc_8026478
-.extern loc_802647C
-.extern loc_80264DA
-.extern loc_8026506
-.extern loc_8026510
-.extern off_8026544
-.extern dword_8026548
-.extern off_802654C
-.extern dword_8026550
-.extern dword_8026554
-.extern dword_8026558
-.extern dword_8026570
-.extern off_8026588
-.extern off_80265DC
-.extern off_8026630
-.extern off_8026634
-.extern locret_8026638
-.extern locret_802663A
-.extern sub_802663C
-.extern loc_802664A
-.extern loc_8026650
-.extern loc_8026654
-.extern off_8026660
-.extern off_8026664
-.extern off_8026668
-.extern sub_802666C
-.extern loc_802667A
-.extern loc_8026680
-.extern loc_8026684
-.extern off_8026690
-.extern off_8026694
-.extern off_8026698
-.extern loc_80266B6
-.extern locret_80266C6
-.extern sub_80266C8
-.extern locret_80266DC
-.extern loc_80266F2
-.extern loc_80266F6
-.extern off_802673C
-.extern off_8026740
-.extern off_8026744
-.extern sub_8026748
-.extern sub_802675A
-.extern loc_802676A
-.extern loc_8026780
-.extern loc_8026784
-.extern loc_8026788
-.extern loc_802678E
-.extern loc_802679C
-.extern loc_80267A2
-.extern loc_80267BC
-.extern loc_80267D4
-.extern loc_80267E4
-.extern loc_80267EC
-.extern loc_802682A
-.extern loc_8026846
-.extern loc_802684A
-.extern loc_8026856
-.extern off_8026874
-.extern off_8026878
-.extern dword_802687C
-.extern off_80268E4
-.extern sub_80268E8
-.extern loc_802690A
-.extern loc_802691C
-.extern loc_8026928
-.extern loc_8026940
-.extern loc_8026948
-.extern loc_802694A
-.extern loc_802695E
-.extern loc_8026964
-.extern loc_802697C
-.extern loc_8026984
-.extern loc_8026986
-.extern loc_802699A
-.extern loc_80269A0
-.extern loc_80269B8
-.extern loc_80269C0
-.extern loc_80269CE
-.extern sub_80269DE
-.extern loc_8026A3E
-.extern off_8026A4C
-.extern sub_8026A50
-.extern loc_8026A88
-.extern loc_8026AC2
-.extern sub_8026AC8
-.extern loc_8026B00
-.extern loc_8026B3A
-.extern sub_8026B40
-.extern loc_8026B78
-.extern loc_8026BB2
-.extern sub_8026BB8
-.extern loc_8026BF0
-.extern loc_8026C2A
-.extern sub_8026C84
-.extern loc_8026C96
-.extern loc_8026C9E
-.extern loc_8026CA8
-.extern locret_8026CB2
-.extern loc_8026CC6
-.extern loc_8026CCE
-.extern loc_8026CD8
-.extern loc_8026CE0
-.extern locret_8026CEA
-.extern sub_8026CEC
-.extern loc_8026CFA
-.extern loc_8026D00
-.extern loc_8026D02
-.extern locret_8026D20
-.extern off_8026D24
-.extern sub_8026D28
-.extern sub_8026D5E
-.extern sub_8026D72
-.extern loc_8026D94
-.extern loc_8026D9A
-.extern loc_8026DA4
-.extern loc_8026DAC
-.extern sub_8026DB2
-.extern loc_8026DD4
-.extern loc_8026DDA
-.extern loc_8026DE4
-.extern loc_8026DEC
-.extern sub_8026DF2
-.extern loc_8026E16
-.extern loc_8026E1C
-.extern loc_8026E24
-.extern off_8026E2C
-.extern sub_8026E30
-.extern loc_8026E70
-.extern sub_8026E7A
-.extern sub_8026EA0
-.extern sub_8026ECA
-.extern loc_8026F02
-.extern sub_8026F0C
-.extern sub_8026F3E
-.extern sub_8026F6C
-.extern sub_8026F9A
-.extern sub_8026FC4
-.extern sub_8026FEC
-.extern sub_8027010
-.extern sub_8027038
-.extern sub_802705C
-.extern locret_80270B2
-.extern sub_80270B4
-.extern locret_8027106
-.extern sub_8027108
-.extern locret_802715A
-.extern sub_802715C
-.extern locret_80271AA
-.extern sub_80271AC
-.extern loc_80271CC
-.extern sub_80271D0
-.extern loc_80271F0
-.extern sub_80271F4
-.extern loc_8027214
-.extern sub_8027218
-.extern loc_8027238
-.extern sub_802723C
-.extern loc_802726C
-.extern loc_8027290
-.extern loc_8027294
-.extern loc_802729A
-.extern loc_802729E
-.extern loc_80272B4
-.extern loc_80272B8
-.extern off_80272C4
-.extern off_80272C8
-.extern jt_80272CC
-.extern sub_8027334
-.extern sub_802736A
-.extern off_8027398
-.extern sub_802739C
-.extern loc_80273A4
-.extern loc_80273B0
-.extern off_80273BC
-.extern sub_80273C6
-.extern sub_80273D4
-.extern sub_80273F6
-.extern sub_802741E
-.extern sub_8027440
-.extern sub_8027468
-.extern loc_8027498
-.extern loc_80274BA
-.extern loc_80274BE
-.extern loc_80274D0
-.extern loc_80274D2
-.extern off_80274DC
-.extern off_80274E0
-.extern jt_80274E4
-.extern sub_802754C
-.extern loc_8027556
-.extern loc_802755A
-.extern off_8027560
-.extern sub_802756A
-.extern sub_8027582
-.extern sub_802759A
-.extern sub_80275B2
-.extern sub_80275CA
-.extern sub_80275E2
-.extern sub_80275FA
-.extern sub_8027612
-.extern sub_802762A
-.extern sub_8027634
-.extern loc_8027662
-.extern loc_8027684
-.extern loc_8027688
-.extern loc_80276C2
-.extern loc_80276C8
-.extern off_80276D4
-.extern off_80276D8
-.extern jt_80276DC
-.extern dword_8027744
-.extern sub_8027748
-.extern loc_8027750
-.extern loc_8027756
-.extern off_802775C
-.extern sub_8027760
-.extern sub_8027766
-.extern sub_802777E
-.extern sub_8027796
-.extern sub_80277AE
-.extern sub_80277C6
-.extern sub_80277DE
-.extern sub_80277F6
-.extern sub_802780E
-.extern sub_8027826
-.extern sub_8027830
-.extern sub_8027848
-.extern sub_8027860
-.extern sub_8027878
-.extern dword_8027CEC
-.extern off_80284E0
-.extern off_8028540
-.extern off_8028600
-.extern off_8028690
-.extern off_8028750
-.extern off_8028774
-.extern off_80287A4
-.extern off_80287C8
-.extern off_80287F8
-.extern off_8028858
-.extern off_8028870
-.extern off_80288C4
-.extern off_8028918
-.extern off_802893C
-.extern off_802896C
-.extern off_80289B4
-.extern off_8028A2C
-.extern off_8028A5C
-.extern off_8028A74
-.extern off_8028AA4
-.extern off_8028AE0
-.extern off_8028B40
-.extern off_8028C00
-.extern off_8028C90
-.extern off_8028D50
-.extern off_8028D74
-.extern off_8028DA4
-.extern off_8028DC8
-.extern off_8028DF8
-.extern off_8028E58
-.extern off_8028E70
-.extern off_8028EC4
-.extern off_8028EE0
-.extern byte_8028EEC
-.extern off_8028EFC
-.extern off_8028F14
-.extern off_8028F3C
-.extern off_8028F4C
-.extern off_8028F54
-.extern off_8028F64
-.extern off_8028F78
-.extern off_8028F98
-.extern off_8028FD8
-.extern off_8029008
-.extern off_8029048
-.extern off_8029054
-.extern off_8029064
-.extern off_8029070
-.extern off_8029080
-.extern off_80290A0
-.extern dword_80290B8
-.extern dword_802910C
-.extern dword_80291F0
-.extern sub_8029268
-.extern loc_8029284
-.extern loc_8029290
-.extern loc_80292C4
-.extern off_80292DC
-.extern dword_80292E0
-.extern off_80292E4
-.extern off_80292E8
-.extern dword_80292EC
-.extern off_80292F0
-.extern off_80292F4
-.extern off_80292F8
-.extern off_80292FC
-.extern off_8029300
-.extern off_8029304
-.extern loc_8029332
-.extern loc_802933C
-.extern locret_8029348
-.extern off_802934C
-.extern jt_8029350
-.extern off_802936C
-.extern jt_8029370
-.extern off_802938C
-.extern sub_8029390
-.extern sub_8029394
-.extern sub_80293A2
-.extern sub_80293B4
-.extern sub_80293C2
-.extern sub_80293D4
-.extern sub_80293E2
-.extern sub_80293F4
-.extern sub_80293F8
-.extern sub_8029400
-.extern sub_8029408
-.extern sub_8029414
-.extern sub_8029420
-.extern sub_8029428
-.extern sub_8029430
-.extern loc_8029458
-.extern dword_802945C
-.extern dword_8029460
-.extern off_8029464
-.extern dword_8029468
-.extern sub_8029498
-.extern dword_80294A8
-.extern dword_80294AC
-.extern sub_80294B0
-.extern loc_80294D8
-.extern loc_8029504
-.extern locret_8029506
-.extern off_8029508
-.extern off_802950C
-.extern dword_8029554
-.extern off_8029558
-.extern off_802955C
-.extern dword_8029560
-.extern dword_8029564
-.extern dword_8029568
-.extern sub_802956C
-.extern loc_8029586
-.extern off_80295A4
-.extern off_80295A8
-.extern dword_80295F0
-.extern off_80295F4
-.extern dword_80295F8
-.extern dword_80295FC
-.extern dword_8029600
-.extern sub_8029604
-.extern loc_8029618
-.extern locret_802961A
-.extern sub_802961C
-.extern off_802962C
-.extern off_8029630
-.extern sub_8029634
-.extern loc_8029652
-.extern loc_802965C
-.extern loc_8029676
-.extern loc_8029678
-.extern loc_8029694
-.extern loc_80296B4
-.extern loc_80296B8
-.extern off_80296E8
-.extern off_80296EC
-.extern dword_80296F0
-.extern dword_80296F4
-.extern dword_80296F8
-.extern dword_80296FC
-.extern locret_8029714
-.extern off_8029718
-.extern sub_802971C
-.extern sub_8029750
-.extern locret_80297DE
-.extern loc_80297F0
-.extern loc_8029802
-.extern loc_8029804
-.extern off_8029810
-.extern off_8029814
-.extern off_8029818
-.extern off_8029824
-.extern off_8029830
-.extern sub_8029834
-.extern off_8029864
-.extern sub_8029868
-.extern off_8029878
-.extern off_802987C
-.extern sub_8029888
-.extern off_80298BC
-.extern sub_80298C0
-.extern sub_80298D6
-.extern loc_802992A
-.extern locret_802993E
-.extern sub_8029940
-.extern loc_8029994
-.extern locret_802999E
-.extern off_80299A0
-.extern dword_80299A4
-.extern off_80299AC
-.extern off_80299B0
-.extern off_80299B8
-.extern off_80299BC
-.extern off_80299C4
-.extern off_80299C8
-.extern off_80299CC
-.extern off_8029AD0
-.extern off_8029AD4
-.extern sub_8029B18
-.extern sub_8029B1C
-.extern loc_8029B26
-.extern loc_8029B48
-.extern sub_8029B62
-.extern sub_8029B6A
-.extern sub_8029B72
-.extern unk_8029BA0
-.extern dword_8029BD0
-.extern dword_8029BE8
-.extern dword_8029C18
-.extern dword_8029CC0
-.extern off_8029D14
-.extern off_8029D68
-.extern off_8029DBC
-.extern sub_8029E10
-.extern loc_8029E3E
-.extern loc_8029E42
-.extern off_8029E68
-.extern off_8029E6C
-.extern off_8029E70
-.extern loc_8029EB2
-.extern loc_8029EC0
-.extern loc_8029EFE
-.extern sub_8029F04
-.extern loc_8029F3E
-.extern loc_8029F5E
-.extern loc_8029F78
-.extern loc_8029F82
-.extern off_8029F88
-.extern off_8029F8C
-.extern sub_8029F90
-.extern loc_8029FB2
-.extern loc_8029FC2
-.extern loc_8029FC6
-.extern loc_802A014
-.extern loc_802A01C
-.extern loc_802A022
-.extern off_802A028
-.extern off_802A02C
-.extern off_802A030
-.extern off_802A034
-.extern off_802A038
-.extern off_802A03C
-.extern dword_802A040
-.extern sub_802A04C
-.extern loc_802A074
-.extern off_802A078
-.extern off_802A07C
-.extern sub_802A080
-.extern loc_802A0AE
-.extern loc_802A0DC
-.extern loc_802A0F6
-.extern off_802A0FC
-.extern off_802A100
-.extern off_802A104
-.extern off_802A108
-.extern sub_802A10C
-.extern loc_802A118
-.extern loc_802A11E
-.extern loc_802A12C
-.extern off_802A134
-.extern dword_802A138
-.extern dword_802A13C
-.extern dword_802A140
-.extern sub_802A150
-.extern loc_802A16C
-.extern loc_802A16E
-.extern loc_802A188
-.extern locret_802A190
-.extern off_802A194
-.extern off_802A198
-.extern dword_802A19C
-.extern dword_802A1A0
-.extern sub_802A1A4
-.extern loc_802A1CC
-.extern locret_802A1D4
-.extern off_802A1D8
-.extern off_802A1DC
-.extern sub_802A1E0
-.extern loc_802A210
-.extern loc_802A214
-.extern locret_802A228
-.extern off_802A22C
-.extern off_802A230
-.extern off_802A234
-.extern off_802A238
-.extern sub_802A23C
-.extern locret_802A27C
-.extern off_802A280
-.extern off_802A284
-.extern off_802A288
-.extern loc_802A2A2
-.extern loc_802A2C0
-.extern loc_802A2C8
-.extern loc_802A2CC
-.extern off_802A2E0
-.extern off_802A2E4
-.extern sub_802A2E8
-.extern locret_802A30C
-.extern off_802A310
-.extern sub_802A314
-.extern loc_802A342
-.extern loc_802A346
-.extern loc_802A352
-.extern off_802A35C
-.extern off_802A360
-.extern loc_802A374
-.extern loc_802A378
-.extern off_802A384
-.extern off_802A388
-.extern off_802A398
-.extern dword_802A39C
-.extern sub_802A3A0
-.extern loc_802A3A4
-.extern loc_802A3BA
-.extern locret_802A3BE
-.extern off_802A3C0
-.extern aXcydzeFGHIJKal
-.extern word_802A3C6
-.extern loc_802A422
-.extern loc_802A434
-.extern locret_802A438
-.extern off_802A43C
-.extern word_802A440
-.extern word_802A442
-.extern sub_802A494
-.extern loc_802A4C4
-.extern loc_802A4C6
-.extern loc_802A4F4
-.extern locret_802A4FA
-.extern off_802A4FC
-.extern word_802A500
-.extern word_802A502
-.extern word_802A504
-.extern off_802A578
-.extern dword_802A57C
-.extern off_802A5C8
-.extern dword_802A5CC
-.extern off_802A618
-.extern sub_802A61C
-.extern loc_802A632
-.extern loc_802A658
-.extern locret_802A660
-.extern off_802A664
-.extern dword_802A668
-.extern off_802A66C
-.extern dword_802A670
-.extern off_802A6B0
-.extern off_802A6C0
-.extern sub_802A6C4
-.extern loc_802A6D8
-.extern loc_802A6E8
-.extern loc_802A6F2
-.extern off_802A6FC
-.extern word_802A700
-.extern off_802A724
-.extern loc_802A820
-.extern sub_802A824
-.extern sub_802A832
-.extern loc_802A85C
-.extern sub_802A862
-.extern loc_802A872
-.extern loc_802A878
-.extern loc_802A88C
-.extern sub_802A892
-.extern loc_802A8B8
-.extern sub_802A8BE
-.extern loc_802A8CE
-.extern loc_802A8D4
-.extern loc_802A8E8
-.extern sub_802A8EE
-.extern loc_802A914
-.extern sub_802A91A
-.extern loc_802A94A
-.extern loc_802A95A
-.extern loc_802A968
-.extern loc_802A96E
-.extern sub_802A974
-.extern loc_802A9A4
-.extern sub_802A9AA
-.extern loc_802A9C4
-.extern loc_802A9D2
-.extern loc_802A9F4
-.extern sub_802A9FA
-.extern loc_802AA0E
-.extern loc_802AA24
-.extern sub_802AA2A
-.extern loc_802AA3E
-.extern loc_802AA54
-.extern sub_802AA5A
-.extern loc_802AA78
-.extern sub_802AA7E
-.extern loc_802AA9C
-.extern sub_802AAA2
-.extern loc_802AAC4
-.extern sub_802AACA
-.extern loc_802AAEC
-.extern sub_802AAF2
-.extern loc_802AB10
-.extern sub_802AB16
-.extern loc_802AB34
-.extern sub_802AB3A
-.extern loc_802AB64
-.extern sub_802AB6A
-.extern loc_802AB7E
-.extern sub_802AB84
-.extern loc_802AB98
-.extern sub_802AB9E
-.extern loc_802ABB4
-.extern sub_802ABBA
-.extern loc_802ABCE
-.extern loc_802ABDE
-.extern sub_802ABE8
-.extern sub_802AC04
-.extern loc_802AC14
-.extern loc_802AC1A
-.extern sub_802AC26
-.extern loc_802AC36
-.extern loc_802AC3C
-.extern sub_802AC48
-.extern sub_802AC66
-.extern sub_802AC84
-.extern loc_802AC8C
-.extern loc_802AC9E
-.extern sub_802ACA4
-.extern loc_802ACAC
-.extern loc_802ACBE
-.extern sub_802ACC4
-.extern dead_802ACDE
-.extern dead_802ACFA
-.extern dead_802AD12
-.extern dead_802AD2A
-.extern dead_802AD42
-.extern dead_802AD5E
-.extern loc_802ADB2
-.extern loc_802ADB4
-.extern loc_802ADC6
-.extern loc_802ADE0
-.extern loc_802ADE8
-.extern loc_802AE0C
-.extern sub_802AE16
-.extern loc_802AE34
-.extern sub_802AE46
-.extern loc_802AE66
-.extern sub_802AE7A
-.extern loc_802AE8A
-.extern sub_802AE9E
-.extern loc_802AEB2
-.extern loc_802AEC0
-.extern off_802AEC8
-.extern off_802AECC
-.extern sub_802AED0
-.extern sub_802AEE4
-.extern sub_802AEF2
-.extern sub_802AF04
-.extern jt_802AF20
-.extern dword_802B10C
-.extern dword_802B17C
-.extern dword_802B1E4
-.extern dword_802B254
-.extern dword_802B2C4
-.extern dword_802B334
-.extern dword_802B3A4
-.extern dword_802B734
-.extern dword_802B7A4
-.extern dword_802B814
-.extern dword_802B894
-.extern dword_802B914
-.extern dword_802B994
-.extern dword_802B9FC
-.extern dword_802BA84
-.extern dword_802BB0C
-.extern dword_802BB94
-.extern loc_802BC30
-.extern loc_802BC42
-.extern loc_802BC46
-.extern locret_802BC4A
-.extern off_802BC4C
-.extern off_802BC8C
-.extern off_802BC90
-.extern off_802BC94
-.extern sub_802BCC4
-.extern off_802BCDC
-.extern locret_802BCF0
-.extern loc_802BD0C
-.extern off_802BD10
-.extern loc_802BD24
-.extern off_802BD28
-.extern sub_802BD2C
-.extern ho_802BD5C
-.extern off_802BD74
-.extern off_802BD78
-.extern jt_802BD7C
-.extern sub_802BDC0
-.extern sub_802BDEA
-.extern loc_802BDFE
-.extern loc_802BE40
-.extern sub_802BE44
-.extern sub_802BE48
-.extern loc_802BE5C
-.extern loc_802BE70
-.extern sub_802BE74
-.extern sub_802BE94
-.extern loc_802BEE2
-.extern loc_802BEE6
-.extern sub_802BEF2
-.extern loc_802BF06
-.extern loc_802BF0E
-.extern loc_802BF12
-.extern loc_802BF1C
-.extern locret_802BF24
-.extern sub_802BF26
-.extern sub_802BF46
-.extern loc_802BF5A
-.extern sub_802BF5E
-.extern sub_802BF74
-.extern sub_802BF8A
-.extern sub_802BFAA
-.extern loc_802BFBC
-.extern sub_802BFC0
-.extern sub_802BFD8
-.extern sub_802BFF0
-.extern sub_802C010
-.extern sub_802C026
-.extern sub_802C040
-.extern sub_802C054
-.extern sub_802C062
-.extern sub_802C074
-.extern off_802C090
-.extern unk_802C22C
-.extern a00000000333333
-.extern sub_802C318
-.extern sub_802C322
-.extern sub_802C32C
-.extern loc_802C34E
-.extern loc_802C354
-.extern loc_802C35A
-.extern loc_802C374
-.extern sub_802C378
-.extern loc_802C39A
-.extern loc_802C3A0
-.extern loc_802C3A8
-.extern loc_802C3C4
-.extern sub_802C3C8
-.extern loc_802C3E4
-.extern loc_802C3EA
-.extern sub_802C3EE
-.extern loc_802C404
-.extern sub_802C408
-.extern loc_802C418
-.extern sub_802C41C
-.extern loc_802C42A
-.extern sub_802C42E
-.extern loc_802C43C
-.extern sub_802C440
-.extern loc_802C45A
-.extern sub_802C45E
-.extern loc_802C474
-.extern sub_802C478
-.extern loc_802C486
-.extern sub_802C48A
-.extern loc_802C49A
-.extern sub_802C49E
-.extern loc_802C4B4
-.extern sub_802C4B8
-.extern loc_802C4CE
-.extern sub_802C4D2
-.extern loc_802C4E0
-.extern sub_802C4E4
-.extern sub_802C4E8
-.extern sub_802C514
-.extern off_802C528
-.extern sub_802C52C
-.extern sub_802C53C
-.extern loc_802C55C
-.extern sub_802C562
-.extern loc_802C580
-.extern sub_802C586
-.extern loc_802C5A4
-.extern sub_802C5AA
-.extern loc_802C5C8
-.extern sub_802C5CE
-.extern loc_802C5EC
-.extern loc_802C648
-.extern loc_802C682
-.extern loc_802C686
-.extern loc_802C6BC
-.extern off_802C6C4
-.extern dead_ho_802C6C8
-.extern off_802C6E0
-.extern jt_802C6E4
-.extern dead_ho_802C720
-.extern loc_802C73A
-.extern loc_802C740
-.extern off_802C74C
-.extern jt_802C750
-.extern sub_802C760
-.extern loc_802C772
-.extern loc_802C78E
-.extern loc_802C794
-.extern loc_802C796
-.extern loc_802C7D6
-.extern off_802C7DC
-.extern sub_802C7E0
-.extern loc_802C81A
-.extern loc_802C820
-.extern loc_802C822
-.extern loc_802C856
-.extern off_802C85C
-.extern dword_802C860
-.extern dead_802CEA4
-.extern dead_802CEB0
-.extern dead_802CEBC
-.extern dead_802CECC
-.extern dead_802CEDA
-.extern dead_802CEEA
-.extern dead_802CF0A
-.extern loc_802CF1C
-.extern sub_802CF42
-.extern loc_802CF56
-.extern loc_802CF5E
-.extern loc_802CF7C
-.extern loc_802CF90
-.extern loc_802CFA4
-.extern off_802CFAC
-.extern off_802CFB0
-.extern sub_802CFB4
-.extern sub_802CFC4
-.extern sub_802CFD4
-.extern sub_802CFF2
-.extern off_802D004
-.extern jt_802D008
-.extern off_802D014
-.extern sub_802D018
-.extern off_802D07C
-.extern loc_802D080
-.extern off_802D098
-.extern jt_802D09C
-.extern sub_802D0B4
-.extern loc_802D0C4
-.extern locret_802D0E4
-.extern off_802D0E8
-.extern sub_802D0EC
-.extern locret_802D13E
-.extern off_802D140
-.extern dword_802D144
-.extern off_802D154
-.extern sub_802D158
-.extern loc_802D170
-.extern locret_802D186
-.extern off_802D188
-.extern sub_802D18C
-.extern loc_802D1A4
-.extern locret_802D1B2
-.extern sub_802D1B4
-.extern locret_802D1D2
-.extern dword_802D1D4
-.extern sub_802D1D8
-.extern locret_802D1E4
-.extern sub_802D1E6
-.extern off_802D204
-.extern sub_802D208
-.extern off_802D218
-.extern dword_802D21C
-.extern sub_802D220
-.extern loc_802D228
-.extern loc_802D238
-.extern off_802D240
-.extern sub_802D244
-.extern off_802D298
-.extern off_802D29C
-.extern dword_802D2A0
-.extern off_802D2A4
-.extern off_802D2A8
-.extern dword_802D2AC
-.extern off_802D304
-.extern byte_802D308
-.extern dword_802D358
-.extern dword_802D35C
-.extern off_802D378
-.extern loc_802D39A
-.extern loc_802D3A0
-.extern loc_802D3B4
-.extern loc_802D3F0
-.extern loc_802D40E
-.extern loc_802D440
-.extern locret_802D454
-.extern sub_802D458
-.extern loc_802D474
-.extern loc_802D488
-.extern loc_802D49C
-.extern loc_802D4A8
-.extern loc_802D4B8
-.extern locret_802D4BA
-.extern dword_802D4BC
-.extern sub_802D4C0
-.extern loc_802D50C
-.extern loc_802D516
-.extern dword_802D51C
-.extern locret_802D532
-.extern loc_802D552
-.extern loc_802D55C
-.extern loc_802D570
-.extern loc_802D596
-.extern loc_802D5A0
-.extern dword_802D5A4
-.extern locret_802D5BA
-.extern loc_802D5DA
-.extern loc_802D5E4
-.extern loc_802D5F8
-.extern loc_802D642
-.extern loc_802D658
-.extern locret_802D65C
-.extern loc_802D67C
-.extern loc_802D6B0
-.extern loc_802D6BE
-.extern loc_802D6D2
-.extern off_802D6E4
-.extern off_802D6E8
-.extern off_802D6FC
-.extern sub_802D700
-.extern loc_802D716
-.extern off_802D778
-.extern off_802D77C
-.extern off_802D780
-.extern off_802D784
-.extern dword_802D788
-.extern off_802D78C
-.extern off_802D790
-.extern off_802D794
-.extern off_802D798
-.extern off_802D79C
-.extern sub_802D7A0
-.extern loc_802D7B4
-.extern off_802D7C4
-.extern sub_802D7C8
-.extern loc_802D7E6
-.extern locret_802D7F2
-.extern dword_802D7F4
-.extern sub_802D7F8
-.extern locret_802D804
-.extern sub_802D806
-.extern off_802D820
-.extern dword_802D824
-.extern dword_802D85C
-.extern off_802D8E4
-.extern sub_802D914
-.extern sub_802D920
-.extern dword_802D96C
-.extern off_802D99C
-.extern off_802D9C8
-.extern jt_802D9CC
-.extern off_802D9E4
-.extern sub_802D9E8
-.extern loc_802DA00
-.extern locret_802DA18
-.extern off_802DA1C
-.extern sub_802DA20
-.extern loc_802DA3C
-.extern loc_802DA42
-.extern loc_802DA62
-.extern loc_802DA6A
-.extern loc_802DA76
-.extern loc_802DA88
-.extern loc_802DA98
-.extern loc_802DAAA
-.extern locret_802DAB2
-.extern sub_802DAB4
-.extern loc_802DAD0
-.extern loc_802DAD6
-.extern loc_802DAE8
-.extern locret_802DB04
-.extern sub_802DB08
-.extern loc_802DB22
-.extern locret_802DB26
-.extern sub_802DB28
-.extern sub_802DB50
-.extern sub_802DB54
-.extern off_802DBB0
-.extern dword_802DBB4
-.extern off_802DBB8
-.extern off_802DBC0
-.extern off_802DBC8
-.extern off_802DBCC
-.extern dword_802DBD0
-.extern off_802DBD4
-.extern off_802DBD8
-.extern off_802DBDC
-.extern sub_802DBE0
-.extern off_802DBF8
-.extern sub_802DBFC
-.extern loc_802DC02
-.extern loc_802DC12
-.extern loc_802DC20
-.extern off_802DC30
-.extern sub_802DC34
-.extern locret_802DC6E
-.extern off_802DC70
-.extern off_802DC74
-.extern off_802DC78
-.extern dword_802DC7C
-.extern off_802DC90
-.extern off_802DC94
-.extern sub_802DCA8
-.extern off_802DCB8
-.extern off_802DCBC
-.extern off_802DCC0
-.extern loc_802DCD4
-.extern loc_802DCDC
-.extern loc_802DCE4
-.extern loc_802DCEC
-.extern loc_802DCF4
-.extern sub_802DCFC
-.extern loc_802DD08
-.extern off_802DD10
-.extern off_802DD14
-.extern sub_802DD18
-.extern off_802DD3C
-.extern dword_802DD40
-.extern sub_802DD44
-.extern off_802DD6C
-.extern dword_802DD70
-.extern sub_802DD74
-.extern off_802DD98
-.extern dword_802DD9C
-.extern sub_802DDA0
-.extern off_802DDB8
-.extern dword_802DDBC
-.extern sub_802DDC0
-.extern loc_802DDD4
-.extern loc_802DDD8
-.extern off_802DDF0
-.extern off_802DDF4
-.extern dword_802DDF8
-.extern off_802DDFC
-.extern off_802DE00
-.extern dword_802DE04
-.extern off_802DE0C
-.extern dword_802DE10
-.extern dword_802DE28
-.extern sub_802DE70
-.extern off_802DEA0
-.extern off_802DEC8
-.extern loc_802DECC
-.extern off_802DEE4
-.extern off_802DEE8
-.extern off_802E004
-.extern dword_802E02C
-.extern dword_802E030
-.extern dword_802E0EC
-.extern dword_802E0F0
-.extern off_802E0F4
-.extern dword_802E0F8
-.extern dword_802E0FC
-.extern dword_802E100
-.extern dword_802E104
-.extern sub_802E1EC
-.extern off_802E1FC
-.extern unk_802E200
-.extern off_802E2C4
-.extern off_802E2E0
-.extern off_802E2E4
-.extern off_802E2EC
-.extern dword_802E2F0
-.extern off_802E300
-.extern dword_802E304
-.extern off_802E308
-.extern dword_802E30C
-.extern off_802E314
-.extern sub_802E318
-.extern locret_802E35A
-.extern off_802E35C
-.extern off_802E360
-.extern off_802E36C
-.extern sub_802E370
-.extern loc_802E37E
-.extern locret_802E398
-.extern sub_802E39C
-.extern locret_802E3A8
-.extern sub_802E3AC
-.extern locret_802E3C2
-.extern sub_802E3C4
-.extern sub_802E4C4
-.extern off_802E4E4
-.extern off_802E4E8
-.extern dword_802E4EC
-.extern off_802E4F0
-.extern off_802E4F4
-.extern dword_802E4F8
-.extern off_802E4FC
-.extern dword_802E500
-.extern sub_802E52C
-.extern loc_802E554
-.extern loc_802E55C
-.extern off_802E574
-.extern off_802E578
-.extern off_802E57C
-.extern off_802E580
-.extern sub_802E584
-.extern loc_802E5CC
-.extern loc_802E5E6
-.extern loc_802E5F4
-.extern loc_802E5F6
-.extern off_802E608
-.extern off_802E60C
-.extern off_802E610
-.extern off_802E614
-.extern sub_802E618
-.extern loc_802E626
-.extern loc_802E638
-.extern off_802E6E8
-.extern off_802E6EC
-.extern off_802E6F8
-.extern off_802E6FC
-.extern off_802E700
-.extern off_802E704
-.extern off_802E708
-.extern off_802E70C
-.extern off_802E710
-.extern dword_802E71C
-.extern aCacbcccdcecfcg
-.extern aB_0
-.extern aB_2
-.extern aB_4
-.extern aB_6
-.extern aB_8
-.extern aB_10
-.extern aB_12
-.extern aB_14
-.extern aB_16
-.extern aB_18
-.extern aB_20
-.extern aB_22
-.extern aB_24
-.extern aBCacbcccdcecfc
-.extern aB_27
-.extern aB_29
-.extern aB_31
-.extern aB_33
-.extern aB_35
-.extern aB_37
-.extern aB_39
-.extern aB_43
-.extern aB_45
-.extern aB_47
-.extern aB_49
-.extern aB_51
-.extern dword_802E8F4
-.extern off_802E8F8
-.extern unk_802E974
-.extern unk_802E9A4
-.extern sub_802E9AC
-.extern off_802E9BC
-.extern off_802E9C0
-.extern ho_cb_802E9CC
-.extern off_802EABC
-.extern jt_802EAC0
-.extern off_802EAC8
-.extern off_802EACC
-.extern off_802EAD0
-.extern off_802EAD4
-.extern off_802EAD8
-.extern dword_802EADC
-.extern off_802EAE0
-.extern off_802EAE8
-.extern off_802EAEC
-.extern off_802EAF4
-.extern off_802EAF8
-.extern off_802EAFC
-.extern dword_802EB00
-.extern off_802EB04
-.extern off_802EB08
-.extern dword_802EB0C
-.extern off_802EB10
-.extern off_802EB14
-.extern off_802EB18
-.extern dword_802EB1C
-.extern off_802EB20
-.extern off_802EB24
-.extern dword_802EB28
-.extern off_802EB2C
-.extern dword_802EB30
-.extern off_802EB34
-.extern dword_802EB38
-.extern dword_802EB3C
-.extern off_802EB40
-.extern off_802EB44
-.extern off_802EB4C
-.extern off_802EB50
-.extern off_802EB54
-.extern dword_802EB58
-.extern off_802EB5C
-.extern off_802EB64
-.extern dword_802EB68
-.extern off_802EB6C
-.extern dword_802EB70
-.extern off_802EB74
-.extern off_802EB78
-.extern dword_802EB7C
-.extern sub_802EB80
-.extern loc_802EB96
-.extern loc_802EBCC
-.extern off_802EC0C
-.extern off_802EC10
-.extern sub_802EC14
-.extern loc_802EC36
-.extern off_802EC74
-.extern off_802EC80
-.extern dword_802EC84
-.extern dword_802EC88
-.extern off_802EC8C
-.extern sub_802EC90
-.extern locret_802ECEC
-.extern off_802ECF0
-.extern off_802ECF4
-.extern sub_802ED00
-.extern loc_802ED18
-.extern loc_802ED2C
-.extern loc_802ED66
-.extern loc_802ED74
-.extern loc_802ED78
-.extern loc_802ED7E
-.extern locret_802ED8E
-.extern off_802ED90
-.extern off_802ED94
-.extern dword_802ED98
-.extern off_802EDA0
-.extern dword_802EDA4
-.extern off_802EDAC
-.extern dword_802EDB0
-.extern sub_802EDB8
-.extern loc_802EDD8
-.extern loc_802EDDC
-.extern loc_802EDE4
-.extern loc_802EDF4
-.extern locret_802EE08
-.extern sub_802EE0C
-.extern locret_802EE18
-.extern sub_802EE1C
-.extern loc_802EE54
-.extern loc_802EE5C
-.extern loc_802EE6C
-.extern loc_802EE80
-.extern loc_802EE96
-.extern sub_802EE9C
-.extern loc_802EEAE
-.extern loc_802EEBA
-.extern locret_802EEC6
-.extern sub_802EEC8
-.extern loc_802EEDA
-.extern sub_802EEF4
-.extern loc_802EF06
-.extern loc_802EF12
-.extern locret_802EF1E
-.extern sub_802EF20
-.extern loc_802EF32
-.extern loc_802EF5E
-.extern loc_802EF62
-.extern loc_802EF76
-.extern loc_802EF82
-.extern loc_802EF88
-.extern off_802EFA4
-.extern dword_802EFA8
-.extern sub_802EFAC
-.extern loc_802EFD6
-.extern locret_802F00A
-.extern loc_802F02E
-.extern locret_802F064
-.extern loc_802F07E
-.extern loc_802F088
-.extern loc_802F092
-.extern loc_802F0AE
-.extern loc_802F0B2
-.extern locret_802F0C4
-.extern off_802F0C8
-.extern off_802F0CC
-.extern dword_802F0D0
-.extern off_802F0D4
-.extern unk_802F0D8
-.extern off_802F0E0
-.extern loc_802F10E
-.extern loc_802F122
-.extern loc_802F14A
-.extern loc_802F150
-.extern off_802F164
-.extern loc_802F190
-.extern loc_802F19C
-.extern loc_802F1A0
-.extern loc_802F1B4
-.extern loc_802F1B6
-.extern off_802F1C8
-.extern dword_802F1CC
-.extern sub_802F1D8
-.extern loc_802F1EC
-.extern loc_802F22E
-.extern off_802F2FC
-.extern off_802F300
-.extern off_802F304
-.extern off_802F308
-.extern off_802F30C
-.extern dword_802F314
-.extern off_802F318
-.extern unk_802F31C
-.extern off_802F340
-.extern dword_802F344
-.extern sub_802F348
-.extern off_802F37C
-.extern unk_802F388
-.extern off_802F394
-.extern unk_802F398
-.extern off_802F3C4
-.extern dword_802F3C8
-.extern unk_802F3CC
-.extern sub_802F3D4
-.extern off_802F428
-.extern off_802F42C
-.extern unk_802F430
-.extern off_802F48C
-.extern unk_802F498
-.extern sub_802F4A4
-.extern off_802F4C4
-.extern off_802F4C8
-.extern unk_802F4CC
-.extern off_802F4D4
-.extern unk_802F4D8
-.extern off_802F4E0
-.extern sub_802F4E4
-.extern loc_802F4EE
-.extern loc_802F4FE
-.extern locret_802F518
-.extern sub_802F51C
-.extern sub_802F528
-.extern locret_802F552
-.extern sub_802F554
-.extern loc_802F578
-.extern loc_802F57C
-.extern loc_802F58A
-.extern loc_802F58C
-.extern loc_802F598
-.extern locret_802F5A2
-.extern dword_802F5A4
-.extern sub_802F5A8
-.extern locret_802F5C6
-.extern sub_802F5C8
-.extern locret_802F5FC
-.extern off_802F600
-.extern loc_802F614
-.extern loc_802F61C
-.extern loc_802F622
-.extern loc_802F656
-.extern loc_802F67A
-.extern off_802F680
-.extern off_802F684
-.extern off_802F688
-.extern dword_802F7E0
-.extern dword_802F7F4
-.extern dword_802F808
-.extern dword_802F81C
-.extern dword_802F830
-.extern dword_802F844
-.extern dword_802F858
-.extern dword_802F86C
-.extern off_802F880
-.extern off_802F884
-.extern off_802F888
-.extern off_802F89C
-.extern dword_802F8A0
-.extern off_802F8B4
-.extern loc_802F8B8
-.extern locret_802F936
-.extern off_802F938
-.extern off_802F93C
-.extern off_802F940
-.extern unk_802F94C
-.extern sub_802F954
-.extern locret_802F968
-.extern sub_802F96C
-.extern off_802F97C
-.extern off_802F980
-.extern off_802F984
-.extern dword_802F988
-.extern sub_802FA54
-.extern off_802FA64
-.extern off_802FA68
-.extern sub_802FA74
-.extern loc_802FB66
-.extern loc_802FB68
-.extern off_802FBE0
-.extern off_802FBE4
-.extern off_802FBE8
-.extern dword_802FBEC
-.extern off_802FBF0
-.extern off_802FBF4
-.extern off_802FBF8
-.extern dword_802FBFC
-.extern off_802FC00
-.extern dword_802FC04
-.extern off_802FC08
-.extern off_802FC0C
-.extern off_802FC10
-.extern dword_802FC14
-.extern off_802FC18
-.extern dword_802FC1C
-.extern off_802FC20
-.extern off_802FC24
-.extern dword_802FC28
-.extern off_802FC2C
-.extern off_802FC30
-.extern off_802FC34
-.extern off_802FC38
-.extern off_802FC3C
-.extern off_802FC40
-.extern off_802FC44
-.extern off_802FC48
-.extern off_802FC54
-.extern dword_802FC58
-.extern dword_802FC5C
-.extern off_802FC60
-.extern off_802FC64
-.extern off_802FC68
-.extern off_802FC6C
-.extern loc_802FC70
-.extern loc_802FC9A
-.extern loc_802FCAE
-.extern loc_802FCBA
-.extern off_802FCC0
-.extern off_802FCC4
-.extern sub_802FCD8
-.extern loc_802FCE6
-.extern loc_802FCF0
-.extern loc_802FCF4
-.extern loc_802FD20
-.extern loc_802FD26
-.extern loc_802FD2C
-.extern loc_802FD30
-.extern loc_802FD4C
-.extern loc_802FD5C
-.extern loc_802FD70
-.extern loc_802FD80
-.extern locret_802FD84
-.extern sub_802FD88
-.extern loc_802FD9C
-.extern loc_802FDAC
-.extern locret_802FDC0
-.extern sub_802FDC4
-.extern locret_802FDD4
-.extern sub_802FDD8
-.extern loc_802FE0C
-.extern locret_802FE26
-.extern sub_802FE28
-.extern sub_802FE4C
-.extern loc_802FE70
-.extern loc_802FE78
-.extern sub_802FEA8
-.extern loc_802FEC2
-.extern loc_802FED4
-.extern sub_802FEE0
-.extern loc_802FEFC
-.extern loc_802FF0E
-.extern sub_802FF18
-.extern off_802FF34
-.extern loc_802FF62
-.extern loc_802FF7A
-.extern loc_802FF88
-.extern loc_802FF98
-.extern loc_802FFA6
-.extern locret_802FFAE
-.extern sub_802FFB0
-.extern sub_802FFC8
-.extern loc_802FFD4
-.extern loc_802FFF0
-.extern loc_803001A
-.extern off_80300DC
-.extern off_80300E0
-.extern off_80300E4
-.extern off_80300E8
-.extern off_80300EC
-.extern off_80300F0
-.extern dword_80300F8
-.extern off_80300FC
-.extern off_8030100
-.extern sub_8030104
-.extern loc_803010E
-.extern loc_803011C
-.extern loc_8030192
-.extern loc_803019A
-.extern off_80301C0
-.extern off_80301C8
-.extern off_80301CC
-.extern off_80301D0
-.extern sub_80301D4
-.extern loc_80301FE
-.extern loc_8030210
-.extern loc_803021E
-.extern loc_8030238
-.extern loc_803024E
-.extern locret_8030256
-.extern loc_8030258
-.extern sub_803025C
-.extern off_8030278
-.extern off_803027C
-.extern sub_8030280
-.extern loc_803028C
-.extern locret_80303A6
-.extern off_80303A8
-.extern off_80303AC
-.extern off_80303B0
-.extern off_80303B4
-.extern off_80303B8
-.extern off_80303BC
-.extern off_80303C4
-.extern dword_80303C8
-.extern off_80303CC
-.extern sub_80303D0
-.extern loc_80303EC
-.extern loc_803041C
-.extern loc_803043C
-.extern dword_80304A4
-.extern sub_80304A8
-.extern loc_80304BC
-.extern loc_80304D6
-.extern loc_80304F4
-.extern loc_80304F8
-.extern sub_8030500
-.extern loc_8030518
-.extern loc_8030532
-.extern loc_8030550
-.extern loc_8030554
-.extern dword_803055C
-.extern sub_8030560
-.extern loc_8030568
-.extern loc_8030576
-.extern loc_8030588
-.extern locret_8030594
-.extern off_8030598
-.extern off_803059C
-.extern off_80305A0
-.extern dword_80305A4
-.extern off_80305A8
-.extern loc_80305BC
-.extern loc_80305DE
-.extern loc_80305EE
-.extern loc_8030602
-.extern off_8030614
-.extern off_8030618
-.extern dword_803061C
-.extern sub_8030620
-.extern loc_8030646
-.extern loc_803066C
-.extern loc_803068A
-.extern loc_803068C
-.extern loc_803069A
-.extern loc_80306A0
-.extern off_80306AC
-.extern loc_80306B0
-.extern locret_80306D8
-.extern off_80306DC
-.extern off_80306E0
-.extern sub_80306E8
-.extern loc_80306FC
-.extern off_803070C
-.extern off_8030710
-.extern sub_8030714
-.extern loc_8030732
-.extern locret_8030752
-.extern off_8030754
-.extern off_8030758
-.extern off_803075C
-.extern dword_8030760
-.extern sub_8030764
-.extern loc_80307A0
-.extern loc_80307D4
-.extern loc_80307FC
-.extern loc_803080C
-.extern loc_8030816
-.extern loc_8030820
-.extern loc_8030834
-.extern loc_8030844
-.extern loc_803084E
-.extern loc_8030856
-.extern sub_803085C
-.extern loc_803086A
-.extern loc_8030876
-.extern locret_8030882
-.extern locret_80308A8
-.extern off_80308AC
-.extern loc_80308B0
-.extern sub_80308B8
-.extern loc_80308F4
-.extern loc_803091C
-.extern loc_8030924
-.extern loc_803092C
-.extern loc_803094E
-.extern loc_8030956
-.extern locret_8030958
-.extern off_803095C
-.extern dword_8030960
-.extern sub_8030964
-.extern loc_80309B8
-.extern loc_80309E0
-.extern loc_80309FA
-.extern locret_8030A26
-.extern sub_8030A28
-.extern loc_8030A5A
-.extern loc_8030A6E
-.extern locret_8030A90
-.extern sub_8030A94
-.extern loc_8030ABC
-.extern loc_8030AD8
-.extern loc_8030AE6
-.extern loc_8030AEE
-.extern loc_8030B00
-.extern loc_8030B20
-.extern loc_8030B2C
-.extern loc_8030B42
-.extern loc_8030B52
-.extern loc_8030B70
-.extern off_8030B80
-.extern off_8030B84
-.extern off_8030B88
-.extern sub_8030B8C
-.extern loc_8030BB0
-.extern loc_8030BD2
-.extern loc_8030C24
-.extern loc_8030C2A
-.extern off_8030C38
-.extern off_8030C3C
-.extern off_8030C40
-.extern sub_8030C44
-.extern loc_8030C94
-.extern off_8030CA8
-.extern off_8030CAC
-.extern sub_8030CB0
-.extern loc_8030CC8
-.extern loc_8030CEE
-.extern loc_8030D10
-.extern loc_8030D48
-.extern loc_8030D4C
-.extern off_8030D5C
-.extern off_8030D64
-.extern sub_8030D6C
-.extern loc_8030DAC
-.extern loc_8030DCE
-.extern loc_8030DEA
-.extern sub_8030DF8
-.extern sub_8030E44
-.extern loc_8030E8C
-.extern loc_8030EB4
-.extern loc_8030EB6
-.extern loc_8030EBC
-.extern sub_8030EC4
-.extern loc_8030ED6
-.extern loc_8030F08
-.extern loc_8030F10
-.extern loc_8030F18
-.extern locret_8030F20
-.extern sub_8030F24
-.extern loc_8030F34
-.extern loc_8030F66
-.extern loc_8030F6E
-.extern loc_8030F76
-.extern locret_8030F7E
-.extern sub_8030F80
-.extern loc_8030FB2
-.extern loc_8030FBC
-.extern locret_8030FC2
-.extern sub_8030FC4
-.extern loc_8030FD6
-.extern loc_8030FF0
-.extern loc_8030FF8
-.extern loc_803100A
-.extern locret_8031010
-.extern sub_8031014
-.extern loc_803102A
-.extern loc_8031044
-.extern loc_803104C
-.extern locret_803105E
-.extern off_8031060
-.extern off_8031064
-.extern off_8031068
-.extern off_803106C
-.extern off_8031070
-.extern loc_803107E
-.extern sub_80310D4
-.extern loc_80310E0
-.extern locret_80310EE
-.extern sub_80310F0
-.extern sub_803110C
-.extern loc_8031118
-.extern loc_8031150
-.extern loc_803116E
-.extern loc_803117E
-.extern locret_8031186
-.extern sub_8031188
-.extern loc_8031194
-.extern loc_80311CC
-.extern loc_80311EA
-.extern loc_80311FA
-.extern locret_8031202
-.extern off_8031208
-.extern off_803120C
-.extern off_8031210
-.extern sub_8031218
-.extern loc_8031230
-.extern locret_8031240
-.extern off_8031244
-.extern loc_803125E
-.extern dword_8031274
-.extern off_8031278
-.extern dword_803127C
-.extern dword_8031280
-.extern sub_8031284
-.extern loc_8031292
-.extern loc_80312AE
-.extern loc_80312EC
-.extern loc_80312EE
-.extern sub_80312F4
-.extern sub_803131C
-.extern loc_803133A
-.extern loc_803135C
-.extern loc_8031386
-.extern loc_803138C
-.extern loc_8031390
-.extern sub_8031398
-.extern loc_80313A8
-.extern loc_80313CE
-.extern loc_80313D4
-.extern loc_80313D8
-.extern dword_80313E8
-.extern sub_80313EC
-.extern loc_80313F2
-.extern loc_8031400
-.extern loc_803142C
-.extern loc_8031430
-.extern locret_8031432
-.extern dword_8031434
-.extern sub_8031438
-.extern loc_803143E
-.extern loc_803144C
-.extern loc_8031456
-.extern loc_8031460
-.extern loc_803148A
-.extern loc_803149A
-.extern loc_80314B0
-.extern loc_80314B4
-.extern locret_80314B6
-.extern sub_80314B8
-.extern loc_80314BE
-.extern loc_80314CC
-.extern loc_80314D6
-.extern loc_80314E0
-.extern loc_803150A
-.extern loc_803151A
-.extern loc_8031530
-.extern loc_8031534
-.extern locret_8031536
-.extern dword_8031538
-.extern sub_8031544
-.extern locret_8031586
-.extern sub_8031588
-.extern loc_803158E
-.extern loc_80315AA
-.extern loc_80315AC
-.extern loc_80315D6
-.extern sub_80315E0
-.extern loc_80315EE
-.extern loc_80315F2
-.extern off_8031604
-.extern off_803160C
-.extern off_8031610
-.extern sub_8031614
-.extern sub_8031624
-.extern loc_8031626
-.extern locret_803163E
-.extern dword_803164C
-.extern dword_803165C
-.extern loc_803167A
-.extern loc_8031680
-.extern loc_8031684
-.extern dword_8031688
-.extern dword_80316AC
-.extern sub_8031724
-.extern off_8031734
-.extern off_8031738
-.extern sub_8031748
-.extern loc_8031806
-.extern loc_803180C
-.extern off_8031864
-.extern off_803186C
-.extern off_8031870
-.extern off_8031878
-.extern dword_803187C
-.extern off_8031880
-.extern dword_8031884
-.extern off_8031888
-.extern off_803188C
-.extern dword_8031890
-.extern off_8031894
-.extern dword_8031898
-.extern off_803189C
-.extern off_80318A0
-.extern off_80318A4
-.extern off_80318A8
-.extern off_80318AC
-.extern off_80318B0
-.extern dword_80318B4
-.extern off_80318B8
-.extern off_80318BC
-.extern off_80318C0
-.extern off_80318C4
-.extern dword_80318C8
-.extern sub_80318CC
-.extern locret_803191A
-.extern off_803191C
-.extern off_8031920
-.extern sub_8031930
-.extern locret_803194C
-.extern sub_8031950
-.extern loc_8031988
-.extern loc_80319B0
-.extern loc_80319BE
-.extern loc_80319C4
-.extern sub_80319CC
-.extern loc_80319DA
-.extern loc_80319EC
-.extern loc_80319EE
-.extern locret_80319F0
-.extern off_80319F4
-.extern sub_80319F8
-.extern loc_8031A18
-.extern sub_8031A20
-.extern sub_8031A38
-.extern sub_8031A50
-.extern sub_8031AC6
-.extern off_8031AE0
-.extern off_8031AE4
-.extern dword_8031AE8
-.extern off_8031AEC
-.extern off_8031B0C
-.extern sub_8031B14
-.extern loc_8031B1A
-.extern loc_8031B24
-.extern off_8031B30
-.extern sub_8031B34
-.extern loc_8031B72
-.extern loc_8031BA0
-.extern off_8031BA8
-.extern off_8031BAC
-.extern off_8031BB0
-.extern sub_8031BB4
-.extern loc_8031BBC
-.extern sub_8031BD0
-.extern loc_8031BDA
-.extern loc_8031BF4
-.extern off_8031C00
-.extern off_8031C04
-.extern loc_8031C08
-.extern ho_8031CA4
-.extern off_8031CB4
-.extern jt_8031CB8
-.extern sub_8031CC4
-.extern off_8031DCC
-.extern off_8031DD0
-.extern off_8031DD8
-.extern dword_8031DDC
-.extern off_8031DE0
-.extern off_8031DE8
-.extern off_8031DEC
-.extern off_8031DF0
-.extern dword_8031DF4
-.extern off_8031DF8
-.extern dword_8031DFC
-.extern off_8031E00
-.extern off_8031E0C
-.extern dword_8031E10
-.extern off_8031E14
-.extern dword_8031E18
-.extern off_8031E24
-.extern off_8031E28
-.extern off_8031E2C
-.extern dword_8031E30
-.extern off_8031E34
-.extern off_8031E38
-.extern dword_8031E3C
-.extern off_8031E40
-.extern off_8031E44
-.extern off_8031E48
-.extern off_8031E4C
-.extern loc_8031E50
-.extern locret_8031E9E
-.extern off_8031EA0
-.extern off_8031EA4
-.extern sub_8031EC4
-.extern loc_8031EDC
-.extern loc_8031EE0
-.extern sub_8031EF0
-.extern locret_8031F1A
-.extern sub_8031F1C
-.extern sub_8031F3C
-.extern loc_8031F54
-.extern loc_8031F6E
-.extern off_8031F7C
-.extern off_8031F80
-.extern sub_8031F98
-.extern loc_8031FA8
-.extern sub_8031FAC
-.extern off_8031FD0
-.extern sub_8031FD4
-.extern sub_8031FF0
-.extern off_8032014
-.extern sub_8032018
-.extern sub_803206C
-.extern loc_8032084
-.extern loc_80320B2
-.extern loc_80320B8
-.extern loc_80320C0
-.extern loc_80320D0
-.extern loc_80320EC
-.extern loc_80320F4
-.extern sub_8032100
-.extern loc_803210C
-.extern loc_8032126
-.extern sub_8032138
-.extern loc_803215A
-.extern locret_803218A
-.extern sub_803218C
-.extern locret_8032198
-.extern sub_803219C
-.extern loc_80321B6
-.extern locret_80321BA
-.extern sub_80321BC
-.extern off_80321D4
-.extern off_80321D8
-.extern off_80321DC
-.extern dword_80321E0
-.extern sub_80321E4
-.extern off_8032260
-.extern off_8032264
-.extern off_803226C
-.extern off_803227C
-.extern sub_8032280
-.extern loc_80322A4
-.extern loc_80322C8
-.extern loc_80322CC
-.extern loc_80322D2
-.extern loc_80322D8
-.extern loc_80322DA
-.extern loc_80322DE
-.extern loc_80322E0
-.extern loc_80322E4
-.extern loc_80322E6
-.extern locret_80322EA
-.extern off_80322EC
-.extern off_80322F0
-.extern off_80322F4
-.extern off_80322F8
-.extern sub_8032300
-.extern loc_8032310
-.extern loc_803231E
-.extern off_8032328
-.extern sub_803232C
-.extern loc_8032354
-.extern loc_803235E
-.extern off_8032364
-.extern dword_8032368
-.extern off_803236C
-.extern off_8032370
-.extern off_8032374
-.extern off_8032378
-.extern sub_803237C
-.extern loc_80323AC
-.extern loc_80323DA
-.extern off_8032408
-.extern dword_803240C
-.extern off_8032438
-.extern dword_803243C
-.extern off_8032440
-.extern loc_8032444
-.extern sub_8032448
-.extern loc_8032472
-.extern loc_8032480
-.extern loc_803248E
-.extern off_8032498
-.extern dword_803249C
-.extern dword_80324AC
-.extern sub_80324B0
-.extern loc_80324D0
-.extern loc_80324D8
-.extern loc_80324EC
-.extern loc_80324F4
-.extern loc_803250A
-.extern locret_803250E
-.extern loc_8032510
-.extern loc_8032532
-.extern off_8032540
-.extern off_8032544
-.extern sub_803255C
-.extern loc_8032576
-.extern sub_8032584
-.extern loc_8032598
-.extern sub_80325AC
-.extern loc_80325C4
-.extern sub_80325D8
-.extern loc_80325F4
-.extern loc_8032602
-.extern sub_8032618
-.extern loc_803262E
-.extern sub_8032644
-.extern loc_803264C
-.extern sub_8032668
-.extern off_8032684
-.extern dword_8032688
-.extern sub_8032698
-.extern loc_80326A2
-.extern locret_80326CA
-.extern function_chunks__function_chunks_loc_80326CC
-.extern loc_80326EA
-.extern locret_80326FE
-.extern off_8032700
-.extern off_8032704
-.extern dword_8032708
-.extern off_803270C
-.extern dword_8032710
-.extern off_8032714
-.extern sub_803271C
-.extern loc_8032726
-.extern locret_8032736
-.extern sub_8032738
-.extern loc_8032820
-.extern loc_8032824
-.extern dword_8032838
-.extern loc_8032840
-.extern off_8032850
-.extern off_8032854
-.extern sub_8032860
-.extern loc_80328C4
-.extern off_8032924
-.extern off_8032928
-.extern off_803292C
-.extern dword_8032930
-.extern off_8032934
-.extern off_803293C
-.extern dword_8032940
-.extern off_8032954
-.extern off_8032958
-.extern off_803295C
-.extern dword_8032960
-.extern off_8032964
-.extern off_8032968
-.extern off_803296C
-.extern off_8032970
-.extern off_8032974
-.extern off_8032978
-.extern sub_803297C
-.extern loc_80329B4
-.extern loc_80329BA
-.extern locret_80329D2
-.extern off_80329D4
-.extern off_80329D8
-.extern sub_80329E0
-.extern loc_80329FC
-.extern locret_8032A0E
-.extern sub_8032A10
-.extern locret_8032A1C
-.extern sub_8032A20
-.extern sub_8032A2C
-.extern off_8032A58
-.extern off_8032A5C
-.extern sub_8032A60
-.extern loc_8032A6A
-.extern loc_8032A7E
-.extern loc_8032A8C
-.extern loc_8032A92
-.extern loc_8032ABC
-.extern loc_8032ACE
-.extern loc_8032AE4
-.extern loc_8032B10
-.extern loc_8032B14
-.extern loc_8032B34
-.extern loc_8032B3C
-.extern loc_8032B42
-.extern loc_8032B44
-.extern loc_8032B48
-.extern loc_8032B4E
-.extern loc_8032B54
-.extern loc_8032B5A
-.extern loc_8032B60
-.extern loc_8032B66
-.extern loc_8032B6C
-.extern loc_8032B72
-.extern loc_8032B78
-.extern loc_8032B7C
-.extern loc_8032B8A
-.extern loc_8032B8E
-.extern loc_8032B90
-.extern locret_8032B94
-.extern sub_8032B98
-.extern sub_8032B9C
-.extern loc_8032BA2
-.extern loc_8032BA8
-.extern loc_8032BAE
-.extern loc_8032BB4
-.extern locret_8032BB8
-.extern word_8032BBA
-.extern sub_8032BBC
-.extern loc_8032BC0
-.extern loc_8032BC4
-.extern loc_8032BCC
-.extern loc_8032BD0
-.extern loc_8032BD8
-.extern loc_8032BDC
-.extern loc_8032BDE
-.extern loc_8032BE2
-.extern off_8032BE8
-.extern off_8032BEC
-.extern unk_8032BF0
-.extern unk_8032BF4
-.extern unk_8032BFA
-.extern unk_8032BFC
-.extern unk_8032C00
-.extern unk_8032C02
-.extern unk_8032C06
-.extern unk_8032C08
-.extern unk_8032C0C
-.extern unk_8032C0E
-.extern unk_8032C12
-.extern unk_8032C14
-.extern unk_8032C18
-.extern unk_8032C1A
-.extern unk_8032C20
-.extern unk_8032C26
-.extern unk_8032C2C
-.extern unk_8032C32
-.extern unk_8032C38
-.extern unk_8032C3C
-.extern unk_8032C42
-.extern unk_8032C48
-.extern unk_8032C4E
-.extern unk_8032C54
-.extern unk_8032C5A
-.extern unk_8032C5C
-.extern unk_8032C60
-.extern unk_8032C62
-.extern unk_8032C66
-.extern unk_8032C68
-.extern unk_8032C6C
-.extern unk_8032C6E
-.extern unk_8032C72
-.extern unk_8032C74
-.extern unk_8032C78
-.extern unk_8032C7A
-.extern unk_8032C80
-.extern unk_8032C86
-.extern sub_8032C88
-.extern loc_8032C8C
-.extern loc_8032C92
-.extern loc_8032C98
-.extern loc_8032C9C
-.extern loc_8032CA2
-.extern loc_8032CA6
-.extern dword_8032CAE
-.extern dword_8032CB2
-.extern dword_8032CB6
-.extern dword_8032CBA
-.extern dword_8032CBE
-.extern dword_8032CC6
-.extern dword_8032CCA
-.extern sub_8032CD0
-.extern loc_8032CD2
-.extern loc_8032CD8
-.extern locret_8032CF8
-.extern loc_8032CFC
-.extern loc_8032D02
-.extern off_8032D08
-.extern loc_8032D0E
-.extern loc_8032D14
-.extern loc_8032D1A
-.extern locret_8032D1E
-.extern sub_8032D20
-.extern loc_8032D26
-.extern loc_8032D2C
-.extern loc_8032D32
-.extern loc_8032D38
-.extern loc_8032D48
-.extern locret_8032D74
-.extern off_8032D78
-.extern dword_8032D7C
-.extern off_8032D80
-.extern off_8032D84
-.extern off_8032D88
-.extern off_8032D8C
-.extern sub_8032D90
-.extern locret_8032DA2
-.extern sub_8032DA4
-.extern loc_8032DD2
-.extern loc_8032DF6
-.extern loc_8032DFE
-.extern loc_8032E00
-.extern locret_8032E06
-.extern off_8032E08
-.extern dword_8032E0C
-.extern sub_8032E10
-.extern loc_8032E34
-.extern off_8032E58
-.extern off_8032E5C
-.extern off_8032E60
-.extern sub_8032E64
-.extern loc_8032E6C
-.extern locret_8032E86
-.extern locret_8032EA6
-.extern off_8032EA8
-.extern dword_8032EAC
-.extern ho_80331A4
-.extern off_80331B4
-.extern jt_80331B8
-.extern sub_80331C4
-.extern sub_80331DC
-.extern loc_80332AA
-.extern loc_80332BC
-.extern loc_80332FC
-.extern loc_8033308
-.extern sub_80333D4
-.extern off_8033400
-.extern off_8033404
-.extern off_8033408
-.extern dword_803340C
-.extern off_8033410
-.extern off_8033418
-.extern dword_803341C
-.extern off_8033420
-.extern off_8033424
-.extern dword_8033428
-.extern off_803342C
-.extern dword_8033430
-.extern off_8033434
-.extern off_803343C
-.extern off_8033440
-.extern off_8033444
-.extern dword_8033448
-.extern off_803344C
-.extern off_8033454
-.extern dword_8033458
-.extern off_803345C
-.extern dword_8033460
-.extern off_8033464
-.extern off_8033468
-.extern dword_8033474
-.extern off_8033478
-.extern off_803347C
-.extern off_8033480
-.extern off_8033484
-.extern off_8033488
-.extern off_803348C
-.extern off_8033490
-.extern off_8033494
-.extern off_8033498
-.extern dword_803349C
-.extern off_80334A0
-.extern sub_80334A4
-.extern loc_80334C2
-.extern locret_80334F6
-.extern off_80334F8
-.extern off_80334FC
-.extern sub_8033548
-.extern loc_80335A2
-.extern loc_80335B8
-.extern locret_80335BC
-.extern off_80335C0
-.extern sub_80335C4
-.extern loc_80335EE
-.extern loc_8033608
-.extern locret_8033654
-.extern sub_803365C
-.extern locret_803366C
-.extern sub_8033670
-.extern locret_8033684
-.extern sub_8033688
-.extern locret_80336C6
-.extern sub_80336CC
-.extern loc_803372E
-.extern locret_8033732
-.extern off_8033734
-.extern dword_8033738
-.extern sub_803373C
-.extern loc_803377E
-.extern loc_8033784
-.extern loc_80337A4
-.extern loc_80337B4
-.extern loc_80337CA
-.extern locret_80337CE
-.extern off_80337D0
-.extern sub_80337D4
-.extern off_80337E0
-.extern off_80337E4
-.extern word_80337E8
-.extern sub_80337EC
-.extern loc_803381E
-.extern loc_803383C
-.extern loc_8033854
-.extern loc_8033858
-.extern loc_803386C
-.extern loc_8033882
-.extern loc_8033886
-.extern loc_8033888
-.extern locret_803388A
-.extern off_803388C
-.extern off_8033890
-.extern sub_8033894
-.extern loc_80338D2
-.extern loc_80338E6
-.extern loc_80338F4
-.extern locret_8033900
-.extern sub_8033910
-.extern sub_8033938
-.extern loc_8033960
-.extern loc_8033980
-.extern loc_8033996
-.extern off_80339C4
-.extern off_80339C8
-.extern sub_80339CC
-.extern locret_80339E0
-.extern sub_80339E4
-.extern loc_8033A20
-.extern loc_8033A26
-.extern loc_8033A34
-.extern loc_8033A58
-.extern locret_8033AA8
-.extern off_8033AAC
-.extern off_8033AB0
-.extern dword_8033AB4
-.extern sub_8033AB8
-.extern loc_8033AC2
-.extern loc_8033AEC
-.extern loc_8033B16
-.extern loc_8033B1E
-.extern loc_8033B3A
-.extern loc_8033B4E
-.extern loc_8033B6C
-.extern loc_8033BB0
-.extern loc_8033BB4
-.extern loc_8033BB6
-.extern loc_8033BBC
-.extern loc_8033BCC
-.extern locret_8033BD0
-.extern off_8033BD4
-.extern off_8033BD8
-.extern off_8033BDC
-.extern sub_8033BE0
-.extern loc_8033BEE
-.extern locret_8033C12
-.extern sub_8033C14
-.extern loc_8033C36
-.extern loc_8033C46
-.extern locret_8033C4E
-.extern dword_8033C50
-.extern sub_8033C54
-.extern locret_8033C6E
-.extern off_8033C70
-.extern sub_8033C74
-.extern locret_8033CAA
-.extern sub_8033CB0
-.extern loc_8033CE2
-.extern loc_8033D04
-.extern locret_8033D08
-.extern off_8033D0C
-.extern off_8033D10
-.extern dword_8033D14
-.extern sub_8033D18
-.extern off_8033DB4
-.extern off_8033DB8
-.extern off_8033DBC
-.extern off_8033DC0
-.extern off_8033DC4
-.extern dword_8033DC8
-.extern off_8033DCC
-.extern off_8033DD0
-.extern dword_8033DD4
-.extern sub_8033DD8
-.extern off_8033DF0
-.extern sub_8033DF4
-.extern loc_8033E14
-.extern loc_8033E22
-.extern loc_8033E30
-.extern loc_8033E40
-.extern loc_8033E44
-.extern loc_8033E78
-.extern loc_8033EA6
-.extern loc_8033ED2
-.extern locret_8033EE4
-.extern dword_8033EE8
-.extern dword_8033EEC
-.extern sub_8033EF0
-.extern loc_8033F12
-.extern loc_8033F38
-.extern loc_8033F42
-.extern locret_8033F46
-.extern dword_8033F48
-.extern off_8033F4C
-.extern off_8033F50
-.extern off_8033F54
-.extern off_8033F58
-.extern sub_8033F5C
-.extern loc_8033F88
-.extern locret_8033F8C
-.extern dword_8033F90
-.extern off_8033F94
-.extern sub_8033F98
-.extern loc_8033FBE
-.extern loc_8033FCE
-.extern loc_8033FE6
-.extern loc_8034002
-.extern locret_803401C
-.extern sub_8034020
-.extern loc_8034042
-.extern loc_803404E
-.extern loc_8034056
-.extern loc_803405C
-.extern loc_8034068
-.extern loc_8034070
-.extern loc_8034084
-.extern loc_8034098
-.extern loc_803409E
-.extern locret_80340A6
-.extern off_80340AC
-.extern sub_80340B4
-.extern loc_80340D2
-.extern off_80340F0
-.extern dword_80340F4
-.extern dword_80340FC
-.extern sub_8034100
-.extern loc_8034116
-.extern loc_803411E
-.extern locret_8034126
-.extern sub_8034128
-.extern locret_8034146
-.extern sub_8034148
-.extern off_8034168
-.extern sub_803416C
-.extern off_8034188
-.extern sub_803418C
-.extern loc_80341F6
-.extern loc_8034204
-.extern loc_8034226
-.extern dword_803423C
-.extern off_8034240
-.extern off_8034244
-.extern off_8034248
-.extern off_803424C
-.extern loc_8034250
-.extern loc_803426C
-.extern sub_80342A4
-.extern off_80342C0
-.extern sub_80342C4
-.extern dword_8034314
-.extern off_8034318
-.extern off_803431C
-.extern sub_8034320
-.extern off_803433C
-.extern sub_8034340
-.extern loc_803434C
-.extern locret_803436C
-.extern dword_8034370
-.extern off_8034374
-.extern off_8034378
-.extern off_803437C
-.extern off_8034380
-.extern sub_8034384
-.extern loc_80343A4
-.extern loc_80343A6
-.extern off_80343D4
-.extern off_80343D8
-.extern off_80343DC
-.extern dword_80343E0
-.extern loc_80343F4
-.extern loc_80343FE
-.extern locret_8034404
-.extern sub_8034408
-.extern off_8034420
-.extern off_8034424
-.extern off_8034428
-.extern dword_803442C
-.extern sub_8034430
-.extern loc_803443C
-.extern loc_803445E
-.extern loc_8034476
-.extern loc_803447E
-.extern loc_8034480
-.extern loc_8034492
-.extern loc_8034498
-.extern loc_80344B0
-.extern sub_80344C4
-.extern sub_80344FC
-.extern off_8034514
-.extern off_8034518
-.extern off_803451C
-.extern off_8034520
-.extern off_8034524
-.extern off_8034528
-.extern dword_803452C
-.extern dword_8034530
-.extern dword_8034534
-.extern loc_8034546
-.extern locret_8034558
-.extern sub_803455C
-.extern loc_803456A
-.extern loc_8034580
-.extern loc_803458E
-.extern loc_8034598
-.extern loc_80345A6
-.extern loc_80345AC
-.extern off_80345BC
-.extern off_803469C
-.extern dword_80346A0
-.extern off_80346A4
-.extern dword_80346A8
-.extern dword_80346B8
-.extern off_80346F0
-.extern sub_80346F4
-.extern sub_80346FC
-.extern off_8034708
-.extern locret_803471E
-.extern locret_803475C
-.extern off_8034760
-.extern dword_8034764
-.extern off_8034768
-.extern off_803476C
-.extern off_8034770
-.extern off_8034774
-.extern locret_803478A
-.extern loc_80347A8
-.extern loc_80347CE
-.extern off_80347D4
-.extern off_80347D8
-.extern sub_80347DC
-.extern locret_80347F0
-.extern off_80347F4
-.extern sub_80347F8
-.extern sub_8034804
-.extern loc_8034826
-.extern loc_8034850
-.extern loc_8034860
-.extern loc_8034868
-.extern sub_8034870
-.extern loc_80348A0
-.extern locret_80348A6
-.extern off_80348A8
-.extern dword_80348AC
-.extern sub_80348B4
-.extern loc_80348BA
-.extern loc_80348C6
-.extern loc_80348D0
-.extern loc_80348DA
-.extern locret_80348EA
-.extern off_80348EC
-.extern off_80348F0
-.extern dword_80348F4
-.extern sub_8034944
-.extern loc_803495A
-.extern loc_8034972
-.extern loc_8034976
-.extern locret_803497C
-.extern off_8034980
-.extern off_8034984
-.extern off_8034988
-.extern byte_803498C
-.extern sub_8034994
-.extern loc_80349B4
-.extern locret_80349BA
-.extern off_80349BC
-.extern sub_80349C0
-.extern loc_80349D4
-.extern locret_80349E4
-.extern off_80349E8
-.extern off_80349EC
-.extern sub_80349F0
-.extern loc_8034A1E
-.extern loc_8034A32
-.extern loc_8034A5E
-.extern loc_8034A72
-.extern locret_8034A74
-.extern off_8034A78
-.extern sub_8034A7C
-.extern loc_8034A80
-.extern loc_8034A8A
-.extern loc_8034AA8
-.extern locret_8034AAC
-.extern off_8034AB0
-.extern off_8034AB4
-.extern off_8034AB8
-.extern ho_8034ABC
-.extern off_8034AD0
-.extern jt_8034AD4
-.extern sub_8034ADC
-.extern loc_8034AF2
-.extern loc_8034B10
-.extern loc_8034B28
-.extern loc_8034B2C
-.extern loc_8034B3A
-.extern loc_8034B58
-.extern loc_8034B5C
-.extern loc_8034B66
-.extern off_8034B6C
-.extern loc_8034B74
-.extern loc_8034B78
-.extern sub_8034B7C
-.extern loc_8034B8C
-.extern loc_8034BA4
-.extern loc_8034BBE
-.extern loc_8034BE4
-.extern loc_8034C02
-.extern loc_8034C1A
-.extern loc_8034C1E
-.extern loc_8034C28
-.extern sub_8034C2C
-.extern loc_8034C52
-.extern loc_8034C5C
-.extern loc_8034C6C
-.extern loc_8034C94
-.extern loc_8034C9C
-.extern sub_8034CA0
-.extern loc_8034CAE
-.extern sub_8034CC4
-.extern loc_8034CE0
-.extern loc_8034CE8
-.extern loc_8034CF0
-.extern loc_8034CF2
-.extern locret_8034D04
-.extern sub_8034D08
-.extern sub_8034D14
-.extern sub_8034D20
-.extern sub_8034D44
-.extern dword_8034D70
-.extern off_8034D74
-.extern sub_8034D78
-.extern loc_8034D88
-.extern loc_8034D98
-.extern loc_8034DAC
-.extern loc_8034DB4
-.extern sub_8034DC4
-.extern loc_8034DD8
-.extern loc_8034DEC
-.extern loc_8034E08
-.extern loc_8034E26
-.extern sub_8034E2C
-.extern locret_8034E4C
-.extern sub_8034E50
-.extern loc_8034E60
-.extern sub_8034E88
-.extern off_8034E98
-.extern off_8034E9C
-.extern off_8034EA0
-.extern off_8034EA4
-.extern off_8034EA8
-.extern off_8034EAC
-.extern off_8034EB0
-.extern off_8034EB4
-.extern off_8034EB8
-.extern off_8034EBC
-.extern loc_8034ECA
-.extern loc_8034EE2
-.extern loc_8034F1E
-.extern loc_8034F2C
-.extern sub_8034F34
-.extern loc_8034F40
-.extern loc_8034F58
-.extern loc_8034F6A
-.extern loc_8034F98
-.extern sub_8034F9C
-.extern loc_8034FAC
-.extern loc_8034FC0
-.extern loc_8034FC2
-.extern loc_803507A
-.extern loc_8035090
-.extern loc_8035094
-.extern sub_80350BC
-.extern off_80350CC
-.extern sub_80350D0
-.extern off_80350DC
-.extern off_80350E0
-.extern dword_80350E4
-.extern off_80350EC
-.extern off_80350F0
-.extern off_80350F4
-.extern off_80350F8
-.extern off_80350FC
-.extern off_8035100
-.extern off_8035104
-.extern off_8035108
-.extern off_803510C
-.extern off_8035110
-.extern off_8035114
-.extern off_8035118
-.extern dword_803511C
-.extern off_8035224
-.extern jt_8035228
-.extern sub_803525C
-.extern loc_8035318
-.extern off_8035324
-.extern dword_8035328
-.extern sub_803532C
-.extern loc_8035342
-.extern sub_8035350
-.extern loc_803537A
-.extern off_803538C
-.extern sub_8035390
-.extern loc_80353AE
-.extern sub_80353C0
-.extern loc_80353D6
-.extern sub_80353E8
-.extern loc_8035410
-.extern loc_8035434
-.extern off_8035444
-.extern off_8035448
-.extern sub_803544C
-.extern loc_8035474
-.extern loc_803547E
-.extern loc_80354C2
-.extern loc_80354C8
-.extern off_80354D8
-.extern sub_80354E0
-.extern loc_8035512
-.extern locret_8035528
-.extern sub_803552C
-.extern loc_8035542
-.extern sub_8035558
-.extern loc_803558A
-.extern sub_803559C
-.extern loc_80355C4
-.extern loc_80355CA
-.extern loc_80355D4
-.extern loc_80355DA
-.extern sub_80355EC
-.extern loc_8035612
-.extern sub_8035624
-.extern off_80356C4
-.extern off_80356C8
-.extern off_80356CC
-.extern dword_80356D0
-.extern off_80356D4
-.extern off_80356D8
-.extern dword_80356DC
-.extern off_80356E0
-.extern off_80356E4
-.extern dword_80356E8
-.extern off_80356EC
-.extern off_80356F4
-.extern off_80356F8
-.extern off_8035700
-.extern dword_8035704
-.extern off_8035708
-.extern dword_803570C
-.extern off_8035710
-.extern off_8035714
-.extern dword_8035718
-.extern off_803571C
-.extern off_8035720
-.extern off_8035724
-.extern dword_8035728
-.extern off_803572C
-.extern off_8035730
-.extern dword_8035734
-.extern off_8035738
-.extern off_803573C
-.extern off_8035740
-.extern off_8035744
-.extern off_8035748
-.extern off_803574C
-.extern off_8035754
-.extern dword_8035758
-.extern sub_803575C
-.extern loc_8035778
-.extern off_8035798
-.extern off_803579C
-.extern sub_80357A8
-.extern loc_80357B8
-.extern loc_80357C0
-.extern loc_80357D6
-.extern loc_80357E8
-.extern loc_80357F0
-.extern loc_80357FC
-.extern loc_803580C
-.extern loc_8035820
-.extern loc_8035828
-.extern loc_803584E
-.extern off_8035860
-.extern off_8035864
-.extern off_8035868
-.extern dword_803586C
-.extern off_8035874
-.extern dword_8035878
-.extern off_8035894
-.extern dword_8035898
-.extern sub_80358B4
-.extern loc_80358B6
-.extern loc_80358C4
-.extern loc_80358C8
-.extern loc_80358E6
-.extern locret_80358EC
-.extern off_80358F0
-.extern sub_80358F4
-.extern off_8035904
-.extern off_8035908
-.extern sub_803590C
-.extern loc_803591E
-.extern loc_8035922
-.extern loc_8035930
-.extern locret_8035936
-.extern sub_8035938
-.extern loc_803594A
-.extern loc_803594E
-.extern loc_8035962
-.extern loc_8035974
-.extern locret_8035978
-.extern off_803597C
-.extern sub_8035980
-.extern sub_8035990
-.extern off_80359A0
-.extern off_80359A4
-.extern sub_80359A8
-.extern off_80359DC
-.extern off_80359E0
-.extern loc_80359E4
-.extern sub_80359F0
-.extern off_80359FC
-.extern sub_8035A14
-.extern loc_8035A2C
-.extern loc_8035A3A
-.extern loc_8035A4E
-.extern loc_8035A74
-.extern locret_8035A9C
-.extern loc_8035A9E
-.extern sub_8035AAC
-.extern off_8035AB4
-.extern off_8035AB8
-.extern sub_8035ABC
-.extern loc_8035ACA
-.extern loc_8035ADC
-.extern loc_8035AEE
-.extern loc_8035AFA
-.extern loc_8035B06
-.extern loc_8035B18
-.extern loc_8035B52
-.extern loc_8035B56
-.extern off_8035B60
-.extern off_8035B64
-.extern off_8035B68
-.extern off_8035B6C
-.extern sub_8035B70
-.extern off_8035B90
-.extern sub_8035B94
-.extern loc_8035BB6
-.extern loc_8035BD8
-.extern loc_8035BE0
-.extern off_8035BF0
-.extern off_8035BF4
-.extern sub_8035BF8
-.extern sub_8035C1C
-.extern loc_8035C2A
-.extern sub_8035C3C
-.extern loc_8035C64
-.extern loc_8035C68
-.extern sub_8035C6C
-.extern loc_8035C7A
-.extern loc_8035C8E
-.extern loc_8035C9A
-.extern loc_8035CA6
-.extern loc_8035CB2
-.extern loc_8035CCE
-.extern loc_8035CDE
-.extern loc_8035CE0
-.extern loc_8035CE4
-.extern loc_8035CF6
-.extern loc_8035D0A
-.extern loc_8035D0C
-.extern loc_8035D0E
-.extern loc_8035D24
-.extern loc_8035D26
-.extern loc_8035D3C
-.extern locret_8035D42
-.extern off_8035D44
-.extern dword_8035D48
-.extern sub_8035D50
-.extern sub_8035D84
-.extern off_8035DF8
-.extern sub_8035DFC
-.extern loc_8035E04
-.extern loc_8035E16
-.extern off_8035E1C
-.extern sub_8035E20
-.extern sub_8035E50
-.extern loc_8035E5E
-.extern sub_8035E70
-.extern loc_8035E94
-.extern off_8035E9C
-.extern sub_8035EA0
-.extern loc_8035EA4
-.extern loc_8035EB8
-.extern loc_8035EE2
-.extern locret_8035EEC
-.extern off_8035EF0
-.extern sub_8035EF4
-.extern loc_8035F02
-.extern loc_8035F14
-.extern loc_8035F26
-.extern loc_8035F50
-.extern loc_8035F72
-.extern loc_8035F94
-.extern loc_8035FA4
-.extern loc_8035FA6
-.extern loc_8035FAA
-.extern loc_8035FC4
-.extern loc_8035FD4
-.extern loc_8035FD6
-.extern loc_8035FD8
-.extern loc_8035FFC
-.extern locret_8036002
-.extern off_8036004
-.extern off_8036008
-.extern off_803600C
-.extern dword_8036010
-.extern sub_8036018
-.extern loc_8036034
-.extern sub_8036060
-.extern loc_80360A0
-.extern loc_80360C0
-.extern sub_80360C8
-.extern loc_80360F2
-.extern sub_80360F8
-.extern sub_803612C
-.extern sub_803614C
-.extern sub_8036170
-.extern sub_8036198
-.extern loc_80361C6
-.extern loc_80361D4
-.extern loc_80361E8
-.extern loc_80361F6
-.extern off_80361FC
-.extern dword_8036200
-.extern sub_8036208
-.extern loc_8036216
-.extern loc_8036238
-.extern loc_803624C
-.extern loc_803625E
-.extern loc_803626E
-.extern loc_8036270
-.extern locret_8036280
-.extern sub_8036284
-.extern loc_80362CA
-.extern loc_80362D2
-.extern loc_80362EA
-.extern loc_80362F2
-.extern loc_8036316
-.extern loc_803632E
-.extern loc_8036330
-.extern sub_8036340
-.extern off_8036358
-.extern sub_803635C
-.extern off_8036370
-.extern dword_8036374
-.extern sub_803637C
-.extern off_8036398
-.extern unk_803639C
-.extern sub_80363B4
-.extern loc_80363CA
-.extern loc_80363D2
-.extern off_80363D8
-.extern dword_80363DC
-.extern sub_80363F4
-.extern sub_8036418
-.extern off_8036434
-.extern off_8036438
-.extern ho_803643C
-.extern off_803644C
-.extern jt_8036450
-.extern sub_8036490
-.extern loc_80364D6
-.extern loc_80364D8
-.extern loc_80364E8
-.extern off_8036500
-.extern off_8036504
-.extern dword_8036508
-.extern sub_8036518
-.extern loc_8036548
-.extern off_8036560
-.extern off_8036564
-.extern byte_8036568
-.extern sub_803656C
-.extern loc_803659A
-.extern loc_80365B0
-.extern loc_80365D4
-.extern off_80365EC
-.extern off_80365F0
-.extern off_80365F4
-.extern sub_80365F8
-.extern loc_803664C
-.extern sub_8036664
-.extern loc_8036682
-.extern loc_803668A
-.extern off_803669C
-.extern sub_80366A0
-.extern loc_80366C4
-.extern loc_80366E8
-.extern off_80366F8
-.extern sub_80366FC
-.extern loc_8036714
-.extern loc_803671A
-.extern sub_8036740
-.extern loc_8036756
-.extern off_803676C
-.extern sub_8036770
-.extern sub_803679C
-.extern loc_80367AC
-.extern sub_80367C4
-.extern loc_80367E8
-.extern off_8036800
-.extern sub_8036804
-.extern loc_803681C
-.extern sub_8036834
-.extern off_80368D0
-.extern off_80368D4
-.extern off_80368D8
-.extern dword_80368DC
-.extern off_80368E0
-.extern off_80368E4
-.extern off_80368E8
-.extern off_80368EC
-.extern dword_80368F0
-.extern off_80368F4
-.extern off_80368F8
-.extern off_80368FC
-.extern off_8036900
-.extern off_8036904
-.extern byte_8036908
-.extern sub_803690C
-.extern sub_803692C
-.extern loc_8036950
-.extern sub_8036964
-.extern off_8036988
-.extern sub_803698C
-.extern locret_80369C8
-.extern off_80369CC
-.extern off_80369D4
-.extern sub_80369D8
-.extern loc_80369EC
-.extern loc_8036A00
-.extern locret_8036A22
-.extern dword_8036A24
-.extern off_8036A28
-.extern loc_8036A2C
-.extern sub_8036A54
-.extern loc_8036A6C
-.extern loc_8036A70
-.extern loc_8036A72
-.extern loc_8036A74
-.extern loc_8036A78
-.extern loc_8036A7A
-.extern loc_8036A84
-.extern loc_8036A86
-.extern loc_8036A88
-.extern loc_8036A8A
-.extern loc_8036A8C
-.extern loc_8036A8E
-.extern loc_8036A98
-.extern loc_8036A9A
-.extern loc_8036A9C
-.extern loc_8036A9E
-.extern loc_8036AA0
-.extern loc_8036AA2
-.extern loc_8036AB0
-.extern loc_8036AB2
-.extern loc_8036AC6
-.extern loc_8036AD4
-.extern loc_8036AEE
-.extern loc_8036B00
-.extern loc_8036B10
-.extern loc_8036B12
-.extern loc_8036B1C
-.extern loc_8036B2E
-.extern locret_8036B3E
-.extern off_8036B40
-.extern dword_8036B44
-.extern sub_8036B4C
-.extern loc_8036B5A
-.extern loc_8036B76
-.extern loc_8036B88
-.extern sub_8036BB8
-.extern off_8036BC8
-.extern off_8036BCC
-.extern dword_8036BD0
-.extern sub_8036BD4
-.extern unk_8036C24
-.extern dword_8036C70
-.extern loc_8036E90
-.extern off_8036EB0
-.extern off_8036EB4
-.extern sub_8036F08
-.extern dword_8037010
-.extern off_8037014
-.extern off_8037018
-.extern sub_803701C
-.extern loc_8037032
-.extern sub_8037044
-.extern loc_8037058
-.extern sub_803706C
-.extern loc_8037080
-.extern sub_8037094
-.extern sub_80370B4
-.extern loc_80370C8
-.extern sub_80370DC
-.extern loc_80370F0
-.extern sub_8037104
-.extern sub_8037124
-.extern loc_8037138
-.extern sub_803714C
-.extern loc_8037160
-.extern sub_8037174
-.extern sub_8037194
-.extern loc_80371AC
-.extern sub_80371C0
-.extern loc_80371D8
-.extern sub_80371EC
-.extern loc_8037210
-.extern loc_8037214
-.extern sub_803721C
-.extern loc_803722E
-.extern loc_8037238
-.extern loc_8037242
-.extern loc_803724C
-.extern loc_8037250
-.extern loc_8037260
-.extern sub_8037264
-.extern loc_803727C
-.extern sub_8037290
-.extern loc_80372A8
-.extern loc_80372C4
-.extern loc_80372EE
-.extern off_80372FC
-.extern word_8037300
-.extern word_8037302
-.extern loc_803730C
-.extern loc_803733E
-.extern loc_8037346
-.extern loc_803734E
-.extern off_803735C
-.extern word_8037360
-.extern word_8037362
-.extern loc_803736C
-.extern loc_803739E
-.extern loc_80373A6
-.extern loc_80373AE
-.extern off_80373BC
-.extern word_80373C0
-.extern word_80373C2
-.extern sub_80373C4
-.extern loc_80373CC
-.extern loc_80373F0
-.extern off_80373FC
-.extern word_8037400
-.extern word_8037402
-.extern loc_803740C
-.extern loc_8037416
-.extern off_8037424
-.extern sub_8037428
-.extern off_8037504
-.extern dword_8037508
-.extern off_803750C
-.extern dword_8037510
-.extern off_8037514
-.extern off_803751C
-.extern off_8037520
-.extern off_8037528
-.extern off_803752C
-.extern off_8037530
-.extern dword_8037534
-.extern off_8037538
-.extern off_803753C
-.extern off_8037540
-.extern dword_8037544
-.extern off_8037548
-.extern dword_803754C
-.extern off_8037550
-.extern off_8037554
-.extern dword_8037558
-.extern off_803755C
-.extern off_8037560
-.extern dword_8037564
-.extern off_8037568
-.extern off_8037570
-.extern off_8037574
-.extern off_8037578
-.extern off_803757C
-.extern dword_8037580
-.extern off_8037584
-.extern off_8037588
-.extern dword_803758C
-.extern off_8037590
-.extern off_8037594
-.extern dword_8037598
-.extern off_803759C
-.extern dword_80375A0
-.extern off_80375A4
-.extern off_80375A8
-.extern off_80375AC
-.extern off_80375B0
-.extern off_80375B4
-.extern dword_80375B8
-.extern off_80375BC
-.extern off_80375C0
-.extern sub_80375C4
-.extern off_803760C
-.extern off_8037610
-.extern sub_8037614
-.extern off_803767C
-.extern off_8037680
-.extern off_8037684
-.extern dword_8037698
-.extern sub_80376AC
-.extern loc_80376BC
-.extern loc_80376F8
-.extern loc_803770C
-.extern loc_803771E
-.extern off_803772C
-.extern off_8037730
-.extern dword_8037734
-.extern sub_8037738
-.extern loc_803774A
-.extern loc_803777A
-.extern loc_8037780
-.extern loc_80377A2
-.extern loc_80377B8
-.extern loc_80377CC
-.extern off_80377D8
-.extern off_80377DC
-.extern off_80377E8
-.extern sub_80377EC
-.extern loc_80377FE
-.extern loc_803782E
-.extern loc_8037834
-.extern loc_8037856
-.extern loc_803786C
-.extern loc_8037880
-.extern off_803788C
-.extern off_8037890
-.extern off_803789C
-.extern off_80378A0
-.extern sub_80378A4
-.extern loc_80378B6
-.extern loc_80378F2
-.extern loc_803790A
-.extern loc_8037920
-.extern loc_803792E
-.extern loc_8037938
-.extern loc_8037946
-.extern loc_803794C
-.extern off_803795C
-.extern off_8037960
-.extern off_8037964
-.extern dword_8037968
-.extern off_803796C
-.extern off_8037970
-.extern sub_8037974
-.extern loc_8037986
-.extern loc_80379B8
-.extern loc_80379DC
-.extern loc_80379FE
-.extern loc_8037A0C
-.extern loc_8037A16
-.extern loc_8037A24
-.extern loc_8037A2A
-.extern off_8037A38
-.extern off_8037A3C
-.extern off_8037A40
-.extern dword_8037A44
-.extern off_8037A48
-.extern off_8037A4C
-.extern dword_8037A50
-.extern off_8037A54
-.extern off_8037A58
-.extern dword_8037A5C
-.extern off_8037A60
-.extern sub_8037A64
-.extern sub_8037AD8
-.extern off_8037AE4
-.extern dword_8037AE8
-.extern off_8037AEC
-.extern off_8037AF0
-.extern byte_8037AF4
-.extern byte_8037AF5
-.extern sub_8037AF8
-.extern locret_8037BC2
-.extern off_8037BC4
-.extern dword_8037BC8
-.extern off_8037BCC
-.extern sub_8037BD0
-.extern locret_8037C9A
-.extern off_8037C9C
-.extern dword_8037CA0
-.extern off_8037CA4
-.extern function_chunks__function_chunks_loc_8037CA8
-.extern loc_8037D22
-.extern locret_8037D78
-.extern off_8037D7C
-.extern dword_8037D80
-.extern off_8037D84
-.extern sub_8037D88
-.extern loc_8037DD2
-.extern locret_8037DF6
-.extern sub_8037DF8
-.extern loc_8037E42
-.extern locret_8037E66
-.extern off_8037E68
-.extern off_8037E6C
-.extern sub_8037E70
-.extern loc_8037E86
-.extern loc_8037E94
-.extern loc_8037EAA
-.extern loc_8037EB4
-.extern off_8037ECC
-.extern dword_8037ED0
-.extern sub_8037ED4
-.extern loc_8037EF0
-.extern locret_8037EFC
-.extern sub_8037F00
-.extern loc_8037F30
-.extern loc_8037F40
-.extern loc_8037F46
-.extern loc_8037F7A
-.extern loc_8037F82
-.extern loc_8037F98
-.extern loc_8037FAE
-.extern loc_8037FEA
-.extern loc_8038000
-.extern loc_8038008
-.extern loc_803801E
-.extern loc_8038034
-.extern off_8038048
-.extern dword_803804C
-.extern off_8038054
-.extern off_8038058
-.extern off_8038060
-.extern sub_8038064
-.extern loc_8038068
-.extern loc_8038084
-.extern locret_8038096
-.extern sub_8038098
-.extern loc_80380B6
-.extern locret_80380C4
-.extern sub_80380C8
-.extern loc_80380E0
-.extern loc_80380EE
-.extern loc_80380FC
-.extern loc_803810E
-.extern sub_803811C
-.extern loc_8038138
-.extern locret_8038144
-.extern sub_8038148
-.extern loc_8038152
-.extern loc_8038164
-.extern loc_8038186
-.extern off_8038194
-.extern sub_8038198
-.extern loc_80381B4
-.extern locret_80381C0
-.extern sub_80381C4
-.extern loc_8038218
-.extern locret_803823C
-.extern off_8038240
-.extern off_8038244
-.extern off_8038248
-.extern off_803824C
-.extern off_8038250
-.extern sub_8038254
-.extern locret_8038270
-.extern sub_80382BC
-.extern sub_80382F0
-.extern sub_803832C
-.extern sub_8038368
-.extern sub_80383A4
-.extern locret_80383E4
-.extern sub_80383EC
-.extern sub_80383F0
-.extern loc_80383FA
-.extern loc_803840A
-.extern loc_803841E
-.extern locret_8038434
-.extern dword_8038438
-.extern off_803843C
-.extern dword_8038440
-.extern off_8038444
-.extern dword_8038448
-.extern off_803844C
-.extern dword_8038450
-.extern dword_803849C
-.extern word_80384E8
-.extern locret_8038546
-.extern dword_8038548
-.extern dword_803854C
-.extern sub_8038550
-.extern loc_8038556
-.extern dword_8038584
-.extern off_8038588
-.extern off_803858C
-.extern loc_8038590
-.extern loc_80385D0
-.extern sub_8038610
-.extern dword_803863C
-.extern off_8038640
-.extern loc_8038644
-.extern sub_8038684
-.extern loc_803869C
-.extern loc_80386AE
-.extern loc_80386CE
-.extern locret_80386E2
-.extern off_80386E4
-.extern sub_80386E8
-.extern loc_8038700
-.extern loc_8038712
-.extern loc_8038722
-.extern loc_8038742
-.extern locret_8038756
-.extern off_8038758
-.extern sub_803875C
-.extern loc_8038774
-.extern loc_8038788
-.extern loc_803878C
-.extern loc_8038792
-.extern loc_80387A2
-.extern loc_80387C2
-.extern locret_80387D6
-.extern off_80387D8
-.extern sub_80387DC
-.extern loc_80387F4
-.extern loc_8038806
-.extern loc_8038816
-.extern loc_8038836
-.extern locret_803884A
-.extern off_803884C
-.extern sub_8038850
-.extern loc_8038868
-.extern loc_8038874
-.extern loc_8038888
-.extern loc_803888C
-.extern loc_8038892
-.extern loc_80388B2
-.extern locret_80388C6
-.extern off_80388C8
-.extern sub_80388CC
-.extern loc_8038926
-.extern loc_803892E
-.extern loc_8038946
-.extern loc_803894E
-.extern loc_8038972
-.extern loc_803898A
-.extern loc_8038992
-.extern sub_80389A0
-.extern off_80389C4
-.extern sub_80389C8
-.extern off_80389EC
-.extern sub_80389F0
-.extern loc_8038A24
-.extern loc_8038A2E
-.extern locret_8038A52
-.extern off_8038A54
-.extern off_8038A58
-.extern off_8038A5C
-.extern off_8038A60
-.extern off_8038A64
-.extern dword_8038A68
-.extern dword_8038CC0
-.extern dword_8038F18
-.extern dword_8039170
-.extern loc_8039340
-.extern off_8039350
-.extern off_8039354
-.extern sub_8039380
-.extern off_803947C
-.extern off_8039480
-.extern off_8039484
-.extern dword_8039488
-.extern off_803948C
-.extern off_8039494
-.extern dword_8039498
-.extern dword_80394A0
-.extern off_80394A4
-.extern off_80394AC
-.extern off_80394B0
-.extern off_80394B4
-.extern dword_80394B8
-.extern off_80394BC
-.extern off_80394C4
-.extern dword_80394C8
-.extern off_80394CC
-.extern dword_80394D0
-.extern off_80394D4
-.extern off_80394D8
-.extern off_80394DC
-.extern off_80394E0
-.extern off_80394E4
-.extern dword_80394E8
-.extern loc_80394EC
-.extern off_803950C
-.extern off_8039510
-.extern sub_803951C
-.extern locret_803952E
-.extern sub_8039530
-.extern loc_8039554
-.extern loc_8039560
-.extern locret_8039568
-.extern loc_803956C
-.extern off_8039590
-.extern off_8039594
-.extern sub_80395A0
-.extern loc_80395B4
-.extern loc_80395D4
-.extern loc_80395FA
-.extern loc_8039606
-.extern loc_8039614
-.extern loc_8039628
-.extern off_803964C
-.extern off_8039650
-.extern sub_8039660
-.extern loc_8039674
-.extern loc_80396B4
-.extern loc_80396EC
-.extern loc_8039706
-.extern off_803971C
-.extern dword_8039720
-.extern sub_8039724
-.extern off_8039734
-.extern off_8039738
-.extern sub_8039748
-.extern loc_8039770
-.extern loc_8039782
-.extern loc_8039790
-.extern loc_8039792
-.extern loc_80397A0
-.extern loc_80397DA
-.extern locret_80397EA
-.extern sub_80397EC
-.extern loc_80397F8
-.extern loc_803980A
-.extern loc_8039822
-.extern loc_803983C
-.extern off_8039850
-.extern loc_8039854
-.extern off_8039878
-.extern off_803987C
-.extern sub_8039890
-.extern loc_80398A4
-.extern loc_80398E4
-.extern loc_8039908
-.extern loc_8039924
-.extern off_8039938
-.extern sub_803993C
-.extern sub_803994A
-.extern off_803995C
-.extern jt_8039960
-.extern sub_8039978
-.extern loc_803998E
-.extern loc_803999C
-.extern loc_80399A8
-.extern loc_80399BC
-.extern loc_80399F6
-.extern locret_8039A02
-.extern sub_8039A04
-.extern loc_8039A34
-.extern loc_8039A4E
-.extern loc_8039A78
-.extern loc_8039AB6
-.extern loc_8039AC0
-.extern loc_8039AD4
-.extern locret_8039AE6
-.extern off_8039AE8
-.extern off_8039AEC
-.extern off_8039AF0
-.extern off_8039AF4
-.extern off_8039AF8
-.extern dword_8039AFC
-.extern off_8039B00
-.extern sub_8039B04
-.extern loc_8039B2E
-.extern locret_8039B4E
-.extern sub_8039B50
-.extern locret_8039B6E
-.extern sub_8039B70
-.extern locret_8039BA6
-.extern sub_8039BA8
-.extern off_8039BC8
-.extern off_8039BCC
-.extern sub_8039BE8
-.extern loc_8039BF4
-.extern loc_8039C0C
-.extern locret_8039C10
-.extern off_8039C14
-.extern sub_8039C18
-.extern locret_8039C3A
-.extern sub_8039C3C
-.extern loc_8039C58
-.extern loc_8039C64
-.extern loc_8039C94
-.extern loc_8039CA6
-.extern locret_8039CC4
-.extern off_8039CC8
-.extern off_8039CCC
-.extern off_8039CD0
-.extern off_8039CD4
-.extern loc_8039CD8
-.extern off_8039CFC
-.extern off_8039D00
-.extern sub_8039D14
-.extern loc_8039D28
-.extern loc_8039D68
-.extern loc_8039D8E
-.extern loc_8039DAC
-.extern off_8039DC0
-.extern dword_8039DC4
-.extern sub_8039DC8
-.extern off_8039DE8
-.extern off_8039DEC
-.extern sub_8039E04
-.extern loc_8039E1A
-.extern loc_8039E28
-.extern loc_8039E34
-.extern loc_8039E48
-.extern loc_8039E82
-.extern locret_8039E8E
-.extern sub_8039E90
-.extern locret_8039EA6
-.extern sub_8039EA8
-.extern loc_8039ED2
-.extern locret_8039EF2
-.extern sub_8039EF4
-.extern locret_8039F12
-.extern sub_8039F14
-.extern locret_8039F4A
-.extern sub_8039F4C
-.extern off_8039F6C
-.extern off_8039F70
-.extern sub_8039F88
-.extern loc_8039F9E
-.extern loc_8039FAC
-.extern loc_8039FB8
-.extern loc_8039FCC
-.extern loc_803A006
-.extern locret_803A012
-.extern sub_803A014
-.extern locret_803A032
-.extern loc_803A034
-.extern off_803A058
-.extern off_803A05C
-.extern sub_803A06C
-.extern loc_803A080
-.extern loc_803A0C0
-.extern loc_803A0E2
-.extern loc_803A0F6
-.extern sub_803A114
-.extern off_803A134
-.extern off_803A138
-.extern sub_803A148
-.extern locret_803A16A
-.extern sub_803A16C
-.extern locret_803A18A
-.extern sub_803A18C
-.extern locret_803A1AA
-.extern sub_803A1AC
-.extern locret_803A1D8
-.extern loc_803A1DC
-.extern off_803A200
-.extern off_803A204
-.extern sub_803A214
-.extern loc_803A23A
-.extern loc_803A25A
-.extern loc_803A274
-.extern loc_803A2A8
-.extern locret_803A2DC
-.extern off_803A2E0
-.extern dword_803A2E4
-.extern sub_803A2E8
-.extern off_803A2F8
-.extern off_803A2FC
-.extern sub_803A30C
-.extern loc_803A334
-.extern loc_803A346
-.extern loc_803A35A
-.extern loc_803A35C
-.extern loc_803A36A
-.extern loc_803A396
-.extern loc_803A3B0
-.extern locret_803A3C0
-.extern off_803A3CC
-.extern sub_803A3D8
-.extern loc_803A3E4
-.extern loc_803A3F6
-.extern loc_803A416
-.extern loc_803A420
-.extern off_803A438
-.extern sub_803A43C
-.extern locret_803A488
-.extern sub_803A48C
-.extern loc_803A4C6
-.extern locret_803A4E4
-.extern sub_803A4E8
-.extern locret_803A532
-.extern locret_803A56C
-.extern off_803A570
-.extern off_803A574
-.extern sub_803A57C
-.extern sub_803A584
-.extern locret_803A594
-.extern sub_803A598
-.extern off_803A5A8
-.extern off_803A5AC
-.extern sub_803A5B8
-.extern loc_803A5C4
-.extern sub_803A5DC
-.extern loc_803A5F8
-.extern loc_803A600
-.extern function_chunks__function_chunks_loc_803A618
-.extern loc_803A664
-.extern sub_803A67C
-.extern loc_803A68C
-.extern loc_803A6A0
-.extern off_803A6C0
-.extern off_803A6C4
-.extern sub_803A6CC
-.extern loc_803A6F4
-.extern loc_803A704
-.extern locret_803A70E
-.extern sub_803A710
-.extern loc_803A736
-.extern locret_803A74A
-.extern sub_803A74C
-.extern off_803A778
-.extern off_803A77C
-.extern sub_803A780
-.extern off_803A798
-.extern sub_803A79C
-.extern loc_803A7C2
-.extern loc_803A7D6
-.extern loc_803A7E6
-.extern loc_803A7F4
-.extern sub_803A800
-.extern locret_803A82C
-.extern off_803A830
-.extern off_803A834
-.extern sub_803A838
-.extern loc_803A896
-.extern loc_803A89A
-.extern locret_803A8B0
-.extern dword_803A8B4
-.extern off_803A8B8
-.extern off_803A8BC
-.extern dword_803A8C0
-.extern off_803A8C4
-.extern dword_803A8C8
-.extern off_803A8CC
-.extern off_803A8D0
-.extern dword_803A8D4
-.extern off_803A8D8
-.extern sub_803A8DC
-.extern off_803A8FC
-.extern sub_803A900
-.extern locret_803A90E
-.extern sub_803A92C
-.extern locret_803A956
-.extern off_803A998
-.extern off_803A99C
-.extern off_803A9A0
-.extern dword_803A9AC
-.extern loc_803A9F2
-.extern loc_803AA0C
-.extern loc_803AA12
-.extern loc_803AA3C
-.extern dword_803AA48
-.extern off_803AA50
-.extern loc_803AA8A
-.extern sub_803AA98
-.extern loc_803AAC4
-.extern loc_803AAD6
-.extern loc_803AAD8
-.extern loc_803AAE2
-.extern loc_803AAFC
-.extern loc_803AB0C
-.extern locret_803AB10
-.extern dword_803AB14
-.extern dword_803AB18
-.extern sub_803AB1C
-.extern locret_803AB40
-.extern sub_803AB44
-.extern loc_803ABA0
-.extern loc_803ABA8
-.extern locret_803ABC8
-.extern off_803ABCC
-.extern off_803ABD0
-.extern off_803ABF4
-.extern off_803AC04
-.extern off_803AC10
-.extern off_803AC18
-.extern off_803AC28
-.extern off_803AC38
-.extern off_803AC48
-.extern off_803AC58
-.extern off_803AC68
-.extern dword_803AC78
-.extern dword_803AC7C
-.extern dword_803AC80
-.extern dword_803AC84
-.extern dword_803AC88
-.extern dword_803AC8C
-.extern dword_803AC90
-.extern dword_803AC94
-.extern dword_803AC98
-.extern off_803AC9C
-.extern off_803ACA0
-.extern dword_803ACC4
-.extern dword_803ACC8
-.extern off_803ACE8
-.extern off_803ACEC
-.extern dword_803AD10
-.extern dword_803AD14
-.extern loc_803AD34
-.extern off_803AD44
-.extern off_803AD48
-.extern sub_803AD70
-.extern sub_803ADA0
-.extern loc_803ADE4
-.extern loc_803ADF2
-.extern sub_803AE04
-.extern sub_803AE3C
-.extern loc_803AE50
-.extern sub_803AE84
-.extern loc_803AE98
-.extern loc_803AEB8
-.extern sub_803AED8
-.extern loc_803AF18
-.extern sub_803AF40
-.extern sub_803AF80
-.extern off_803AFC0
-.extern off_803AFC4
-.extern off_803AFC8
-.extern off_803AFCC
-.extern off_803AFD0
-.extern off_803AFD4
-.extern sub_803AFD8
-.extern loc_803AFE8
-.extern loc_803AFEA
-.extern off_803B000
-.extern off_803B004
-.extern off_803B008
-.extern sub_803B014
-.extern dword_803B048
-.extern off_803B04C
-.extern off_803B050
-.extern sub_803B054
-.extern dword_803B088
-.extern off_803B08C
-.extern off_803B090
-.extern sub_803B094
-.extern dword_803B0EC
-.extern off_803B0F0
-.extern off_803B0F4
-.extern sub_803B0FC
-.extern dword_803B130
-.extern off_803B134
-.extern off_803B138
-.extern sub_803B13C
-.extern dword_803B170
-.extern off_803B174
-.extern dword_803B178
-.extern sub_803B198
-.extern dword_803B1CC
-.extern off_803B1D0
-.extern unk_803B1D4
-.extern sub_803B20C
-.extern dword_803B24C
-.extern off_803B250
-.extern loc_803B284
-.extern loc_803B286
-.extern loc_803B298
-.extern loc_803B29A
-.extern loc_803B2A2
-.extern dword_803B2DC
-.extern off_803B2E0
-.extern dword_803B2E4
-.extern sub_803B2E8
-.extern locret_803B300
-.extern sub_803B304
-.extern locret_803B31C
-.extern unk_803B324
-.extern sub_803B338
-.extern dword_803B34C
-.extern sub_803B354
-.extern loc_803B362
-.extern loc_803B37C
-.extern loc_803B388
-.extern loc_803B38C
-.extern loc_803B3A8
-.extern loc_803B3BE
-.extern loc_803B3D0
-.extern loc_803B3F0
-.extern loc_803B402
-.extern loc_803B41A
-.extern loc_803B46A
-.extern loc_803B470
-.extern loc_803B47A
-.extern sub_803B480
-.extern sub_803B488
-.extern loc_803B4AE
-.extern loc_803B4BA
-.extern loc_803B4CA
-.extern loc_803B4F2
-.extern loc_803B4FA
-.extern sub_803B500
-.extern loc_803B528
-.extern loc_803B534
-.extern loc_803B544
-.extern loc_803B55E
-.extern sub_803B564
-.extern loc_803B568
-.extern sub_803B57C
-.extern loc_803B594
-.extern loc_803B59C
-.extern locret_803B5B4
-.extern off_803B5B8
-.extern sub_803B5BC
-.extern loc_803B5D4
-.extern loc_803B5DC
-.extern locret_803B5F4
-.extern off_803B5F8
-.extern sub_803B5FC
-.extern loc_803B614
-.extern loc_803B664
-.extern loc_803B674
-.extern loc_803B692
-.extern loc_803B696
-.extern loc_803B6A2
-.extern off_803B6B4
-.extern off_803B6B8
-.extern sub_803B6BC
-.extern loc_803B6E6
-.extern loc_803B6FC
-.extern loc_803B70E
-.extern loc_803B71C
-.extern loc_803B720
-.extern loc_803B72C
-.extern off_803B738
-.extern off_803B73C
-.extern off_803B740
-.extern off_803B744
-.extern off_803B748
-.extern sub_803B74C
-.extern loc_803B794
-.extern off_803B7D4
-.extern sub_803B7D8
-.extern loc_803B7EE
-.extern loc_803B83E
-.extern loc_803B840
-.extern loc_803B88A
-.extern loc_803B89A
-.extern loc_803B8A8
-.extern loc_803B8AC
-.extern loc_803B8B8
-.extern off_803B8CC
-.extern off_803B8D0
-.extern off_803B8D4
-.extern off_803B8D8
-.extern off_803B8DC
-.extern off_803B8E0
-.extern off_803B8E4
-.extern dword_803B8E8
-.extern off_803B994
-.extern loc_803B998
-.extern sub_803B9A4
-.extern loc_803B9AA
-.extern loc_803B9C2
-.extern loc_803B9C8
-.extern dword_803B9CC
-.extern loc_803B9F4
-.extern off_803BA04
-.extern off_803BA08
-.extern sub_803BA14
-.extern loc_803BB10
-.extern off_803BB68
-.extern off_803BB6C
-.extern off_803BB70
-.extern dword_803BB74
-.extern off_803BB78
-.extern off_803BB7C
-.extern off_803BB80
-.extern off_803BB84
-.extern off_803BB88
-.extern off_803BB90
-.extern dword_803BB94
-.extern off_803BB98
-.extern dword_803BB9C
-.extern off_803BBA0
-.extern off_803BBA8
-.extern dword_803BBAC
-.extern off_803BBB0
-.extern dword_803BBB4
-.extern off_803BBB8
-.extern off_803BBBC
-.extern off_803BBC0
-.extern dword_803BBC4
-.extern off_803BBC8
-.extern dword_803BBCC
-.extern off_803BBD0
-.extern off_803BBD8
-.extern dword_803BBDC
-.extern off_803BBE0
-.extern dword_803BBE4
-.extern off_803BBE8
-.extern off_803BBF0
-.extern dword_803BBF4
-.extern off_803BBFC
-.extern dword_803BC00
-.extern off_803BC04
-.extern unk_803BC08
-.extern aH
-.extern off_803BC0C
-.extern off_803BC10
-.extern off_803BC14
-.extern dword_803BC18
-.extern off_803BC1C
-.extern off_803BC20
-.extern dword_803BC24
-.extern off_803BC28
-.extern sub_803BC2C
-.extern off_803BC4C
-.extern off_803BC50
-.extern sub_803BC60
-.extern locret_803BC70
-.extern sub_803BC74
-.extern loc_803BC98
-.extern locret_803BCBE
-.extern off_803BCC0
-.extern off_803BCC4
-.extern off_803BCC8
-.extern off_803BCCC
-.extern sub_803BCD0
-.extern locret_803BCDE
-.extern sub_803BCE0
-.extern locret_803BCEE
-.extern sub_803BCF0
-.extern off_803BD00
-.extern off_803BD04
-.extern sub_803BD0C
-.extern loc_803BD18
-.extern sub_803BD28
-.extern loc_803BD48
-.extern locret_803BD56
-.extern sub_803BD58
-.extern off_803BD70
-.extern sub_803BD74
-.extern loc_803BDA2
-.extern locret_803BDB6
-.extern sub_803BDB8
-.extern loc_803BDDC
-.extern loc_803BDFE
-.extern loc_803BE3A
-.extern off_803BE48
-.extern off_803BE4C
-.extern off_803BE50
-.extern off_803BE54
-.extern unk_803BE58
-.extern off_803BEA8
-.extern off_803BEAC
-.extern dword_803BEB0
-.extern sub_803BEC4
-.extern off_803BEEC
-.extern off_803BEF0
-.extern sub_803BEF8
-.extern loc_803BF14
-.extern loc_803BF28
-.extern off_803BF3C
-.extern off_803BF44
-.extern off_803BF48
-.extern sub_803BF4C
-.extern loc_803BF50
-.extern loc_803BF6C
-.extern locret_803BF7E
-.extern sub_803BF80
-.extern sub_803BF90
-.extern off_803BFB8
-.extern off_803BFBC
-.extern sub_803BFC0
-.extern off_803BFE8
-.extern off_803BFEC
-.extern sub_803BFF0
-.extern off_803C018
-.extern off_803C01C
-.extern sub_803C020
-.extern loc_803C03C
-.extern loc_803C050
-.extern off_803C068
-.extern off_803C06C
-.extern sub_803C070
-.extern sub_803C080
-.extern loc_803C0A0
-.extern loc_803C0C0
-.extern loc_803C0C4
-.extern off_803C0DC
-.extern off_803C0E0
-.extern off_803C0E4
-.extern sub_803C0E8
-.extern sub_803C0F8
-.extern loc_803C114
-.extern loc_803C12E
-.extern off_803C144
-.extern sub_803C148
-.extern sub_803C158
-.extern off_803C170
-.extern off_803C174
-.extern off_803C178
-.extern dword_803C17C
-.extern sub_803C180
-.extern loc_803C18A
-.extern loc_803C192
-.extern loc_803C19A
-.extern loc_803C1A6
-.extern loc_803C1B0
-.extern dword_803C1C8
-.extern sub_803C1CC
-.extern off_803C1E4
-.extern sub_803C1E8
-.extern off_803C200
-.extern dword_803C204
-.extern sub_803C25C
-.extern loc_803C26C
-.extern loc_803C284
-.extern loc_803C286
-.extern loc_803C288
-.extern sub_803C2A4
-.extern loc_803C2BC
-.extern loc_803C2C8
-.extern loc_803C2E8
-.extern locret_803C2FC
-.extern off_803C300
-.extern sub_803C304
-.extern locret_803C328
-.extern sub_803C32C
-.extern sub_803C344
-.extern loc_803C3D2
-.extern loc_803C3D6
-.extern loc_803C3E4
-.extern loc_803C3EA
-.extern off_803C3F0
-.extern off_803C3F4
-.extern off_803C3F8
-.extern dword_803C3FC
-.extern off_803C400
-.extern off_803C404
-.extern off_803C408
-.extern sub_803C40C
-.extern sub_803C414
-.extern loc_803C418
-.extern loc_803C42C
-.extern loc_803C440
-.extern loc_803C44A
-.extern locret_803C45C
-.extern dword_803C460
-.extern dword_803C464
-.extern off_803C468
-.extern word_803C46C
-.extern off_803C49C
-.extern dword_803C4A0
-.extern dword_803C4A4
-.extern sub_803CF1C
-.extern sub_803D14C
-.extern loc_803D168
-.extern loc_803D198
-.extern sub_803D25C
-.extern loc_803D280
-.extern loc_803D296
-.extern locret_803D298
-.extern loc_803D2D4
-.extern loc_803D304
-.extern loc_803D31C
-.extern loc_803D332
-.extern locret_803D334
-.extern loc_803D368
-.extern loc_803D38E
-.extern loc_803D3A6
-.extern loc_803D3BC
-.extern locret_803D3BE
-.extern off_803D3C0
-.extern off_803D3C4
-.extern dword_803D3E4
-.extern off_803D3E8
-.extern off_803D3EC
-.extern sub_803D3FC
-.extern loc_803D44C
-.extern sub_803D470
-.extern off_803D484
-.extern dword_803D488
-.extern loc_803D4AE
-.extern dword_803D4DC
-.extern off_803D4E0
-.extern off_803D548
-.extern off_803D54C
-.extern loc_803D572
-.extern locret_803D592
-.extern off_803D594
-.extern off_803D598
-.extern off_803D59C
-.extern dword_803D5A0
-.extern off_803D5B4
-.extern off_803D5BC
-.extern loc_803D5C8
-.extern off_803D5E4
-.extern off_803D5F8
-.extern off_803D5FC
-.extern off_803D614
-.extern loc_803D622
-.extern loc_803D638
-.extern loc_803D6AE
-.extern loc_803D6B4
-.extern loc_803D6B6
-.extern off_803D6DC
-.extern off_803D6E4
-.extern off_803D6E8
-.extern off_803D6EC
-.extern loc_803D6FE
-.extern loc_803D732
-.extern off_803D73C
-.extern off_803D740
-.extern off_803D744
-.extern dword_803D748
-.extern off_803E748
-.extern off_803E74C
-.extern dword_803E750
-.extern locret_803E794
-.extern off_803E7A0
-.extern loc_803E7C0
-.extern loc_803E7C6
-.extern loc_803E7CE
-.extern off_803E7DC
-.extern off_803E7E0
-.extern off_803E7E8
-.extern dword_803E7EC
-.extern off_803E7F4
-.extern off_803E7F8
-.extern off_803E7FC
-.extern off_803E800
-.extern off_803E828
-.extern off_803E82C
-.extern sub_803E830
-.extern off_803E83C
-.extern sub_803E840
-.extern off_803E8B8
-.extern off_803E8BC
-.extern loc_803E90A
-.extern loc_803E916
-.extern loc_803E93A
-.extern loc_803E93E
-.extern loc_803E950
-.extern locret_803E952
-.extern dword_803E954
-.extern dword_803E958
-.extern sub_803E95C
-.extern off_803E97C
-.extern sub_803E980
-.extern loc_803E9AA
-.extern locret_803E9B8
-.extern off_803E9BC
-.extern locret_803E9D4
-.extern loc_803E9E2
-.extern loc_803E9F8
-.extern loc_803EA08
-.extern off_803EA48
-.extern off_803EA4C
-.extern off_803EA50
-.extern off_803EA68
-.extern loc_803EAA6
-.extern loc_803EAB8
-.extern loc_803EAC4
-.extern locret_803EAD6
-.extern off_803EAD8
-.extern sub_803EADC
-.extern sub_803EAFC
-.extern loc_803EB3A
-.extern loc_803EB46
-.extern locret_803EB54
-.extern off_803EB58
-.extern sub_803EB5C
-.extern loc_803EB74
-.extern loc_803EB7E
-.extern dword_803EB94
-.extern sub_803EB98
-.extern locret_803EBBC
-.extern loc_803EBD6
-.extern loc_803EBE2
-.extern loc_803EC00
-.extern loc_803EC04
-.extern loc_803EC16
-.extern locret_803EC18
-.extern dword_803EC1C
-.extern dword_803EC20
-.extern sub_803EC24
-.extern off_803EC50
-.extern sub_803EC54
-.extern loc_803EC82
-.extern locret_803EC90
-.extern off_803EC94
-.extern off_803ECA8
-.extern off_803ECAC
-.extern sub_803ECC4
-.extern loc_803ECDA
-.extern loc_803ECE2
-.extern loc_803ECEC
-.extern loc_803ECF6
-.extern loc_803ED00
-.extern locret_803ED04
-.extern sub_803ED08
-.extern loc_803ED14
-.extern off_803ED28
-.extern sub_803ED2C
-.extern sub_803ED30
-.extern sub_803ED34
-.extern locret_803ED4E
-.extern loc_803ED5E
-.extern loc_803ED68
-.extern loc_803ED72
-.extern loc_803ED7C
-.extern locret_803ED84
-.extern loc_803ED98
-.extern locret_803ED9A
-.extern loc_803F7FA
-.extern loc_803F81A
-.extern loc_803F824
-.extern loc_803F82A
-.extern sub_803F838
-.extern loc_803F856
-.extern off_803F860
-.extern off_803F864
-.extern off_803F868
-.extern off_803F86C
-.extern loc_803F870
-.extern loc_803F884
-.extern locret_803F89E
-.extern off_803F8A0
-.extern off_803F8A4
-.extern dword_803F8AC
-.extern loc_803FADC
-.extern loc_803FAF4
-.extern loc_803FB00
-.extern off_803FB30
-.extern dword_803FD60
-.extern sub_8040104
-.extern loc_804010C
-.extern loc_804011E
-.extern off_8040128
-.extern loc_8040130
-.extern sub_804013C
-.extern off_8040164
-.extern off_8040168
-.extern off_8040170
-.extern off_804018C
-.extern sub_8040190
-.extern loc_80401B6
-.extern loc_80401D6
-.extern loc_80401F4
-.extern loc_80401F8
-.extern loc_8040200
-.extern off_804020C
-.extern off_8040214
-.extern off_8040218
-.extern loc_804021C
-.extern sub_8040228
-.extern loc_804022C
-.extern locret_8040248
-.extern sub_804024C
-.extern loc_8040272
-.extern loc_804027E
-.extern loc_804029E
-.extern locret_80402B2
-.extern off_80402B4
-.extern locret_80402D0
-.extern off_80402EC
-.extern sub_80402F0
-.extern sub_804030C
-.extern loc_8040330
-.extern loc_8040336
-.extern loc_8040356
-.extern loc_8040360
-.extern loc_804036E
-.extern locret_8040378
-.extern loc_804038E
-.extern loc_80403A2
-.extern locret_80403B8
-.extern dword_80403BC
-.extern off_80403C0
-.extern word_80403CC
-.extern off_804041C
-.extern sub_8040420
-.extern sub_804044C
-.extern loc_804046A
-.extern off_8040474
-.extern off_8040478
-.extern off_804047C
-.extern off_8040480
-.extern dword_8040484
-.extern dword_8040488
-.extern sub_80404FC
-.extern loc_804050C
-.extern sub_8040528
-.extern loc_8040582
-.extern loc_8040598
-.extern loc_804059E
-.extern loc_80405C0
-.extern loc_80405C6
-.extern locret_80405D2
-.extern off_80405D4
-.extern loc_80405E4
-.extern off_80405F8
-.extern off_80405FC
-.extern sub_804060C
-.extern loc_80406FE
-.extern locret_80407A4
-.extern off_80407A8
-.extern off_80407AC
-.extern off_80407B0
-.extern off_80407B4
-.extern dword_80407B8
-.extern off_80407BC
-.extern off_80407C4
-.extern dword_80407C8
-.extern off_80407D4
-.extern dword_80407D8
-.extern off_80407DC
-.extern off_80407E0
-.extern off_80407E4
-.extern off_80407EC
-.extern off_80407F0
-.extern off_80407F4
-.extern dword_80407F8
-.extern off_80407FC
-.extern off_8040804
-.extern dword_8040808
-.extern off_804080C
-.extern dword_8040810
-.extern off_8040814
-.extern dword_8040818
-.extern dword_804081C
-.extern off_8040820
-.extern off_8040828
-.extern off_804082C
-.extern off_8040830
-.extern dword_8040834
-.extern off_8040838
-.extern off_804083C
-.extern off_8040844
-.extern off_804084C
-.extern sub_8040850
-.extern loc_804087E
-.extern off_8040888
-.extern off_804088C
-.extern off_80408BC
-.extern sub_80408C0
-.extern loc_8040900
-.extern loc_804090E
-.extern sub_8040920
-.extern loc_804092E
-.extern loc_8040938
-.extern loc_8040946
-.extern loc_804095A
-.extern loc_8040978
-.extern loc_8040980
-.extern loc_8040994
-.extern loc_804099A
-.extern loc_80409B0
-.extern loc_80409B8
-.extern off_80409CC
-.extern sub_80409D4
-.extern loc_80409E2
-.extern loc_80409EC
-.extern loc_80409FA
-.extern loc_8040A0E
-.extern loc_8040A2C
-.extern loc_8040A38
-.extern loc_8040A46
-.extern loc_8040A52
-.extern loc_8040A88
-.extern loc_8040A90
-.extern dword_8040AA4
-.extern off_8040AA8
-.extern sub_8040AAC
-.extern loc_8040ABE
-.extern loc_8040AC8
-.extern loc_8040ADC
-.extern loc_8040AFC
-.extern loc_8040B0C
-.extern loc_8040B14
-.extern sub_8040B28
-.extern off_8040B38
-.extern off_8040B3C
-.extern sub_8040B54
-.extern loc_8040B7A
-.extern off_8040B8C
-.extern sub_8040B90
-.extern loc_8040BA6
-.extern sub_8040BB8
-.extern loc_8040BCE
-.extern loc_8040BD8
-.extern loc_8040BF4
-.extern off_8040C08
-.extern sub_8040C0C
-.extern loc_8040C26
-.extern loc_8040C32
-.extern loc_8040C46
-.extern loc_8040C52
-.extern loc_8040C5C
-.extern sub_8040C6C
-.extern loc_8040C84
-.extern locret_8040C9E
-.extern sub_8040CA0
-.extern locret_8040CB8
-.extern sub_8040CBC
-.extern off_8040CCC
-.extern off_8040CD0
-.extern sub_8040CD8
-.extern loc_8040D32
-.extern off_8040D38
-.extern off_8040D3C
-.extern dword_8040D40
-.extern dword_8040D64
-.extern byte_8040D7C
-.extern byte_8040D7D
-.extern sub_8040D80
-.extern loc_8040D94
-.extern loc_8040DAA
-.extern loc_8040DBE
-.extern sub_8040DC8
-.extern loc_8040DE6
-.extern loc_8040DFA
-.extern sub_8040E04
-.extern off_8040E14
-.extern off_8040E18
-.extern sub_8040E20
-.extern loc_8040E38
-.extern loc_8040E4E
-.extern loc_8040E6E
-.extern loc_8040E78
-.extern sub_8040E88
-.extern loc_8040EB4
-.extern sub_8040EC4
-.extern loc_8040EDC
-.extern loc_8040EF2
-.extern loc_8040F06
-.extern loc_8040F0C
-.extern loc_8040F12
-.extern loc_8040F2A
-.extern dword_8040F3C
-.extern sub_8040F40
-.extern sub_8040F54
-.extern loc_8040F66
-.extern loc_8040F70
-.extern locret_8040F8E
-.extern sub_8040F90
-.extern sub_8040FA8
-.extern loc_8040FB6
-.extern loc_8040FC0
-.extern loc_8040FCA
-.extern locret_8040FEC
-.extern sub_8040FF0
-.extern locret_8041014
-.extern sub_8041018
-.extern loc_804105A
-.extern loc_8041070
-.extern locret_80410A2
-.extern off_80410A4
-.extern loc_80410A8
-.extern sub_80410C0
-.extern off_80410EC
-.extern off_80410F0
-.extern sub_80410F4
-.extern off_804110C
-.extern sub_8041110
-.extern loc_8041142
-.extern loc_8041160
-.extern locret_804116E
-.extern sub_8041170
-.extern dword_80411A8
-.extern off_80411AC
-.extern off_80411B0
-.extern sub_80411B4
-.extern off_80411D4
-.extern sub_80411D8
-.extern off_80411EC
-.extern sub_80411F0
-.extern sub_8041208
-.extern locret_8041218
-.extern sub_804121C
-.extern locret_804122E
-.extern off_8041230
-.extern sub_8041234
-.extern loc_804124A
-.extern loc_804125A
-.extern loc_8041260
-.extern loc_8041274
-.extern loc_804127A
-.extern loc_8041286
-.extern loc_8041288
-.extern loc_80412A0
-.extern off_80412A4
-.extern sub_80412A8
-.extern loc_80412BC
-.extern loc_80412CA
-.extern loc_80412CC
-.extern loc_80412DE
-.extern loc_80412E0
-.extern loc_80412E8
-.extern sub_80412F4
-.extern loc_8041306
-.extern sub_8041310
-.extern loc_8041328
-.extern loc_8041338
-.extern locret_8041350
-.extern off_8041354
-.extern dword_8041358
-.extern dword_804135C
-.extern sub_8041378
-.extern locret_804138A
-.extern sub_804138C
-.extern loc_8041392
-.extern loc_804139A
-.extern sub_80413A4
-.extern dword_80413B0
-.extern sub_80413B4
-.extern loc_80413CA
-.extern loc_80413DE
-.extern loc_80413E8
-.extern locret_80413FA
-.extern dword_80413FC
-.extern dword_8041400
-.extern off_8041404
-.extern word_8041408
-.extern off_804144C
-.extern sub_8041450
-.extern locret_8041468
-.extern dword_804146C
-.extern sub_8041470
-.extern locret_804149A
-.extern dword_804149C
-.extern off_80414B0
-.extern off_80414B4
-.extern sub_80414C0
-.extern dword_804154C
-.extern dword_8041550
-.extern dword_8041554
-.extern sub_8041558
-.extern loc_8041578
-.extern loc_804157C
-.extern loc_804158A
-.extern loc_8041598
-.extern off_80415A8
-.extern off_80415AC
-.extern sub_80415BC
-.extern loc_80415CC
-.extern loc_80415DC
-.extern loc_80415F2
-.extern locret_80415F6
-.extern sub_80415F8
-.extern locret_8041618
-.extern sub_804161A
-.extern loc_8041626
-.extern loc_8041636
-.extern sub_804163A
-.extern loc_804165A
-.extern loc_804166C
-.extern loc_804168C
-.extern locret_804169E
-.extern off_80416A0
-.extern loc_80416A4
-.extern sub_80416B0
-.extern loc_80416D0
-.extern loc_80416DC
-.extern loc_80416EE
-.extern loc_8041702
-.extern loc_8041710
-.extern locret_804171A
-.extern sub_804171C
-.extern sub_8041736
-.extern loc_804173E
-.extern loc_804175E
-.extern off_804177C
-.extern off_8041784
-.extern off_8041788
-.extern dword_804178C
-.extern off_80417B4
-.extern off_80417B8
-.extern sub_80417DC
-.extern sub_8041800
-.extern loc_8041806
-.extern loc_804182E
-.extern loc_8041834
-.extern locret_8041842
-.extern off_8041844
-.extern byte_8041848
-.extern byte_8041849
-.extern byte_804184A
-.extern byte_804184B
-.extern byte_804184C
-.extern loc_804187C
-.extern loc_8041892
-.extern loc_80418C2
-.extern loc_80418CC
-.extern loc_80418D2
-.extern loc_80418D4
-.extern loc_80418E0
-.extern loc_80418EC
-.extern loc_804190C
-.extern loc_804191A
-.extern loc_804193A
-.extern off_8041950
-.extern off_8041954
-.extern dword_8041958
-.extern sub_8041A14
-.extern sub_8041A20
-.extern loc_8041A30
-.extern sub_8041A38
-.extern loc_8041A48
-.extern sub_8041A50
-.extern loc_8041A60
-.extern sub_8041A68
-.extern loc_8041A78
-.extern sub_8041A80
-.extern loc_8041A90
-.extern sub_8041A98
-.extern sub_8041AA4
-.extern sub_8041AB0
-.extern sub_8041ABC
-.extern sub_8041AC8
-.extern sub_8041AD4
-.extern sub_8041AE0
-.extern sub_8041AEC
-.extern sub_8041AF8
-.extern dword_8041B04
-.extern sub_8041B08
-.extern dword_8041B14
-.extern sub_8041B18
-.extern dword_8041B24
-.extern sub_8041B28
-.extern dword_8041B34
-.extern sub_8041B38
-.extern sub_8041B4C
-.extern sub_8041B58
-.extern loc_8041B68
-.extern loc_8041B7C
-.extern loc_8041B90
-.extern loc_8041BA4
-.extern sub_8041BAC
-.extern sub_8041BC0
-.extern sub_8041BEC
-.extern sub_8041BF8
-.extern sub_8041C04
-.extern sub_8041C10
-.extern sub_8041C1C
-.extern sub_8041C28
-.extern sub_8041C34
-.extern sub_8041C40
-.extern sub_8041C4C
-.extern sub_8041C58
-.extern sub_8041C64
-.extern loc_8041C74
-.extern sub_8041C7C
-.extern loc_8041C8C
-.extern sub_8041C94
-.extern loc_8041CA4
-.extern sub_8041CAC
-.extern sub_8041CB8
-.extern sub_8041CC4
-.extern sub_8041CD0
-.extern loc_8041CE0
-.extern sub_8041CE8
-.extern sub_8041CF8
-.extern sub_8041D08
-.extern sub_8041D18
-.extern off_8041D28
-.extern sub_8041D2C
-.extern off_8041D3C
-.extern sub_8041D40
-.extern off_8041D54
-.extern sub_8041D58
-.extern loc_8041D7A
-.extern locret_8041D8C
-.extern off_8041D90
-.extern off_8041D94
-.extern sub_8041FAC
-.extern sub_8041FBC
-.extern sub_8041FCC
-.extern sub_8041FE0
-.extern sub_8041FF4
-.extern sub_8042000
-.extern sub_8042014
-.extern sub_8042028
-.extern sub_804203C
-.extern loc_804204C
-.extern sub_804205C
-.extern loc_804206C
-.extern sub_8042078
-.extern sub_804208C
-.extern sub_80420A0
-.extern sub_80420B4
-.extern sub_80420C8
-.extern sub_80420DC
-.extern sub_80420F0
-.extern sub_8042104
-.extern sub_8042118
-.extern sub_804212C
-.extern sub_8042130
-.extern sub_8042134
-.extern sub_8042138
-.extern dword_8042148
-.extern sub_804214C
-.extern dword_8042164
-.extern sub_8042168
-.extern dword_8042180
-.extern sub_8042184
-.extern off_804219C
-.extern sub_80421A0
-.extern sub_80421AC
-.extern sub_80421B8
-.extern sub_80421C4
-.extern sub_80421D0
-.extern sub_80421DC
-.extern sub_80421E8
-.extern sub_80421F4
-.extern sub_8042208
-.extern sub_8042214
-.extern sub_8042220
-.extern sub_804223C
-.extern loc_804224C
-.extern sub_804225C
-.extern sub_8042270
-.extern sub_8042284
-.extern sub_8042298
-.extern sub_80422AC
-.extern sub_80422C0
-.extern sub_80422D4
-.extern sub_80422E8
-.extern sub_80422FC
-.extern sub_8042308
-.extern sub_8042314
-.extern dword_8042324
-.extern sub_8042328
-.extern dword_8042338
-.extern sub_804233C
-.extern dword_8042354
-.extern sub_8042358
-.extern off_8042370
-.extern sub_8042374
-.extern sub_8042380
-.extern sub_804238C
-.extern sub_8042398
-.extern sub_80423A4
-.extern locret_80423CC
-.extern sub_80423D0
-.extern locret_80423F8
-.extern sub_80423FC
-.extern locret_8042422
-.extern sub_8042424
-.extern locret_804244A
-.extern sub_804244C
-.extern sub_8042458
-.extern sub_8042464
-.extern sub_8042478
-.extern sub_804248C
-.extern sub_80424B4
-.extern sub_80424C8
-.extern sub_80424DC
-.extern sub_80424F0
-.extern sub_8042504
-.extern sub_8042518
-.extern sub_804252C
-.extern sub_8042530
-.extern sub_804253C
-.extern sub_8042548
-.extern off_8042560
-.extern sub_8042564
-.extern dword_8042574
-.extern sub_8042578
-.extern dword_8042590
-.extern sub_8042594
-.extern off_80425A4
-.extern sub_80425A8
-.extern off_80425C0
-.extern sub_80425C4
-.extern dword_80425D4
-.extern sub_80425D8
-.extern dword_80425F0
-.extern sub_80425F4
-.extern off_8042604
-.extern sub_8042608
-.extern off_8042620
-.extern sub_8042624
-.extern dword_804263C
-.extern sub_8042640
-.extern off_8042650
-.extern sub_8042654
-.extern sub_8042660
-.extern locret_8042684
-.extern sub_8042688
-.extern locret_80426AC
-.extern sub_80426B0
-.extern sub_80426D4
-.extern sub_80426E8
-.extern sub_80426F4
-.extern sub_8042700
-.extern loc_8042710
-.extern sub_804271C
-.extern loc_804272C
-.extern sub_8042734
-.extern sub_8042748
-.extern sub_8042754
-.extern sub_8042768
-.extern sub_804277C
-.extern sub_8042790
-.extern sub_80427A4
-.extern sub_80427C0
-.extern sub_80427DC
-.extern sub_80427F0
-.extern sub_8042804
-.extern sub_8042818
-.extern sub_804282C
-.extern sub_8042840
-.extern sub_8042854
-.extern sub_8042868
-.extern sub_804287C
-.extern sub_8042890
-.extern sub_80428A4
-.extern sub_80428B8
-.extern sub_80428CC
-.extern off_80428DC
-.extern sub_80428E0
-.extern loc_80428F0
-.extern sub_8042900
-.extern sub_804290C
-.extern sub_8042920
-.extern loc_8042930
-.extern sub_8042940
-.extern loc_8042950
-.extern loc_8042960
-.extern loc_804296C
-.extern loc_8042992
-.extern loc_804299C
-.extern loc_80429B6
-.extern loc_80429B8
-.extern loc_80429DE
-.extern locret_80429E4
-.extern loc_80429EE
-.extern loc_8042A14
-.extern off_8042A1C
-.extern dword_8042A20
-.extern sub_8042AE0
-.extern sub_8042AE4
-.extern loc_8042AF4
-.extern locret_8042AFE
-.extern sub_8042B00
-.extern loc_8042B10
-.extern locret_8042B1A
-.extern sub_8042B1C
-.extern loc_8042B2C
-.extern locret_8042B36
-.extern sub_8042B38
-.extern sub_8042B3C
-.extern loc_8042B4C
-.extern locret_8042B56
-.extern sub_8042B58
-.extern loc_8042B68
-.extern locret_8042B72
-.extern sub_8042B74
-.extern loc_8042B84
-.extern locret_8042B8E
-.extern sub_8042B90
-.extern sub_8042B94
-.extern loc_8042BA4
-.extern locret_8042BAE
-.extern sub_8042BB0
-.extern loc_8042BC0
-.extern locret_8042BCA
-.extern sub_8042BCC
-.extern loc_8042BDC
-.extern locret_8042BE6
-.extern sub_8042BE8
-.extern sub_8042BEC
-.extern loc_8042BFC
-.extern locret_8042C06
-.extern sub_8042C08
-.extern loc_8042C18
-.extern locret_8042C22
-.extern sub_8042C24
-.extern loc_8042C34
-.extern locret_8042C3E
-.extern sub_8042C40
-.extern sub_8042C44
-.extern loc_8042C54
-.extern locret_8042C5E
-.extern sub_8042C60
-.extern loc_8042C70
-.extern locret_8042C7A
-.extern sub_8042C7C
-.extern loc_8042C8C
-.extern locret_8042C96
-.extern sub_8042C98
-.extern sub_8042C9C
-.extern loc_8042CAC
-.extern locret_8042CB6
-.extern sub_8042CB8
-.extern loc_8042CC8
-.extern locret_8042CD2
-.extern sub_8042CD4
-.extern loc_8042CE4
-.extern locret_8042CEE
-.extern sub_8042CF0
-.extern sub_8042CF4
-.extern loc_8042D04
-.extern locret_8042D0E
-.extern sub_8042D10
-.extern loc_8042D20
-.extern locret_8042D2A
-.extern sub_8042D2C
-.extern loc_8042D3C
-.extern locret_8042D46
-.extern sub_8042D48
-.extern sub_8042D4C
-.extern loc_8042D5C
-.extern locret_8042D66
-.extern sub_8042D68
-.extern loc_8042D78
-.extern locret_8042D82
-.extern sub_8042D84
-.extern loc_8042D94
-.extern locret_8042D9E
-.extern sub_8042DA0
-.extern sub_8042DA4
-.extern loc_8042DB4
-.extern locret_8042DBE
-.extern sub_8042DC0
-.extern loc_8042DD0
-.extern locret_8042DDA
-.extern sub_8042DDC
-.extern loc_8042DEC
-.extern locret_8042DF6
-.extern sub_8042DF8
-.extern sub_8042DFC
-.extern loc_8042E0E
-.extern sub_8042E1A
-.extern loc_8042E2C
-.extern sub_8042E38
-.extern loc_8042E4A
-.extern sub_8042E56
-.extern sub_8042E5A
-.extern sub_8042E5E
-.extern sub_8042E62
-.extern sub_8042E68
-.extern loc_8042EC2
-.extern dword_8042EC8
-.extern sub_8042ED8
-.extern sub_8042EF0
-.extern loc_8042F06
-.extern locret_8042F18
-.extern loc_8042F24
-.extern loc_8042F36
-.extern loc_8042F44
-.extern off_8042F4C
-.extern off_8042F50
-.extern dword_8042F54
-.extern dword_8042F78
-.extern loc_8042FA6
-.extern loc_8042FC2
-.extern loc_8042FCE
-.extern loc_8042FF4
-.extern loc_804300E
-.extern loc_8043012
-.extern loc_8043014
-.extern loc_8043024
-.extern locret_804302E
-.extern sub_8043030
-.extern loc_8043040
-.extern sub_804305C
-.extern sub_8043078
-.extern off_8043090
-.extern off_8043094
-.extern sub_8043098
-.extern sub_80430B0
-.extern sub_80430BC
-.extern loc_804310C
-.extern off_804311C
-.extern off_8043130
-.extern loc_8043140
-.extern loc_8043146
-.extern loc_8043154
-.extern loc_8043160
-.extern dword_804316C
-.extern loc_804317C
-.extern loc_804318A
-.extern loc_804319C
-.extern loc_80431B4
-.extern loc_80431C2
-.extern loc_80431D4
-.extern dword_80431E0
-.extern loc_8043238
-.extern off_8043248
-.extern off_804324C
-.extern off_8043258
-.extern sub_804325C
-.extern loc_804327E
-.extern loc_8043296
-.extern loc_80432A0
-.extern loc_80432C2
-.extern loc_80432D0
-.extern loc_804339A
-.extern sub_80433FC
-.extern off_8043414
-.extern off_8043418
-.extern off_804344C
-.extern off_8043450
-.extern off_8043454
-.extern off_8043458
-.extern off_804345C
-.extern off_8043490
-.extern off_8043494
-.extern off_80434C8
-.extern dword_80434CC
-.extern dword_80434D0
-.extern off_80434D4
-.extern dword_80434D8
-.extern off_804350C
-.extern off_8043510
-.extern off_8043544
-.extern off_8043548
-.extern off_804357C
-.extern off_8043580
-.extern off_8043584
-.extern off_804358C
-.extern off_8043590
-.extern off_8043594
-.extern off_8043598
-.extern off_804359C
-.extern off_80435A0
-.extern off_80435A4
-.extern off_80435A8
-.extern dword_80435AC
-.extern off_80435B0
-.extern off_80435B4
-.extern off_80435BC
-.extern off_80435C0
-.extern off_80435C4
-.extern off_80435C8
-.extern off_80435CC
-.extern dword_80435D0
-.extern sub_80435DC
-.extern off_80435F4
-.extern off_80435F8
-.extern sub_8043600
-.extern sub_8043608
-.extern locret_8043618
-.extern sub_804361C
-.extern byte_8043640
-.extern aMoveMapWorld
-.extern sub_8043664
-.extern off_8043690
-.extern off_8043694
-.extern off_8043698
-.extern off_804369C
-.extern off_80436A0
-.extern off_80436A4
-.extern off_80436A8
-.extern off_80436AC
-.extern off_80436B0
-.extern off_80436B4
-.extern sub_80436B8
-.extern off_80436EC
-.extern off_80436F0
-.extern off_80436F4
-.extern off_80436F8
-.extern off_80436FC
-.extern off_8043700
-.extern off_8043704
-.extern off_8043708
-.extern off_804370C
-.extern off_8043710
-.extern off_8043714
-.extern off_8043718
-.extern off_804371C
-.extern dword_8043720
-.extern off_804375C
-.extern off_8043774
-.extern dword_804378C
-.extern loc_80437EA
-.extern off_80437F4
-.extern dword_80437F8
-.extern off_80437FC
-.extern sub_8043834
-.extern sub_8043864
-.extern off_8043874
-.extern off_8043878
-.extern off_8043884
-.extern sub_8043888
-.extern loc_80438C8
-.extern loc_80438CC
-.extern loc_804394A
-.extern loc_8043956
-.extern loc_8043976
-.extern off_804397C
-.extern off_8043980
-.extern sub_8043990
-.extern loc_80439AE
-.extern locret_80439D8
-.extern off_80439DC
-.extern off_80439E0
-.extern off_80439EC
-.extern off_80439F0
-.extern off_80439F4
-.extern off_80439F8
-.extern dword_80439FC
-.extern off_8043A00
-.extern off_8043A04
-.extern off_8043A10
-.extern off_8043A18
-.extern off_8043A20
-.extern off_8043A24
-.extern dword_8043A28
-.extern off_8043A2C
-.extern sub_8043A30
-.extern loc_8043A42
-.extern loc_8043A4E
-.extern loc_8043A5A
-.extern loc_8043A66
-.extern locret_8043A88
-.extern sub_8043A8C
-.extern sub_8043A94
-.extern locret_8043AA0
-.extern sub_8043AA4
-.extern loc_8043ABC
-.extern loc_8043AEA
-.extern off_8043AF0
-.extern loc_8043AF8
-.extern loc_8043B12
-.extern loc_8043B2A
-.extern loc_8043B46
-.extern off_8043B5C
-.extern off_8043B60
-.extern sub_8043B68
-.extern loc_8043B78
-.extern locret_8043B82
-.extern sub_8043B84
-.extern loc_8043B94
-.extern locret_8043B9E
-.extern off_8043BA0
-.extern dword_8043BA8
-.extern off_8043BAC
-.extern loc_8043BB0
-.extern sub_8043BD0
-.extern loc_8043BF6
-.extern locret_8043C10
-.extern off_8043C14
-.extern off_8043C18
-.extern dword_8043C1C
-.extern off_8043C20
-.extern dword_8043C24
-.extern dword_8043C28
-.extern sub_8043C2C
-.extern loc_8043C32
-.extern sub_8043C44
-.extern loc_8043C52
-.extern sub_8043C6C
-.extern loc_8043C78
-.extern loc_8043C8A
-.extern loc_8043CB0
-.extern loc_8043CB8
-.extern loc_8043CBA
-.extern locret_8043CF8
-.extern loc_8043D08
-.extern loc_8043D1A
-.extern loc_8043D40
-.extern loc_8043D48
-.extern loc_8043D4A
-.extern locret_8043D88
-.extern off_8043D8C
-.extern dword_8043D90
-.extern dword_8043D94
-.extern sub_8043D9C
-.extern loc_8043DAC
-.extern loc_8043DBA
-.extern loc_8043DC4
-.extern sub_8043DCC
-.extern loc_8043DD8
-.extern sub_8043DE8
-.extern loc_8043DFA
-.extern off_8043E10
-.extern off_8043E14
-.extern off_8043E18
-.extern dword_8043E1C
-.extern off_8043E2C
-.extern off_8043E44
-.extern loc_8043E56
-.extern loc_8043E62
-.extern loc_8043E78
-.extern loc_8043E86
-.extern loc_8043E8A
-.extern off_8043E94
-.extern off_8043E98
-.extern sub_8043E9C
-.extern loc_8043EB4
-.extern loc_8043EC8
-.extern loc_8043ED6
-.extern sub_8043EE0
-.extern locret_8043F06
-.extern loc_8043F08
-.extern loc_8043F2E
-.extern loc_8043F34
-.extern off_8043F3C
-.extern off_8043F40
-.extern dword_8043F4C
-.extern sub_8043F54
-.extern loc_8043F80
-.extern loc_8043F98
-.extern loc_8043F9C
-.extern loc_8043FA0
-.extern loc_8043FB2
-.extern loc_8043FF0
-.extern loc_8044010
-.extern loc_8044018
-.extern loc_804401C
-.extern loc_8044036
-.extern loc_804403E
-.extern loc_804404E
-.extern loc_8044050
-.extern loc_804405E
-.extern loc_8044076
-.extern loc_8044090
-.extern loc_80440A4
-.extern loc_80440A8
-.extern loc_80440AE
-.extern loc_80440B2
-.extern loc_80440C0
-.extern loc_80440CE
-.extern off_80440E4
-.extern off_80440E8
-.extern off_80440F4
-.extern dword_80440F8
-.extern off_8044104
-.extern off_8044108
-.extern dword_804410C
-.extern dword_8044110
-.extern sub_8044128
-.extern loc_8044148
-.extern loc_8044156
-.extern loc_804416C
-.extern off_8044170
-.extern off_8044174
-.extern dword_8044180
-.extern sub_8044188
-.extern loc_80441A8
-.extern loc_80441B6
-.extern loc_80441CC
-.extern off_80441D0
-.extern off_80441D4
-.extern dword_80441E0
-.extern sub_80441E8
-.extern loc_804423C
-.extern loc_804425A
-.extern loc_8044262
-.extern loc_8044268
-.extern loc_804426C
-.extern loc_804427E
-.extern loc_8044284
-.extern loc_8044288
-.extern loc_804429A
-.extern loc_80442A0
-.extern loc_80442A4
-.extern loc_80442AE
-.extern loc_80442B6
-.extern loc_80442BC
-.extern loc_80442BE
-.extern loc_80442D8
-.extern loc_80442EA
-.extern loc_80442FA
-.extern loc_80442FC
-.extern loc_804430C
-.extern loc_804430E
-.extern loc_804431E
-.extern loc_804432C
-.extern loc_8044336
-.extern loc_804434C
-.extern loc_8044354
-.extern loc_804435E
-.extern loc_8044368
-.extern loc_8044374
-.extern loc_804437C
-.extern loc_8044386
-.extern loc_8044392
-.extern loc_80443B0
-.extern loc_80443BA
-.extern loc_80443BC
-.extern loc_80443C4
-.extern loc_80443CE
-.extern loc_80443DE
-.extern loc_80443EC
-.extern loc_804440A
-.extern loc_804441A
-.extern loc_8044452
-.extern loc_804446A
-.extern loc_804448A
-.extern loc_8044494
-.extern loc_804449E
-.extern loc_80444A4
-.extern loc_80444B4
-.extern off_80444C0
-.extern off_80444C8
-.extern dword_80444CC
-.extern dword_80444D0
-.extern sub_80444E0
-.extern loc_80444E4
-.extern loc_80444EE
-.extern locret_80444F8
-.extern sub_8044514
-.extern loc_804451C
-.extern loc_8044532
-.extern sub_804453C
-.extern loc_8044568
-.extern loc_804457A
-.extern loc_8044582
-.extern loc_8044592
-.extern loc_80445C6
-.extern loc_80445CE
-.extern loc_80445DC
-.extern loc_80445F6
-.extern loc_80445FC
-.extern loc_8044604
-.extern loc_804461E
-.extern loc_8044624
-.extern loc_804462A
-.extern loc_8044630
-.extern dword_804463C
-.extern sub_8044640
-.extern loc_8044650
-.extern loc_8044664
-.extern loc_804466E
-.extern loc_8044672
-.extern loc_8044686
-.extern loc_8044690
-.extern loc_80446A4
-.extern loc_80446A8
-.extern loc_80446AA
-.extern loc_80446BE
-.extern loc_80446C4
-.extern off_80446CC
-.extern off_80446D0
-.extern off_80446D4
-.extern dword_80446D8
-.extern off_80446FC
-.extern off_8044704
-.extern sub_8044708
-.extern loc_8044732
-.extern loc_804473C
-.extern dword_8044740
-.extern dword_8044764
-.extern dword_8044784
-.extern sub_80447A4
-.extern off_80447B8
-.extern sub_80447BC
-.extern loc_80447D6
-.extern loc_80447E8
-.extern loc_80447F6
-.extern loc_8044814
-.extern loc_804481A
-.extern loc_804483A
-.extern loc_804483E
-.extern loc_8044854
-.extern off_8044860
-.extern off_8044868
-.extern dword_804486C
-.extern sub_8044870
-.extern off_8044884
-.extern sub_8044888
-.extern loc_8044892
-.extern loc_80448B8
-.extern loc_80448BE
-.extern off_80448CC
-.extern off_80448D0
-.extern off_80448D4
-.extern loc_80448D8
-.extern sub_80448DC
-.extern loc_8044900
-.extern loc_8044916
-.extern loc_804493A
-.extern loc_804493C
-.extern loc_8044960
-.extern locret_8044974
-.extern off_8044978
-.extern off_804497C
-.extern off_8044980
-.extern loc_8044984
-.extern sub_8044988
-.extern off_80449B4
-.extern off_80449E4
-.extern off_80449F4
-.extern sub_80449F8
-.extern loc_8044A18
-.extern loc_8044A20
-.extern loc_8044A28
-.extern locret_8044A32
-.extern off_8044A34
-.extern off_8044A38
-.extern sub_8044A3C
-.extern off_8044A44
-.extern loc_8044A48
-.extern loc_8044A54
-.extern off_8044A68
-.extern off_8044A6C
-.extern sub_8044A7C
-.extern loc_8044AE6
-.extern loc_8044B40
-.extern loc_8044B9A
-.extern locret_8044BE6
-.extern off_8044BE8
-.extern sub_8044BEC
-.extern loc_8044C4C
-.extern loc_8044C9C
-.extern loc_8044CEC
-.extern locret_8044D2E
-.extern off_8044D30
-.extern sub_8044D34
-.extern loc_8044D94
-.extern loc_8044DE4
-.extern loc_8044E34
-.extern locret_8044E76
-.extern off_8044E78
-.extern sub_8044E7C
-.extern loc_8044ED4
-.extern loc_8044F1C
-.extern locret_8044F5E
-.extern off_8044F60
-.extern sub_8044F64
-.extern loc_8044F7C
-.extern loc_8044F82
-.extern off_8044F88
-.extern off_8044F8C
-.extern dword_8044F90
-.extern dword_8044F9C
-.extern loc_8044FA8
-.extern off_8044FC4
-.extern off_8044FC8
-.extern off_8044FCC
-.extern sub_8044FDC
-.extern off_8045008
-.extern off_804500C
-.extern dword_8045010
-.extern off_8045014
-.extern off_8045018
-.extern dword_804501C
-.extern sub_8045020
-.extern loc_8045044
-.extern loc_8045046
-.extern loc_8045054
-.extern locret_8045076
-.extern off_8045078
-.extern jt_804507C
-.extern off_80450A0
-.extern off_80450A4
-.extern dword_80450A8
-.extern sub_80450AC
-.extern loc_80450E4
-.extern loc_80450F4
-.extern locret_8045100
-.extern sub_8045104
-.extern loc_8045116
-.extern locret_804512E
-.extern sub_8045130
-.extern loc_8045150
-.extern loc_8045166
-.extern loc_8045168
-.extern locret_804516C
-.extern sub_8045170
-.extern loc_80451B0
-.extern locret_80451B8
-.extern off_80451BC
-.extern sub_80451C0
-.extern locret_80451CC
-.extern sub_80451D0
-.extern loc_80451E4
-.extern locret_80451EC
-.extern sub_80451F0
-.extern off_8045200
-.extern off_8045204
-.extern sub_804520C
-.extern loc_8045222
-.extern loc_8045234
-.extern locret_8045238
-.extern off_804523C
-.extern sub_8045240
-.extern loc_8045258
-.extern loc_804526A
-.extern locret_8045282
-.extern sub_8045284
-.extern sub_8045294
-.extern off_80452B0
-.extern off_80452B4
-.extern dword_80452B8
-.extern sub_80452BC
-.extern locret_80452E4
-.extern sub_80452E8
-.extern locret_8045352
-.extern sub_8045354
-.extern loc_8045372
-.extern loc_8045388
-.extern loc_8045398
-.extern loc_80453AA
-.extern locret_80453AE
-.extern off_80453B0
-.extern off_80453B4
-.extern dword_80453B8
-.extern dword_80453BC
-.extern sub_80453E0
-.extern loc_8045400
-.extern loc_8045416
-.extern loc_8045418
-.extern off_8045420
-.extern loc_8045424
-.extern sub_804543C
-.extern loc_804544E
-.extern loc_8045474
-.extern loc_8045476
-.extern loc_804548C
-.extern loc_804548E
-.extern off_804549C
-.extern off_80454A0
-.extern loc_80454A4
-.extern sub_80454BC
-.extern off_80454C8
-.extern sub_80454CC
-.extern off_80454D8
-.extern sub_80454DC
-.extern off_80454E8
-.extern sub_80454EC
-.extern off_804550C
-.extern off_8045534
 
+/* External Symbols */
+.include "asm03.inc"
+// .extern sub_8046C98
+// .extern sub_8046CA8
+// .extern sub_8046CB4
+// .extern sub_8046CD8
+// .extern sub_8046D98
+// .extern sub_8046E64
+// .extern sub_8046E74
+// .extern sub_8046EC8
+// .extern sub_8046EE4
+// .extern sub_8046FA4
+// .extern sub_8046FAA
+// .extern sub_8046FB4
+// .extern sub_8047084
+// .extern sub_80470A8
+// .extern sub_8047180
+// .extern sub_80471B0
+// .extern sub_80471CC
+// .extern sub_80471E8
+// .extern sub_8047240
+// .extern sub_8047578
+// .extern sub_8047580
+// .extern sub_8047584
+// .extern sub_8047590
+// .extern sub_80475DC
+// .extern sub_80475E8
+// .extern sub_80475F4
+// .extern sub_80476D8
+// .extern sub_8047768
+// .extern sub_80480A4
+// .extern sub_80480B4
+// .extern sub_80480EC
+// .extern sub_8048104
+// .extern sub_8048138
+// .extern sub_804814C
+// .extern sub_8048164
+// .extern sub_804819C
+// .extern sub_80481A8
+// .extern sub_80481C8
+// .extern sub_80481E4
+// .extern sub_80481EC
+// .extern sub_8048624
+// .extern sub_8048660
+// .extern sub_80486EC
+// .extern sub_8048714
+// .extern sub_8048754
+// .extern sub_80487E8
+// .extern sub_80488F8
+// .extern sub_8048956
+// .extern sub_804BAF8
+// .extern loc_804C5F4
+// .extern sub_804DFA0
+// .extern sub_804E2A4
+// .extern sub_804E448
+
+.include "asm11.inc"
+// .extern sub_8073B88
+// .extern sub_8073BD2
+
+.include "start.inc"
+// .extern start_
+// .extern dword_8000004
+
+.include "asm15.inc"
+// .extern loc_807CC90
+// .extern sub_807CCBA
+// .extern off_807CD54
+
+.include "asm27.inc"
+// .extern dword_809CDE4
+// .extern dword_809CF04
+// .extern dword_809D24C
+// .extern dword_809D2FC
+// .extern unk_809D364
+// .extern unk_809D394
+// .extern dword_809D4BC
+// .extern dword_809D654
+// .extern dword_809D6D0
+// .extern dword_809DA9C
+// .extern dword_809DAAC
+// .extern dword_809DB98
+// .extern dword_809DF10
+// .extern dword_809E018
+// .extern dword_809E318
+// .extern sub_809F388
+// .extern sub_809F588
+// .extern sub_80A028C
+// .extern sub_80A1BEC
+// .extern sub_80A52F2
+// .extern sub_80A6CF0
+// .extern sub_80A6D2E
+// .extern sub_80A6D7A
+// .extern sub_80A6D90
+// .extern sub_80A6D9E
+// .extern loc_80A6E46
+// .extern sub_80A6E74
+// .extern sub_80A6E7C
+// .extern sub_80A6E88
+// .extern sub_80A6E94
+// .extern sub_80A6EA0
+// .extern sub_80A6EAC
+// .extern sub_80A6EB6
+// .extern sub_80A6EC2
+// .extern sub_80A6ED0
+// .extern sub_80A6EDE
+// .extern sub_80A6EEC
+// .extern sub_80A6F0E
+// .extern sub_80A6F18
+// .extern sub_80A6F88
+// .extern sub_80A6F96
+// .extern sub_80A6FA6
+// .extern sub_80A6FB6
+// .extern sub_80A703C
+// .extern sub_80A704A
+// .extern sub_80A8EEC
+// .extern sub_80A9130
+
+.include "asm10.inc"
+// .extern ho_806FE20
+// .extern sub_806FF58
+// .extern pt_807016C
+// .extern loc_807150C
+// .extern sub_80715C0
+
+.include "asm09.inc"
+// .extern ho_806D928
+// .extern sub_806D95E
+// .extern off_806DA68
+
+.include "asm17.inc"
+// .extern ho_null_8082728
+// .extern sub_8082770
+
+.include "asm07.inc"
+// .extern sub_8069450
+// .extern sub_80694CA
+// .extern sub_806958C
+// .extern sub_80695B0
+// .extern off_8069638
+
+.include "asm16.inc"
+// .extern sub_807FD00
+// .extern sub_807FD30
+
+.include "asm08.inc"
+// .extern sub_806A87C
+// .extern sub_806A91E
+// .extern loc_806AAA0
+// .extern sub_806AAD0
+// .extern off_806AB28
+
+.include "asm01.inc"
+// .extern sub_8019010
+// .extern sub_8019020
+// .extern dword_801907C
+// .extern sub_8019122
+// .extern sub_8019154
+// .extern sub_801916C
+// .extern sub_8019196
+// .extern sub_80191FC
+// .extern sub_8019228
+// .extern ho_8019288
+// .extern sub_801949A
+// .extern sub_80195DC
+// .extern sub_8019648
+
+.include "asm04.inc"
+// .extern sub_8053980
+// .extern sub_8053990
+// .extern sub_80539A0
+// .extern sub_80539B0
+// .extern sub_8053A04
+// .extern sub_8053A30
+// .extern sub_8053A6C
+// .extern sub_8053FFC
+// .extern sub_8054018
+// .extern sub_8054054
+// .extern sub_80540BA
+// .extern sub_80540C6
+// .extern sub_80540EC
+// .extern sub_805411A
+
+.include "asm28.inc"
+// .extern sub_80ADDDC
+// .extern sub_80E1F5C
+// .extern sub_80E2AF2
+// .extern sub_80E2EB8
+// .extern sub_80E2F8A
+// .extern sub_80E30B4
+// .extern sub_80E31F4
+// .extern sub_80E381E
+// .extern sub_80E395C
+// .extern sub_80E3A7E
+// .extern sub_80E3B3C
+// .extern sub_80E3ECC
+// .extern sub_80E3F62
+// .extern sub_80E44DE
+// .extern sub_80E4610
+// .extern sub_80E46F8
+// .extern sub_80E48C0
+// .extern sub_80E4A44
+// .extern sub_80E4AFA
+// .extern sub_80E4B8A
+// .extern sub_80E4C78
+// .extern sub_80E4F92
+// .extern sub_80E5032
+// .extern sub_80E53F6
+// .extern sub_80E56B0
+// .extern sub_80E5750
+// .extern sub_80E5AAA
+// .extern sub_80E5B44
+// .extern sub_80E5C50
+// .extern sub_80E5E92
+// .extern sub_80E6004
+// .extern sub_80E6174
+// .extern sub_80E62D4
+// .extern sub_80E63B2
+// .extern sub_80E6544
+// .extern sub_80E67D0
+// .extern sub_80E6894
+// .extern sub_80E69FA
+// .extern sub_80E6E48
+// .extern sub_80E71C4
+// .extern sub_80E7290
+// .extern sub_80E769C
+// .extern sub_80E7930
+// .extern sub_80E7B30
+// .extern sub_80E7E36
+// .extern sub_80E7FA2
+// .extern sub_80E8136
+// .extern sub_80E834A
+// .extern sub_80E83E8
+// .extern sub_80E8512
+// .extern sub_80E8638
+// .extern sub_80E8870
+// .extern sub_80E89B2
+// .extern sub_80E8A5C
+// .extern sub_80E8B2E
+// .extern sub_80E8F82
+// .extern sub_80E90B4
+// .extern sub_80E9382
+// .extern sub_80E9422
+// .extern sub_80E95C2
+// .extern sub_80E96EE
+// .extern sub_80E9794
+// .extern sub_80E9994
+// .extern sub_80E9BAC
+// .extern sub_80E9D62
+// .extern sub_80E9FF0
+// .extern sub_80EA2AE
+// .extern sub_80EA37E
+// .extern sub_80EA44E
+// .extern sub_80EA51E
+// .extern sub_80EA5FA
+// .extern sub_80EA74E
+// .extern sub_80EA93C
+// .extern sub_80EAA0E
+// .extern sub_80EAAAE
+// .extern sub_80EAB4E
+// .extern sub_80EAC06
+// .extern sub_80EACAA
+// .extern loc_80EB0B0
+// .extern loc_80EF498
+// .extern sub_80F0638
+// .extern loc_80F0804
+// .extern sub_80F5698
+// .extern sub_80F5944
+// .extern sub_80F5CB0
+
+.include "asm00.inc"
+// .extern f500_8000558
+// .extern f500_8000560
+// .extern f500_800057E
+// .extern f500_80005BA
+// .extern f500_80005D2
+// .extern f500_80006CC
+// .extern loc_8000870
+// .extern loc_8000874
+// .extern f800_80008EC
+// .extern f900_8000904
+// .extern f900_8000910
+// .extern f900_8000930
+// .extern f900_8000950
+// .extern f900_8000970
+// .extern f900_800097A
+// .extern f900_800098C
+// .extern f900_80009A0
+// .extern f900_80009B4
+// .extern f900_80009BC
+// .extern f900_80009DC
+// .extern f900_80009FC
+// .extern fA00_8000A30
+// .extern fA00_8000A8C
+// .extern fA00_8000AA2
+// .extern fA00_8000B42
+// .extern fA00_8000BB4
+// .extern fA00_8000C3C
+// .extern sub_8000D20
+// .extern sub_8000DE0
+// .extern sub_8001740
+// .extern sub_80019A0
+// .extern sub_8001AE0
+// .extern sub_8001AF6
+// .extern sub_8001B10
+// .extern sub_8001B40
+// .extern sub_8001BC8
+// .extern sub_8001D04
+// .extern sub_8001D38
+// .extern sub_8001D60
+// .extern sub_8001D88
+// .extern sub_8001D9C
+// .extern sub_8001DC8
+// .extern sub_8001DDC
+// .extern sub_8001DE6
+// .extern sub_8001DF8
+// .extern sub_8001E14
+// .extern sub_8001E74
+// .extern sub_8002008
+// .extern sub_8002028
+// .extern sub_8002078
+// .extern sub_80024E0
+// .extern sub_8002534
+// .extern sub_800262E
+// .extern sub_800264C
+// .extern sub_8002798
+// .extern sub_80027F4
+// .extern sub_80034C4
+// .extern sub_80034F6
+// .extern sub_8003814
+// .extern sub_8003836
+// .extern sub_80038A0
+// .extern sub_8004204
+// .extern sub_8004908
+// .extern sub_8004988
+// .extern sub_8004F14
+// .extern sub_8005020
+// .extern sub_8005500
+// .extern sub_800552E
+// .extern sub_800553C
+// .extern sub_8005544
+// .extern sub_8005552
+// .extern sub_8005644
+// .extern sub_8005754
+// .extern sub_8005772
+// .extern sub_80057A8
+// .extern sub_8005ADC
+// .extern loc_8005AE0
+// .extern sub_8005B34
+// .extern sub_8005B3A
+// .extern sub_8005B5C
+// .extern loc_8005B60
+// .extern word_8005D78
+// .extern word_8005DF8
+// .extern sub_8006084
+// .extern sub_800609C
+// .extern sub_8006108
+// .extern sub_8006360
+// .extern sub_8006374
+// .extern sub_8006394
+// .extern sub_80063A8
+// .extern sub_800640C
+// .extern sub_8006478
+// .extern sub_8006490
+// .extern sub_80064B4
+// .extern sub_80064CC
+// .extern sub_80064F0
+// .extern sub_8006504
+// .extern sub_800651A
+// .extern sub_8006574
+// .extern sub_800659E
+// .extern sub_80065C2
+// .extern sub_8006644
+// .extern sub_8007880
+// .extern sub_80078C4
+// .extern sub_8007920
+// .extern sub_8007958
+// .extern sub_80079EA
+// .extern sub_8007A4C
+// .extern sub_8007A64
+// .extern sub_8007BB4
+// .extern sub_8007BC6
+// .extern sub_8007C44
+// .extern sub_8007C60
+// .extern sub_8007C80
+// .extern sub_8007D90
+// .extern sub_8007E16
+// .extern sub_8007E1E
+// .extern sub_8007E3E
+// .extern sub_8007E9A
+// .extern sub_8007EA6
+// .extern sub_8007EB2
+// .extern sub_8007EBC
+// .extern sub_8007ECA
+// .extern sub_8007FCA
+// .extern sub_80083B8
+// .extern sub_800855E
+// .extern sub_80085C0
+// .extern sub_80088B6
+// .extern sub_80088E2
+// .extern sub_800898A
+// .extern sub_80089A0
+// .extern sub_80089CC
+// .extern sub_80089D8
+// .extern sub_8009A52
+// .extern sub_8009A88
+// .extern sub_8009E64
+// .extern sub_8009E78
+// .extern sub_8009EA4
+// .extern sub_8009FCC
+// .extern sub_800A0DA
+// .extern sub_800A17A
+// .extern sub_800A210
+// .extern sub_800AB54
+// .extern loc_800AB56
+// .extern sub_800AB86
+// .extern sub_800AFE4
+// .extern sub_800B98C
+// .extern sub_800BF7A
+// .extern sub_800BF94
+// .extern sub_800BFAE
+// .extern sub_800BFB8
+// .extern sub_800C1CC
+// .extern sub_800C3C0
+// .extern sub_800C41A
+// .extern sub_800C960
+// .extern sub_800C96E
+// .extern sub_800D618
+// .extern sub_800D62E
+// .extern sub_800D6F2
+// .extern sub_800D706
+// .extern sub_800D722
+// .extern sub_800D73A
+// .extern sub_800D742
+// .extern sub_800D74A
+// .extern sub_800D752
+// .extern sub_800D77A
+// .extern sub_800E860
+// .extern sub_800E896
+// .extern sub_800EB42
+// .extern sub_800F448
+// .extern sub_800F48A
+// .extern sub_800F548
+// .extern sub_800F6E0
+// .extern sub_800F72C
+// .extern sub_800F8AE
+// .extern sub_800F8BC
+// .extern sub_800F93C
+// .extern sub_8012F4A
+// .extern sub_8013464
+// .extern sub_80158F8
+// .extern sub_8015902
+// .extern sub_801590C
+// .extern sub_8015A80
+// .extern sub_8015AB0
+// .extern sub_8015ACA
+// .extern sub_8015AFA
+// .extern sub_8015DCC
+// .extern sub_801609C
+// .extern sub_80160C0
+// .extern sub_80160D2
+// .extern sub_8016262
+// .extern sub_801630A
+// .extern sub_801631C
+// .extern sub_801635C
+// .extern sub_8016644
+// .extern function_chunk_8016688
+// .extern sub_8016764
+// .extern sub_8016778
+// .extern sub_80167CC
+// .extern sub_80169B6
+// .extern sub_80169EC
+// .extern sub_8016A28
+
+.include "asm14.inc"
+// .extern ho_null_807990C
+// .extern sub_807993C
+
+.include "asm30.inc"
+// .extern sub_8105A04
+// .extern sub_810982C
+// .extern sub_810998C
+// .extern dword_810CF58
+// .extern sub_8110A8C
+// .extern sub_811168C
+// .extern sub_8111698
+// .extern sub_81116AC
+// .extern sub_81116B8
+// .extern sub_81116E4
+// .extern dword_8111700
+
+.include "asm12.inc"
+// .extern loc_8075BB4
+// .extern sub_8075C0E
+
+.include "asm13.inc"
+// .extern loc_80773C0
+// .extern sub_80773EA
+// .extern off_80774D4
+
+
+/* Undeclared Symbols */
+.equ unk_2000000, 0x2000000
+.equ unk_2000190, 0x2000190
+.equ unk_20001E0, 0x20001E0
+.equ unk_2000200, 0x2000200
+.equ unk_2000520, 0x2000520
+.equ unk_20008A0, 0x20008A0
+.equ unk_2001460, 0x2001460
+.equ unk_20014C0, 0x20014C0
+.equ unk_20014F0, 0x20014F0
+.equ unk_2001500, 0x2001500
+.equ unk_2001520, 0x2001520
+.equ byte_20015E0, 0x20015E0
+.equ byte_20015E1, 0x20015E1
+.equ byte_20015E2, 0x20015E2
+.equ byte_20015E3, 0x20015E3
+.equ byte_20015E4, 0x20015E4
+.equ byte_20015E5, 0x20015E5
+.equ byte_20015E9, 0x20015E9
+.equ byte_20015EA, 0x20015EA
+.equ byte_20015EC, 0x20015EC
+.equ byte_20015ED, 0x20015ED
+.equ byte_20015EE, 0x20015EE
+.equ word_20015F2, 0x20015F2
+.equ dword_2001600, 0x2001600
+.equ unk_2001610, 0x2001610
+.equ unk_2001770, 0x2001770
+.equ unk_20017A0, 0x20017A0
+.equ dword_2001E98, 0x2001E98
+.equ unk_2001E9C, 0x2001E9C
+.equ byte_2001E9D, 0x2001E9D
+.equ unk_2001EA0, 0x2001EA0
+.equ unk_2006130, 0x2006130
+.equ byte_2006140, 0x2006140
+.equ byte_2006EC0, 0x2006EC0
+.equ unk_2006F40, 0x2006F40
+.equ unk_2007230, 0x2007230
+.equ unk_20073A0, 0x20073A0
+.equ word_20073D0, 0x20073D0
+.equ dword_20073F8, 0x20073F8
+.equ unk_200780C, 0x200780C
+.equ byte_2007810, 0x2007810
+.equ dword_2009440, 0x2009440
+.equ unk_2009F10, 0x2009F10
+.equ word_2009F18, 0x2009F18
+.equ word_2009F1A, 0x2009F1A
+.equ dword_200A100, 0x200A100
+.equ word_200A104, 0x200A104
+.equ byte_200A106, 0x200A106
+.equ byte_200A107, 0x200A107
+.equ dword_200A114, 0x200A114
+.equ dword_200A140, 0x200A140
+.equ dword_200A140, 0x200A140
+.equ dword_200A144, 0x200A144
+.equ unk_200A1A0, 0x200A1A0
+.equ dword_200A338, 0x200A338
+.equ word_200A340, 0x200A340
+.equ word_200A342, 0x200A342
+.equ word_200A344, 0x200A344
+.equ word_200A346, 0x200A346
+.equ byte_200A3C8, 0x200A3C8
+.equ byte_200A3D0, 0x200A3D0
+.equ byte_200A3D1, 0x200A3D1
+.equ byte_200A3D3, 0x200A3D3
+.equ byte_200A3D4, 0x200A3D4
+.equ word_200A3DC, 0x200A3DC
+.equ word_200A3DE, 0x200A3DE
+.equ dword_200A3EC, 0x200A3EC
+.equ dword_200A3F0, 0x200A3F0
+.equ dword_200A3F0, 0x200A3F0
+.equ dword_200A3F4, 0x200A3F4
+.equ dword_200A3F4, 0x200A3F4
+.equ dword_200A3FC, 0x200A3FC
+.equ dword_200A400, 0x200A400
+.equ dword_200A404, 0x200A404
+.equ dword_200A408, 0x200A408
+.equ dword_200A40C, 0x200A40C
+.equ dword_200A416, 0x200A416
+.equ dword_200A416, 0x200A416
+.equ dword_200A41C, 0x200A41C
+.equ dword_200A42C, 0x200A42C
+.equ dword_200A448, 0x200A448
+.equ dword_200A4E0, 0x200A4E0
+.equ dword_200A4E4, 0x200A4E4
+.equ word_200AB30, 0x200AB30
+.equ byte_200ACC0, 0x200ACC0
+.equ byte_200ACC1, 0x200ACC1
+.equ byte_200ACC2, 0x200ACC2
+.equ byte_200ACC3, 0x200ACC3
+.equ byte_200ACC5, 0x200ACC5
+.equ byte_200ACCC, 0x200ACCC
+.equ byte_200ACD4, 0x200ACD4
+.equ byte_200ACD7, 0x200ACD7
+.equ byte_200ACDE, 0x200ACDE
+.equ dword_200AD30, 0x200AD30
+.equ word_200AD34, 0x200AD34
+.equ word_200AD36, 0x200AD36
+.equ byte_200AD38, 0x200AD38
+.equ byte_200AD39, 0x200AD39
+.equ byte_200AD3A, 0x200AD3A
+.equ byte_200AD3B, 0x200AD3B
+.equ byte_200AD3C, 0x200AD3C
+.equ dword_200AD40, 0x200AD40
+.equ dword_200AD44, 0x200AD44
+.equ word_200AD48, 0x200AD48
+.equ unk_200B120, 0x200B120
+.equ byte_200B124, 0x200B124
+.equ byte_200B127, 0x200B127
+.equ word_200B128, 0x200B128
+.equ byte_200B138, 0x200B138
+.equ byte_200B190, 0x200B190
+.equ word_200B194, 0x200B194
+.equ byte_200B220, 0x200B220
+.equ byte_200B226, 0x200B226
+.equ byte_200B228, 0x200B228
+.equ unk_200B490, 0x200B490
+.equ dword_200B498, 0x200B498
+.equ dword_200B49C, 0x200B49C
+.equ dword_200B4A0, 0x200B4A0
+.equ unk_200B6D0, 0x200B6D0
+.equ dword_200B720, 0x200B720
+.equ word_200B724, 0x200B724
+.equ word_200B726, 0x200B726
+.equ word_200B728, 0x200B728
+.equ word_200B72A, 0x200B72A
+.equ word_200B72C, 0x200B72C
+.equ word_200B72E, 0x200B72E
+.equ dword_200D8A0, 0x200D8A0
+.equ word_200D8A4, 0x200D8A4
+.equ byte_200D8A6, 0x200D8A6
+.equ byte_200D8A7, 0x200D8A7
+.equ dword_200D8B4, 0x200D8B4
+.equ dword_200D8C0, 0x200D8C0
+.equ word_200D8C4, 0x200D8C4
+.equ byte_200D8C6, 0x200D8C6
+.equ byte_200D8C7, 0x200D8C7
+.equ dword_200D8D4, 0x200D8D4
+.equ byte_200D8E0, 0x200D8E0
+.equ byte_200D8E1, 0x200D8E1
+.equ word_200D8E4, 0x200D8E4
+.equ word_200D8E6, 0x200D8E6
+.equ dword_200D8E8, 0x200D8E8
+.equ dword_200D8EC, 0x200D8EC
+.equ dword_200D8F0, 0x200D8F0
+.equ dword_200D8F4, 0x200D8F4
+.equ dword_200D8F8, 0x200D8F8
+.equ dword_200D8FC, 0x200D8FC
+.equ dword_200D900, 0x200D900
+.equ byte_200D908, 0x200D908
+.equ byte_200D90A, 0x200D90A
+.equ byte_200D90B, 0x200D90B
+.equ unk_200D920, 0x200D920
+.equ unk_200DAE0, 0x200DAE0
+.equ unk_200DD20, 0x200DD20
+.equ unk_200DEA0, 0x200DEA0
+.equ unk_200E0A0, 0x200E0A0
+.equ byte_200F770, 0x200F770
+.equ byte_200F771, 0x200F771
+.equ byte_200F772, 0x200F772
+.equ byte_200F773, 0x200F773
+.equ byte_200F774, 0x200F774
+.equ word_200F776, 0x200F776
+.equ dword_200F778, 0x200F778
+.equ dword_2010BF0, 0x2010BF0
+.equ dword_2010C00, 0x2010C00
+.equ dword_2010C04, 0x2010C04
+.equ dword_2010C0C, 0x2010C0C
+.equ dword_2010C10, 0x2010C10
+.equ dword_2010C18, 0x2010C18
+.equ dword_2010C1C, 0x2010C1C
+.equ unk_2012800, 0x2012800
+.equ word_2014000, 0x2014000
+.equ unk_20142C0, 0x20142C0
+.equ unk_2014400, 0x2014400
+.equ unk_2014800, 0x2014800
+.equ unk_2014C00, 0x2014C00
+.equ unk_2014E00, 0x2014E00
+.equ unk_2014EC0, 0x2014EC0
+.equ unk_2015000, 0x2015000
+.equ unk_2015400, 0x2015400
+.equ unk_2015800, 0x2015800
+.equ unk_2015C00, 0x2015C00
+.equ unk_2015CC0, 0x2015CC0
+.equ unk_2015D80, 0x2015D80
+.equ unk_2016000, 0x2016000
+.equ unk_20160A8, 0x20160A8
+.equ unk_2016100, 0x2016100
+.equ unk_2016140, 0x2016140
+.equ unk_2016180, 0x2016180
+.equ unk_2016188, 0x2016188
+.equ unk_20161A0, 0x20161A0
+.equ unk_20161E0, 0x20161E0
+.equ unk_2016268, 0x2016268
+.equ unk_2016400, 0x2016400
+.equ unk_2016500, 0x2016500
+.equ unk_2016540, 0x2016540
+.equ unk_2016580, 0x2016580
+.equ unk_20165A0, 0x20165A0
+.equ unk_20165E0, 0x20165E0
+.equ unk_2016600, 0x2016600
+.equ unk_2016800, 0x2016800
+.equ unk_2016900, 0x2016900
+.equ unk_2016AC0, 0x2016AC0
+.equ dword_2016C00, 0x2016C00
+.equ dword_2016C04, 0x2016C04
+.equ unk_2017000, 0x2017000
+.equ unk_2017400, 0x2017400
+.equ unk_2017800, 0x2017800
+.equ unk_2017C00, 0x2017C00
+.equ unk_2018000, 0x2018000
+.equ unk_2018200, 0x2018200
+.equ unk_2018400, 0x2018400
+.equ dword_201A000, 0x201A000
+.equ dword_201A000, 0x201A000
+.equ unk_201A800, 0x201A800
+.equ unk_201AD78, 0x201AD78
+.equ unk_201B000, 0x201B000
+.equ dword_201B800, 0x201B800
+.equ unk_201BD78, 0x201BD78
+.equ dword_201C000, 0x201C000
+.equ dword_201C014, 0x201C014
+.equ unk_201C080, 0x201C080
+.equ word_201C160, 0x201C160
+.equ unk_201C578, 0x201C578
+.equ unk_201D000, 0x201D000
+.equ unk_201D010, 0x201D010
+.equ unk_201D020, 0x201D020
+.equ unk_201E000, 0x201E000
+.equ unk_2020000, 0x2020000
+.equ unk_2022000, 0x2022000
+.equ unk_2024000, 0x2024000
+.equ unk_2026400, 0x2026400
+.equ dword_2027400, 0x2027400
+.equ unk_2027500, 0x2027500
+.equ dword_2027520, 0x2027520
+.equ dword_2028000, 0x2028000
+.equ unk_2028800, 0x2028800
+.equ word_202A000, 0x202A000
+.equ unk_202A800, 0x202A800
+.equ unk_202B000, 0x202B000
+.equ dword_202E000, 0x202E000
+.equ unk_2030000, 0x2030000
+.equ dword_2031000, 0x2031000
+.equ dword_2033000, 0x2033000
+.equ dword_2033000, 0x2033000
+.equ word_203300C, 0x203300C
+.equ word_2033016, 0x2033016
+.equ word_2033018, 0x2033018
+.equ word_2033024, 0x2033024
+.equ word_203303A, 0x203303A
+.equ word_203303C, 0x203303C
+.equ unk_2033060, 0x2033060
+.equ byte_2033072, 0x2033072
+.equ byte_203307B, 0x203307B
+.equ byte_203307C, 0x203307C
+.equ word_203309E, 0x203309E
+.equ unk_2035D50, 0x2035D50
+.equ unk_2036170, 0x2036170
+.equ word_2036188, 0x2036188
+.equ word_203618A, 0x203618A
+.equ word_20361A6, 0x20361A6
+.equ word_20361A8, 0x20361A8
+.equ word_20361C4, 0x20361C4
+.equ word_20361C6, 0x20361C6
+.equ word_20362F8, 0x20362F8
+.equ word_20362FA, 0x20362FA
+.equ word_2036316, 0x2036316
+.equ word_2036318, 0x2036318
+.equ word_2036384, 0x2036384
+.equ word_2036386, 0x2036386
+.equ word_2036388, 0x2036388
+.equ word_20363A2, 0x20363A2
+.equ word_20363A4, 0x20363A4
+.equ word_20363A6, 0x20363A6
+.equ unk_20363D0, 0x20363D0
+.equ byte_20363D1, 0x20363D1
+.equ dword_20363D8, 0x20363D8
+.equ unk_20363DC, 0x20363DC
+.equ byte_20363DD, 0x20363DD
+.equ dword_20363E4, 0x20363E4
+.equ unk_20363F0, 0x20363F0
+.equ byte_2036440, 0x2036440
+.equ byte_2036441, 0x2036441
+.equ word_2036442, 0x2036442
+.equ byte_203644F, 0x203644F
+.equ byte_2036450, 0x2036450
+.equ byte_2036451, 0x2036451
+.equ byte_2036452, 0x2036452
+.equ byte_2036453, 0x2036453
+.equ byte_2036455, 0x2036455
+.equ byte_2036456, 0x2036456
+.equ byte_203645A, 0x203645A
+.equ byte_203645B, 0x203645B
+.equ byte_203645C, 0x203645C
+.equ byte_203645D, 0x203645D
+.equ byte_2036460, 0x2036460
+.equ byte_2036471, 0x2036471
+.equ word_203647E, 0x203647E
+.equ dword_2036490, 0x2036490
+.equ dword_2036494, 0x2036494
+.equ dword_2036498, 0x2036498
+.equ byte_20364A8, 0x20364A8
+.equ unk_20364B0, 0x20364B0
+.equ unk_2036670, 0x2036670
+.equ unk_20366B0, 0x20366B0
+.equ unk_2036800, 0x2036800
+.equ unk_20374B0, 0x20374B0
+.equ byte_2037A10, 0x2037A10
+.equ word_2037A12, 0x2037A12
+.equ word_2037A1E, 0x2037A1E
+.equ word_2037A2A, 0x2037A2A
+.equ word_2037A36, 0x2037A36
+.equ word_2037A42, 0x2037A42
+.equ byte_2037A4E, 0x2037A4E
+.equ byte_2037A54, 0x2037A54
+.equ unk_2037A70, 0x2037A70
+.equ dword_2037A78, 0x2037A78
+.equ dword_2037A88, 0x2037A88
+.equ dword_2037BD8, 0x2037BD8
+.equ dword_2037C40, 0x2037C40
+.equ dword_2037C44, 0x2037C44
+.equ dword_2037C4C, 0x2037C4C
+.equ byte_2037C50, 0x2037C50
+.equ word_203AC30, 0x203AC30
+.equ byte_203B830, 0x203B830
+.equ byte_203B834, 0x203B834
+.equ byte_203B835, 0x203B835
+.equ byte_203B836, 0x203B836
+.equ byte_203B837, 0x203B837
+.equ byte_203B838, 0x203B838
+.equ byte_203B83D, 0x203B83D
+.equ dword_203B844, 0x203B844
+.equ dword_203B848, 0x203B848
+.equ dword_203B84C, 0x203B84C
+.equ byte_203BC90, 0x203BC90
+.equ byte_203BC91, 0x203BC91
+.equ byte_203BC94, 0x203BC94
+.equ word_203BE80, 0x203BE80
+.equ dword_203BF88, 0x203BF88
+.equ dword_203C050, 0x203C050
+.equ dword_203C050, 0x203C050
+.equ dword_203C054, 0x203C054
+.equ dword_203C058, 0x203C058
+.equ dword_203C05C, 0x203C05C
+.equ dword_203C05C, 0x203C05C
+.equ dword_203C060, 0x203C060
+.equ dword_203C064, 0x203C064
+.equ word_203DB70, 0x203DB70
+.equ dword_203DC70, 0x203DC70
+.equ byte_203DC74, 0x203DC74
+.equ byte_203DC77, 0x203DC77
+.equ word_203DC78, 0x203DC78
+.equ word_203DC7A, 0x203DC7A
+.equ word_203DC7C, 0x203DC7C
+.equ word_203DC7E, 0x203DC7E
+.equ unk_203E590, 0x203E590
+.equ unk_203E790, 0x203E790
+.equ byte_203F6D0, 0x203F6D0
+.equ unk_3002240, 0x3002240
+.equ unk_3002640, 0x3002640
+.equ unk_3002660, 0x3002660
+.equ unk_3002680, 0x3002680
+.equ unk_30026E0, 0x30026E0
+.equ unk_3002740, 0x3002740
+.equ unk_3002760, 0x3002760
+.equ word_3002780, 0x3002780
+.equ unk_30027A0, 0x30027A0
+.equ unk_30027C0, 0x30027C0
+.equ unk_30027E0, 0x30027E0
+.equ unk_3002800, 0x3002800
+.equ unk_3002820, 0x3002820
+.equ dword_3002A40, 0x3002A40
+.equ word_3002A50, 0x3002A50
+.equ unk_3002A70, 0x3002A70
+.equ unk_3002A90, 0x3002A90
+.equ unk_3002AB0, 0x3002AB0
+.equ unk_3002AD0, 0x3002AD0
+.equ unk_3002AF0, 0x3002AF0
+.equ unk_3002B10, 0x3002B10
+.equ unk_3002B30, 0x3002B30
+.equ unk_3002B50, 0x3002B50
+.equ unk_3002B70, 0x3002B70
+.equ unk_3002B90, 0x3002B90
+.equ unk_3002BB0, 0x3002BB0
+.equ word_3002BC4, 0x3002BC4
+.equ word_3002BC6, 0x3002BC6
+.equ word_3002BC8, 0x3002BC8
+.equ word_3002BCA, 0x3002BCA
+.equ word_3002BCC, 0x3002BCC
+.equ word_3002BCE, 0x3002BCE
+.equ unk_3002BD0, 0x3002BD0
+.equ unk_3002BF0, 0x3002BF0
+.equ unk_3002C10, 0x3002C10
+.equ word_3002C20, 0x3002C20
+.equ unk_3002C30, 0x3002C30
+.equ dword_3002E50, 0x3002E50
+.equ unk_3003660, 0x3003660
+.equ dword_3003670, 0x3003670
+.equ unk_3003690, 0x3003690
+.equ loc_30064CC, 0x30064CC
+.equ loc_3006504, 0x3006504
+.equ loc_300658C, 0x300658C
+.equ LCDControl, 0x4000000
+.equ BG2Rotation_ScalingParameterA_dx_, 0x4000020
+.equ AlphaBlendingCoefficients, 0x4000052
+.equ Brightness_Fade_In_Out_Coefficient, 0x4000054
+.equ Channel1Sweepregister_NR10_, 0x4000060
+.equ dword_8017C08, 0x8017C08
+.equ off_8071818, 0x8071818
+.equ dword_80740E8, 0x80740E8
+.equ off_8075F44, 0x8075F44
+.equ off_8079C14, 0x8079C14
+.equ off_807FFA4, 0x807FFA4
+.equ off_8082A4C, 0x8082A4C
+.equ dword_809CDC0, 0x809CDC0
+.equ dword_82C8AEC, 0x82C8AEC
+.equ dword_82D3A24, 0x82D3A24
+.equ unk_82DE68C, 0x82DE68C
+.equ dword_82E74B4, 0x82E74B4
+.equ dword_82F3D5C, 0x82F3D5C
+.equ dword_82FF574, 0x82FF574
+.equ dword_83091D4, 0x83091D4
+.equ dword_83124B8, 0x83124B8
+.equ dword_831A888, 0x831A888
+.equ dword_8407DD0, 0x8407DD0
+.equ dword_840E700, 0x840E700
+.equ dword_841DC88, 0x841DC88
+.equ dword_84210D8, 0x84210D8
+.equ dword_8427930, 0x8427930
+.equ dword_84294DC, 0x84294DC
+.equ dword_842B888, 0x842B888
+.equ dword_842D820, 0x842D820
+.equ dword_842EE30, 0x842EE30
+.equ dword_8435954, 0x8435954
+.equ dword_843642C, 0x843642C
+.equ dword_84C3FA4, 0x84C3FA4
+.equ off_84E6AC8, 0x84E6AC8
+.equ off_84EADE8, 0x84EADE8
+.equ dword_84EAFEC, 0x84EAFEC
+.equ off_84ECA08, 0x84ECA08
+.equ off_84F05A8, 0x84F05A8
+.equ dword_84F07AC, 0x84F07AC
+.equ off_84F1230, 0x84F1230
+.equ off_84F3598, 0x84F3598
+.equ dword_84F379C, 0x84F379C
+.equ off_84F3D30, 0x84F3D30
+.equ off_84F5F88, 0x84F5F88
+.equ dword_84F618C, 0x84F618C
+.equ off_84F6794, 0x84F6794
+.equ off_84F9508, 0x84F9508
+.equ dword_84F970C, 0x84F970C
+.equ off_84F9D90, 0x84F9D90
+.equ off_84FD424, 0x84FD424
+.equ dword_84FD628, 0x84FD628
+.equ off_84FDF6C, 0x84FDF6C
+.equ off_85011B0, 0x85011B0
+.equ dword_85013B4, 0x85013B4
+.equ off_8501C04, 0x8501C04
+.equ off_8505728, 0x8505728
+.equ dword_850592C, 0x850592C
+.equ off_8506F88, 0x8506F88
+.equ off_850A26C, 0x850A26C
+.equ dword_850A470, 0x850A470
+.equ off_850B904, 0x850B904
+.equ off_850E838, 0x850E838
+.equ dword_850EA3C, 0x850EA3C
+.equ off_850FB9C, 0x850FB9C
+.equ off_8513798, 0x8513798
+.equ dword_851399C, 0x851399C
+.equ off_8515480, 0x8515480
+.equ dword_8515684, 0x8515684
+.equ off_85168B8, 0x85168B8
+.equ off_851A010, 0x851A010
+.equ dword_851A214, 0x851A214
+.equ off_851ABB8, 0x851ABB8
+.equ off_851DC84, 0x851DC84
+.equ dword_851DE88, 0x851DE88
+.equ off_851F190, 0x851F190
+.equ off_85237C8, 0x85237C8
+.equ dword_85239CC, 0x85239CC
+.equ off_8525120, 0x8525120
+.equ off_85296AC, 0x85296AC
+.equ dword_85298B0, 0x85298B0
+.equ off_852AE54, 0x852AE54
+.equ off_852E234, 0x852E234
+.equ dword_852E438, 0x852E438
+.equ off_852EE68, 0x852EE68
+.equ off_8531E68, 0x8531E68
+.equ dword_853206C, 0x853206C
+.equ off_8533754, 0x8533754
+.equ off_8538548, 0x8538548
+.equ dword_853874C, 0x853874C
+.equ off_8539C60, 0x8539C60
+.equ off_853DE64, 0x853DE64
+.equ dword_853E068, 0x853E068
+.equ off_853F4C4, 0x853F4C4
+.equ off_8543158, 0x8543158
+.equ dword_854335C, 0x854335C
+.equ off_8544F9C, 0x8544F9C
+.equ off_8548928, 0x8548928
+.equ dword_8548B2C, 0x8548B2C
+.equ off_854AB58, 0x854AB58
+.equ off_854D374, 0x854D374
+.equ dword_854D578, 0x854D578
+.equ off_854DCEC, 0x854DCEC
+.equ off_854FE28, 0x854FE28
+.equ dword_855002C, 0x855002C
+.equ off_8550CA4, 0x8550CA4
+.equ off_855566C, 0x855566C
+.equ dword_8555870, 0x8555870
+.equ off_8556E40, 0x8556E40
+.equ off_855BFF8, 0x855BFF8
+.equ dword_855C1FC, 0x855C1FC
+.equ off_855D604, 0x855D604
+.equ off_8560A54, 0x8560A54
+.equ dword_8560C58, 0x8560C58
+.equ off_8561B00, 0x8561B00
+.equ off_85663D4, 0x85663D4
+.equ dword_85665D8, 0x85665D8
+.equ off_856811C, 0x856811C
+.equ off_856BAA8, 0x856BAA8
+.equ dword_856BCAC, 0x856BCAC
+.equ off_856E9F8, 0x856E9F8
+.equ off_8572118, 0x8572118
+.equ dword_857231C, 0x857231C
+.equ off_8573758, 0x8573758
+.equ off_8576660, 0x8576660
+.equ dword_8576864, 0x8576864
+.equ off_8577920, 0x8577920
+.equ off_857B21C, 0x857B21C
+.equ off_858F634, 0x858F634
+.equ off_8592C44, 0x8592C44
+.equ dword_8592E48, 0x8592E48
+.equ dword_8595BB0, 0x8595BB0
+.equ dword_8598714, 0x8598714
+.equ dword_859B6E8, 0x859B6E8
+.equ dword_859E314, 0x859E314
+.equ off_85A0D5C, 0x85A0D5C
+.equ dword_85A0F60, 0x85A0F60
+.equ dword_85A2AA8, 0x85A2AA8
+.equ dword_85A4690, 0x85A4690
+.equ dword_85A63CC, 0x85A63CC
+.equ off_85A86E0, 0x85A86E0
+.equ dword_85A88E4, 0x85A88E4
+.equ off_85AA458, 0x85AA458
+.equ off_85ACC0C, 0x85ACC0C
+.equ dword_85ACE10, 0x85ACE10
+.equ off_85ADE2C, 0x85ADE2C
+.equ dword_85AE030, 0x85AE030
+.equ off_85AEF94, 0x85AEF94
+.equ dword_85AF198, 0x85AF198
+.equ off_85B0248, 0x85B0248
+.equ dword_85B044C, 0x85B044C
+.equ off_85B1320, 0x85B1320
+.equ dword_85B1524, 0x85B1524
+.equ off_85B2FD4, 0x85B2FD4
+.equ dword_85B31D8, 0x85B31D8
+.equ off_85B44E8, 0x85B44E8
+.equ dword_85B46EC, 0x85B46EC
+.equ off_85B5ACC, 0x85B5ACC
+.equ dword_85B5CD0, 0x85B5CD0
+.equ off_85B72E8, 0x85B72E8
+.equ off_85B8238, 0x85B8238
+.equ dword_85B843C, 0x85B843C
+.equ dword_85B90D8, 0x85B90D8
+.equ off_85BA528, 0x85BA528
+.equ off_85BE5EC, 0x85BE5EC
+.equ dword_85BE7F0, 0x85BE7F0
+.equ dword_85C0964, 0x85C0964
+.equ dword_85C31C4, 0x85C31C4
+.equ dword_85C55EC, 0x85C55EC
+.equ off_85C78B8, 0x85C78B8
+.equ dword_85C7ABC, 0x85C7ABC
+.equ dword_85C9DE8, 0x85C9DE8
+.equ dword_85CC524, 0x85CC524
+.equ off_85CDF88, 0x85CDF88
+.equ off_85CE18C, 0x85CE18C
+.equ dword_85D2348, 0x85D2348
+.equ off_85D4C9C, 0x85D4C9C
+.equ dword_85D4EA0, 0x85D4EA0
+.equ dword_85D787C, 0x85D787C
+.equ off_85DA0B4, 0x85DA0B4
+.equ dword_85DDC10, 0x85DDC10
+.equ off_85E087C, 0x85E087C
+.equ dword_85E0A80, 0x85E0A80
+.equ off_85E3724, 0x85E3724
+.equ dword_85E3928, 0x85E3928
+.equ off_85E6390, 0x85E6390
+.equ dword_85E6594, 0x85E6594
+.equ off_85E9068, 0x85E9068
+.equ off_85E926C, 0x85E926C
+.equ dword_85EEB4C, 0x85EEB4C
+.equ off_85F13D0, 0x85F13D0
+.equ dword_85F15D4, 0x85F15D4
+.equ dword_85F3DB8, 0x85F3DB8
+.equ off_85F672C, 0x85F672C
+.equ dword_85F9714, 0x85F9714
+.equ off_85FC6E0, 0x85FC6E0
+.equ dword_85FC8E4, 0x85FC8E4
+.equ dword_85FF3CC, 0x85FF3CC
+.equ dword_8602034, 0x8602034
+.equ off_8604378, 0x8604378
+.equ dword_860457C, 0x860457C
+.equ dword_861BD44, 0x861BD44
+.equ dword_861CF14, 0x861CF14
+.equ dword_861D428, 0x861D428
+.equ dword_861D6F4, 0x861D6F4
+.equ dword_861D974, 0x861D974
+.equ dword_861DC00, 0x861DC00
+.equ dword_861E104, 0x861E104
+.equ dword_861E460, 0x861E460
+.equ dword_861EFBC, 0x861EFBC
+.equ dword_861FE0C, 0x861FE0C
+.equ dword_8623370, 0x8623370
+.equ dword_8623C4C, 0x8623C4C
+.equ dword_8624844, 0x8624844
+.equ dword_86255D0, 0x86255D0
+.equ dword_86265A0, 0x86265A0
+.equ dword_86269D8, 0x86269D8
+.equ dword_8627164, 0x8627164
+.equ dword_8629094, 0x8629094
+.equ dword_8629E04, 0x8629E04
+.equ dword_862AB60, 0x862AB60
+.equ dword_862C3D8, 0x862C3D8
+.equ dword_862CA00, 0x862CA00
+.equ dword_862DA7C, 0x862DA7C
+.equ dword_862E18C, 0x862E18C
+.equ dword_862F228, 0x862F228
+.equ dword_862FDB0, 0x862FDB0
+.equ dword_863183C, 0x863183C
+.equ dword_8632E34, 0x8632E34
+.equ dword_86341B0, 0x86341B0
+.equ dword_8634D54, 0x8634D54
+.equ dword_86358E4, 0x86358E4
+.equ dword_863675C, 0x863675C
+.equ dword_86378BC, 0x86378BC
+.equ dword_8638714, 0x8638714
+.equ dword_86397C8, 0x86397C8
+.equ dword_863B980, 0x863B980
+.equ dword_863DC9C, 0x863DC9C
+.equ dword_8640314, 0x8640314
+.equ dword_8642CD8, 0x8642CD8
+.equ dword_8643B90, 0x8643B90
+.equ dword_8644CB0, 0x8644CB0
+.equ dword_8645FA8, 0x8645FA8
+.equ dword_86475D0, 0x86475D0
+.equ dword_8647C80, 0x8647C80
+.equ dword_8648220, 0x8648220
+.equ dword_8648914, 0x8648914
+.equ dword_86491C8, 0x86491C8
+.equ dword_8649710, 0x8649710
+.equ dword_864A12C, 0x864A12C
+.equ dword_864A85C, 0x864A85C
+.equ dword_864B290, 0x864B290
+.equ dword_864BD54, 0x864BD54
+.equ dword_864C330, 0x864C330
+.equ dword_864CB2C, 0x864CB2C
+.equ dword_864CF78, 0x864CF78
+.equ dword_864D6D0, 0x864D6D0
+.equ dword_864DCC0, 0x864DCC0
+.equ dword_864E380, 0x864E380
+.equ dword_864F4C4, 0x864F4C4
+.equ dword_8650C8C, 0x8650C8C
+.equ dword_8652258, 0x8652258
+.equ dword_8653F04, 0x8653F04
+.equ dword_86573D4, 0x86573D4
+.equ dword_865C518, 0x865C518
+.equ dword_865D820, 0x865D820
+.equ dword_8660AF0, 0x8660AF0
+.equ dword_8664684, 0x8664684
+.equ dword_86678B4, 0x86678B4
+.equ dword_8669EAC, 0x8669EAC
+.equ dword_866C5AC, 0x866C5AC
+.equ dword_866EEEC, 0x866EEEC
+.equ dword_8671CF0, 0x8671CF0
+.equ dword_867462C, 0x867462C
+.equ dword_8677C48, 0x8677C48
+.equ dword_867A0E8, 0x867A0E8
+.equ dword_867E180, 0x867E180
+.equ dword_8680720, 0x8680720
+.equ dword_8683D4C, 0x8683D4C
+.equ dword_86859C8, 0x86859C8
+.equ dword_868DBA4, 0x868DBA4
+.equ dword_868E124, 0x868E124
+.equ dword_868E1A4, 0x868E1A4
+.equ dword_868E1C4, 0x868E1C4
+.equ dword_868E1E4, 0x868E1E4
+.equ dword_868E204, 0x868E204
+.equ dword_868E224, 0x868E224
+.equ dword_8695224, 0x8695224
+.equ dword_869F784, 0x869F784
+.equ dword_869F7C4, 0x869F7C4
+.equ dword_869F8A4, 0x869F8A4
+.equ dword_869F8C4, 0x869F8C4
+.equ dword_869F8E4, 0x869F8E4
+.equ dword_869FAE4, 0x869FAE4
+.equ dword_869FBE4, 0x869FBE4
+.equ dword_869FCE4, 0x869FCE4
+.equ dword_869FDE4, 0x869FDE4
+.equ dword_869FEE4, 0x869FEE4
+.equ dword_869FFE4, 0x869FFE4
+.equ dword_86A00E4, 0x86A00E4
+.equ dword_86A0364, 0x86A0364
+.equ dword_86A03C4, 0x86A03C4
+.equ dword_86A0704, 0x86A0704
+.equ dword_86A0724, 0x86A0724
+.equ dword_86A0744, 0x86A0744
+.equ dword_86A0764, 0x86A0764
+.equ dword_86A0784, 0x86A0784
+.equ dword_86A3CA8, 0x86A3CA8
+.equ dword_86A7420, 0x86A7420
+.equ dword_86AA8F8, 0x86AA8F8
+.equ dword_86ADA44, 0x86ADA44
+.equ dword_86AE3A4, 0x86AE3A4
+.equ dword_86AE3C4, 0x86AE3C4
+.equ loc_86AED74, 0x86AED74
+.equ loc_86B4634, 0x86B4634
+.equ dword_86B9FB4, 0x86B9FB4
+.equ dword_86BADC4, 0x86BADC4
+.equ dword_86BB84C, 0x86BB84C
+.equ dword_86BC028, 0x86BC028
+.equ dword_86BCDAC, 0x86BCDAC
+.equ dword_86BE340, 0x86BE340
+.equ dword_86BF138, 0x86BF138
+.equ dword_86BFF18, 0x86BFF18
+.equ dword_86C0B9C, 0x86C0B9C
+.equ unk_86C17C0, 0x86C17C0
+.equ dword_86C22D0, 0x86C22D0
+.equ dword_86C24D0, 0x86C24D0
+.equ dword_86C26D0, 0x86C26D0
+.equ dword_86C28D0, 0x86C28D0
+.equ asc_86C29D4, 0x86C29D4
+.equ dword_86C2CD0, 0x86C2CD0
+.equ dword_86C2ED0, 0x86C2ED0
+.equ dword_86C32D0, 0x86C32D0
+.equ dword_86C34D0, 0x86C34D0
+.equ dword_86C36D0, 0x86C36D0
+.equ dword_86C38D0, 0x86C38D0
+.equ dword_86C3AD0, 0x86C3AD0
+.equ dword_86C3CF0, 0x86C3CF0
+.equ dword_86C3D10, 0x86C3D10
+.equ dword_86C4210, 0x86C4210
+.equ dword_86C4710, 0x86C4710
+.equ dword_86C4800, 0x86C4800
+.equ dword_86C48F0, 0x86C48F0
+.equ dword_86C49E0, 0x86C49E0
+.equ dword_86C4AD0, 0x86C4AD0
+.equ dword_86C50C0, 0x86C50C0
+.equ dword_86C51B0, 0x86C51B0
+.equ dword_86C52A0, 0x86C52A0
+.equ dword_86C5390, 0x86C5390
+.equ dword_86C5480, 0x86C5480
+.equ dword_86C5750, 0x86C5750
+.equ dword_86C5948, 0x86C5948
+.equ dword_86C5BAC, 0x86C5BAC
+.equ dword_86C5D2C, 0x86C5D2C
+.equ dword_86C61DC, 0x86C61DC
+.equ dword_86C668C, 0x86C668C
+.equ dword_86C6B3C, 0x86C6B3C
+.equ dword_86C6BDC, 0x86C6BDC
+.equ dword_86C6BFC, 0x86C6BFC
+.equ dword_86C6D80, 0x86C6D80
+.equ dword_86C6E60, 0x86C6E60
+.equ dword_86CDEA0, 0x86CDEA0
+.equ dword_86CDFA0, 0x86CDFA0
+.equ dword_86CE300, 0x86CE300
+.equ dword_86CE720, 0x86CE720
+.equ dword_86CEA60, 0x86CEA60
+.equ dword_86CEAE0, 0x86CEAE0
+.equ dword_86D156C, 0x86D156C
+.equ dword_86D1794, 0x86D1794
+.equ dword_86D1794, 0x86D1794
+.equ dword_86D3198, 0x86D3198
+.equ byte_86D3648, 0x86D3648
+.equ dword_86D3E40, 0x86D3E40
+.equ dword_86D42F0, 0x86D42F0
+.equ dword_86D44D0, 0x86D44D0
+.equ dword_86D4980, 0x86D4980
+.equ dword_86D4EA8, 0x86D4EA8
+.equ dword_86D554C, 0x86D554C
+.equ dword_86D59FC, 0x86D59FC
+.equ dword_86D5A5C, 0x86D5A5C
+.equ dword_86D5ABC, 0x86D5ABC
+.equ dword_86D5B1C, 0x86D5B1C
+.equ dword_86D5B7C, 0x86D5B7C
+.equ aAbbbbbbbb, 0x86D602C
+.equ dword_86D6450, 0x86D6450
+.equ dword_86D6900, 0x86D6900
+.equ dword_86D6A18, 0x86D6A18
+.equ dword_86D6B30, 0x86D6B30
+.equ dword_86D6C34, 0x86D6C34
+.equ dword_86D6E2C, 0x86D6E2C
+.equ byte_86D72DC, 0x86D72DC
+.equ dword_86D7EF4, 0x86D7EF4
+.equ dword_86D83A4, 0x86D83A4
+.equ dword_86D84BC, 0x86D84BC
+.equ dword_86D896C, 0x86D896C
+.equ dword_86D92CC, 0x86D92CC
+.equ dword_86D996C, 0x86D996C
+.equ aAbcdbcefghijkl, 0x86D9E1C
+.equ dword_86D9E54, 0x86D9E54
+.equ asc_86DA174, 0x86DA174
+.equ dword_86DABEC, 0x86DABEC
+.equ loc_86DAE6C, 0x86DAE6C
+.equ dword_86DD9AC, 0x86DD9AC
+.equ dword_86DDA2C, 0x86DDA2C
+.equ dword_86DDA4C, 0x86DDA4C
+.equ dword_86DDA8C, 0x86DDA8C
+.equ dword_86DE22C, 0x86DE22C
+.equ dword_86DE24C, 0x86DE24C
+.equ dword_86DE35C, 0x86DE35C
+.equ dword_86DE5D4, 0x86DE5D4
+.equ unk_86DE644, 0x86DE644
+.equ dword_86E0A10, 0x86E0A10
+.equ dword_86E2D1C, 0x86E2D1C
+.equ dword_86E2D68, 0x86E2D68
+.equ dword_86E31DC, 0x86E31DC
+.equ dword_86E3238, 0x86E3238
+.equ dword_86E3520, 0x86E3520
+.equ aNn, 0x86E4890
+.equ unk_86E4BEC, 0x86E4BEC
+.equ dword_86E5B94, 0x86E5B94
+.equ byte_86E66B8, 0x86E66B8
+.equ dword_86E6F00, 0x86E6F00
+.equ dword_86E789C, 0x86E789C
+.equ dword_86E7F10, 0x86E7F10
+.equ loc_86E9900, 0x86E9900
+.equ loc_86E9E00, 0x86E9E00
+.equ dword_86EADA0, 0x86EADA0
+.equ dword_86EBFC0, 0x86EBFC0
+.equ loc_86ECF98, 0x86ECF98
+.equ dword_86EE2B8, 0x86EE2B8
+.equ dword_86F00B0, 0x86F00B0
+.equ dword_86F0310, 0x86F0310
+.equ dword_86F0350, 0x86F0350
+.equ dword_86F0410, 0x86F0410
+.equ dword_86F04D0, 0x86F04D0
+.equ dword_86F1050, 0x86F1050
+.equ dword_86F1070, 0x86F1070
+.equ dword_86F1160, 0x86F1160
+.equ asc_86F151D, 0x86F151D
+.equ dword_86F17E0, 0x86F17E0
+.equ dword_86F1D0C, 0x86F1D0C
+.equ dword_86F2104, 0x86F2104
+.equ dword_86F2510, 0x86F2510
+.equ dword_86F2530, 0x86F2530
+.equ dword_86F2CA4, 0x86F2CA4
+.equ loc_86F3D5C, 0x86F3D5C
+.equ dword_86F3F70, 0x86F3F70
+.equ dword_86F5560, 0x86F5560
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ dword_86F5D60, 0x86F5D60
+.equ byte_86F6100, 0x86F6100
+.equ byte_86F6180, 0x86F6180
+.equ aSbsbsbsbsbsbsb_1, 0x86F6270
+.equ dword_86F6284, 0x86F6284
+.equ dword_86F6380, 0x86F6380
+.equ dword_86F63F0, 0x86F63F0
+.equ dword_86F63F0, 0x86F63F0
+.equ dword_86F63F0, 0x86F63F0
+.equ dword_86F63F0, 0x86F63F0
+.equ dword_86F63F0, 0x86F63F0
+.equ dword_86F63F0, 0x86F63F0
+.equ byte_86F66C0, 0x86F66C0
+.equ byte_86F6AC0, 0x86F6AC0
+.equ byte_86F6CC0, 0x86F6CC0
+.equ byte_86F6EC0, 0x86F6EC0
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F70A4, 0x86F70A4
+.equ dword_86F7BE4, 0x86F7BE4
+.equ dword_86F7BE4, 0x86F7BE4
+.equ dword_86F7BE4, 0x86F7BE4
+.equ dword_86F7BE4, 0x86F7BE4
+.equ dword_86F7FA4, 0x86F7FA4
+.equ dword_86F8164, 0x86F8164
+.equ dword_86F8244, 0x86F8244
+.equ byte_86F8340, 0x86F8340
+.equ dword_86F87B4, 0x86F87B4
+.equ dword_86F87B4, 0x86F87B4
+.equ dword_8700FBC, 0x8700FBC
+.equ dword_87054C0, 0x87054C0
+.equ dword_8706800, 0x8706800
+.equ unk_8706F00, 0x8706F00
+.equ unk_8707580, 0x8707580
+.equ dword_8707A80, 0x8707A80
+.equ dword_8707AA0, 0x8707AA0
+.equ dword_8708CE0, 0x8708CE0
+.equ dword_8708D20, 0x8708D20
+.equ dword_870A000, 0x870A000
+.equ dword_870A020, 0x870A020
+.equ dword_870A060, 0x870A060
+.equ dword_870A080, 0x870A080
+.equ dword_870A780, 0x870A780
+.equ dword_870A940, 0x870A940
+.equ dword_873A4F8, 0x873A4F8
+.equ dword_873AA38, 0x873AA38
+.equ unk_873AF78, 0x873AF78
+.equ dword_873B4B8, 0x873B4B8
+.equ dword_873DD78, 0x873DD78
+.equ dword_873DD98, 0x873DD98
+.equ loc_8745CB8, 0x8745CB8
+.equ off_8745E98, 0x8745E98
+.equ loc_8746830, 0x8746830
+.equ a8Bdfhjlnprtvxz, 0x8746D20
+.equ byte_8746D90, 0x8746D90
+.equ loc_8746ECC, 0x8746ECC
+.equ unk_8748110, 0x8748110
+.equ unk_8748A14, 0x8748A14
+.equ unk_874914C, 0x874914C
+.equ unk_87496AC, 0x87496AC
+.equ unk_8749B60, 0x8749B60
+.equ dword_8749F30, 0x8749F30
+.equ dword_874C670, 0x874C670
+.equ dword_874E6E8, 0x874E6E8
+.equ dword_87509C8, 0x87509C8
+.equ dword_8750CF8, 0x8750CF8
+.equ dword_8751028, 0x8751028
+.equ dword_8751028, 0x8751028
+.equ dword_8751028, 0x8751028
+.equ unk_8751B18, 0x8751B18
+.equ dword_8752058, 0x8752058
+.equ unk_8752078, 0x8752078
+.equ dword_87525B8, 0x87525B8
+.equ dword_87525D8, 0x87525D8
+.equ dword_8752B18, 0x8752B18
+.equ dword_8752B38, 0x8752B38
+.equ dword_8753078, 0x8753078
+.equ unk_8753098, 0x8753098
+.equ dword_87535D8, 0x87535D8
+.equ dword_8753658, 0x8753658
+.equ dword_87545EC, 0x87545EC
+.equ dword_87548F4, 0x87548F4
+.equ unk_87D918C, 0x87D918C
+.equ unk_87D948C, 0x87D948C
+.equ unk_87D97E0, 0x87D97E0
+.equ dword_87DDE08, 0x87DDE08
 
 .endif // INC_ASM02
