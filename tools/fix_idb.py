@@ -7,7 +7,6 @@ it compiles and outputs a matching ROM.
 
 
 pt.fix.remFuncChunks()
-pt.fix.replNameParen()
 pt.fix.removeStackVarUsages(0x8000000, 0x8800000)
 # this just needs to repeat a few times to remove new ARM guesses
 for i in range(3):
