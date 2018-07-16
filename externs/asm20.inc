@@ -2,17 +2,17 @@
 .equ EXT_ASM20, 0
 
 .include "asm02.inc"
-// .equ sub_8024F9C, 0x8024F9C
-// .equ sub_8024FB8, 0x8024FB8
-// .equ sub_8024FF4, 0x8024FF4
-// .equ sub_8025F1E, 0x8025F1E
-// .equ sub_802A6B4, 0x802A6B4
+// .extern sub_8024F9C
+// .extern sub_8024FB8
+// .extern sub_8024FF4
+// .extern sub_8025F1E
+// .extern sub_802A6B4
 
 .include "asm27.inc"
-// .equ sub_809F2B4, 0x809F2B4
+// .extern sub_809F2B4
 
 .include "asm00.inc"
-// .equ sub_8001C94, 0x8001C94
+// .extern sub_8001C94
 
 
 .equ dword_200AA90, 0x200AA90

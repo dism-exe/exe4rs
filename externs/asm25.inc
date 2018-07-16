@@ -2,10 +2,10 @@
 .equ EXT_ASM25, 0
 
 .include "asm27.inc"
-// .equ sub_80A6F0E, 0x80A6F0E
+// .extern sub_80A6F0E
 
 .include "asm00.inc"
-// .equ f500_8000558, 0x8000558
+// .extern f500_8000558
 
 
 .equ unk_20005E0, 0x20005E0

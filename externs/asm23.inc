@@ -2,7 +2,7 @@
 .equ EXT_ASM23, 0
 
 .include "asm00.inc"
-// .equ f500_8000558, 0x8000558
+// .extern f500_8000558
 
 
 

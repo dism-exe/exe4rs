@@ -4,7 +4,7 @@
 // Public Interface
 
 // Forward Reference
-.equ dead_80986C4, 0x80986C4
+.extern dead_80986C4
 
 
 .endif // INC_ASM26

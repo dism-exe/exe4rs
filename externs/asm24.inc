@@ -2,14 +2,14 @@
 .equ EXT_ASM24, 0
 
 .include "asm15.inc"
-// .equ sub_807CB92, 0x807CB92
+// .extern sub_807CB92
 
 .include "asm02.inc"
-// .equ sub_8024FF0, 0x8024FF0
-// .equ sub_8029296, 0x8029296
+// .extern sub_8024FF0
+// .extern sub_8029296
 
 .include "asm00.inc"
-// .equ sub_8001C94, 0x8001C94
+// .extern sub_8001C94
 
 
 .equ dword_200AAB0, 0x200AAB0

@@ -2,13 +2,13 @@
 .equ EXT_ASM21, 0
 
 .include "start.inc"
-// .equ start_, 0x8000000
+// .extern start_
 
 .include "asm27.inc"
-// .equ sub_80A2798, 0x80A2798
+// .extern sub_80A2798
 
 .include "asm00.inc"
-// .equ sub_8001D60, 0x8001D60
+// .extern sub_8001D60
 
 
 .equ byte_2010BA8, 0x2010BA8

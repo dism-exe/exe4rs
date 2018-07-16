@@ -2,76 +2,76 @@
 .equ INC_ASM20, 0
 
 // Public Interface
-.equ off_8089EC8, 0x8089EC8
+.extern off_8089EC8
 
 // Forward Reference
-.equ dead_80886F8, 0x80886F8
-.equ sub_8088C8C, 0x8088C8C
-.equ dword_8088CA8, 0x8088CA8
-.equ sub_8088CAC, 0x8088CAC
-.equ sub_8089880, 0x8089880
-.equ off_8089894, 0x8089894
-.equ off_8089898, 0x8089898
-.equ sub_80898E8, 0x80898E8
-.equ off_80898FC, 0x80898FC
-.equ off_8089900, 0x8089900
-.equ sub_8089904, 0x8089904
-.equ sub_8089910, 0x8089910
-.equ loc_8089920, 0x8089920
-.equ off_8089AFC, 0x8089AFC
-.equ sub_8089B70, 0x8089B70
-.equ off_8089B84, 0x8089B84
-.equ off_8089B88, 0x8089B88
-.equ sub_8089B8C, 0x8089B8C
-.equ sub_8089B98, 0x8089B98
-.equ sub_8089C00, 0x8089C00
-.equ off_8089C10, 0x8089C10
-.equ dead_8089C5C, 0x8089C5C
-.equ off_8089C80, 0x8089C80
-.equ word_8089C84, 0x8089C84
-.equ word_8089C86, 0x8089C86
-.equ sub_8089C88, 0x8089C88
-.equ unk_8089D0C, 0x8089D0C
-.equ dword_8089ED8, 0x8089ED8
-.equ dword_8089EDC, 0x8089EDC
-.equ off_8089EE0, 0x8089EE0
-.equ off_8089EE8, 0x8089EE8
-.equ sub_8089FDC, 0x8089FDC
-.equ off_8089FF0, 0x8089FF0
-.equ off_8089FF4, 0x8089FF4
-.equ sub_8089FF8, 0x8089FF8
-.equ loc_808A036, 0x808A036
-.equ loc_808A042, 0x808A042
-.equ off_808A048, 0x808A048
-.equ dword_808A04C, 0x808A04C
-.equ sub_808A054, 0x808A054
-.equ loc_808A07A, 0x808A07A
-.equ off_808A088, 0x808A088
-.equ off_808A08C, 0x808A08C
-.equ off_808A09C, 0x808A09C
-.equ off_808A0A0, 0x808A0A0
-.equ off_808A0B0, 0x808A0B0
-.equ byte_808A0B4, 0x808A0B4
-.equ dead_808A0BC, 0x808A0BC
-.equ loc_808A0E2, 0x808A0E2
-.equ loc_808A0FC, 0x808A0FC
-.equ off_808A104, 0x808A104
-.equ off_808A108, 0x808A108
-.equ sub_808A10C, 0x808A10C
-.equ sub_808A118, 0x808A118
-.equ loc_808A136, 0x808A136
-.equ loc_808A13A, 0x808A13A
-.equ sub_808A140, 0x808A140
-.equ loc_808A152, 0x808A152
-.equ loc_808A16C, 0x808A16C
-.equ sub_808A170, 0x808A170
-.equ loc_808A18A, 0x808A18A
-.equ loc_808A1A0, 0x808A1A0
-.equ sub_808A1A4, 0x808A1A4
-.equ loc_808A1BA, 0x808A1BA
-.equ loc_808A1D4, 0x808A1D4
-.equ loc_808A1EA, 0x808A1EA
-.equ off_808A1F0, 0x808A1F0
+.extern dead_80886F8
+.extern sub_8088C8C
+.extern dword_8088CA8
+.extern sub_8088CAC
+.extern sub_8089880
+.extern off_8089894
+.extern off_8089898
+.extern sub_80898E8
+.extern off_80898FC
+.extern off_8089900
+.extern sub_8089904
+.extern sub_8089910
+.extern loc_8089920
+.extern off_8089AFC
+.extern sub_8089B70
+.extern off_8089B84
+.extern off_8089B88
+.extern sub_8089B8C
+.extern sub_8089B98
+.extern sub_8089C00
+.extern off_8089C10
+.extern dead_8089C5C
+.extern off_8089C80
+.extern word_8089C84
+.extern word_8089C86
+.extern sub_8089C88
+.extern unk_8089D0C
+.extern dword_8089ED8
+.extern dword_8089EDC
+.extern off_8089EE0
+.extern off_8089EE8
+.extern sub_8089FDC
+.extern off_8089FF0
+.extern off_8089FF4
+.extern sub_8089FF8
+.extern loc_808A036
+.extern loc_808A042
+.extern off_808A048
+.extern dword_808A04C
+.extern sub_808A054
+.extern loc_808A07A
+.extern off_808A088
+.extern off_808A08C
+.extern off_808A09C
+.extern off_808A0A0
+.extern off_808A0B0
+.extern byte_808A0B4
+.extern dead_808A0BC
+.extern loc_808A0E2
+.extern loc_808A0FC
+.extern off_808A104
+.extern off_808A108
+.extern sub_808A10C
+.extern sub_808A118
+.extern loc_808A136
+.extern loc_808A13A
+.extern sub_808A140
+.extern loc_808A152
+.extern loc_808A16C
+.extern sub_808A170
+.extern loc_808A18A
+.extern loc_808A1A0
+.extern sub_808A1A4
+.extern loc_808A1BA
+.extern loc_808A1D4
+.extern loc_808A1EA
+.extern off_808A1F0
 
 
 .endif // INC_ASM20

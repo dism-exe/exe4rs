@@ -2,274 +2,274 @@
 .equ EXT_ASM02, 0
 
 .include "asm03.inc"
-// .equ sub_8046CA8, 0x8046CA8
-// .equ sub_8046CD8, 0x8046CD8
-// .equ sub_8046E64, 0x8046E64
-// .equ sub_8046EC8, 0x8046EC8
-// .equ sub_8046FA4, 0x8046FA4
-// .equ sub_8046FB4, 0x8046FB4
-// .equ sub_80470A8, 0x80470A8
-// .equ sub_80471B0, 0x80471B0
-// .equ sub_80471E8, 0x80471E8
-// .equ sub_8047578, 0x8047578
-// .equ sub_8047584, 0x8047584
-// .equ sub_80475DC, 0x80475DC
-// .equ sub_80475F4, 0x80475F4
-// .equ sub_8047768, 0x8047768
-// .equ sub_80480B4, 0x80480B4
-// .equ sub_8048104, 0x8048104
-// .equ sub_804814C, 0x804814C
-// .equ sub_804819C, 0x804819C
-// .equ sub_80481C8, 0x80481C8
-// .equ sub_80481EC, 0x80481EC
-// .equ sub_8048660, 0x8048660
-// .equ sub_8048714, 0x8048714
-// .equ sub_80487E8, 0x80487E8
-// .equ sub_8048956, 0x8048956
-// .equ loc_804C5F4, 0x804C5F4
-// .equ sub_804E2A4, 0x804E2A4
+// .extern sub_8046CA8
+// .extern sub_8046CD8
+// .extern sub_8046E64
+// .extern sub_8046EC8
+// .extern sub_8046FA4
+// .extern sub_8046FB4
+// .extern sub_80470A8
+// .extern sub_80471B0
+// .extern sub_80471E8
+// .extern sub_8047578
+// .extern sub_8047584
+// .extern sub_80475DC
+// .extern sub_80475F4
+// .extern sub_8047768
+// .extern sub_80480B4
+// .extern sub_8048104
+// .extern sub_804814C
+// .extern sub_804819C
+// .extern sub_80481C8
+// .extern sub_80481EC
+// .extern sub_8048660
+// .extern sub_8048714
+// .extern sub_80487E8
+// .extern sub_8048956
+// .extern loc_804C5F4
+// .extern sub_804E2A4
 
 .include "asm11.inc"
-// .equ sub_8073B88, 0x8073B88
+// .extern sub_8073B88
 
 .include "start.inc"
-// .equ start_, 0x8000000
+// .extern start_
 
 .include "asm15.inc"
-// .equ loc_807CC90, 0x807CC90
-// .equ off_807CD54, 0x807CD54
+// .extern loc_807CC90
+// .extern off_807CD54
 
 .include "asm27.inc"
-// .equ dword_809CDE4, 0x809CDE4
-// .equ dword_809D24C, 0x809D24C
-// .equ unk_809D364, 0x809D364
-// .equ dword_809D4BC, 0x809D4BC
-// .equ dword_809D6D0, 0x809D6D0
-// .equ dword_809DAAC, 0x809DAAC
-// .equ dword_809DF10, 0x809DF10
-// .equ dword_809E318, 0x809E318
-// .equ sub_809F588, 0x809F588
-// .equ sub_80A1BEC, 0x80A1BEC
-// .equ sub_80A6CF0, 0x80A6CF0
-// .equ sub_80A6D7A, 0x80A6D7A
-// .equ sub_80A6D9E, 0x80A6D9E
-// .equ sub_80A6E74, 0x80A6E74
-// .equ sub_80A6E88, 0x80A6E88
-// .equ sub_80A6EA0, 0x80A6EA0
-// .equ sub_80A6EB6, 0x80A6EB6
-// .equ sub_80A6ED0, 0x80A6ED0
-// .equ sub_80A6EEC, 0x80A6EEC
-// .equ sub_80A6F18, 0x80A6F18
-// .equ sub_80A6F96, 0x80A6F96
-// .equ sub_80A6FB6, 0x80A6FB6
-// .equ sub_80A704A, 0x80A704A
-// .equ sub_80A9130, 0x80A9130
+// .extern dword_809CDE4
+// .extern dword_809D24C
+// .extern unk_809D364
+// .extern dword_809D4BC
+// .extern dword_809D6D0
+// .extern dword_809DAAC
+// .extern dword_809DF10
+// .extern dword_809E318
+// .extern sub_809F588
+// .extern sub_80A1BEC
+// .extern sub_80A6CF0
+// .extern sub_80A6D7A
+// .extern sub_80A6D9E
+// .extern sub_80A6E74
+// .extern sub_80A6E88
+// .extern sub_80A6EA0
+// .extern sub_80A6EB6
+// .extern sub_80A6ED0
+// .extern sub_80A6EEC
+// .extern sub_80A6F18
+// .extern sub_80A6F96
+// .extern sub_80A6FB6
+// .extern sub_80A704A
+// .extern sub_80A9130
 
 .include "asm10.inc"
-// .equ sub_806FF58, 0x806FF58
-// .equ loc_807150C, 0x807150C
+// .extern sub_806FF58
+// .extern loc_807150C
 
 .include "asm09.inc"
-// .equ ho_806D928, 0x806D928
-// .equ off_806DA68, 0x806DA68
+// .extern ho_806D928
+// .extern off_806DA68
 
 .include "asm17.inc"
-// .equ ho_null_8082728, 0x8082728
+// .extern ho_null_8082728
 
 .include "asm07.inc"
-// .equ sub_8069450, 0x8069450
-// .equ sub_806958C, 0x806958C
-// .equ off_8069638, 0x8069638
+// .extern sub_8069450
+// .extern sub_806958C
+// .extern off_8069638
 
 .include "asm16.inc"
-// .equ sub_807FD30, 0x807FD30
+// .extern sub_807FD30
 
 .include "asm08.inc"
-// .equ sub_806A91E, 0x806A91E
-// .equ sub_806AAD0, 0x806AAD0
+// .extern sub_806A91E
+// .extern sub_806AAD0
 
 .include "asm01.inc"
-// .equ sub_8019010, 0x8019010
-// .equ dword_801907C, 0x801907E
-// .equ sub_8019154, 0x8019154
-// .equ sub_8019196, 0x8019196
-// .equ sub_8019228, 0x8019228
-// .equ sub_801949A, 0x801949A
-// .equ sub_8019648, 0x8019648
+// .extern sub_8019010
+// .extern dword_801907C
+// .extern sub_8019154
+// .extern sub_8019196
+// .extern sub_8019228
+// .extern sub_801949A
+// .extern sub_8019648
 
 .include "asm04.inc"
-// .equ sub_8053980, 0x8053980
-// .equ sub_80539A0, 0x80539A0
-// .equ sub_8053A04, 0x8053A04
-// .equ sub_8053A6C, 0x8053A6C
-// .equ sub_8054018, 0x8054018
-// .equ sub_80540BA, 0x80540BA
-// .equ sub_80540EC, 0x80540EC
+// .extern sub_8053980
+// .extern sub_80539A0
+// .extern sub_8053A04
+// .extern sub_8053A6C
+// .extern sub_8054018
+// .extern sub_80540BA
+// .extern sub_80540EC
 
 .include "asm28.inc"
-// .equ sub_80E1F5C, 0x80E1F5C
-// .equ sub_80E2EB8, 0x80E2EB8
-// .equ sub_80E30B4, 0x80E30B4
-// .equ sub_80E381E, 0x80E381E
-// .equ sub_80E3A7E, 0x80E3A7E
-// .equ sub_80E3ECC, 0x80E3ECC
-// .equ sub_80E44DE, 0x80E44DE
-// .equ sub_80E46F8, 0x80E46F8
-// .equ sub_80E4A44, 0x80E4A44
-// .equ sub_80E4B8A, 0x80E4B8A
-// .equ sub_80E4F92, 0x80E4F92
-// .equ sub_80E53F6, 0x80E53F6
-// .equ sub_80E5750, 0x80E5750
-// .equ sub_80E5B44, 0x80E5B44
-// .equ sub_80E5E92, 0x80E5E92
-// .equ sub_80E6174, 0x80E6174
-// .equ sub_80E63B2, 0x80E63B2
-// .equ sub_80E67D0, 0x80E67D0
-// .equ sub_80E69FA, 0x80E69FA
-// .equ sub_80E71C4, 0x80E71C4
-// .equ sub_80E769C, 0x80E769C
-// .equ sub_80E7B30, 0x80E7B30
-// .equ sub_80E7FA2, 0x80E7FA2
-// .equ sub_80E834A, 0x80E834A
-// .equ sub_80E8512, 0x80E8512
-// .equ sub_80E8870, 0x80E8870
-// .equ sub_80E8A5C, 0x80E8A5C
-// .equ sub_80E8F82, 0x80E8F82
-// .equ sub_80E9382, 0x80E9382
-// .equ sub_80E95C2, 0x80E95C2
-// .equ sub_80E9794, 0x80E9794
-// .equ sub_80E9BAC, 0x80E9BAC
-// .equ sub_80E9FF0, 0x80E9FF0
-// .equ sub_80EA37E, 0x80EA37E
-// .equ sub_80EA51E, 0x80EA51E
-// .equ sub_80EA74E, 0x80EA74E
-// .equ sub_80EAA0E, 0x80EAA0E
-// .equ sub_80EAB4E, 0x80EAB4E
-// .equ sub_80EACAA, 0x80EACAA
-// .equ loc_80EF498, 0x80EF498
-// .equ loc_80F0804, 0x80F0804
-// .equ sub_80F5944, 0x80F5944
+// .extern sub_80E1F5C
+// .extern sub_80E2EB8
+// .extern sub_80E30B4
+// .extern sub_80E381E
+// .extern sub_80E3A7E
+// .extern sub_80E3ECC
+// .extern sub_80E44DE
+// .extern sub_80E46F8
+// .extern sub_80E4A44
+// .extern sub_80E4B8A
+// .extern sub_80E4F92
+// .extern sub_80E53F6
+// .extern sub_80E5750
+// .extern sub_80E5B44
+// .extern sub_80E5E92
+// .extern sub_80E6174
+// .extern sub_80E63B2
+// .extern sub_80E67D0
+// .extern sub_80E69FA
+// .extern sub_80E71C4
+// .extern sub_80E769C
+// .extern sub_80E7B30
+// .extern sub_80E7FA2
+// .extern sub_80E834A
+// .extern sub_80E8512
+// .extern sub_80E8870
+// .extern sub_80E8A5C
+// .extern sub_80E8F82
+// .extern sub_80E9382
+// .extern sub_80E95C2
+// .extern sub_80E9794
+// .extern sub_80E9BAC
+// .extern sub_80E9FF0
+// .extern sub_80EA37E
+// .extern sub_80EA51E
+// .extern sub_80EA74E
+// .extern sub_80EAA0E
+// .extern sub_80EAB4E
+// .extern sub_80EACAA
+// .extern loc_80EF498
+// .extern loc_80F0804
+// .extern sub_80F5944
 
 .include "asm00.inc"
-// .equ f500_8000558, 0x8000558
-// .equ f500_800057E, 0x800057E
-// .equ f500_80005D2, 0x80005D2
-// .equ loc_8000870, 0x8000870
-// .equ f800_80008EC, 0x80008EC
-// .equ f900_8000910, 0x8000910
-// .equ f900_8000950, 0x8000950
-// .equ f900_800097A, 0x800097A
-// .equ f900_80009A0, 0x80009A0
-// .equ f900_80009BC, 0x80009BC
-// .equ f900_80009FC, 0x80009FC
-// .equ fA00_8000A8C, 0x8000A8C
-// .equ fA00_8000B42, 0x8000B42
-// .equ fA00_8000C3C, 0x8000C3C
-// .equ sub_8000DE0, 0x8000DE0
-// .equ sub_80019A0, 0x80019A0
-// .equ sub_8001AF6, 0x8001AF6
-// .equ sub_8001B40, 0x8001B40
-// .equ sub_8001D04, 0x8001D04
-// .equ sub_8001D60, 0x8001D60
-// .equ sub_8001D9C, 0x8001D9C
-// .equ sub_8001DDC, 0x8001DDC
-// .equ sub_8001DF8, 0x8001DF8
-// .equ sub_8001E74, 0x8001E74
-// .equ sub_8002028, 0x8002028
-// .equ sub_80024E0, 0x80024E0
-// .equ sub_800262E, 0x800262E
-// .equ sub_8002798, 0x8002798
-// .equ sub_80034C4, 0x80034C4
-// .equ sub_8003814, 0x8003814
-// .equ sub_80038A0, 0x80038A0
-// .equ sub_8004908, 0x8004908
-// .equ sub_8004F14, 0x8004F14
-// .equ sub_8005500, 0x8005500
-// .equ sub_800553C, 0x800553C
-// .equ sub_8005552, 0x8005552
-// .equ sub_8005754, 0x8005754
-// .equ sub_80057A8, 0x80057A8
-// .equ loc_8005AE0, 0x8005AE0
-// .equ sub_8005B3A, 0x8005B3A
-// .equ loc_8005B60, 0x8005B60
-// .equ word_8005DF8, 0x8005DF8
-// .equ sub_800609C, 0x800609C
-// .equ sub_8006360, 0x8006360
-// .equ sub_8006394, 0x8006394
-// .equ sub_800640C, 0x800640C
-// .equ sub_8006490, 0x8006490
-// .equ sub_80064CC, 0x80064CC
-// .equ sub_8006504, 0x8006504
-// .equ sub_8006574, 0x8006574
-// .equ sub_80065C2, 0x80065C2
-// .equ sub_8007880, 0x8007880
-// .equ sub_8007920, 0x8007920
-// .equ sub_80079EA, 0x80079EA
-// .equ sub_8007A64, 0x8007A64
-// .equ sub_8007BC6, 0x8007BC6
-// .equ sub_8007C60, 0x8007C60
-// .equ sub_8007D90, 0x8007D90
-// .equ sub_8007E1E, 0x8007E1E
-// .equ sub_8007E9A, 0x8007E9A
-// .equ sub_8007EB2, 0x8007EB2
-// .equ sub_8007ECA, 0x8007ECA
-// .equ sub_80083B8, 0x80083B8
-// .equ sub_80085C0, 0x80085C0
-// .equ sub_80088E2, 0x80088E2
-// .equ sub_80089A0, 0x80089A0
-// .equ sub_80089D8, 0x80089D8
-// .equ sub_8009A88, 0x8009A88
-// .equ sub_8009E78, 0x8009E78
-// .equ sub_8009FCC, 0x8009FCC
-// .equ sub_800A17A, 0x800A17A
-// .equ sub_800AB54, 0x800AB54
-// .equ sub_800AB86, 0x800AB86
-// .equ sub_800B98C, 0x800B98C
-// .equ sub_800BF94, 0x800BF94
-// .equ sub_800BFB8, 0x800BFB8
-// .equ sub_800C3C0, 0x800C3C0
-// .equ sub_800C960, 0x800C960
-// .equ sub_800D618, 0x800D618
-// .equ sub_800D6F2, 0x800D6F2
-// .equ sub_800D722, 0x800D722
-// .equ sub_800D742, 0x800D742
-// .equ sub_800D752, 0x800D752
-// .equ sub_800E860, 0x800E860
-// .equ sub_800EB42, 0x800EB42
-// .equ sub_800F48A, 0x800F48A
-// .equ sub_800F6E0, 0x800F6E0
-// .equ sub_800F8AE, 0x800F8AE
-// .equ sub_800F93C, 0x800F93C
-// .equ sub_8013464, 0x8013464
-// .equ sub_8015902, 0x8015902
-// .equ sub_8015A80, 0x8015A80
-// .equ sub_8015ACA, 0x8015ACA
-// .equ sub_8015DCC, 0x8015DCC
-// .equ sub_80160C0, 0x80160C0
-// .equ sub_8016262, 0x8016262
-// .equ sub_801631C, 0x801631C
-// .equ sub_8016644, 0x8016644
-// .equ sub_8016764, 0x8016764
-// .equ sub_80167CC, 0x80167CC
-// .equ sub_80169EC, 0x80169EC
+// .extern f500_8000558
+// .extern f500_800057E
+// .extern f500_80005D2
+// .extern loc_8000870
+// .extern f800_80008EC
+// .extern f900_8000910
+// .extern f900_8000950
+// .extern f900_800097A
+// .extern f900_80009A0
+// .extern f900_80009BC
+// .extern f900_80009FC
+// .extern fA00_8000A8C
+// .extern fA00_8000B42
+// .extern fA00_8000C3C
+// .extern sub_8000DE0
+// .extern sub_80019A0
+// .extern sub_8001AF6
+// .extern sub_8001B40
+// .extern sub_8001D04
+// .extern sub_8001D60
+// .extern sub_8001D9C
+// .extern sub_8001DDC
+// .extern sub_8001DF8
+// .extern sub_8001E74
+// .extern sub_8002028
+// .extern sub_80024E0
+// .extern sub_800262E
+// .extern sub_8002798
+// .extern sub_80034C4
+// .extern sub_8003814
+// .extern sub_80038A0
+// .extern sub_8004908
+// .extern sub_8004F14
+// .extern sub_8005500
+// .extern sub_800553C
+// .extern sub_8005552
+// .extern sub_8005754
+// .extern sub_80057A8
+// .extern loc_8005AE0
+// .extern sub_8005B3A
+// .extern loc_8005B60
+// .extern word_8005DF8
+// .extern sub_800609C
+// .extern sub_8006360
+// .extern sub_8006394
+// .extern sub_800640C
+// .extern sub_8006490
+// .extern sub_80064CC
+// .extern sub_8006504
+// .extern sub_8006574
+// .extern sub_80065C2
+// .extern sub_8007880
+// .extern sub_8007920
+// .extern sub_80079EA
+// .extern sub_8007A64
+// .extern sub_8007BC6
+// .extern sub_8007C60
+// .extern sub_8007D90
+// .extern sub_8007E1E
+// .extern sub_8007E9A
+// .extern sub_8007EB2
+// .extern sub_8007ECA
+// .extern sub_80083B8
+// .extern sub_80085C0
+// .extern sub_80088E2
+// .extern sub_80089A0
+// .extern sub_80089D8
+// .extern sub_8009A88
+// .extern sub_8009E78
+// .extern sub_8009FCC
+// .extern sub_800A17A
+// .extern sub_800AB54
+// .extern sub_800AB86
+// .extern sub_800B98C
+// .extern sub_800BF94
+// .extern sub_800BFB8
+// .extern sub_800C3C0
+// .extern sub_800C960
+// .extern sub_800D618
+// .extern sub_800D6F2
+// .extern sub_800D722
+// .extern sub_800D742
+// .extern sub_800D752
+// .extern sub_800E860
+// .extern sub_800EB42
+// .extern sub_800F48A
+// .extern sub_800F6E0
+// .extern sub_800F8AE
+// .extern sub_800F93C
+// .extern sub_8013464
+// .extern sub_8015902
+// .extern sub_8015A80
+// .extern sub_8015ACA
+// .extern sub_8015DCC
+// .extern sub_80160C0
+// .extern sub_8016262
+// .extern sub_801631C
+// .extern sub_8016644
+// .extern sub_8016764
+// .extern sub_80167CC
+// .extern sub_80169EC
 
 .include "asm14.inc"
-// .equ sub_807993C, 0x807993C
+// .extern sub_807993C
 
 .include "asm30.inc"
-// .equ sub_8105A04, 0x8105A04
-// .equ sub_810998C, 0x810998C
-// .equ sub_8110A8C, 0x8110A8C
-// .equ sub_8111698, 0x8111698
-// .equ sub_81116B8, 0x81116B8
-// .equ dword_8111700, 0x8111700
+// .extern sub_8105A04
+// .extern sub_810998C
+// .extern sub_8110A8C
+// .extern sub_8111698
+// .extern sub_81116B8
+// .extern dword_8111700
 
 .include "asm12.inc"
-// .equ loc_8075BB4, 0x8075BB4
+// .extern loc_8075BB4
 
 .include "asm13.inc"
-// .equ loc_80773C0, 0x80773C0
-// .equ off_80774D4, 0x80774D4
+// .extern loc_80773C0
+// .extern off_80774D4
 
 
 .equ unk_2000000, 0x2000000

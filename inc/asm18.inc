@@ -2,76 +2,76 @@
 .equ INC_ASM18, 0
 
 // Public Interface
-.equ sub_8085444, 0x8085444
-.equ sub_808547C, 0x808547C
+.extern sub_8085444
+.extern sub_808547C
 
 // Forward Reference
-.equ loc_8085462, 0x8085462
-.equ off_8085478, 0x8085478
-.equ loc_808549A, 0x808549A
-.equ off_80854CC, 0x80854CC
-.equ off_80854D0, 0x80854D0
-.equ jt_80854D4, 0x80854D4
-.equ off_8085684, 0x8085684
-.equ pt_8085688, 0x8085688
-.equ dword_80856F4, 0x80856F4
-.equ dword_8085718, 0x8085718
-.equ dword_808573C, 0x808573C
-.equ dword_8085760, 0x8085760
-.equ dword_8085784, 0x8085784
-.equ dword_80857A8, 0x80857A8
-.equ dword_80857CC, 0x80857CC
-.equ dword_80857F0, 0x80857F0
-.equ dword_8085814, 0x8085814
-.equ dword_8085838, 0x8085838
-.equ dword_808585C, 0x808585C
-.equ dword_8085880, 0x8085880
-.equ dword_80858A4, 0x80858A4
-.equ dword_80858C8, 0x80858C8
-.equ dword_80858EC, 0x80858EC
-.equ dword_8085910, 0x8085910
-.equ dword_8085934, 0x8085934
-.equ dword_8085958, 0x8085958
-.equ dword_808597C, 0x808597C
-.equ dword_80859A0, 0x80859A0
-.equ dword_80859C4, 0x80859C4
-.equ dword_80859E8, 0x80859E8
-.equ dword_8085A0C, 0x8085A0C
-.equ byte_8085A30, 0x8085A30
-.equ byte_8085A54, 0x8085A54
-.equ byte_8085A78, 0x8085A78
-.equ pt_8085A9C, 0x8085A9C
-.equ off_8085B08, 0x8085B08
-.equ off_8085B10, 0x8085B10
-.equ off_8085B24, 0x8085B24
-.equ off_8085B2C, 0x8085B2C
-.equ off_8085B38, 0x8085B38
-.equ off_8085B40, 0x8085B40
-.equ off_8085B48, 0x8085B48
-.equ off_8085B50, 0x8085B50
-.equ off_8085B58, 0x8085B58
-.equ off_8085B60, 0x8085B60
-.equ off_8085B70, 0x8085B70
-.equ off_8085B78, 0x8085B78
-.equ off_8085B80, 0x8085B80
-.equ off_8085B88, 0x8085B88
-.equ dword_8085B90, 0x8085B90
-.equ off_8085B94, 0x8085B94
-.equ off_8085B9C, 0x8085B9C
-.equ off_8085BA4, 0x8085BA4
-.equ off_8085BAC, 0x8085BAC
-.equ off_8085BB8, 0x8085BB8
-.equ off_8085BC0, 0x8085BC0
-.equ off_8085BC8, 0x8085BC8
-.equ off_8085BD0, 0x8085BD0
-.equ off_8085BD8, 0x8085BD8
-.equ off_8085BE0, 0x8085BE0
-.equ off_8085BE8, 0x8085BE8
-.equ off_8085BF0, 0x8085BF0
-.equ sub_8085BF8, 0x8085BF8
-.equ loc_8085C12, 0x8085C12
-.equ off_8085C18, 0x8085C18
-.equ pt_8085C1C, 0x8085C1C
+.extern loc_8085462
+.extern off_8085478
+.extern loc_808549A
+.extern off_80854CC
+.extern off_80854D0
+.extern jt_80854D4
+.extern off_8085684
+.extern pt_8085688
+.extern dword_80856F4
+.extern dword_8085718
+.extern dword_808573C
+.extern dword_8085760
+.extern dword_8085784
+.extern dword_80857A8
+.extern dword_80857CC
+.extern dword_80857F0
+.extern dword_8085814
+.extern dword_8085838
+.extern dword_808585C
+.extern dword_8085880
+.extern dword_80858A4
+.extern dword_80858C8
+.extern dword_80858EC
+.extern dword_8085910
+.extern dword_8085934
+.extern dword_8085958
+.extern dword_808597C
+.extern dword_80859A0
+.extern dword_80859C4
+.extern dword_80859E8
+.extern dword_8085A0C
+.extern byte_8085A30
+.extern byte_8085A54
+.extern byte_8085A78
+.extern pt_8085A9C
+.extern off_8085B08
+.extern off_8085B10
+.extern off_8085B24
+.extern off_8085B2C
+.extern off_8085B38
+.extern off_8085B40
+.extern off_8085B48
+.extern off_8085B50
+.extern off_8085B58
+.extern off_8085B60
+.extern off_8085B70
+.extern off_8085B78
+.extern off_8085B80
+.extern off_8085B88
+.extern dword_8085B90
+.extern off_8085B94
+.extern off_8085B9C
+.extern off_8085BA4
+.extern off_8085BAC
+.extern off_8085BB8
+.extern off_8085BC0
+.extern off_8085BC8
+.extern off_8085BD0
+.extern off_8085BD8
+.extern off_8085BE0
+.extern off_8085BE8
+.extern off_8085BF0
+.extern sub_8085BF8
+.extern loc_8085C12
+.extern off_8085C18
+.extern pt_8085C1C
 
 
 .endif // INC_ASM18

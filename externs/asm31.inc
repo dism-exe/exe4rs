@@ -2,22 +2,22 @@
 .equ EXT_ASM31, 0
 
 .include "asm30.inc"
-// .equ sub_81118D8, 0x81118D8
+// .extern sub_81118D8
 
 .include "main.inc"
-// .equ sub_8000538, 0x8000538
+// .extern sub_8000538
 
 .include "asm02.inc"
-// .equ off_8025B20, 0x8025B20
-// .equ ho_802724E, 0x802724E
+// .extern off_8025B20
+// .extern ho_802724E
 
 .include "asm00.inc"
-// .equ loc_8000874, 0x8000874
-// .equ f900_8000970, 0x8000970
-// .equ fA00_8000A30, 0x8000A30
-// .equ sub_80035C0, 0x80035C0
-// .equ word_8005DF8, 0x8005DF8
-// .equ sub_8006084, 0x8006084
+// .extern loc_8000874
+// .extern f900_8000970
+// .extern fA00_8000A30
+// .extern sub_80035C0
+// .extern word_8005DF8
+// .extern sub_8006084
 
 
 .equ unk_2001770, 0x2001770

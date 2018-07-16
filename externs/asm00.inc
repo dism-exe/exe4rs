@@ -2,333 +2,333 @@
 .equ EXT_ASM00, 0
 
 .include "asm03.inc"
-// .equ sub_804720C, 0x804720C
-// .equ sub_8047608, 0x8047608
-// .equ sub_80480B4, 0x80480B4
-// .equ sub_8048120, 0x8048120
-// .equ sub_80481C8, 0x80481C8
-// .equ sub_8048660, 0x8048660
-// .equ sub_8048714, 0x8048714
-// .equ sub_80489E0, 0x80489E0
-// .equ sub_8049CB0, 0x8049CB0
-// .equ sub_804BDD4, 0x804BDD4
-// .equ sub_804E448, 0x804E448
+// .extern sub_804720C
+// .extern sub_8047608
+// .extern sub_80480B4
+// .extern sub_8048120
+// .extern sub_80481C8
+// .extern sub_8048660
+// .extern sub_8048714
+// .extern sub_80489E0
+// .extern sub_8049CB0
+// .extern sub_804BDD4
+// .extern sub_804E448
 
 .include "start.inc"
-// .equ start_, 0x8000000
-// .equ dword_8000004, 0x8000028
+// .extern start_
+// .extern dword_8000004
 
 .include "asm18.inc"
-// .equ sub_8085444, 0x8085444
+// .extern sub_8085444
 
 .include "asm02.inc"
-// .equ sub_801DB68, 0x801DB68
-// .equ sub_801FCC0, 0x801FCC0
-// .equ ho_8020EA4, 0x8020EA4
-// .equ sub_802180A, 0x802180A
-// .equ sub_8021E4C, 0x8021E4C
-// .equ ho_8021EE8, 0x8021EE8
-// .equ sub_802216C, 0x802216C
-// .equ sub_80221AC, 0x80221AC
-// .equ sub_8022C62, 0x8022C62
-// .equ sub_8022CBC, 0x8022CBC
-// .equ sub_8022D04, 0x8022D04
-// .equ sub_8022E02, 0x8022E02
-// .equ sub_8022EFC, 0x8022EFC
-// .equ sub_8022F20, 0x8022F20
-// .equ sub_8022F70, 0x8022F70
-// .equ sub_80230A0, 0x80230A0
-// .equ sub_802319C, 0x802319C
-// .equ sub_8023280, 0x8023280
-// .equ sub_802330C, 0x802330C
-// .equ sub_8023370, 0x8023370
-// .equ sub_802351C, 0x802351C
-// .equ sub_80236C8, 0x80236C8
-// .equ sub_80238B0, 0x80238B0
-// .equ sub_8023A48, 0x8023A48
-// .equ ho_8023B80, 0x8023B80
-// .equ sub_8023CC4, 0x8023CC4
-// .equ sub_8023DF4, 0x8023DF4
-// .equ sub_8023EB0, 0x8023EB0
-// .equ sub_8023F10, 0x8023F10
-// .equ sub_8023F8C, 0x8023F8C
-// .equ sub_802408C, 0x802408C
-// .equ sub_8024194, 0x8024194
-// .equ sub_8024384, 0x8024384
-// .equ sub_8024474, 0x8024474
-// .equ sub_8024538, 0x8024538
-// .equ sub_8024684, 0x8024684
-// .equ sub_8024870, 0x8024870
-// .equ sub_8024A04, 0x8024A04
-// .equ sub_8024F50, 0x8024F50
-// .equ sub_8024F80, 0x8024F80
-// .equ sub_8024FA0, 0x8024FA0
-// .equ sub_8024FBC, 0x8024FBC
-// .equ sub_8024FF4, 0x8024FF4
-// .equ sub_802512A, 0x802512A
-// .equ sub_8025B60, 0x8025B60
-// .equ sub_8025BD8, 0x8025BD8
-// .equ sub_8025C1A, 0x8025C1A
-// .equ sub_8025CDC, 0x8025CDC
-// .equ ho_8025D94, 0x8025D94
-// .equ sub_8026104, 0x8026104
-// .equ loc_8026460, 0x8026460
-// .equ unk_8027890, 0x8027890
-// .equ dword_8027CEC, 0x8028124
-// .equ dword_802919C, 0x802919C
-// .equ sub_80297E0, 0x80297E0
-// .equ sub_802BC60, 0x802BC60
-// .equ sub_802BCE0, 0x802BCE0
-// .equ sub_802CFE4, 0x802CFE4
-// .equ sub_802D3F8, 0x802D3F8
-// .equ sub_802D424, 0x802D424
-// .equ loc_802D6BC, 0x802D6BC
-// .equ sub_802D938, 0x802D938
-// .equ sub_802D970, 0x802D970
-// .equ sub_802DEA4, 0x802DEA4
-// .equ sub_8034EC0, 0x8034EC0
-// .equ sub_8035044, 0x8035044
-// .equ sub_8037304, 0x8037304
-// .equ sub_8037404, 0x8037404
-// .equ byte_803A9C4, 0x803A9C4
-// .equ sub_803C48E, 0x803C48E
-// .equ sub_8040560, 0x8040560
-// .equ sub_8042ECC, 0x8042ECC
-// .equ sub_8043104, 0x8043104
-// .equ sub_80431E4, 0x80431E4
-// .equ sub_8043800, 0x8043800
-// .equ sub_80444FC, 0x80444FC
-// .equ sub_80449B8, 0x80449B8
+// .extern sub_801DB68
+// .extern sub_801FCC0
+// .extern ho_8020EA4
+// .extern sub_802180A
+// .extern sub_8021E4C
+// .extern ho_8021EE8
+// .extern sub_802216C
+// .extern sub_80221AC
+// .extern sub_8022C62
+// .extern sub_8022CBC
+// .extern sub_8022D04
+// .extern sub_8022E02
+// .extern sub_8022EFC
+// .extern sub_8022F20
+// .extern sub_8022F70
+// .extern sub_80230A0
+// .extern sub_802319C
+// .extern sub_8023280
+// .extern sub_802330C
+// .extern sub_8023370
+// .extern sub_802351C
+// .extern sub_80236C8
+// .extern sub_80238B0
+// .extern sub_8023A48
+// .extern ho_8023B80
+// .extern sub_8023CC4
+// .extern sub_8023DF4
+// .extern sub_8023EB0
+// .extern sub_8023F10
+// .extern sub_8023F8C
+// .extern sub_802408C
+// .extern sub_8024194
+// .extern sub_8024384
+// .extern sub_8024474
+// .extern sub_8024538
+// .extern sub_8024684
+// .extern sub_8024870
+// .extern sub_8024A04
+// .extern sub_8024F50
+// .extern sub_8024F80
+// .extern sub_8024FA0
+// .extern sub_8024FBC
+// .extern sub_8024FF4
+// .extern sub_802512A
+// .extern sub_8025B60
+// .extern sub_8025BD8
+// .extern sub_8025C1A
+// .extern sub_8025CDC
+// .extern ho_8025D94
+// .extern sub_8026104
+// .extern loc_8026460
+// .extern unk_8027890
+// .extern dword_8027CEC
+// .extern dword_802919C
+// .extern sub_80297E0
+// .extern sub_802BC60
+// .extern sub_802BCE0
+// .extern sub_802CFE4
+// .extern sub_802D3F8
+// .extern sub_802D424
+// .extern loc_802D6BC
+// .extern sub_802D938
+// .extern sub_802D970
+// .extern sub_802DEA4
+// .extern sub_8034EC0
+// .extern sub_8035044
+// .extern sub_8037304
+// .extern sub_8037404
+// .extern byte_803A9C4
+// .extern sub_803C48E
+// .extern sub_8040560
+// .extern sub_8042ECC
+// .extern sub_8043104
+// .extern sub_80431E4
+// .extern sub_8043800
+// .extern sub_80444FC
+// .extern sub_80449B8
 
 .include "asm27.inc"
-// .equ unk_809D414, 0x809D414
-// .equ sub_809ED84, 0x809ED84
-// .equ sub_809FFA6, 0x809FFA6
-// .equ sub_80A0CE4, 0x80A0CE4
-// .equ sub_80A2C2E, 0x80A2C2E
-// .equ sub_80A5CA0, 0x80A5CA0
-// .equ sub_80A6F22, 0x80A6F22
-// .equ sub_80A6F5C, 0x80A6F5C
-// .equ sub_80A6FB6, 0x80A6FB6
-// .equ sub_80A7058, 0x80A7058
-// .equ sub_80A907C, 0x80A907C
+// .extern unk_809D414
+// .extern sub_809ED84
+// .extern sub_809FFA6
+// .extern sub_80A0CE4
+// .extern sub_80A2C2E
+// .extern sub_80A5CA0
+// .extern sub_80A6F22
+// .extern sub_80A6F5C
+// .extern sub_80A6FB6
+// .extern sub_80A7058
+// .extern sub_80A907C
 
 .include "asm01.inc"
-// .equ sub_8019010, 0x8019010
-// .equ sub_801904C, 0x801904C
-// .equ sub_80191FC, 0x80191FC
-// .equ sub_8019648, 0x8019648
+// .extern sub_8019010
+// .extern sub_801904C
+// .extern sub_80191FC
+// .extern sub_8019648
 
 .include "asm04.inc"
-// .equ sub_80539A0, 0x80539A0
+// .extern sub_80539A0
 
 .include "asm28.inc"
-// .equ sub_80ADDC8, 0x80ADDC8
-// .equ sub_80ADE98, 0x80ADE98
-// .equ ho_80AE4C8, 0x80AE4C8
-// .equ loc_80AE6C0, 0x80AE6C0
-// .equ sub_80AE94C, 0x80AE94C
-// .equ sub_80AEFA0, 0x80AEFA0
-// .equ sub_80AF250, 0x80AF250
-// .equ sub_80B021A, 0x80B021A
-// .equ sub_80B0798, 0x80B0798
-// .equ sub_80B0B5C, 0x80B0B5C
-// .equ sub_80B0D5C, 0x80B0D5C
-// .equ sub_80B0EE8, 0x80B0EE8
-// .equ sub_80B10CC, 0x80B10CC
-// .equ sub_80B132C, 0x80B132C
-// .equ sub_80B1558, 0x80B1558
-// .equ sub_80B16D8, 0x80B16D8
-// .equ sub_80B1824, 0x80B1824
-// .equ sub_80B19C8, 0x80B19C8
-// .equ sub_80B1CE4, 0x80B1CE4
-// .equ loc_80B1E18, 0x80B1E18
-// .equ ho_cb_80B2328, 0x80B2328
-// .equ sub_80B2640, 0x80B2640
-// .equ sub_80B2B6C, 0x80B2B6C
-// .equ sub_80B3090, 0x80B3090
-// .equ loc_80B335A, 0x80B335A
-// .equ sub_80B34A4, 0x80B34A4
-// .equ sub_80B351C, 0x80B351C
-// .equ sub_80B3C80, 0x80B3C80
-// .equ sub_80B5018, 0x80B5018
-// .equ sub_80B5C98, 0x80B5C98
-// .equ sub_80B656C, 0x80B656C
-// .equ loc_80B73CC, 0x80B73CC
-// .equ loc_80B7DB8, 0x80B7DB8
-// .equ loc_80B8524, 0x80B8524
-// .equ loc_80B89C4, 0x80B89C4
-// .equ loc_80B928E, 0x80B928E
-// .equ loc_80B9978, 0x80B9978
-// .equ loc_80BA078, 0x80BA078
-// .equ loc_80BA7C0, 0x80BA7C0
-// .equ loc_80BAF4C, 0x80BAF4C
-// .equ loc_80BB5D0, 0x80BB5D0
-// .equ loc_80BC398, 0x80BC398
-// .equ sub_80BD030, 0x80BD030
-// .equ loc_80BD95C, 0x80BD95C
-// .equ loc_80BE2E8, 0x80BE2E8
-// .equ loc_80BEAD4, 0x80BEAD4
-// .equ loc_80BF5C4, 0x80BF5C4
-// .equ loc_80C0360, 0x80C0360
-// .equ loc_80C1158, 0x80C1158
-// .equ loc_80C147C, 0x80C147C
-// .equ loc_80C26D8, 0x80C26D8
-// .equ loc_80C317C, 0x80C317C
-// .equ loc_80C373C, 0x80C373C
-// .equ sub_80C3CCC, 0x80C3CCC
-// .equ loc_80C3EFC, 0x80C3EFC
-// .equ loc_80C5860, 0x80C5860
-// .equ sub_80C5F3C, 0x80C5F3C
-// .equ loc_80C61B8, 0x80C61B8
-// .equ loc_80C6E14, 0x80C6E14
-// .equ loc_80C762C, 0x80C762C
-// .equ sub_80C789C, 0x80C789C
-// .equ loc_80C8060, 0x80C8060
-// .equ loc_80C8528, 0x80C8528
-// .equ loc_80C8C04, 0x80C8C04
-// .equ loc_80C90E8, 0x80C90E8
-// .equ sub_80C93D8, 0x80C93D8
-// .equ dword_80C9518, 0x80C9529
-// .equ loc_80C9A2C, 0x80C9A2C
-// .equ loc_80CA6AC, 0x80CA6AC
-// .equ loc_80CAB24, 0x80CAB24
-// .equ loc_80CB03C, 0x80CB03C
-// .equ loc_80CB64C, 0x80CB64C
-// .equ loc_80CBBF0, 0x80CBBF0
-// .equ loc_80CBF40, 0x80CBF40
-// .equ sub_80CC4E8, 0x80CC4E8
-// .equ sub_80CC50E, 0x80CC50E
-// .equ loc_80CC620, 0x80CC620
-// .equ loc_80CC9C0, 0x80CC9C0
-// .equ sub_80CCE28, 0x80CCE28
-// .equ loc_80CCE50, 0x80CCE50
-// .equ sub_80CD16A, 0x80CD16A
-// .equ sub_80CD34E, 0x80CD34E
-// .equ loc_80CD4EC, 0x80CD4EC
-// .equ sub_80CD712, 0x80CD712
-// .equ loc_80CD8DC, 0x80CD8DC
-// .equ loc_80CDDA8, 0x80CDDA8
-// .equ loc_80CE1C8, 0x80CE1C8
-// .equ loc_80CE5D0, 0x80CE5D0
-// .equ loc_80CE964, 0x80CE964
-// .equ loc_80CEEC4, 0x80CEEC4
-// .equ loc_80CF1F0, 0x80CF1F0
-// .equ loc_80CF4A8, 0x80CF4A8
-// .equ sub_80CF924, 0x80CF924
-// .equ loc_80CF968, 0x80CF968
-// .equ loc_80CFC38, 0x80CFC38
-// .equ loc_80CFE70, 0x80CFE70
-// .equ loc_80D01E8, 0x80D01E8
-// .equ loc_80D07AC, 0x80D07AC
-// .equ loc_80D21F4, 0x80D21F4
-// .equ loc_80D57DE, 0x80D57DE
-// .equ loc_80D5B40, 0x80D5B40
-// .equ loc_80D5EE8, 0x80D5EE8
-// .equ loc_80D6378, 0x80D6378
-// .equ loc_80D67BC, 0x80D67BC
-// .equ loc_80D6DC4, 0x80D6DC4
-// .equ loc_80D717C, 0x80D717C
-// .equ loc_80D745C, 0x80D745C
-// .equ loc_80D7A54, 0x80D7A54
-// .equ loc_80D7FD4, 0x80D7FD4
-// .equ loc_80D849A, 0x80D849A
-// .equ loc_80D8768, 0x80D8768
-// .equ sub_80D8A8E, 0x80D8A8E
-// .equ loc_80D8BA4, 0x80D8BA4
-// .equ loc_80D8FB8, 0x80D8FB8
-// .equ sub_80D9370, 0x80D9370
-// .equ loc_80D9718, 0x80D9718
-// .equ loc_80D9B48, 0x80D9B48
-// .equ loc_80D9E90, 0x80D9E90
-// .equ loc_80DA320, 0x80DA320
-// .equ loc_80DA754, 0x80DA754
-// .equ loc_80DAB44, 0x80DAB44
-// .equ loc_80DAEAC, 0x80DAEAC
-// .equ sub_80DB14E, 0x80DB14E
-// .equ sub_80DB2E8, 0x80DB2E8
-// .equ sub_80DB5EC, 0x80DB5EC
-// .equ loc_80DBADC, 0x80DBADC
-// .equ loc_80DBC84, 0x80DBC84
-// .equ loc_80DBF38, 0x80DBF38
-// .equ loc_80DC568, 0x80DC568
-// .equ loc_80DC994, 0x80DC994
-// .equ loc_80DCC98, 0x80DCC98
-// .equ loc_80DD144, 0x80DD144
-// .equ loc_80DD428, 0x80DD428
-// .equ loc_80DD688, 0x80DD688
-// .equ loc_80DDA24, 0x80DDA24
-// .equ loc_80DDEDC, 0x80DDEDC
-// .equ sub_80DE1C0, 0x80DE1C0
-// .equ loc_80DE778, 0x80DE778
-// .equ loc_80DEA60, 0x80DEA60
-// .equ loc_80DEEDC, 0x80DEEDC
-// .equ loc_80DF25C, 0x80DF25C
-// .equ sub_80DF57C, 0x80DF57C
-// .equ loc_80DF8A0, 0x80DF8A0
-// .equ loc_80DFC44, 0x80DFC44
-// .equ loc_80E007C, 0x80E007C
-// .equ loc_80E0394, 0x80E0394
-// .equ loc_80E059C, 0x80E059C
-// .equ loc_80E074C, 0x80E074C
-// .equ loc_80E0BC4, 0x80E0BC4
-// .equ loc_80E0F18, 0x80E0F18
-// .equ loc_80E12EC, 0x80E12EC
-// .equ loc_80E14B8, 0x80E14B8
-// .equ sub_80E17DE, 0x80E17DE
-// .equ sub_80E2030, 0x80E2030
-// .equ sub_80E22A2, 0x80E22A2
-// .equ sub_80E32BA, 0x80E32BA
-// .equ sub_80E3762, 0x80E3762
-// .equ sub_80E649A, 0x80E649A
-// .equ sub_80E67D0, 0x80E67D0
-// .equ sub_80E6894, 0x80E6894
-// .equ sub_80E6D24, 0x80E6D24
-// .equ loc_80E71E8, 0x80E71E8
-// .equ loc_80E73B8, 0x80E73B8
-// .equ loc_80E76C0, 0x80E76C0
-// .equ loc_80E7AC8, 0x80E7AC8
-// .equ loc_80E7DA8, 0x80E7DA8
-// .equ loc_80E7EEC, 0x80E7EEC
-// .equ loc_80E809C, 0x80E809C
-// .equ loc_80E82D0, 0x80E82D0
-// .equ loc_80E840C, 0x80E840C
-// .equ loc_80E865C, 0x80E865C
-// .equ loc_80E89D4, 0x80E89D4
-// .equ loc_80E8B50, 0x80E8B50
-// .equ loc_80E8D54, 0x80E8D54
-// .equ sub_80E8FA4, 0x80E8FA4
-// .equ loc_80E92D4, 0x80E92D4
-// .equ loc_80E94B8, 0x80E94B8
-// .equ loc_80E9710, 0x80E9710
-// .equ sub_80E9860, 0x80E9860
-// .equ loc_80E9928, 0x80E9928
-// .equ loc_80E9B08, 0x80E9B08
-// .equ loc_80E9D84, 0x80E9D84
-// .equ loc_80EA014, 0x80EA014
-// .equ sub_80EA2AE, 0x80EA2AE
-// .equ loc_80EA3A0, 0x80EA3A0
-// .equ loc_80EA540, 0x80EA540
-// .equ loc_80EA7D8, 0x80EA7D8
-// .equ loc_80EAA30, 0x80EAA30
-// .equ loc_80EAAD4, 0x80EAAD4
-// .equ loc_80EAC2C, 0x80EAC2C
-// .equ loc_80EB0B0, 0x80EB0B0
-// .equ sub_80F3EA4, 0x80F3EA4
-// .equ sub_80F522C, 0x80F522C
-// .equ sub_80F5C94, 0x80F5C94
+// .extern sub_80ADDC8
+// .extern sub_80ADE98
+// .extern ho_80AE4C8
+// .extern loc_80AE6C0
+// .extern sub_80AE94C
+// .extern sub_80AEFA0
+// .extern sub_80AF250
+// .extern sub_80B021A
+// .extern sub_80B0798
+// .extern sub_80B0B5C
+// .extern sub_80B0D5C
+// .extern sub_80B0EE8
+// .extern sub_80B10CC
+// .extern sub_80B132C
+// .extern sub_80B1558
+// .extern sub_80B16D8
+// .extern sub_80B1824
+// .extern sub_80B19C8
+// .extern sub_80B1CE4
+// .extern loc_80B1E18
+// .extern ho_cb_80B2328
+// .extern sub_80B2640
+// .extern sub_80B2B6C
+// .extern sub_80B3090
+// .extern loc_80B335A
+// .extern sub_80B34A4
+// .extern sub_80B351C
+// .extern sub_80B3C80
+// .extern sub_80B5018
+// .extern sub_80B5C98
+// .extern sub_80B656C
+// .extern loc_80B73CC
+// .extern loc_80B7DB8
+// .extern loc_80B8524
+// .extern loc_80B89C4
+// .extern loc_80B928E
+// .extern loc_80B9978
+// .extern loc_80BA078
+// .extern loc_80BA7C0
+// .extern loc_80BAF4C
+// .extern loc_80BB5D0
+// .extern loc_80BC398
+// .extern sub_80BD030
+// .extern loc_80BD95C
+// .extern loc_80BE2E8
+// .extern loc_80BEAD4
+// .extern loc_80BF5C4
+// .extern loc_80C0360
+// .extern loc_80C1158
+// .extern loc_80C147C
+// .extern loc_80C26D8
+// .extern loc_80C317C
+// .extern loc_80C373C
+// .extern sub_80C3CCC
+// .extern loc_80C3EFC
+// .extern loc_80C5860
+// .extern sub_80C5F3C
+// .extern loc_80C61B8
+// .extern loc_80C6E14
+// .extern loc_80C762C
+// .extern sub_80C789C
+// .extern loc_80C8060
+// .extern loc_80C8528
+// .extern loc_80C8C04
+// .extern loc_80C90E8
+// .extern sub_80C93D8
+// .extern dword_80C9518
+// .extern loc_80C9A2C
+// .extern loc_80CA6AC
+// .extern loc_80CAB24
+// .extern loc_80CB03C
+// .extern loc_80CB64C
+// .extern loc_80CBBF0
+// .extern loc_80CBF40
+// .extern sub_80CC4E8
+// .extern sub_80CC50E
+// .extern loc_80CC620
+// .extern loc_80CC9C0
+// .extern sub_80CCE28
+// .extern loc_80CCE50
+// .extern sub_80CD16A
+// .extern sub_80CD34E
+// .extern loc_80CD4EC
+// .extern sub_80CD712
+// .extern loc_80CD8DC
+// .extern loc_80CDDA8
+// .extern loc_80CE1C8
+// .extern loc_80CE5D0
+// .extern loc_80CE964
+// .extern loc_80CEEC4
+// .extern loc_80CF1F0
+// .extern loc_80CF4A8
+// .extern sub_80CF924
+// .extern loc_80CF968
+// .extern loc_80CFC38
+// .extern loc_80CFE70
+// .extern loc_80D01E8
+// .extern loc_80D07AC
+// .extern loc_80D21F4
+// .extern loc_80D57DE
+// .extern loc_80D5B40
+// .extern loc_80D5EE8
+// .extern loc_80D6378
+// .extern loc_80D67BC
+// .extern loc_80D6DC4
+// .extern loc_80D717C
+// .extern loc_80D745C
+// .extern loc_80D7A54
+// .extern loc_80D7FD4
+// .extern loc_80D849A
+// .extern loc_80D8768
+// .extern sub_80D8A8E
+// .extern loc_80D8BA4
+// .extern loc_80D8FB8
+// .extern sub_80D9370
+// .extern loc_80D9718
+// .extern loc_80D9B48
+// .extern loc_80D9E90
+// .extern loc_80DA320
+// .extern loc_80DA754
+// .extern loc_80DAB44
+// .extern loc_80DAEAC
+// .extern sub_80DB14E
+// .extern sub_80DB2E8
+// .extern sub_80DB5EC
+// .extern loc_80DBADC
+// .extern loc_80DBC84
+// .extern loc_80DBF38
+// .extern loc_80DC568
+// .extern loc_80DC994
+// .extern loc_80DCC98
+// .extern loc_80DD144
+// .extern loc_80DD428
+// .extern loc_80DD688
+// .extern loc_80DDA24
+// .extern loc_80DDEDC
+// .extern sub_80DE1C0
+// .extern loc_80DE778
+// .extern loc_80DEA60
+// .extern loc_80DEEDC
+// .extern loc_80DF25C
+// .extern sub_80DF57C
+// .extern loc_80DF8A0
+// .extern loc_80DFC44
+// .extern loc_80E007C
+// .extern loc_80E0394
+// .extern loc_80E059C
+// .extern loc_80E074C
+// .extern loc_80E0BC4
+// .extern loc_80E0F18
+// .extern loc_80E12EC
+// .extern loc_80E14B8
+// .extern sub_80E17DE
+// .extern sub_80E2030
+// .extern sub_80E22A2
+// .extern sub_80E32BA
+// .extern sub_80E3762
+// .extern sub_80E649A
+// .extern sub_80E67D0
+// .extern sub_80E6894
+// .extern sub_80E6D24
+// .extern loc_80E71E8
+// .extern loc_80E73B8
+// .extern loc_80E76C0
+// .extern loc_80E7AC8
+// .extern loc_80E7DA8
+// .extern loc_80E7EEC
+// .extern loc_80E809C
+// .extern loc_80E82D0
+// .extern loc_80E840C
+// .extern loc_80E865C
+// .extern loc_80E89D4
+// .extern loc_80E8B50
+// .extern loc_80E8D54
+// .extern sub_80E8FA4
+// .extern loc_80E92D4
+// .extern loc_80E94B8
+// .extern loc_80E9710
+// .extern sub_80E9860
+// .extern loc_80E9928
+// .extern loc_80E9B08
+// .extern loc_80E9D84
+// .extern loc_80EA014
+// .extern sub_80EA2AE
+// .extern loc_80EA3A0
+// .extern loc_80EA540
+// .extern loc_80EA7D8
+// .extern loc_80EAA30
+// .extern loc_80EAAD4
+// .extern loc_80EAC2C
+// .extern loc_80EB0B0
+// .extern sub_80F3EA4
+// .extern sub_80F522C
+// .extern sub_80F5C94
 
 .include "asm30.inc"
-// .equ sub_810FFF4, 0x810FFF4
-// .equ sub_8110A8C, 0x8110A8C
-// .equ sub_81116AC, 0x81116AC
-// .equ loc_81116E8, 0x81116E8
-// .equ loc_81116F0, 0x81116F0
-// .equ dword_8111700, 0x8111700
-// .equ sub_8111FD4, 0x8111FD4
-// .equ sub_81126B4, 0x81126B4
-// .equ sub_81127E8, 0x81127E8
-// .equ sub_81128A4, 0x81128A4
+// .extern sub_810FFF4
+// .extern sub_8110A8C
+// .extern sub_81116AC
+// .extern loc_81116E8
+// .extern loc_81116F0
+// .extern dword_8111700
+// .extern sub_8111FD4
+// .extern sub_81126B4
+// .extern sub_81127E8
+// .extern sub_81128A4
 
 
 .equ unk_2000000, 0x2000000
@@ -394,7 +394,7 @@
 .equ dword_2009E40, 0x2009E40
 .equ dword_2009E44, 0x2009E44
 .equ dword_2009E64, 0x2009E64
-.equ unk_2009E70, 0x2009E70
+.equ s_toolkit, 0x2009E70
 .equ byte_2009F50, 0x2009F50
 .equ word_2009F52, 0x2009F52
 .equ dword_2009F54, 0x2009F54
@@ -803,6 +803,7 @@
 .equ sub_30059E8, 0x30059E8
 .equ loc_3005A22, 0x3005A22
 .equ loc_3005A5C, 0x3005A5C
+.equ loc_3005A92, 0x3005A92
 .equ loc_3005AC8, 0x3005AC8
 .equ loc_3005C00, 0x3005C00
 .equ loc_3005DC0, 0x3005DC0

@@ -2,43 +2,43 @@
 .equ INC_ASM08, 0
 
 // Public Interface
-.equ sub_806A9C4, 0x806A9C4
-.equ off_806AB28, 0x806AB28
+.extern sub_806A9C4
+.extern off_806AB28
 
 // Forward Reference
-.equ sub_806A87C, 0x806A87C
-.equ off_806A8D4, 0x806A8D4
-.equ off_806A8D8, 0x806A8D8
-.equ off_806A8DC, 0x806A8DC
-.equ off_806A8E0, 0x806A8E0
-.equ dword_806A8F0, 0x806A8F0
-.equ sub_806A91E, 0x806A91E
-.equ off_806A92C, 0x806A92C
-.equ off_806A930, 0x806A930
-.equ off_806A940, 0x806A940
-.equ off_806A964, 0x806A964
-.equ off_806A988, 0x806A988
-.equ off_806A9AC, 0x806A9AC
-.equ off_806AA00, 0x806AA00
-.equ off_806AA04, 0x806AA04
-.equ off_806AA44, 0x806AA44
-.equ off_806AA48, 0x806AA48
-.equ off_806AA58, 0x806AA58
-.equ off_806AA7C, 0x806AA7C
-.equ loc_806AAA0, 0x806AAA0
-.equ off_806AAB4, 0x806AAB4
-.equ off_806AAB8, 0x806AAB8
-.equ locret_806AAC8, 0x806AAC8
-.equ locret_806AACA, 0x806AACA
-.equ locret_806AACC, 0x806AACC
-.equ locret_806AACE, 0x806AACE
-.equ sub_806AAD0, 0x806AAD0
-.equ off_806AAE4, 0x806AAE4
-.equ off_806AAE8, 0x806AAE8
-.equ dword_806AAF8, 0x806AAF8
-.equ dword_806AAFC, 0x806AAFC
-.equ dword_806AB00, 0x806AB00
-.equ dword_806AB04, 0x806AB04
+.extern sub_806A87C
+.extern off_806A8D4
+.extern off_806A8D8
+.extern off_806A8DC
+.extern off_806A8E0
+.extern dword_806A8F0
+.extern sub_806A91E
+.extern off_806A92C
+.extern off_806A930
+.extern off_806A940
+.extern off_806A964
+.extern off_806A988
+.extern off_806A9AC
+.extern off_806AA00
+.extern off_806AA04
+.extern off_806AA44
+.extern off_806AA48
+.extern off_806AA58
+.extern off_806AA7C
+.extern loc_806AAA0
+.extern off_806AAB4
+.extern off_806AAB8
+.extern locret_806AAC8
+.extern locret_806AACA
+.extern locret_806AACC
+.extern locret_806AACE
+.extern sub_806AAD0
+.extern off_806AAE4
+.extern off_806AAE8
+.extern dword_806AAF8
+.extern dword_806AAFC
+.extern dword_806AB00
+.extern dword_806AB04
 
 
 .endif // INC_ASM08

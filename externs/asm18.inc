@@ -2,17 +2,17 @@
 .equ EXT_ASM18, 0
 
 .include "asm10.inc"
-// .equ dword_8070ED8, 0x8071004
+// .extern dword_8070ED8
 
 .include "asm02.inc"
-// .equ sub_8026188, 0x8026188
+// .extern sub_8026188
 
 .include "asm00.inc"
-// .equ f900_8000904, 0x8000904
-// .equ nullsub_87, 0x8001EB0
-// .equ sub_8001EFC, 0x8001EFC
-// .equ sub_8001F44, 0x8001F44
-// .equ nullsub_88, 0x8001F94
+// .extern f900_8000904
+// .extern nullsub_87
+// .extern sub_8001EFC
+// .extern sub_8001F44
+// .extern nullsub_88
 
 
 .equ dword_200A150, 0x200A150

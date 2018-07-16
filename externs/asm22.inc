@@ -2,17 +2,17 @@
 .equ EXT_ASM22, 0
 
 .include "asm03.inc"
-// .equ sub_80511C0, 0x80511C0
+// .extern sub_80511C0
 
 .include "asm13.inc"
-// .equ sub_807731C, 0x807731C
+// .extern sub_807731C
 
 .include "asm28.inc"
-// .equ off_80CFF24, 0x80CFF24
+// .extern off_80CFF24
 
 .include "asm00.inc"
-// .equ f900_80009B4, 0x80009B4
-// .equ sub_8001C94, 0x8001C94
+// .extern f900_80009B4
+// .extern sub_8001C94
 
 
 .equ LCDControl, 0x4000000

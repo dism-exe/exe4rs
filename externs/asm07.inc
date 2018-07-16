@@ -2,18 +2,18 @@
 .equ EXT_ASM07, 0
 
 .include "asm03.inc"
-// .equ sub_804DF5C, 0x804DF5C
+// .extern sub_804DF5C
 
 .include "asm02.inc"
-// .equ sub_8026098, 0x8026098
-// .equ sub_8026188, 0x8026188
-// .equ sub_80266E0, 0x80266E0
+// .extern sub_8026098
+// .extern sub_8026188
+// .extern sub_80266E0
 
 .include "asm00.inc"
-// .equ sub_8001E5C, 0x8001E5C
-// .equ nullsub_88, 0x8001F94
-// .equ sub_80029F8, 0x80029F8
-// .equ sub_80034C4, 0x80034C4
+// .extern sub_8001E5C
+// .extern nullsub_88
+// .extern sub_80029F8
+// .extern sub_80034C4
 
 
 .equ unk_2012800, 0x2012800

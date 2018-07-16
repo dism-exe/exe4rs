@@ -2,35 +2,35 @@
 .equ EXT_START, 0
 
 .include "asm03.inc"
-// .equ loc_804903C, 0x804903C
-// .equ loc_804BDFC, 0x804BDFC
+// .extern loc_804903C
+// .extern loc_804BDFC
 
 .include "asm30.inc"
-// .equ loc_8110000, 0x8110000
-// .equ sub_811104C, 0x811104C
+// .extern loc_8110000
+// .extern sub_811104C
 
 .include "main.inc"
-// .equ main_static_800036C, 0x800036C
-// .equ main_static_80003B0, 0x80003B0
-// .equ main_static_8000456, 0x8000456
+// .extern main_static_800036C
+// .extern main_static_80003B0
+// .extern main_static_8000456
 
 .include "asm02.inc"
-// .equ ho_cb_8025268, 0x8025268
-// .equ loc_80297F0, 0x80297F0
-// .equ sub_802D6B8, 0x802D6B8
-// .equ loc_802DECC, 0x802DECC
-// .equ loc_8043238, 0x8043238
-// .equ loc_8044FA8, 0x8044FA8
+// .extern ho_cb_8025268
+// .extern loc_80297F0
+// .extern sub_802D6B8
+// .extern loc_802DECC
+// .extern loc_8043238
+// .extern loc_8044FA8
 
 .include "asm00.inc"
-// .equ f800_8000800, 0x8000800
-// .equ sub_8001AD8, 0x8001AD8
-// .equ sub_8001CB8, 0x8001CB8
-// .equ sub_8001E94, 0x8001E94
-// .equ sub_80020A0, 0x80020A0
-// .equ sub_80027DC, 0x80027DC
-// .equ ho_8004B70, 0x8004B70
-// .equ ho_8006AF4, 0x8006AF4
+// .extern f800_8000800
+// .extern sub_8001AD8
+// .extern sub_8001CB8
+// .extern sub_8001E94
+// .extern sub_80020A0
+// .extern sub_80027DC
+// .extern ho_8004B70
+// .extern ho_8006AF4
 
 
 .equ dword_2008920, 0x2008920

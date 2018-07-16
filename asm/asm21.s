@@ -221,9 +221,9 @@ sub_808C744:
 sub_808CE04:
     push {r4-r7,lr}
     ldr r7, [pc, #0x808ce24-0x808ce06-2] // byte_2010BA8
-    ldrb r0, [r7,#(byte_2010BA9 - 0x2010ba8)]
+    ldrb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)
     add r0, #1
-    strb r0, [r7,#(byte_2010BA9 - 0x2010ba8)]
+    strb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)
     mov r0, #0
     pop {r4-r7,pc}
     .balign 4, 0x00
@@ -233,9 +233,9 @@ sub_808CE04:
 sub_808CE14:
     push {r4-r7,lr}
     ldr r7, [pc, #0x808ce24-0x808ce16-2] // byte_2010BA8
-    ldrb r0, [r7,#(byte_2010BA9 - 0x2010ba8)]
+    ldrb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)
     add r0, #4
-    strb r0, [r7,#(byte_2010BA9 - 0x2010ba8)]
+    strb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)
     mov r0, #1
     pop {r4-r7,pc}
     .balign 4, 0x00

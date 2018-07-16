@@ -2,55 +2,55 @@
 .equ EXT_ASM04, 0
 
 .include "asm30.inc"
-// .equ sub_8102E9C, 0x8102E9C
-// .equ loc_81048C0, 0x81048C0
-// .equ loc_8104E58, 0x8104E58
-// .equ sub_81052F4, 0x81052F4
-// .equ loc_8105858, 0x8105858
-// .equ loc_81063F4, 0x81063F4
-// .equ loc_8106BEC, 0x8106BEC
-// .equ loc_8106EE8, 0x8106EE8
-// .equ loc_8107030, 0x8107030
-// .equ loc_8107248, 0x8107248
-// .equ loc_8107418, 0x8107418
-// .equ loc_8107A4C, 0x8107A4C
-// .equ loc_81081FC, 0x81081FC
-// .equ loc_8108754, 0x8108754
-// .equ loc_81089D8, 0x81089D8
-// .equ loc_8108C78, 0x8108C78
-// .equ loc_8108F44, 0x8108F44
-// .equ loc_81099F0, 0x81099F0
-// .equ loc_8109E78, 0x8109E78
-// .equ loc_810A02C, 0x810A02C
-// .equ loc_810A434, 0x810A434
-// .equ loc_810A768, 0x810A768
-// .equ loc_810AB80, 0x810AB80
-// .equ loc_810ADE0, 0x810ADE0
-// .equ loc_810B23C, 0x810B23C
-// .equ loc_810B6A0, 0x810B6A0
-// .equ loc_810B9EC, 0x810B9EC
-// .equ loc_810BB84, 0x810BB84
-// .equ loc_810BDE8, 0x810BDE8
-// .equ loc_810C338, 0x810C338
-// .equ sub_810CEB0, 0x810CEB0
-// .equ loc_810D1B8, 0x810D1B8
-// .equ loc_810D414, 0x810D414
-// .equ loc_810D8A8, 0x810D8A8
-// .equ loc_810DA9C, 0x810DA9C
-// .equ loc_810DE14, 0x810DE14
-// .equ loc_810E116, 0x810E116
-// .equ loc_810E340, 0x810E340
-// .equ loc_810E760, 0x810E760
+// .extern sub_8102E9C
+// .extern loc_81048C0
+// .extern loc_8104E58
+// .extern sub_81052F4
+// .extern loc_8105858
+// .extern loc_81063F4
+// .extern loc_8106BEC
+// .extern loc_8106EE8
+// .extern loc_8107030
+// .extern loc_8107248
+// .extern loc_8107418
+// .extern loc_8107A4C
+// .extern loc_81081FC
+// .extern loc_8108754
+// .extern loc_81089D8
+// .extern loc_8108C78
+// .extern loc_8108F44
+// .extern loc_81099F0
+// .extern loc_8109E78
+// .extern loc_810A02C
+// .extern loc_810A434
+// .extern loc_810A768
+// .extern loc_810AB80
+// .extern loc_810ADE0
+// .extern loc_810B23C
+// .extern loc_810B6A0
+// .extern loc_810B9EC
+// .extern loc_810BB84
+// .extern loc_810BDE8
+// .extern loc_810C338
+// .extern sub_810CEB0
+// .extern loc_810D1B8
+// .extern loc_810D414
+// .extern loc_810D8A8
+// .extern loc_810DA9C
+// .extern loc_810DE14
+// .extern loc_810E116
+// .extern loc_810E340
+// .extern loc_810E760
 
 .include "asm02.inc"
-// .equ sub_8025BD8, 0x8025BD8
+// .extern sub_8025BD8
 
 .include "asm00.inc"
-// .equ loc_8000874, 0x8000874
-// .equ f900_8000950, 0x8000950
-// .equ fA00_8000A30, 0x8000A30
-// .equ sub_800280C, 0x800280C
-// .equ sub_8002998, 0x8002998
+// .extern loc_8000874
+// .extern f900_8000950
+// .extern fA00_8000A30
+// .extern sub_800280C
+// .extern sub_8002998
 
 
 .equ byte_2008BB0, 0x2008BB0

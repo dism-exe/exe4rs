@@ -492,7 +492,7 @@ dead_8089C5C:
     .hword 0x1c00 // add r0, r0, #0  // <mkdata>
     bl sub_8024FA0
     ldr r4, [pc, #0x8089c80-0x8089c70-4] // word_8089C84
-    ldrh r0, [r4,#(word_8089C86 - 0x8089c84)]
+    ldrh r0, [r4,#0x2] // (word_8089C86 - 0x8089c84)
     add r0, r0, r2
     .hword 0x1c00 // add r0, r0, #0  // <mkdata>
     bl sub_8024FA0

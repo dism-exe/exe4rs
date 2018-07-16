@@ -31,9 +31,9 @@ sub_8212868:
     beq locret_82128A8
     ldr r0, [pc, #0x82128b0-0x8212872-2] // DMA0SourceAddress
     ldr r1, [pc, #0x82128b4-0x8212874-4] // =0x22000000
-    ldr r2, [r0,#(DMA0WordCount - 0x40000b0)]
+    ldr r2, [r0,#0x8] // (DMA0WordCount - 0x40000b0)
     and r2, r1
-    str r2, [r0,#(DMA0WordCount - 0x40000b0)]
+    str r2, [r0,#0x8] // (DMA0WordCount - 0x40000b0)
     cmp r3, #0x80
     bne loc_8212888
     ldr r1, [pc, #0x82128ac-0x8212880-4] // dword_2008920
@@ -44,14 +44,14 @@ loc_8212888:
     ldr r1, [pc, #0x82128ac-0x8212888-4] // dword_2008920
     ldr r2, [pc, #0x82128b8-0x821288a-2] // unk_2009940
     str r2, [r0]
-    ldr r2, [r1,#(dword_2008928 - 0x2008920)]
-    str r2, [r0,#(DMA0DestinationAddress - 0x40000b0)]
-    ldrb r2, [r1,#(dword_2008920+1 - 0x2008920)]
-    ldrh r3, [r1,#(dword_2008920+2 - 0x2008920)]
+    ldr r2, [r1,#0x8] // (dword_2008928 - 0x2008920)
+    str r2, [r0,#0x4] // (DMA0DestinationAddress - 0x40000b0)
+    ldrb r2, [r1,#0x1] // (dword_2008920+1 - 0x2008920)
+    ldrh r3, [r1,#0x2] // (dword_2008920+2 - 0x2008920)
     lsl r3, r3, #0x10
     orr r2, r3
-    str r2, [r0,#(DMA0WordCount - 0x40000b0)]
-    ldr r0, [r1,#(dword_2008924 - 0x2008920)]
+    str r2, [r0,#0x8] // (DMA0WordCount - 0x40000b0)
+    ldr r0, [r1,#0x4] // (dword_2008924 - 0x2008920)
     ldr r1, [pc, #0x82128b8-0x821289e-2] // unk_2009940
     ldr r2, [pc, #0x82128bc-0x82128a0-4] // =0x500
     ldr r3, [pc, #0x82128c0-0x82128a2-2] // sub_8006078+1
@@ -1937,30 +1937,30 @@ dword_8213910:    .word 0x3006A14
     mov lr, pc
     bx r2
     mov r0, #0
-    strh r0, [r5,#(dword_200A164 - 0x200a160)]
+    strh r0, [r5,#0x4] // (dword_200A164 - 0x200a160)
     mov r0, #2
     lsl r0, r0, #0x10
-    str r0, [r5,#(dword_200A16C - 0x200a160)]
+    str r0, [r5,#0xc] // (dword_200A16C - 0x200a160)
     ldr r0, [r4]
-    str r0, [r5,#(dword_200A168 - 0x200a160)]
+    str r0, [r5,#0x8] // (dword_200A168 - 0x200a160)
     ldr r0, [r4,#4]
-    str r0, [r5,#(dword_200A170 - 0x200a160)]
+    str r0, [r5,#0x10] // (dword_200A170 - 0x200a160)
     ldr r0, [r4,#8]
-    str r0, [r5,#(dword_200A174 - 0x200a160)]
+    str r0, [r5,#0x14] // (dword_200A174 - 0x200a160)
     ldr r0, [r4,#0xc]
-    str r0, [r5,#(dword_200A178 - 0x200a160)]
+    str r0, [r5,#0x18] // (dword_200A178 - 0x200a160)
     ldr r0, [r4,#0x10]
-    str r0, [r5,#(dword_200A17C - 0x200a160)]
+    str r0, [r5,#0x1c] // (dword_200A17C - 0x200a160)
     ldr r0, [r4,#0x14]
-    str r0, [r5,#(dword_200A180 - 0x200a160)]
+    str r0, [r5,#0x20] // (dword_200A180 - 0x200a160)
     ldr r0, [r4,#0x18]
-    str r0, [r5,#(dword_200A184 - 0x200a160)]
+    str r0, [r5,#0x24] // (dword_200A184 - 0x200a160)
     ldr r0, [r4,#0x1c]
-    str r0, [r5,#(dword_200A188 - 0x200a160)]
+    str r0, [r5,#0x28] // (dword_200A188 - 0x200a160)
     ldr r0, [r4,#0x20]
-    str r0, [r5,#(dword_200A18C - 0x200a160)]
+    str r0, [r5,#0x2c] // (dword_200A18C - 0x200a160)
     ldr r0, [r4,#0x24]
-    strb r0, [r5,#(byte_200A163 - 0x200a160)]
+    strb r0, [r5,#0x3] // (byte_200A163 - 0x200a160)
     ldr r0, [pc, #0x8213e6c-0x8213c46-2] // dword_2009440
     mov r1, #0xa0
     lsl r1, r1, #3
@@ -2000,7 +2000,7 @@ sub_8213C74:
     bx r1
     tst r2, r2
     beq loc_8213CB4
-    ldrh r2, [r5,#(dword_200A164 - 0x200a160)]
+    ldrh r2, [r5,#0x4] // (dword_200A164 - 0x200a160)
     cmp r2, #0xff
     bpl loc_8213CB4
     push {r0-r2}
@@ -2019,56 +2019,56 @@ loc_8213CB4:
     strb r0, [r6,#1]
     mov r0, #0x10
     strb r0, [r6,#3]
-    ldr r0, [r5,#(dword_200A16C - 0x200a160)]
+    ldr r0, [r5,#0xc] // (dword_200A16C - 0x200a160)
     lsr r0, r0, #0x10
     strb r0, [r6,#2]
-    ldr r0, [r5,#(dword_200A164 - 0x200a160)]
-    ldr r1, [r5,#(dword_200A168 - 0x200a160)]
-    ldr r2, [r5,#(dword_200A174 - 0x200a160)]
+    ldr r0, [r5,#0x4] // (dword_200A164 - 0x200a160)
+    ldr r1, [r5,#0x8] // (dword_200A168 - 0x200a160)
+    ldr r2, [r5,#0x14] // (dword_200A174 - 0x200a160)
     add r1, r1, r2
-    ldr r3, [r5,#(dword_200A17C - 0x200a160)]
+    ldr r3, [r5,#0x1c] // (dword_200A17C - 0x200a160)
     cmp r1, r3
     bgt loc_8213CD8
-    str r1, [r5,#(dword_200A168 - 0x200a160)]
+    str r1, [r5,#0x8] // (dword_200A168 - 0x200a160)
 loc_8213CD8:
     lsr r1, r1, #0x10
     add r0, r0, r1
-    ldrb r3, [r5,#(byte_200A163 - 0x200a160)]
+    ldrb r3, [r5,#0x3] // (byte_200A163 - 0x200a160)
     cmp r0, r3
     bgt loc_8213CE6
-    str r0, [r5,#(dword_200A164 - 0x200a160)]
+    str r0, [r5,#0x4] // (dword_200A164 - 0x200a160)
     b loc_8213CE8
 loc_8213CE6:
-    str r3, [r5,#(dword_200A164 - 0x200a160)]
+    str r3, [r5,#0x4] // (dword_200A164 - 0x200a160)
 loc_8213CE8:
-    ldr r0, [r5,#(dword_200A16C - 0x200a160)]
-    ldr r1, [r5,#(dword_200A170 - 0x200a160)]
-    ldr r2, [r5,#(dword_200A178 - 0x200a160)]
+    ldr r0, [r5,#0xc] // (dword_200A16C - 0x200a160)
+    ldr r1, [r5,#0x10] // (dword_200A170 - 0x200a160)
+    ldr r2, [r5,#0x18] // (dword_200A178 - 0x200a160)
     add r1, r1, r2
-    ldr r3, [r5,#(dword_200A180 - 0x200a160)]
+    ldr r3, [r5,#0x20] // (dword_200A180 - 0x200a160)
     cmp r1, r3
     bgt loc_8213CF8
-    str r1, [r5,#(dword_200A170 - 0x200a160)]
+    str r1, [r5,#0x10] // (dword_200A170 - 0x200a160)
 loc_8213CF8:
     add r0, r0, r1
-    ldrb r3, [r5,#(byte_200A163 - 0x200a160)]
+    ldrb r3, [r5,#0x3] // (byte_200A163 - 0x200a160)
     lsl r3, r3, #0x10
     cmp r0, r3
     bgt loc_8213D06
-    str r0, [r5,#(dword_200A16C - 0x200a160)]
+    str r0, [r5,#0xc] // (dword_200A16C - 0x200a160)
     b loc_8213D08
 loc_8213D06:
-    str r3, [r5,#(dword_200A16C - 0x200a160)]
+    str r3, [r5,#0xc] // (dword_200A16C - 0x200a160)
 loc_8213D08:
-    ldr r0, [r5,#(dword_200A16C - 0x200a160)]
+    ldr r0, [r5,#0xc] // (dword_200A16C - 0x200a160)
     lsr r0, r0, #0x10
     cmp r0, #0x10
     blt loc_8213D16
     mov r0, #0x10
     lsl r0, r0, #0x10
-    str r0, [r5,#(dword_200A16C - 0x200a160)]
+    str r0, [r5,#0xc] // (dword_200A16C - 0x200a160)
 loc_8213D16:
-    ldr r0, [r5,#(dword_200A164 - 0x200a160)]
+    ldr r0, [r5,#0x4] // (dword_200A164 - 0x200a160)
     cmp r0, #0xff
     blt loc_8213D28
     mov r0, #1

@@ -47,7 +47,7 @@ sub_80973B8:
     mov r6, r10
     ldr r6, [r6,#0x40]
     ldr r6, [r6,#0x28]
-    ldrb r0, [r7,#(byte_20005E1 - 0x20005e0)]
+    ldrb r0, [r7,#0x1] // (byte_20005E1 - 0x20005e0)
     cmp r0, #0
     beq loc_80973D4
     cmp r0, #2
@@ -57,7 +57,7 @@ sub_80973B8:
     cmp r0, #3
     beq loc_80973E6
 loc_80973D4:
-    mov r1, #(word_20005E2 - 0x20005e0)
+    mov r1, #0x2 // (word_20005E2 - 0x20005e0)
     ldrsh r2, [r7,r1]
     lsl r2, r2, #0x10
     ldr r1, [r6,#0x24]
@@ -67,7 +67,7 @@ loc_80973D4:
     mov r0, #5
     b loc_80973F6
 loc_80973E6:
-    mov r1, #(word_20005E4 - 0x20005e0)
+    mov r1, #0x4 // (word_20005E4 - 0x20005e0)
     ldrsh r2, [r7,r1]
     lsl r2, r2, #0x10
     ldr r1, [r6,#0x28]

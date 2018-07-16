@@ -2,7 +2,7 @@
 .equ EXT_ASM17, 0
 
 .include "asm00.inc"
-// .equ sub_80034C4, 0x80034C4
+// .extern sub_80034C4
 
 
 .equ dword_80827A8, 0x80827A8

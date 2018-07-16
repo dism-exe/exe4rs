@@ -2,12 +2,12 @@
 .equ EXT_ASM06, 0
 
 .include "asm02.inc"
-// .equ sub_8026098, 0x8026098
-// .equ sub_80266E0, 0x80266E0
+// .extern sub_8026098
+// .extern sub_80266E0
 
 .include "asm00.inc"
-// .equ sub_80029F8, 0x80029F8
-// .equ sub_80034C4, 0x80034C4
+// .extern sub_80029F8
+// .extern sub_80034C4
 
 
 .equ unk_2038800, 0x2038800

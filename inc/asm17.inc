@@ -4,20 +4,20 @@
 // Public Interface
 
 // Forward Reference
-.equ ho_null_8082728, 0x8082728
-.equ off_808273C, 0x808273C
-.equ jt_null_8082740, 0x8082740
-.equ nullsub_98, 0x8082760
-.equ nullsub_99, 0x8082762
-.equ nullsub_100, 0x8082764
-.equ nullsub_101, 0x8082766
-.equ nullsub_102, 0x8082768
-.equ nullsub_103, 0x808276A
-.equ nullsub_104, 0x808276C
-.equ nullsub_105, 0x808276E
-.equ sub_8082770, 0x8082770
-.equ off_8082784, 0x8082784
-.equ off_8082788, 0x8082788
+.extern ho_null_8082728
+.extern off_808273C
+.extern jt_null_8082740
+.extern nullsub_98
+.extern nullsub_99
+.extern nullsub_100
+.extern nullsub_101
+.extern nullsub_102
+.extern nullsub_103
+.extern nullsub_104
+.extern nullsub_105
+.extern sub_8082770
+.extern off_8082784
+.extern off_8082788
 
 
 .endif // INC_ASM17

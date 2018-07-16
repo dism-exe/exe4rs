@@ -2,18 +2,18 @@
 .equ EXT_ASM01, 0
 
 .include "asm02.inc"
-// .equ sub_8022CDE, 0x8022CDE
-// .equ sub_80405D8, 0x80405D8
-// .equ sub_80430F8, 0x80430F8
+// .extern sub_8022CDE
+// .extern sub_80405D8
+// .extern sub_80430F8
 
 .include "asm00.inc"
-// .equ f900_8000930, 0x8000930
-// .equ f900_800098C, 0x800098C
-// .equ f900_80009DC, 0x80009DC
-// .equ fA00_8000BB4, 0x8000BB4
-// .equ sub_80063A8, 0x80063A8
-// .equ sub_8007E16, 0x8007E16
-// .equ sub_800C41A, 0x800C41A
+// .extern f900_8000930
+// .extern f900_800098C
+// .extern f900_80009DC
+// .extern fA00_8000BB4
+// .extern sub_80063A8
+// .extern sub_8007E16
+// .extern sub_800C41A
 
 
 .equ unk_20008A0, 0x20008A0

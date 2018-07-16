@@ -2,16 +2,16 @@
 .equ EXT_ASM10, 0
 
 .include "asm02.inc"
-// .equ sub_8025CFC, 0x8025CFC
-// .equ sub_802610E, 0x802610E
-// .equ sub_80261BA, 0x80261BA
-// .equ sub_802A28C, 0x802A28C
+// .extern sub_8025CFC
+// .extern sub_802610E
+// .extern sub_80261BA
+// .extern sub_802A28C
 
 .include "asm00.inc"
-// .equ sub_8001E5C, 0x8001E5C
-// .equ nullsub_88, 0x8001F94
-// .equ sub_80029F8, 0x80029F8
-// .equ sub_80034C4, 0x80034C4
+// .extern sub_8001E5C
+// .extern nullsub_88
+// .extern sub_80029F8
+// .extern sub_80034C4
 
 
 .equ unk_2012800, 0x2012800
