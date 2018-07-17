@@ -10,7 +10,7 @@ and overlaying the object files on the binary image of the ROM in the bin folder
 - **make fdiff**: Runs a python script to quickly report back all content differences detected in the ROM.
 
 # Setting up and syncing IDA with the project
-In order to sync this project with IDA, The PseudoTerminal tool chain is needed: https://github.com/LanHikari22/GBA-IDA-Pseudo-Terminal. In the tools folder, there is an environment script, a game loader idc script, and an IDB fix script.
+This is not necessary for contribution, but could prove very useful. In order to sync this project with IDA, The PseudoTerminal tool chain is needed: https://github.com/LanHikari22/GBA-IDA-Pseudo-Terminal. In the tools folder, there is an environment script, a game loader idc script, and an IDB fix script.
 - Initialize the IDA database for exe4rs as a binary. 
 - Choose ARM little endian as the processor type.
 - In Processor Settings, Disable Macros and make sure that pointer dereferencing is enabled.
