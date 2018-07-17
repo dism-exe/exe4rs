@@ -2,8 +2,7 @@ Install DevkitARM and make the bin folder containing arm-none-eabi binaries avai
 
 # Building
 Use the following make rules to build the ROM:
-- **make rom**: Builds the output ROM `exe4rs.gba` by compiling the disassembled asm files
-and overlaying the object files on the binary image of the ROM in the bin folder: `bin/exe4rs.bin`
+- **make rom**: Builds the output ROM `exe4rs.gba` by compiling rom.s, which includes all disassembled asm files, and data files.
 - **make checksum**: displays the sha1 checksum of both `bin/exe4rs.bin` and `exe4rs.gba`. They must always be identical for `exe4rs.gba` to be considered valid
 - **make clean**: removes intermediate build files
 - **make tail**: In case the tail label changes locations in `_rom.s`, Run this to recompute `tail.bin`. the tail label is the very last label in `rom.s`, so it only has content if the rom has not been completely disassembled.
