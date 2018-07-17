@@ -1,6 +1,6 @@
 # Reverse Engineering
 - Document functions, files, or data by adding comments or changing symbol names in the asm and header files. (Make sure to refactor the symbol names so that all files remain in sync).
-- Update the game file ranges found in the environment script in the tools folder. Extract out of the code chunks, or uncover specific data files, and add them to the game files.
+- Update the game file ranges found in the environment script in the tools folder. Extract asm modules out of the code chunk files, or uncover specific data files, and add them to the game files.
 - Document, or reverse engineer more structs, constants, or enums.
 - All of these changes could be done manually. IDA May help with syncing symbol names and comments automatically, but manual changes and a Pull request are welcome.
 - Every code file is associated with a header file in the inc folder, which defines its public symbols, and all external symbols it uses.
