@@ -4,8 +4,8 @@
 - Document, or reverse engineer more structs, constants, or enums.
 - All of these changes could be done manually. IDA May help with syncing symbol names and comments automatically, but manual changes included in pull requests are more than welcome.
 - Every asm file is associated with a header file in the inc folder, which defines its public symbols, and all external symbols it uses.
-- Reverse engineer a memory map for WRAM. Similar to `rom.s`, a `wram.s` should be set to define the layout of WRAM.
-- Any new files created must be included in `rom.s` at the appropriate place relative to the other includes.
+- Reverse engineer a memory map for WRAM. Similar to `_rom.s`, a `_wram.s` should be set to define the layout of WRAM.
+- Any new files created must be included in `_rom.s` at the appropriate place relative to the other includes.
 
 # Validity Checking
 All changes must produce an identical ROM. run `make checksum` after `make rom` to ensure that the output ROM is identical to the source.
