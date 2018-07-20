@@ -20,7 +20,6 @@
 
 .include "asm30.inc"
 // .extern loc_8110000
-// .extern sub_8111FD4
 // .extern sub_8112630
 // .extern sub_81126A8
 // .extern sub_8112BCC
