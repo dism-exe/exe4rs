@@ -12,7 +12,18 @@ Use the following make rules to build the ROM:
 This is not necessary for contribution, but could prove very useful. In order to sync this project with IDA, The PseudoTerminal tool chain is needed: https://github.com/LanHikari22/GBA-IDA-Pseudo-Terminal. In the tools folder, there is an environment script, a game loader idc script, and an IDB fix script.
 - Initialize the IDA database for exe4rs as a binary. 
 - Choose ARM little endian as the processor type.
-- In Processor Settings, Disable Macros and make sure that pointer dereferencing is enabled.
+- Make sure to set the following kernal and processor settings: (Empty box = untick)
+  - (Kernal 1)
+  - [ ] Create function tails
+  - [ ] Create stack variables
+  - (Kernal 2)
+  - (ARM Specific Settings)
+  - [ ] Enable macros
+  - (Edit ARM Architecture options)
+  - Base architecture: ARMv7-A&R
+  - Advanced SIMD (NEON): No
+  - VFP instructions: None
+- Set the ROM segment and input file loading address to 0x08000000.
 - Once the database is initialized, run the game loader idc script.
 - Once that is finished, run `pt.py` from the PseudoTerminal tool chain and then run the IDB fix script.
 - Open the PseudoTerminal environment script and modify the project path.
