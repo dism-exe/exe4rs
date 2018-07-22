@@ -4,7 +4,7 @@
 sub_8073910:
     push {r4-r7,lr}
     mov r7, r10
-    ldr r0, [pc, #0x8073968-0x8073914-4] // off_80738D0
+    ldr r0, [pc, #0x8073968-0x8073914-4] // =off_80738D0
     ldr r1, [r7,#0x14]
     ldrb r2, [r5,#5]
     lsl r4, r2, #2
@@ -25,11 +25,11 @@ sub_8073910:
     bl sub_8025CFC
     bl sub_802610E
     bl sub_8073A30
-    ldr r0, [pc, #0x807396c-0x8073948-4] // unk_2038800
+    ldr r0, [pc, #0x807396c-0x8073948-4] // =unk_2038800
     bl sub_80029F8
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
-    ldr r0, [pc, #0x8073970-0x8073952-2] // off_8073974
+    ldr r0, [pc, #0x8073970-0x8073952-2] // =off_8073974
     ldr r0, [r0,r1]
     bl sub_8002A2A
     bl sub_804DF5C
@@ -59,7 +59,7 @@ sub_8073A30:
     ldr r5, [r5,#0x40]
     ldrb r1, [r5,#5]
     lsl r1, r1, #4
-    ldr r7, [pc, #0x8073a6c-0x8073a3a-2] // off_8073A70
+    ldr r7, [pc, #0x8073a6c-0x8073a3a-2] // =off_8073A70
     add r7, r7, r1
     ldr r0, [r7]
     ldr r1, [r7,#4]
@@ -71,7 +71,7 @@ sub_8073A30:
     ldr r0, [r7,#0xc]
     orr r2, r0
     strh r2, [r1]
-    ldr r0, [pc, #0x8073b30-0x8073a54-4] // off_8073B34
+    ldr r0, [pc, #0x8073b30-0x8073a54-4] // =off_8073B34
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
     ldr r0, [r0,r1]
@@ -120,7 +120,7 @@ sub_8073B88:
     ldr r5, [r5,#0x40]
     ldrb r6, [r5,#5]
     lsl r6, r6, #2
-    ldr r7, [pc, #0x8073b9c-0x8073b92-2] // jt_nullsub_8073BA0
+    ldr r7, [pc, #0x8073b9c-0x8073b92-2] // =jt_nullsub_8073BA0
     ldr r7, [r7,r6]
     mov lr, pc
     bx r7
@@ -152,7 +152,7 @@ sub_8073BD2:
     ldr r0, [r0,#0x40]
     ldrb r0, [r0,#5]
     lsl r0, r0, #2
-    ldr r1, [pc, #0x8073be8-0x8073bdc-4] // off_8073BEC
+    ldr r1, [pc, #0x8073be8-0x8073bdc-4] // =off_8073BEC
     ldr r0, [r1,r0]
     bl sub_80034C4
     pop {pc}  // <endpool>

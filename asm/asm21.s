@@ -220,7 +220,7 @@ sub_808C744:
 .thumb
 sub_808CE04:
     push {r4-r7,lr}
-    ldr r7, [pc, #0x808ce24-0x808ce06-2] // byte_2010BA8
+    ldr r7, [pc, #0x808ce24-0x808ce06-2] // =byte_2010BA8
     ldrb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)
     add r0, #1
     strb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)
@@ -232,7 +232,7 @@ sub_808CE04:
 .thumb
 sub_808CE14:
     push {r4-r7,lr}
-    ldr r7, [pc, #0x808ce24-0x808ce16-2] // byte_2010BA8
+    ldr r7, [pc, #0x808ce24-0x808ce16-2] // =byte_2010BA8
     ldrb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)
     add r0, #4
     strb r0, [r7,#0x1] // (byte_2010BA9 - 0x2010ba8)

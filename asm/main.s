@@ -30,7 +30,7 @@ game_routine:
     add r1, #1
     strh r1, [r0]
     bl fA00_8000C24
-    ldr r0, [pc, #0x8000328-0x80002f2-2] // jt_mainCallbacks
+    ldr r0, [pc, #0x8000328-0x80002f2-2] // =jt_mainCallbacks
     mov r7, r10
     ldr r1, [r7]
     ldrb r1, [r1]
@@ -45,7 +45,7 @@ loc_800030C:
     bl loc_804DFC4
     bl sub_8001E94
     bl sub_80020A0
-    ldr r0, [pc, #0x8000324-0x8000318-4] // loc_30063F8+1
+    ldr r0, [pc, #0x8000324-0x8000318-4] // =loc_30063F8+1
     mov lr, pc
     bx r0
     bl main_static_8000418
@@ -74,15 +74,15 @@ jt_mainCallbacks:    .word ho_cb_8025268+1
 main_static_800036C:
     push {lr}
 loc_800036E:
-    ldr r0, [pc, #0x8000398-0x800036e-2] // GeneralLCDStatus_STAT_LYC_
+    ldr r0, [pc, #0x8000398-0x800036e-2] // =GeneralLCDStatus_STAT_LYC_
     mov r2, #1
 loc_8000372:
     ldrh r1, [r0]
     tst r1, r2
     beq loc_8000372
-    ldr r0, [pc, #0x8000390-0x8000378-4] // dword_200ACB0
+    ldr r0, [pc, #0x8000390-0x8000378-4] // =dword_200ACB0
     ldr r2, [r0]
-    ldr r1, [pc, #0x8000394-0x800037c-4] // dword_200A338
+    ldr r1, [pc, #0x8000394-0x800037c-4] // =dword_200A338
     ldr r1, [r1]
     cmp r2, r1
     blt loc_800036E
@@ -99,7 +99,7 @@ off_8000398:    .word GeneralLCDStatus_STAT_LYC_
 .thumb
 main_static_800039C:
     push {lr}
-    ldr r0, [pc, #0x80003ac-0x800039e-2] // GeneralLCDStatus_STAT_LYC_
+    ldr r0, [pc, #0x80003ac-0x800039e-2] // =GeneralLCDStatus_STAT_LYC_
     mov r2, #1
 loc_80003A2:
     ldrh r1, [r0]
@@ -121,7 +121,7 @@ main_static_80003B0:
     mov r7, #0
 loc_80003BE:
     strb r7, [r0,#0x13]
-    ldr r4, [pc, #0x8000414-0x80003c0-4] // KeyStatus
+    ldr r4, [pc, #0x8000414-0x80003c0-4] // =KeyStatus
     ldrh r4, [r4]
     mvn r4, r4
     ldrh r5, [r0]
@@ -364,7 +364,7 @@ main_static_80004FC:
     mov r0, #0x10
     ldr r1, [pc, #0x8000534-0x800050a-2] // =0x30059C4
     bl start_8000284
-    ldr r0, [pc, #0x800052c-0x8000510-4] // GeneralLCDStatus_STAT_LYC_
+    ldr r0, [pc, #0x800052c-0x8000510-4] // =GeneralLCDStatus_STAT_LYC_
     ldrh r1, [r0]
     mov r2, #0xff
     and r1, r2

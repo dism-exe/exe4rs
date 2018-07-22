@@ -17,11 +17,11 @@ sub_8085444:
     bl sub_8085BF8
     add r4, r0, #0
 loc_8085462:
-    ldr r0, [pc, #0x8085684-0x8085462-2] // pt_8085688
+    ldr r0, [pc, #0x8085684-0x8085462-2] // =pt_8085688
     lsl r1, r4, #2
     ldr r0, [r0,r1]
     bl sub_8026188
-    ldr r0, [pc, #0x8085478-0x808546c-4] // dword_200A150
+    ldr r0, [pc, #0x8085478-0x808546c-4] // =dword_200A150
     mov r1, #8
     bl f900_8000904
     pop {pc}
@@ -47,7 +47,7 @@ sub_808547C:
     add r4, r0, #0
 loc_808549A:
     lsl r1, r4, #4
-    ldr r7, [pc, #0x80854d0-0x808549c-4] // jt_80854D4
+    ldr r7, [pc, #0x80854d0-0x808549c-4] // =jt_80854D4
     add r7, r7, r1
     ldr r0, [r7]
     ldr r1, [r7,#4]
@@ -59,12 +59,12 @@ loc_808549A:
     ldr r0, [r7,#0xc]
     orr r2, r0
     strh r2, [r1]
-    ldr r0, [pc, #0x8085684-0x80854b6-2] // pt_8085688
+    ldr r0, [pc, #0x8085684-0x80854b6-2] // =pt_8085688
     lsl r1, r4, #2
     ldr r0, [r0,r1]
     bl sub_80261BA
     lsl r1, r4, #2
-    ldr r0, [pc, #0x80854cc-0x80854c2-2] // pt_8085A9C
+    ldr r0, [pc, #0x80854cc-0x80854c2-2] // =pt_8085A9C
     ldr r0, [r0,r1]
     bl sub_80024E0
     pop {r4-r7,pc}
@@ -342,7 +342,7 @@ sub_8085BF8:
     ldrb r0, [r0,#5]
     cmp r1, #0x80
     blt loc_8085C12
-    ldr r2, [pc, #0x8085c18-0x8085c06-2] // pt_8085C1C
+    ldr r2, [pc, #0x8085c18-0x8085c06-2] // =pt_8085C1C
     sub r1, #0x80
     lsl r1, r1, #2
     ldr r2, [r2,r1]

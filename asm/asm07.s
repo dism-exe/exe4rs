@@ -4,7 +4,7 @@
 sub_8069450:
     push {r4-r7,lr}
     mov r7, r10
-    ldr r0, [pc, #0x80694a8-0x8069454-4] // dword_80691D8+40
+    ldr r0, [pc, #0x80694a8-0x8069454-4] // =dword_80691D8+40
     ldr r1, [r7,#0x14]
     ldrb r2, [r5,#5]
     lsl r4, r2, #2
@@ -25,11 +25,11 @@ sub_8069450:
     bl sub_8025CFC
     bl sub_802610E
     bl sub_80694FC
-    ldr r0, [pc, #0x80694ac-0x8069488-4] // unk_2038800
+    ldr r0, [pc, #0x80694ac-0x8069488-4] // =unk_2038800
     bl sub_80029F8
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
-    ldr r0, [pc, #0x80694b0-0x8069492-2] // off_80694B4
+    ldr r0, [pc, #0x80694b0-0x8069492-2] // =off_80694B4
     ldr r0, [r0,r1]
     bl sub_8002A2A
     bl sub_804DF5C
@@ -49,7 +49,7 @@ dword_80694BC:    .word 0x41C031C, 0x31CFFFF, 0xA1C041C
 sub_80694CA:
     push {lr}
     lsl r1, r1, #2
-    ldr r0, [pc, #0x80694d8-0x80694ce-2] // off_80694DC
+    ldr r0, [pc, #0x80694d8-0x80694ce-2] // =off_80694DC
     ldr r0, [r0,r1]
     bl sub_80024E0
     pop {pc}
@@ -71,7 +71,7 @@ sub_80694FC:
     ldr r5, [r5,#0x40]
     ldrb r1, [r5,#5]
     lsl r1, r1, #4
-    ldr r7, [pc, #0x8069538-0x8069506-2] // off_806953C
+    ldr r7, [pc, #0x8069538-0x8069506-2] // =off_806953C
     add r7, r7, r1
     ldr r0, [r7]
     ldr r1, [r7,#4]
@@ -83,7 +83,7 @@ sub_80694FC:
     ldr r0, [r7,#0xc]
     orr r2, r0
     strh r2, [r1]
-    ldr r0, [pc, #0x806955c-0x8069520-4] // off_8069560
+    ldr r0, [pc, #0x806955c-0x8069520-4] // =off_8069560
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
     ldr r0, [r0,r1]
@@ -116,7 +116,7 @@ sub_806958C:
     ldr r5, [r5,#0x40]
     ldrb r6, [r5,#5]
     lsl r6, r6, #2
-    ldr r7, [pc, #0x80695a0-0x8069596-2] // off_80695A4
+    ldr r7, [pc, #0x80695a0-0x8069596-2] // =off_80695A4
     ldr r7, [r7,r6]
     mov lr, pc
     bx r7
@@ -143,7 +143,7 @@ sub_80695B0:
     ldr r0, [r0,#0x40]
     ldrb r0, [r0,#5]
     lsl r0, r0, #2
-    ldr r1, [pc, #0x80695c4-0x80695ba-2] // off_80695C8
+    ldr r1, [pc, #0x80695c4-0x80695ba-2] // =off_80695C8
     ldr r0, [r1,r0]
     bl sub_80034C4
     pop {pc}

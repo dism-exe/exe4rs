@@ -7,7 +7,7 @@ ho_null_807990C:
     ldr r5, [r5,#0x40]
     ldrb r6, [r5,#5]
     lsl r6, r6, #2
-    ldr r7, [pc, #0x8079920-0x8079916-2] // jt_null_8079924
+    ldr r7, [pc, #0x8079920-0x8079916-2] // =jt_null_8079924
     ldr r7, [r7,r6]
     mov lr, pc
     bx r7
@@ -46,7 +46,7 @@ sub_807993C:
     ldr r0, [r0,#0x40]
     ldrb r0, [r0,#5]
     lsl r0, r0, #2
-    ldr r1, [pc, #0x8079950-0x8079946-2] // off_8079954
+    ldr r1, [pc, #0x8079950-0x8079946-2] // =off_8079954
     ldr r0, [r1,r0]
     bl sub_80034C4
     pop {pc}

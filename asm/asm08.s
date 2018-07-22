@@ -4,7 +4,7 @@
 sub_806A87C:
     push {r4-r7,lr}
     mov r7, r10
-    ldr r0, [pc, #0x806a8d4-0x806a880-4] // dword_8069A24+1732
+    ldr r0, [pc, #0x806a8d4-0x806a880-4] // =dword_8069A24+1732
     ldr r1, [r7,#0x14]
     ldrb r2, [r5,#5]
     lsl r4, r2, #2
@@ -25,11 +25,11 @@ sub_806A87C:
     bl sub_8025CFC
     bl sub_802610E
     bl sub_806A9C4
-    ldr r0, [pc, #0x806a8d8-0x806a8b4-4] // unk_2038800
+    ldr r0, [pc, #0x806a8d8-0x806a8b4-4] // =unk_2038800
     bl sub_80029F8
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
-    ldr r0, [pc, #0x806a8dc-0x806a8be-2] // off_806A8E0
+    ldr r0, [pc, #0x806a8dc-0x806a8be-2] // =off_806A8E0
     ldr r0, [r0,r1]
     bl sub_8002A2A
     bl sub_804DF5C
@@ -51,7 +51,7 @@ dword_806A8F0:    .word 0x151C141C, 0x271C161C, 0x141CFFFF, 0x161C151C, 0xFFFF27
 sub_806A91E:
     push {lr}
     lsl r1, r1, #2
-    ldr r0, [pc, #0x806a92c-0x806a922-2] // off_806A930
+    ldr r0, [pc, #0x806a92c-0x806a922-2] // =off_806A930
     ldr r0, [r0,r1]
     bl sub_80024E0
     pop {pc}
@@ -102,7 +102,7 @@ sub_806A9C4:
     ldr r5, [r5,#0x40]
     ldrb r1, [r5,#5]
     lsl r1, r1, #4
-    ldr r7, [pc, #0x806aa00-0x806a9ce-2] // off_806AA04
+    ldr r7, [pc, #0x806aa00-0x806a9ce-2] // =off_806AA04
     add r7, r7, r1
     ldr r0, [r7]
     ldr r1, [r7,#4]
@@ -114,7 +114,7 @@ sub_806A9C4:
     ldr r0, [r7,#0xc]
     orr r2, r0
     strh r2, [r1]
-    ldr r0, [pc, #0x806aa44-0x806a9e8-4] // off_806AA48
+    ldr r0, [pc, #0x806aa44-0x806a9e8-4] // =off_806AA48
     ldrb r1, [r5,#5]
     lsl r1, r1, #2
     ldr r0, [r0,r1]
@@ -151,7 +151,7 @@ loc_806AAA0:
     ldr r5, [r5,#0x40]
     ldrb r6, [r5,#5]
     lsl r6, r6, #2
-    ldr r7, [pc, #0x806aab4-0x806aaaa-2] // off_806AAB8
+    ldr r7, [pc, #0x806aab4-0x806aaaa-2] // =off_806AAB8
     ldr r7, [r7,r6]
     mov lr, pc
     bx r7
@@ -176,7 +176,7 @@ sub_806AAD0:
     ldr r0, [r0,#0x40]
     ldrb r0, [r0,#5]
     lsl r0, r0, #2
-    ldr r1, [pc, #0x806aae4-0x806aada-2] // off_806AAE8
+    ldr r1, [pc, #0x806aae4-0x806aada-2] // =off_806AAE8
     ldr r0, [r1,r0]
     bl sub_80034C4
     pop {pc}

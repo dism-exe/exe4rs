@@ -3,7 +3,7 @@
 .thumb
 sub_8097328:
     push {r4-r7,lr}
-    ldr r0, [pc, #0x809733c-0x809732a-2] // dword_8097340
+    ldr r0, [pc, #0x809733c-0x809732a-2] // =dword_8097340
     ldrb r1, [r5,#4]
     mov r2, #0x10
     mul r1, r2
@@ -43,7 +43,7 @@ loc_80973AC:
 .thumb
 sub_80973B8:
     push {r4-r7,lr}
-    ldr r7, [pc, #0x809740c-0x80973ba-2] // unk_20005E0
+    ldr r7, [pc, #0x809740c-0x80973ba-2] // =unk_20005E0
     mov r6, r10
     ldr r6, [r6,#0x40]
     ldr r6, [r6,#0x28]

@@ -247,12 +247,12 @@ sub_8094BA0:
     bne loc_8094BBC
     mov r4, #0
 loc_8094BBC:
-    ldr r0, [pc, #0x8094bd0-0x8094bbc-4] // off_8094BD4
+    ldr r0, [pc, #0x8094bd0-0x8094bbc-4] // =off_8094BD4
     lsl r4, r4, #2
     ldr r0, [r0,r4]
     bl sub_802669C
     mov r0, #0
-    ldr r1, [pc, #0x8094be0-0x8094bc8-4] // dword_200AAB0
+    ldr r1, [pc, #0x8094be0-0x8094bc8-4] // =dword_200AAB0
     strb r0, [r1]
     mov r0, #0
     pop {r4,pc}
