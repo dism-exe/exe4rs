@@ -1,7 +1,7 @@
 .ifndef INC_ASM29
 .equ INC_ASM29, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_80F8944
 
 

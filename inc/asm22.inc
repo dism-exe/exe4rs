@@ -1,7 +1,7 @@
 .ifndef INC_ASM22
 .equ INC_ASM22, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_808EC76
 .extern sub_808F45C
 

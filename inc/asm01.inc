@@ -1,7 +1,7 @@
 .ifndef INC_ASM01
 .equ INC_ASM01, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_8019010
 .extern sub_8019020
 .extern sub_801904C

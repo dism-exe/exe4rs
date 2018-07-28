@@ -1,7 +1,7 @@
 .ifndef INC_ASM15
 .equ INC_ASM15, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_807CB92
 .extern sub_807CBEC
 .extern off_807CD54

@@ -1,14 +1,14 @@
 .ifndef INC_ASM27
 .equ INC_ASM27, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern dword_809CDE4
 .extern dword_809CF04
 .extern dword_809D24C
 .extern dword_809D2FC
-.extern unk_809D364
+.extern dword_809D364
 .extern unk_809D394
-.extern unk_809D414
+.extern dword_809D414
 .extern unk_809D474
 .extern dword_809D4BC
 .extern dword_809D654
@@ -210,7 +210,7 @@
 .include "asm30.inc"
 // .extern sub_8109FDA
 // .extern sub_810CE50
-// .extern loc_81116F0
+// .extern sub_81116F0
 
 
 /* Undeclared Symbols */
@@ -320,11 +320,11 @@
 .equ dword_80A9210, 0x80A9210
 .equ dword_84C45B0, 0x84C45B0
 .equ dword_868E224, 0x868E224
-.equ aNn, 0x86E4890
-.equ loc_86E8448, 0x86E8448
+.equ byte_86E4890, 0x86E4890
+.equ unk_86E8448, 0x86E8448
 .equ dword_86FF0DC, 0x86FF0DC
 .equ dword_8701E80, 0x8701E80
 .equ dword_87022E0, 0x87022E0
-.equ unk_8755B7C, 0x8755B7C
+.equ dword_8755B7C, 0x8755B7C
 
 .endif // INC_ASM27

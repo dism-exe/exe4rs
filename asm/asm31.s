@@ -207,7 +207,8 @@ loc_82129B6:
     blt loc_82129A2
     add sp, sp, #4
     mov pc, lr
-loc_82129C8:
+.thumb
+sub_82129C8:
     push {r5,lr}
     cmp r6, #0
     ble locret_82129F0
@@ -237,6 +238,8 @@ dword_82129F4:    .word 0x3005AF8
 dword_8212A00:    .word 0x7BDE
 dword_8212A04:    .word 0x8420
 dword_8212A08:    .word 0x3DEF
+// end of function sub_82129C8
+
     add r4, r0, #0
     and r4, r1
     lsl r4, r4, #1
@@ -503,7 +506,7 @@ loc_8212C00:
 .thumb
 sub_8212C10:
     push {r7}
-    bl loc_82129C8
+    bl sub_82129C8
     pop {r0}
 loc_8212C18:
     mov r8, r5
@@ -1665,12 +1668,10 @@ off_8213480:    .word dword_3003670
     .word 0x7841E7EA, 0xF00031E4, 0x3002F813, 0x3701464F, 0xE7E146B9
     .word 0x1A12BC03, 0x46FE4B03, 0x46484718, 0xBD00
     .word 0x3006700
+    .byte 0x75, 0x8, 0x0, 0x8, 0x5
+    .byte 0x9, 0x0, 0x8
 // end of function sub_8213404
 
-    lsr r5, r6, #1
-    lsr r0, r0, #0x20
-    lsr r5, r0, #4
-    lsr r0, r0, #0x20
 .thumb
 sub_82136F0:
     push {r0,r6,lr}

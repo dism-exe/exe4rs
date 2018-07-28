@@ -1,7 +1,7 @@
 .ifndef INC_ASM30
 .equ INC_ASM30, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_8105A04
 .extern sub_810982C
 .extern sub_810998C
@@ -20,10 +20,10 @@
 .extern sub_81116AC
 .extern sub_81116B8
 .extern sub_81116E4
-.extern loc_81116E8
-.extern loc_81116EC
-.extern loc_81116F0
-.extern loc_81116F4
+.extern sub_81116E8
+.extern sub_81116EC
+.extern sub_81116F0
+.extern sub_81116F4
 .extern dword_81116FC
 .extern dword_8111700
 .extern dword_8111704
@@ -97,7 +97,7 @@
 // .extern sub_80539A0
 // .extern sub_80539B0
 // .extern sub_8053A04
-// .extern function_chunks__function_chunks_loc_8053A28
+// .extern sub_8053A28
 // .extern sub_8053A6C
 // .extern sub_80540C6
 // .extern sub_80540E0
@@ -373,6 +373,7 @@
 .equ off_805D0A0, 0x805D0A0
 .equ dword_80807E0, 0x80807E0
 .equ dword_80807E0, 0x80807E0
+.equ dword_8086D64, 0x8086D64
 .equ dword_8086F84, 0x8086F84
 .equ dword_8086F84, 0x8086F84
 .equ off_8155CE4, 0x8155CE4
@@ -405,7 +406,7 @@
 .equ dword_86888F4, 0x86888F4
 .equ dword_8688974, 0x8688974
 .equ dword_8688E1C, 0x8688E1C
-.equ a99999999999999, 0x8688E34
+.equ unk_868901C, 0x868901C
 .equ dword_8689A84, 0x8689A84
 .equ dword_8689AC4, 0x8689AC4
 .equ dword_8689AE4, 0x8689AE4
@@ -428,7 +429,6 @@
 .equ dword_86A0364, 0x86A0364
 .equ dword_86C26D0, 0x86C26D0
 .equ dword_86C28D0, 0x86C28D0
-.equ asc_86C29D4, 0x86C29D4
 .equ dword_86C2CD0, 0x86C2CD0
 .equ dword_86C2ED0, 0x86C2ED0
 .equ dword_86C32D0, 0x86C32D0
@@ -453,22 +453,22 @@
 .equ dword_86D539C, 0x86D539C
 .equ dword_86D6234, 0x86D6234
 .equ dword_86D6C34, 0x86D6C34
-.equ unk_86DE644, 0x86DE644
+.equ dword_86DE644, 0x86DE644
 .equ byte_86E66B8, 0x86E66B8
-.equ loc_86E6888, 0x86E6888
+.equ unk_86E6888, 0x86E6888
 .equ dword_86F1840, 0x86F1840
 .equ dword_87017BC, 0x87017BC
 .equ dword_8706800, 0x8706800
-.equ unk_8706F00, 0x8706F00
-.equ unk_8707580, 0x8707580
+.equ dword_8706F00, 0x8706F00
+.equ dword_8707580, 0x8707580
 .equ dword_8707A80, 0x8707A80
-.equ loc_8745CB8, 0x8745CB8
-.equ dword_8749F30, 0x8749F30
+.equ unk_8745CB8, 0x8745CB8
+.equ unk_8749F30, 0x8749F30
 .equ dword_874C670, 0x874C670
-.equ dword_87548F4, 0x87548F4
+.equ unk_87548F4, 0x87548F4
 .equ dword_87D85B0, 0x87D85B0
-.equ unk_87D8C30, 0x87D8C30
+.equ byte_87D8C30, 0x87D8C30
 .equ loc_87D8C50, 0x87D8C50
-.equ loc_87D8CE0, 0x87D8CE0
+.equ unk_87D8CE0, 0x87D8CE0
 
 .endif // INC_ASM30

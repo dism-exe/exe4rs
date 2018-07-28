@@ -1,7 +1,7 @@
 .ifndef INC_ASM03
 .equ INC_ASM03, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_8046C98
 .extern sub_8046CA8
 .extern sub_8046CB4
@@ -52,6 +52,7 @@
 .extern sub_80486EC
 .extern sub_8048714
 .extern sub_8048754
+.extern loc_8048758
 .extern sub_80487E8
 .extern sub_80488F8
 .extern sub_8048956
@@ -61,11 +62,12 @@
 .extern sub_804BA5C
 .extern sub_804BAF8
 .extern sub_804BDD4
-.extern loc_804C5F4
+.extern sub_804C5F4
+.extern sub_804DF48
 .extern sub_804DF5C
 .extern sub_804DF90
 .extern sub_804DFA0
-.extern loc_804DFC4
+.extern sub_804DFC4
 .extern sub_804E294
 .extern sub_804E2A4
 .extern sub_804E448
@@ -141,7 +143,7 @@
 // .extern sub_803B488
 // .extern sub_803D618
 // .extern sub_8041D72
-// .extern loc_80429E8
+// .extern sub_80429E8
 // .extern sub_8042FB4
 // .extern sub_80430E8
 // .extern sub_8043E48
@@ -178,7 +180,7 @@
 // .extern sub_8053990
 // .extern sub_80539A0
 // .extern sub_80539B0
-// .extern unk_80539C4
+// .extern sub_80539C4
 // .extern sub_8053A04
 // .extern sub_8053FFC
 // .extern sub_8054018
@@ -447,7 +449,7 @@
 .equ off_8052EDC, 0x8052EDC
 .equ off_8052EF4, 0x8052EF4
 .equ dword_80535C0, 0x80535C0
-.equ unk_8053700, 0x8053700
+.equ dword_8053700, 0x8053700
 .equ unk_8053840, 0x8053840
 .equ dword_868DBA4, 0x868DBA4
 .equ dword_868DD04, 0x868DD04
@@ -474,11 +476,11 @@
 .equ dword_86DE22C, 0x86DE22C
 .equ dword_86DE24C, 0x86DE24C
 .equ dword_86E31DC, 0x86E31DC
-.equ unk_86E4BEC, 0x86E4BEC
+.equ dword_86E4BEC, 0x86E4BEC
 .equ dword_86E5B94, 0x86E5B94
 .equ byte_86E66B8, 0x86E66B8
-.equ loc_86E6888, 0x86E6888
-.equ aRvyCmu, 0x86E82DC
+.equ unk_86E6888, 0x86E6888
+.equ byte_86E82DC, 0x86E82DC
 .equ dword_86EE2B8, 0x86EE2B8
 .equ dword_86F87B4, 0x86F87B4
 .equ dword_86F87B4, 0x86F87B4
@@ -497,15 +499,15 @@
 .equ dword_86FF8FC, 0x86FF8FC
 .equ dword_8700FBC, 0x8700FBC
 .equ dword_8700FBC, 0x8700FBC
-.equ unk_8706F00, 0x8706F00
+.equ dword_8706F00, 0x8706F00
 .equ dword_8707A80, 0x8707A80
-.equ a8Bdfhjlnprtvxz, 0x8746D20
-.equ unk_8753894, 0x8753894
+.equ byte_8746D20, 0x8746D20
+.equ dword_8753894, 0x8753894
 .equ dword_8753B14, 0x8753B14
 .equ dword_8753B34, 0x8753B34
-.equ unk_8753D14, 0x8753D14
-.equ loc_8753EF4, 0x8753EF4
-.equ loc_87540D4, 0x87540D4
-.equ dword_87548F4, 0x87548F4
+.equ dword_8753D14, 0x8753D14
+.equ unk_8753EF4, 0x8753EF4
+.equ unk_87540D4, 0x87540D4
+.equ unk_87548F4, 0x87548F4
 
 .endif // INC_ASM03

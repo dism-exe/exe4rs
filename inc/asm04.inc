@@ -1,14 +1,14 @@
 .ifndef INC_ASM04
 .equ INC_ASM04, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_8053980
 .extern sub_8053990
 .extern sub_80539A0
 .extern sub_80539B0
-.extern unk_80539C4
+.extern sub_80539C4
 .extern sub_8053A04
-.extern function_chunks__function_chunks_loc_8053A28
+.extern sub_8053A28
 .extern sub_8053A30
 .extern sub_8053A6C
 .extern sub_8053FFC
@@ -24,83 +24,84 @@
 /* External Symbols */
 .include "asm30.inc"
 // .extern sub_8102E9C
-// .extern loc_81045E0
-// .extern loc_81048C0
-// .extern loc_8104C58
+// .extern sub_8103ED0
+// .extern sub_81045E0
+// .extern sub_81048C0
+// .extern sub_8104C58
 // .extern loc_8104E58
-// .extern loc_81050B0
+// .extern sub_81050B0
 // .extern sub_81052F4
-// .extern loc_81056D0
-// .extern loc_8105858
-// .extern loc_81059C0
-// .extern loc_81063F4
-// .extern loc_81064E8
-// .extern loc_8106BEC
-// .extern loc_8106E34
-// .extern loc_8106EE8
-// .extern loc_8106FB4
-// .extern loc_8107030
-// .extern loc_810719C
-// .extern loc_8107248
-// .extern loc_8107368
-// .extern loc_8107418
-// .extern loc_8107660
-// .extern loc_8107A4C
-// .extern loc_8107E98
-// .extern loc_81081FC
-// .extern loc_8108608
-// .extern loc_8108754
-// .extern loc_8108934
-// .extern loc_81089D8
-// .extern loc_8108BDC
-// .extern loc_8108C78
-// .extern loc_8108DE0
-// .extern loc_8108F44
-// .extern loc_810939C
-// .extern loc_81099F0
-// .extern loc_8109DC4
-// .extern loc_8109E78
-// .extern loc_8109F48
-// .extern loc_810A02C
-// .extern loc_810A2E4
-// .extern loc_810A434
-// .extern loc_810A500
-// .extern loc_810A768
-// .extern loc_810A8EC
-// .extern loc_810AB80
-// .extern loc_810AC44
-// .extern loc_810ADE0
-// .extern loc_810B014
-// .extern loc_810B23C
-// .extern loc_810B31C
-// .extern loc_810B6A0
-// .extern loc_810B8F4
-// .extern loc_810B9EC
-// .extern loc_810BAB4
-// .extern loc_810BB84
-// .extern loc_810BC5C
-// .extern loc_810BDE8
-// .extern loc_810BEB8
-// .extern loc_810C338
-// .extern loc_810CDC0
+// .extern sub_81056D0
+// .extern sub_8105858
+// .extern sub_81059C0
+// .extern sub_81063F4
+// .extern sub_81064E8
+// .extern sub_8106BEC
+// .extern sub_8106E34
+// .extern sub_8106EE8
+// .extern sub_8106FB4
+// .extern sub_8107030
+// .extern sub_810719C
+// .extern sub_8107248
+// .extern sub_8107368
+// .extern sub_8107418
+// .extern sub_8107660
+// .extern sub_8107A4C
+// .extern sub_8107E98
+// .extern sub_81081FC
+// .extern sub_8108608
+// .extern sub_8108754
+// .extern sub_8108934
+// .extern sub_81089D8
+// .extern sub_8108BDC
+// .extern sub_8108C78
+// .extern sub_8108DE0
+// .extern sub_8108F44
+// .extern sub_810939C
+// .extern sub_81099F0
+// .extern sub_8109DC4
+// .extern sub_8109E78
+// .extern sub_8109F48
+// .extern sub_810A02C
+// .extern sub_810A2E4
+// .extern sub_810A434
+// .extern sub_810A500
+// .extern sub_810A768
+// .extern sub_810A8EC
+// .extern sub_810AB80
+// .extern sub_810AC44
+// .extern sub_810ADE0
+// .extern sub_810B014
+// .extern sub_810B23C
+// .extern sub_810B31C
+// .extern sub_810B6A0
+// .extern sub_810B8F4
+// .extern sub_810B9EC
+// .extern sub_810BAB4
+// .extern sub_810BB84
+// .extern sub_810BC5C
+// .extern sub_810BDE8
+// .extern sub_810BEB8
+// .extern sub_810C338
+// .extern sub_810CDC0
 // .extern sub_810CEB0
-// .extern loc_810D078
+// .extern sub_810D078
 // .extern loc_810D1B8
-// .extern loc_810D260
-// .extern loc_810D414
-// .extern loc_810D7B0
-// .extern loc_810D8A8
+// .extern sub_810D260
+// .extern sub_810D414
+// .extern sub_810D7B0
+// .extern sub_810D8A8
 // .extern sub_810D9E8
-// .extern loc_810DA9C
+// .extern sub_810DA9C
 // .extern sub_810DB44
-// .extern loc_810DE14
-// .extern loc_810DF10
-// .extern loc_810E116
-// .extern loc_810E190
-// .extern loc_810E340
-// .extern loc_810E5C4
-// .extern loc_810E760
-// .extern loc_810E968
+// .extern sub_810DE14
+// .extern sub_810DF10
+// .extern sub_810E116
+// .extern sub_810E190
+// .extern sub_810E340
+// .extern sub_810E5C4
+// .extern sub_810E760
+// .extern sub_810E968
 
 .include "asm02.inc"
 // .extern sub_8025BD8
@@ -132,6 +133,8 @@
 .equ dword_200A6DC, 0x200A6DC
 .equ dword_200A6E0, 0x200A6E0
 .equ byte_200A6F4, 0x200A6F4
+.equ unk_200D920, 0x200D920
+.equ unk_200E820, 0x200E820
 .equ loc_300677C, 0x300677C
 .equ dword_80515B8, 0x80515B8
 .equ dword_80515B8, 0x80515B8

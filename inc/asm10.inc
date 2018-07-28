@@ -1,7 +1,7 @@
 .ifndef INC_ASM10
 .equ INC_ASM10, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern pt_807016C
 
 

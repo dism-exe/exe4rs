@@ -1,7 +1,7 @@
 .ifndef INC_ASM25
 .equ INC_ASM25, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern dword_8097370
 
 

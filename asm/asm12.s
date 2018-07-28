@@ -123,7 +123,8 @@ off_8075B90:    .word off_8619ABC
     .word 0x3002A50, 0x20
 // end of function sub_8075A0C
 
-loc_8075BB4:
+.thumb
+sub_8075BB4:
     push {r4-r7,lr}
     mov r5, r10
     ldr r5, [r5,#0x40]
@@ -151,6 +152,8 @@ off_8075BCC:    .word locret_8075C0C+1
     .word locret_8075C0C+1
     .word locret_8075C0C+1
     .word locret_8075C0C+1
+// end of function sub_8075BB4
+
 locret_8075C0C:
     mov pc, lr
 .thumb

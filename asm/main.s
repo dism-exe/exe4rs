@@ -42,7 +42,7 @@ game_routine:
     beq loc_800030C
     bl sub_8005B6E
 loc_800030C:
-    bl loc_804DFC4
+    bl sub_804DFC4
     bl sub_8001E94
     bl sub_80020A0
     ldr r0, [pc, #0x8000324-0x8000318-4] // =loc_30063F8+1
@@ -55,19 +55,19 @@ off_8000328:    .word jt_mainCallbacks
 jt_mainCallbacks:    .word ho_cb_8025268+1
     .word ho_8004B70+1
     .word ho_8006AF4+1
-    .word loc_80297F0+1
+    .word sub_80297F0+1
     .word sub_802CFF2+1
-    .word loc_802D6D2+1
-    .word loc_80489EC+1
-    .word loc_802DECC+1
-    .word loc_8043238+1
+    .word sub_802D6D2+1
+    .word sub_80489EC+1
+    .word sub_802DECC+1
+    .word sub_8043238+1
     .word sub_8043864+1
-    .word loc_804903C+1
-    .word loc_8049CE8+1
-    .word loc_804BDFC+1
-    .word loc_8044FA8+1
-    .word loc_8110000+1
-    .word loc_80405E4+1
+    .word sub_804903C+1
+    .word sub_8049CE8+1
+    .word sub_804BDFC+1
+    .word sub_8044FA8+1
+    .word sub_8110000+1
+    .word sub_80405E4+1
 // end of function main_
 
 .thumb
@@ -215,146 +215,54 @@ loc_800045C:
     push {r0}
     bl sub_80060AC
     bl sub_8006108
-    .byte 1
-    .byte 0xBC
-    .byte 0x21 
-    .byte 0x49 
-    .byte 0
-    .byte 0x42 
-    .byte 0
-    .byte 0xD0
-    .byte 0x20
-    .byte 0x49 
-    .byte 0x50 
-    .byte 0x46 
-    .byte 0x80
-    .byte 0x68 
-    .byte 1
-    .byte 0x80
-    .byte 1
-    .byte 0xF0
-    .byte 0x64 
-    .byte 0xFC
-    .byte 1
-    .byte 0xF0
-    .byte 0x1C
-    .byte 0xFC
-    .byte 0
-    .byte 0xF0
-    .byte 0x3C 
-    .byte 0xF8
-    .byte 0
-    .byte 0xF0
-    .byte 0x39 
-    .byte 0xF9
-    .byte 1
-    .byte 0xF0
-    .byte 0xF4
-    .byte 0xFC
-    .byte 2
-    .byte 0xF0
-    .byte 0xCF
-    .byte 0xF8
-    .byte 3
-    .byte 0xF0
-    .byte 0xD1
-    .byte 0xF9
-    .byte 1
-    .byte 0xF0
-    .byte 0x70 
-    .byte 0xFB
-    .byte 2
-    .byte 0xF0
-    .byte 0x7E 
-    .byte 0xF9
-    .byte 0x24 
-    .byte 0xF0
-    .byte 0xDE
-    .byte 0xFE
-    .byte 0x25 
-    .byte 0xF0
-    .byte 0x5E 
-    .byte 0xFB
-    .byte 0
-    .byte 0xF0
-    .byte 0xA8
-    .byte 0xF9
-    .byte 0x4D 
-    .byte 0xF0
-    .byte 0x4E 
-    .byte 0xFD
-    .byte 0x25 
-    .byte 0xF0
-    .byte 0x16
-    .byte 0xFC
-    .byte 4
-    .byte 0xF0
-    .byte 0x6A 
-    .byte 0xFA
-    .byte 4
-    .byte 0xF0
-    .byte 0x28 
-    .byte 0xFA
-    .byte 0x2B 
-    .byte 0xF0
-    .byte 0xF4
-    .byte 0xFB
-    .byte 0x2B 
-    .byte 0xF0
-    .byte 0x10
-    .byte 0xFC
-    .byte 1
-    .byte 0xF0
-    .byte 0xA2
-    .byte 0xFD
-    .byte 2
-    .byte 0xF0
-    .byte 0x16
-    .byte 0xF8
-    .byte 1
-    .byte 0xF0
-    .byte 0x4A 
-    .byte 0xFC
-    .byte 5
-    .byte 0xF0
-    .byte 0x40 
-    .byte 0xFB
-    .byte 5
-    .byte 0xF0
-    .byte 0xE4
-    .byte 0xFD
-    .byte 0x47 
-    .byte 0xF0
-    .byte 0x62 
-    .byte 0xFE
-    .byte 0x10
-    .byte 0xF1
-    .byte 0x8C
-    .byte 0xFB
-    .byte 6
-    .byte 0x48 
-    .byte 1
-    .byte 0x21 
-    .byte 1
-    .byte 0x80
-    .byte 0x50 
-    .byte 0x46 
-    .byte 0
-    .byte 0x68 
-    .byte 8
-    .byte 0x21 
-    .byte 0
-    .byte 0xF0
-    .byte 0x22 
-    .byte 0xFA
-    .byte 0x20
-    .byte 0xBD
-    .byte 0, 0
-    .word 0x40
-    .word 0xC0
-    .word dword_200A338
 // end of function main_static_8000456
 
+    pop {r0}
+    ldr r1, [pc, #0x80004f0-0x800046a-2] // =0x40
+    tst r0, r0
+    beq loc_8000472
+    ldr r1, [pc, #0x80004f4-0x8000470-4] // =0xC0
+loc_8000472:
+    mov r0, r10
+    ldr r0, [r0,#8]
+    strh r1, [r0]
+    bl sub_8001D44
+    bl sub_8001CB8
+    bl main_static_80004FC
+    bl f500_80006FA
+    bl sub_8001E74
+    bl sub_800262E
+    bl sub_8003836
+    bl sub_8001B78
+    bl sub_8002798
+    bl sub_802525C
+    bl sub_8025B60
+    bl f800_80007F8
+    bl sub_804DF48
+    bl sub_8025CDC
+    bl sub_8004988
+    bl sub_8004908
+    bl sub_802BCA4
+    bl sub_802BCE0
+    bl sub_8002008
+    bl sub_80024F4
+    bl sub_8001D60
+    bl sub_8005B50
+    bl sub_800609C
+    bl sub_804819C
+    bl sub_8110BF4
+    ldr r0, [pc, #0x80004f8-0x80004dc-4] // =dword_200A338
+    mov r1, #1
+    strh r1, [r0]
+    mov r0, r10
+    ldr r0, [r0]
+    mov r1, #8
+    bl f900_8000930
+    pop {r5,pc}
+    .byte 0, 0
+off_80004F0:    .word 0x40
+off_80004F4:    .word 0xC0
+off_80004F8:    .word dword_200A338
 .thumb
 main_static_80004FC:
     push {lr}

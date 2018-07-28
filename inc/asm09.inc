@@ -1,7 +1,7 @@
 .ifndef INC_ASM09
 .equ INC_ASM09, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern off_806DA68
 
 

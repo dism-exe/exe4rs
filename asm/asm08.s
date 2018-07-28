@@ -145,7 +145,8 @@ off_806AA7C:    .word dword_860F4E4+0xF8
     .word 0x3002A50, 0x20
 // end of function sub_806A9C4
 
-loc_806AAA0:
+.thumb
+sub_806AAA0:
     push {r4-r7,lr}
     mov r5, r10
     ldr r5, [r5,#0x40]
@@ -161,6 +162,8 @@ off_806AAB8:    .word locret_806AAC8+1
     .word locret_806AACA+1
     .word locret_806AACC+1
     .word locret_806AACE+1
+// end of function sub_806AAA0
+
 locret_806AAC8:
     mov pc, lr
 locret_806AACA:

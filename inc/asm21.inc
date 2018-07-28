@@ -1,7 +1,7 @@
 .ifndef INC_ASM21
 .equ INC_ASM21, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern dword_808D348
 .extern dword_808D638
 

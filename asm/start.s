@@ -1,8 +1,9 @@
 .include "start.inc"
 
+.arm
 start_:
     b start_init
-dword_8000004:    .word 0x51AEFF24, 0x21A29A69, 0xA82843D, 0xAD09E484, 0x988B2411
+start_header:    .word 0x51AEFF24, 0x21A29A69, 0xA82843D, 0xAD09E484, 0x988B2411
     .word 0x217F81C0, 0x19BE52A3, 0x20CE0993, 0x4A4A4610, 0xEC3127F8
     .word 0x33E8C758, 0xBFCEE382, 0x94DFF485, 0xC1094BCE, 0xC08A5694
     .word 0xFCA77213, 0x734D849F, 0x619ACAA3, 0x27A39758, 0x769803FC
@@ -74,6 +75,8 @@ start_init:
     ldr r0, [pc, #0x8000220-0x80001a4-8] // =main_+1
     bx r0
     b start_
+// end of function start_
+
 .arm
 start_static_80001B0:
     mov r2, #0

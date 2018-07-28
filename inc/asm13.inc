@@ -1,7 +1,7 @@
 .ifndef INC_ASM13
 .equ INC_ASM13, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_80772DA
 .extern sub_807731C
 .extern off_80774D4

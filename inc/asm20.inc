@@ -1,7 +1,7 @@
 .ifndef INC_ASM20
 .equ INC_ASM20, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern off_8089EC8
 
 
@@ -47,5 +47,6 @@
 .equ dword_806C888, 0x806C888
 .equ dword_806C888, 0x806C888
 .equ dword_806C888, 0x806C888
+.equ dword_89897B4, 0x89897B4
 
 .endif // INC_ASM20

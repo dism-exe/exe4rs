@@ -1,7 +1,7 @@
 .ifndef INC_ASM02
 .equ INC_ASM02, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern off_801DA10
 .extern sub_801DB04
 .extern sub_801DB68
@@ -26,7 +26,7 @@
 .extern sub_8022802
 .extern sub_8022830
 .extern sub_8022AFA
-.extern loc_8022B1C
+.extern sub_8022B1C
 .extern ho_8022B58
 .extern sub_8022C26
 .extern sub_8022C62
@@ -90,25 +90,30 @@
 .extern sub_8026188
 .extern sub_80261BA
 .extern sub_8026208
-.extern loc_8026460
+.extern sub_8026460
+.extern sub_802663C
+.extern sub_802666C
 .extern sub_802669C
 .extern sub_80266E0
 .extern sub_80267A6
 .extern ho_802724E
 .extern ho_802747C
 .extern sub_8027646
-.extern unk_8027890
+.extern dword_8027890
 .extern off_8029184
 .extern dword_802919C
+.extern sub_8029268
 .extern sub_8029296
 .extern ho_8029308
 .extern sub_8029700
 .extern sub_80297E0
+.extern sub_8029E10
 .extern sub_8029E74
 .extern sub_8029ECA
 .extern sub_802A28C
 .extern sub_802A326
 .extern sub_802A6B4
+.extern sub_802A6C4
 .extern sub_802BC1C
 .extern sub_802BC50
 .extern sub_802BC60
@@ -189,7 +194,7 @@
 .extern sub_8040560
 .extern sub_80405D8
 .extern sub_8041D72
-.extern loc_80429E8
+.extern sub_80429E8
 .extern sub_8042ECC
 .extern sub_8042F1C
 .extern sub_8042FA0
@@ -265,7 +270,7 @@
 // .extern sub_80488F8
 // .extern sub_8048956
 // .extern sub_804BAF8
-// .extern loc_804C5F4
+// .extern sub_804C5F4
 // .extern sub_804DFA0
 // .extern sub_804E2A4
 // .extern sub_804E448
@@ -276,10 +281,10 @@
 
 .include "start.inc"
 // .extern start_
-// .extern dword_8000004
+// .extern start_header
 
 .include "asm15.inc"
-// .extern loc_807CC90
+// .extern sub_807CC90
 // .extern sub_807CCBA
 // .extern off_807CD54
 
@@ -288,7 +293,7 @@
 // .extern dword_809CF04
 // .extern dword_809D24C
 // .extern dword_809D2FC
-// .extern unk_809D364
+// .extern dword_809D364
 // .extern unk_809D394
 // .extern dword_809D4BC
 // .extern dword_809D654
@@ -336,7 +341,7 @@
 // .extern ho_806FE20
 // .extern sub_806FF58
 // .extern pt_807016C
-// .extern loc_807150C
+// .extern sub_807150C
 // .extern sub_80715C0
 
 .include "asm09.inc"
@@ -362,7 +367,7 @@
 .include "asm08.inc"
 // .extern sub_806A87C
 // .extern sub_806A91E
-// .extern loc_806AAA0
+// .extern sub_806AAA0
 // .extern sub_806AAD0
 // .extern off_806AB28
 
@@ -476,7 +481,7 @@
 // .extern sub_80EAB4E
 // .extern sub_80EAC06
 // .extern sub_80EACAA
-// .extern loc_80EB0B0
+// .extern sub_80EB0B0
 // .extern loc_80EF498
 // .extern sub_80F0638
 // .extern loc_80F0804
@@ -491,6 +496,7 @@
 // .extern f500_80005BA
 // .extern f500_80005D2
 // .extern f500_80006CC
+// .extern f500_80006E8
 // .extern loc_8000870
 // .extern loc_8000874
 // .extern f800_80008EC
@@ -706,11 +712,11 @@
 // .extern dword_8111700
 
 .include "asm12.inc"
-// .extern loc_8075BB4
+// .extern sub_8075BB4
 // .extern sub_8075C0E
 
 .include "asm13.inc"
-// .extern loc_80773C0
+// .extern sub_80773C0
 // .extern sub_80773EA
 // .extern off_80774D4
 
@@ -742,6 +748,7 @@
 .equ dword_2001600, 0x2001600
 .equ unk_2001610, 0x2001610
 .equ unk_2001770, 0x2001770
+.equ unk_2001780, 0x2001780
 .equ unk_20017A0, 0x20017A0
 .equ dword_2001E98, 0x2001E98
 .equ unk_2001E9C, 0x2001E9C
@@ -914,9 +921,11 @@
 .equ unk_2016580, 0x2016580
 .equ unk_20165A0, 0x20165A0
 .equ unk_20165E0, 0x20165E0
+.equ unk_20165F0, 0x20165F0
 .equ unk_2016600, 0x2016600
 .equ unk_2016800, 0x2016800
 .equ unk_2016900, 0x2016900
+.equ unk_2016A00, 0x2016A00
 .equ unk_2016AC0, 0x2016AC0
 .equ dword_2016C00, 0x2016C00
 .equ dword_2016C04, 0x2016C04
@@ -1123,6 +1132,18 @@
 .equ Brightness_Fade_In_Out_Coefficient, 0x4000054
 .equ Channel1Sweepregister_NR10_, 0x4000060
 .equ dword_8017C08, 0x8017C08
+.equ dword_8054464, 0x8054464
+.equ dword_8054464, 0x8054464
+.equ dword_8056F7C, 0x8056F7C
+.equ dword_8056F7C, 0x8056F7C
+.equ dword_80593D8, 0x80593D8
+.equ dword_80593D8, 0x80593D8
+.equ dword_805D7A4, 0x805D7A4
+.equ dword_805D7A4, 0x805D7A4
+.equ dword_8062B28, 0x8062B28
+.equ dword_8062B28, 0x8062B28
+.equ dword_8067ACC, 0x8067ACC
+.equ dword_8067ACC, 0x8067ACC
 .equ off_8071818, 0x8071818
 .equ dword_80740E8, 0x80740E8
 .equ off_8075F44, 0x8075F44
@@ -1132,7 +1153,7 @@
 .equ dword_809CDC0, 0x809CDC0
 .equ dword_82C8AEC, 0x82C8AEC
 .equ dword_82D3A24, 0x82D3A24
-.equ unk_82DE68C, 0x82DE68C
+.equ dword_82DE68C, 0x82DE68C
 .equ dword_82E74B4, 0x82E74B4
 .equ dword_82F3D5C, 0x82F3D5C
 .equ dword_82FF574, 0x82FF574
@@ -1431,7 +1452,7 @@
 .equ dword_86AE3A4, 0x86AE3A4
 .equ dword_86AE3C4, 0x86AE3C4
 .equ loc_86AED74, 0x86AED74
-.equ loc_86B4634, 0x86B4634
+.equ unk_86B4634, 0x86B4634
 .equ dword_86B9FB4, 0x86B9FB4
 .equ dword_86BADC4, 0x86BADC4
 .equ dword_86BB84C, 0x86BB84C
@@ -1440,13 +1461,12 @@
 .equ dword_86BE340, 0x86BE340
 .equ dword_86BF138, 0x86BF138
 .equ dword_86BFF18, 0x86BFF18
-.equ dword_86C0B9C, 0x86C0B9C
+.equ unk_86C0B9C, 0x86C0B9C
 .equ unk_86C17C0, 0x86C17C0
 .equ dword_86C22D0, 0x86C22D0
 .equ dword_86C24D0, 0x86C24D0
 .equ dword_86C26D0, 0x86C26D0
 .equ dword_86C28D0, 0x86C28D0
-.equ asc_86C29D4, 0x86C29D4
 .equ dword_86C2CD0, 0x86C2CD0
 .equ dword_86C2ED0, 0x86C2ED0
 .equ dword_86C32D0, 0x86C32D0
@@ -1487,6 +1507,22 @@
 .equ dword_86D156C, 0x86D156C
 .equ dword_86D1794, 0x86D1794
 .equ dword_86D1794, 0x86D1794
+.equ dword_86D1794, 0x86D1794
+.equ dword_86D1F94, 0x86D1F94
+.equ dword_86D1F94, 0x86D1F94
+.equ dword_86D1F94, 0x86D1F94
+.equ dword_86D2794, 0x86D2794
+.equ dword_86D2794, 0x86D2794
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
+.equ dword_86D2F94, 0x86D2F94
 .equ dword_86D3198, 0x86D3198
 .equ byte_86D3648, 0x86D3648
 .equ dword_86D3E40, 0x86D3E40
@@ -1500,7 +1536,7 @@
 .equ dword_86D5ABC, 0x86D5ABC
 .equ dword_86D5B1C, 0x86D5B1C
 .equ dword_86D5B7C, 0x86D5B7C
-.equ aAbbbbbbbb, 0x86D602C
+.equ byte_86D602C, 0x86D602C
 .equ dword_86D6450, 0x86D6450
 .equ dword_86D6900, 0x86D6900
 .equ dword_86D6A18, 0x86D6A18
@@ -1514,9 +1550,9 @@
 .equ dword_86D896C, 0x86D896C
 .equ dword_86D92CC, 0x86D92CC
 .equ dword_86D996C, 0x86D996C
-.equ aAbcdbcefghijkl, 0x86D9E1C
+.equ byte_86D9E1C, 0x86D9E1C
 .equ dword_86D9E54, 0x86D9E54
-.equ asc_86DA174, 0x86DA174
+.equ byte_86DA174, 0x86DA174
 .equ dword_86DABEC, 0x86DABEC
 .equ loc_86DAE6C, 0x86DAE6C
 .equ dword_86DD9AC, 0x86DD9AC
@@ -1527,25 +1563,25 @@
 .equ dword_86DE24C, 0x86DE24C
 .equ dword_86DE35C, 0x86DE35C
 .equ dword_86DE5D4, 0x86DE5D4
-.equ unk_86DE644, 0x86DE644
+.equ dword_86DE644, 0x86DE644
 .equ dword_86E0A10, 0x86E0A10
 .equ dword_86E2D1C, 0x86E2D1C
-.equ dword_86E2D68, 0x86E2D68
+.equ unk_86E2D68, 0x86E2D68
 .equ dword_86E31DC, 0x86E31DC
 .equ dword_86E3238, 0x86E3238
-.equ dword_86E3520, 0x86E3520
-.equ aNn, 0x86E4890
-.equ unk_86E4BEC, 0x86E4BEC
+.equ unk_86E3520, 0x86E3520
+.equ byte_86E4890, 0x86E4890
+.equ dword_86E4BEC, 0x86E4BEC
 .equ dword_86E5B94, 0x86E5B94
 .equ byte_86E66B8, 0x86E66B8
 .equ dword_86E6F00, 0x86E6F00
 .equ dword_86E789C, 0x86E789C
 .equ dword_86E7F10, 0x86E7F10
 .equ loc_86E9900, 0x86E9900
-.equ loc_86E9E00, 0x86E9E00
+.equ unk_86E9E00, 0x86E9E00
 .equ dword_86EADA0, 0x86EADA0
 .equ dword_86EBFC0, 0x86EBFC0
-.equ loc_86ECF98, 0x86ECF98
+.equ unk_86ECF98, 0x86ECF98
 .equ dword_86EE2B8, 0x86EE2B8
 .equ dword_86F00B0, 0x86F00B0
 .equ dword_86F0310, 0x86F0310
@@ -1555,14 +1591,14 @@
 .equ dword_86F1050, 0x86F1050
 .equ dword_86F1070, 0x86F1070
 .equ dword_86F1160, 0x86F1160
-.equ asc_86F151D, 0x86F151D
+.equ unk_86F1540, 0x86F1540
 .equ dword_86F17E0, 0x86F17E0
 .equ dword_86F1D0C, 0x86F1D0C
 .equ dword_86F2104, 0x86F2104
 .equ dword_86F2510, 0x86F2510
 .equ dword_86F2530, 0x86F2530
 .equ dword_86F2CA4, 0x86F2CA4
-.equ loc_86F3D5C, 0x86F3D5C
+.equ unk_86F3D5C, 0x86F3D5C
 .equ dword_86F3F70, 0x86F3F70
 .equ dword_86F5560, 0x86F5560
 .equ dword_86F5D60, 0x86F5D60
@@ -1577,7 +1613,6 @@
 .equ dword_86F5D60, 0x86F5D60
 .equ byte_86F6100, 0x86F6100
 .equ byte_86F6180, 0x86F6180
-.equ aSbsbsbsbsbsbsb_1, 0x86F6270
 .equ dword_86F6284, 0x86F6284
 .equ dword_86F6380, 0x86F6380
 .equ dword_86F63F0, 0x86F63F0
@@ -1628,8 +1663,8 @@
 .equ dword_8700FBC, 0x8700FBC
 .equ dword_87054C0, 0x87054C0
 .equ dword_8706800, 0x8706800
-.equ unk_8706F00, 0x8706F00
-.equ unk_8707580, 0x8707580
+.equ dword_8706F00, 0x8706F00
+.equ dword_8707580, 0x8707580
 .equ dword_8707A80, 0x8707A80
 .equ dword_8707AA0, 0x8707AA0
 .equ dword_8708CE0, 0x8708CE0
@@ -1642,22 +1677,22 @@
 .equ dword_870A940, 0x870A940
 .equ dword_873A4F8, 0x873A4F8
 .equ dword_873AA38, 0x873AA38
-.equ unk_873AF78, 0x873AF78
+.equ dword_873AF78, 0x873AF78
 .equ dword_873B4B8, 0x873B4B8
 .equ dword_873DD78, 0x873DD78
 .equ dword_873DD98, 0x873DD98
-.equ loc_8745CB8, 0x8745CB8
+.equ unk_8745CB8, 0x8745CB8
 .equ off_8745E98, 0x8745E98
-.equ loc_8746830, 0x8746830
-.equ a8Bdfhjlnprtvxz, 0x8746D20
+.equ unk_8746830, 0x8746830
+.equ byte_8746D20, 0x8746D20
 .equ byte_8746D90, 0x8746D90
-.equ loc_8746ECC, 0x8746ECC
-.equ unk_8748110, 0x8748110
+.equ unk_8746ECC, 0x8746ECC
+.equ dword_8748110, 0x8748110
 .equ unk_8748A14, 0x8748A14
-.equ unk_874914C, 0x874914C
-.equ unk_87496AC, 0x87496AC
-.equ unk_8749B60, 0x8749B60
-.equ dword_8749F30, 0x8749F30
+.equ dword_874914C, 0x874914C
+.equ dword_87496AC, 0x87496AC
+.equ dword_8749B60, 0x8749B60
+.equ unk_8749F30, 0x8749F30
 .equ dword_874C670, 0x874C670
 .equ dword_874E6E8, 0x874E6E8
 .equ dword_87509C8, 0x87509C8
@@ -1665,22 +1700,22 @@
 .equ dword_8751028, 0x8751028
 .equ dword_8751028, 0x8751028
 .equ dword_8751028, 0x8751028
-.equ unk_8751B18, 0x8751B18
+.equ dword_8751B18, 0x8751B18
 .equ dword_8752058, 0x8752058
-.equ unk_8752078, 0x8752078
+.equ dword_8752078, 0x8752078
 .equ dword_87525B8, 0x87525B8
 .equ dword_87525D8, 0x87525D8
 .equ dword_8752B18, 0x8752B18
 .equ dword_8752B38, 0x8752B38
 .equ dword_8753078, 0x8753078
-.equ unk_8753098, 0x8753098
+.equ dword_8753098, 0x8753098
 .equ dword_87535D8, 0x87535D8
 .equ dword_8753658, 0x8753658
 .equ dword_87545EC, 0x87545EC
-.equ dword_87548F4, 0x87548F4
-.equ unk_87D918C, 0x87D918C
-.equ unk_87D948C, 0x87D948C
-.equ unk_87D97E0, 0x87D97E0
+.equ unk_87548F4, 0x87548F4
+.equ dword_87D918C, 0x87D918C
+.equ dword_87D948C, 0x87D948C
+.equ dword_87D97E0, 0x87D97E0
 .equ dword_87DDE08, 0x87DDE08
 
 .endif // INC_ASM02

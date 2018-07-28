@@ -1,7 +1,7 @@
 .ifndef INC_ASM07
 .equ INC_ASM07, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern off_8069638
 
 

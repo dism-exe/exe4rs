@@ -1,7 +1,7 @@
 .ifndef INC_START
 .equ INC_START, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern start_
 .extern start_800025C
 .extern start_8000284

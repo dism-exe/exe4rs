@@ -6,6 +6,42 @@ to make the ROM. This file is compiled to define the whole ROM region.
 // assign section to be set to 0x08000000
 .section .r__start, "ax"
 
+// Include all header files for when disassembly is not complete
+.include "start.inc"
+.include "main.inc"
+.include "asm00.inc"
+.include "asm01.inc"
+.include "asm02.inc"
+.include "asm03.inc"
+.include "asm04.inc"
+.include "asm05.inc"
+.include "asm06.inc"
+.include "asm07.inc"
+.include "asm08.inc"
+.include "asm09.inc"
+.include "asm10.inc"
+.include "asm11.inc"
+.include "asm12.inc"
+.include "asm13.inc"
+.include "asm14.inc"
+.include "asm15.inc"
+.include "asm16.inc"
+.include "asm17.inc"
+.include "asm18.inc"
+.include "asm19.inc"
+.include "asm20.inc"
+.include "asm21.inc"
+.include "asm22.inc"
+.include "asm23.inc"
+.include "asm24.inc"
+.include "asm25.inc"
+.include "asm26.inc"
+.include "asm27.inc"
+.include "asm28.inc"
+.include "asm29.inc"
+.include "asm30.inc"
+.include "asm31.inc"
+
 start:
 .include "asm/start.s"
 main:
@@ -98,7 +134,6 @@ asm27:
 asm28:
 .include "asm/asm28.s"
 .incbin  "bin/bin28.bin"
-// <--->
 asm29:
 .include "asm/asm29.s"
 .incbin  "bin/bin29.bin"
@@ -108,9 +143,8 @@ asm30:
 asm31:
 .include "asm/asm31.s"
 .incbin  "bin/bin31.bin"
-
-
+/**/
 // include parts of the ROM not disassembled yet
 // run 'make tail' if this label's location changes to re-compute bin/tail.bin
 tail:
-// .incbin "bin/tail.bin"
+.incbin "bin/tail.bin"

@@ -580,7 +580,8 @@ off_80714E8:    .word off_8619ABC
     .word 0x3002A50, 0x20
 // end of function sub_8071364
 
-loc_807150C:
+.thumb
+sub_807150C:
     push {r4-r7,lr}
     mov r5, r10
     ldr r5, [r5,#0x40]
@@ -608,6 +609,8 @@ off_8071524:    .word locret_8071564+1
     .word locret_8071564+1
     .word locret_8071564+1
     .word locret_8071564+1
+// end of function sub_807150C
+
 locret_8071564:
     mov pc, lr
 .thumb

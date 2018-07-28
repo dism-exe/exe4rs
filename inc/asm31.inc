@@ -1,7 +1,7 @@
 .ifndef INC_ASM31
 .equ INC_ASM31, 0
 
-/* Public Interface */
+/* Public Symbols */
 
 
 /* External Symbols */

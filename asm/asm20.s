@@ -344,76 +344,14 @@ loc_8089920:
     .word 0x8089924, 0x200AAB8, 0x200AABC, 0x2101B500, 0x420088A8
     .word 0x2100D100, 0x20007229, 0xBD00, 0x40068000, 0x802E0F8
     .word 0x80CFF24, 0xF2114707, 0xE5470809, 0x5008089A
-    .byte 0
-    .byte 0x98
-    .byte 0x9A
-    .byte 8
-    .byte 8
-    .byte 2
-    .byte 0xFF
-    .byte 0x14
-    .byte 0x24 
-    .byte 0xFF
-    .byte 8
-    .byte 8
-    .byte 7
-    .byte 2
-    .byte 0xFF
-    .byte 0x3C 
-    .byte 0x32 
-    .byte 8
-    .byte 1
-    .byte 0x3A 
-    .byte 0x1C
-    .byte 0xB2
-    .byte 0x7A 
-    .byte 8
-    .byte 0x36 
-    .byte 0xFF
-    .byte 0
-    .byte 4
-    .byte 0x80
-    .byte 0x32 
-    .byte 8
-    .byte 2
-    .byte 2
-    .byte 0xFF
-    .byte 0x3C 
-    .byte 0x36 
-    .byte 0xFF
-    .byte 1
-    .byte 4
-    .byte 0x80
-    .byte 0x26 
-    .byte 0xFF
-    .byte 0x4E 
-    .byte 4
-    .byte 0x27 
-    .byte 0xFF
-    .byte 0x3D 
-    .byte 1
-    .byte 0x51 
-    .byte 0x3C 
-    .byte 1
-    .byte 0
-    .byte 0
-    .byte 0xB5
-    .byte 4
-    .byte 0x48 
-    .byte 0x29 
-    .byte 0x79 
-    .byte 0x89
-    .byte 0
-    .byte 0x40 
-    .byte 0x58 
-    .byte 0x9C
-    .byte 0xF7
-    .byte 0xD5
-    .byte 0xFD
-    .byte 0
-    .byte 0x20
-    .byte 0
-    .byte 0xBD
+    .word dword_89897B4+0x2004C
+    .word 0x14FF0208, 0x808FF24, 0x3CFF0207, 0x3A010832, 0x87AB21C
+    .word 0x400FF36, 0x2083280, 0x363CFF02, 0x800401FF, 0x44EFF26
+    .word 0x13DFF27, 0x13C51, 0x4804B500, 0x897929, 0xF79C5840
+    .word 0x2000FDD5
+// end of function sub_8089910
+
+    pop {pc}
     .balign 4, 0x00
     .word off_8089AFC
 off_8089AFC:    .word dword_806C038+0x18
@@ -422,8 +360,6 @@ off_8089AFC:    .word dword_806C038+0x18
     .word 0x2010809, 0x643A1EFF, 0x47087AB2, 0x8089B8D, 0x80040736, 0x323CFF02
     .word 0xFF02010A, 0x9B99473C, 0x7360808, 0xFF268004, 0xFF26044D, 0xFF27014E
     .word 0xFF26013D, 0x50013E, 0x8089B06, 0x0
-// end of function sub_8089910
-
 .thumb
 sub_8089B70:
     push {lr}
@@ -529,46 +465,14 @@ sub_8089C88:
     .word 0x89D7547
     .word 0x9CE51408
     .word 0xFF020808
-    .byte 0x3C 
-    .byte 0x3A 
+    .byte 0x3C, 0x3A
     .word 0x87AC65C
     .word 0x400FF36
-    .byte 0x80
-    .byte 0x47 
-    .byte 0xBD
-    .byte 0xF1
-    .byte 9
-    .byte 8
-    .byte 0x3B 
-    .byte 4
-    .byte 0
-    .byte 0
-    .byte 0x51 
-    .byte 0x46 
-    .byte 9
-    .byte 0x6C 
-    .byte 0x49 
-    .byte 0x79 
-    .byte 4
-    .byte 0x48 
-    .byte 0x40 
-    .byte 0x5C 
-    .byte 0x29 
-    .byte 0x79 
-    .byte 0x49 
-    .byte 0
-    .byte 0x40 
-    .byte 0x18
-    .byte 0xE8
-    .byte 0x71 
-    .byte 0
-    .byte 0x20
-    .byte 0xF7
-    .byte 0x46 
-    .byte 0
-    .byte 0
-    .word unk_8089D0C
-unk_8089D0C:    .byte 1
+    .hword 0x4780
+    .word 0x809F1BD, 0x43B, 0x6C094651, 0x48047949, 0x79295C40
+    .word 0x18400049, 0x200071E8, 0x46F7
+    .word byte_8089D0C
+byte_8089D0C:    .byte 0x1
     .word 0x4130D07
     .word 0x416D0348
     .word 0x8B22016D
@@ -618,9 +522,7 @@ unk_8089D0C:    .byte 1
     .word 0x43013904
     .word 0x47013104
     .word 0x48013504
-    .byte 3
-    .byte 0x36 
-    .byte 1
+    .byte 0x3, 0x36, 0x1
     .byte 0x4B 
     .byte 4
     .byte 0x39 
@@ -641,230 +543,18 @@ unk_8089D0C:    .byte 1
     .byte 8
     .byte 8
     .byte 0x47 
-    .byte 1
-    .byte 0x9F
-    .byte 8
-    .byte 8
-    .byte 0x1B
-    .byte 8
-    .byte 1
-    .byte 0
-    .byte 0x9E
-    .byte 8
-    .byte 8
-    .byte 0x3A 
-    .byte 0xC0
-    .byte 0xC6
-    .byte 0x7A 
-    .byte 8
-    .byte 0x36 
-    .byte 0xFF
-    .byte 0
-    .byte 0x14
-    .byte 0x1D
-    .byte 0x9E
-    .byte 8
-    .byte 8
-    .byte 0x3A 
-    .byte 0xDC
-    .byte 0xC8
-    .byte 0x7A 
-    .byte 8
-    .byte 0x47 
-    .byte 0x25 
-    .byte 0x9F
-    .byte 8
-    .byte 8
-    .byte 0x36 
-    .byte 7
-    .byte 0x14
-    .byte 0x1D
-    .byte 0x9E
-    .byte 8
-    .byte 8
-    .byte 0x3A 
-    .byte 0xF0
-    .byte 0xD6
-    .byte 0x7A 
-    .byte 8
-    .byte 0x47 
-    .byte 0x39 
-    .byte 0x9F
-    .byte 8
-    .byte 8
-    .byte 0x36 
-    .byte 7
-    .byte 4
-    .byte 0x80
-    .byte 2
-    .byte 0xFF
-    .byte 0x1E
-    .byte 0x47 
-    .byte 0x59 
-    .byte 0x9E
-    .byte 8
-    .byte 8
-    .byte 0x16
-    .byte 0xFF
-    .byte 0x41 
-    .byte 1
-    .byte 0x51 
-    .byte 0x9E
-    .byte 8
-    .byte 8
-    .byte 0x24 
-    .byte 0xFF
-    .byte 0xC
-    .byte 8
-    .byte 7
-    .byte 0x26 
-    .byte 0xFF
-    .byte 0x40 
-    .byte 1
-    .byte 2
-    .byte 0xFF
-    .byte 1
-    .byte 0x47 
-    .byte 0xE5
-    .byte 0xF4
-    .byte 9
-    .byte 8
-    .byte 0x47 
-    .byte 0xBD
-    .byte 0xF1
-    .byte 9
-    .byte 8
-    .byte 0x50 
-    .byte 1
-    .byte 2
-    .byte 0xFF
-    .byte 0x1E
-    .byte 0x24 
-    .byte 0xFF
-    .byte 8
-    .byte 8
-    .byte 7
-    .byte 0x3B 
-    .byte 4
-    .byte 0x27 
-    .byte 0xFF
-    .byte 0x41 
-    .byte 1
-    .byte 0
-    .byte 0
-    .byte 0
-    .byte 0xF3
-    .byte 0xB5
-    .byte 0x15
-    .byte 0xF0
-    .byte 0x2B 
-    .byte 0xFA
-    .byte 0x66 
-    .byte 0x1A
-    .byte 6
-    .byte 0x48 
-    .byte 0xBF
-    .byte 0
-    .byte 0xC0
-    .byte 0x59 
-    .byte 0x86
-    .byte 0x5D 
-    .byte 3
-    .byte 0x48 
-    .byte 0x80
-    .byte 0x19
-    .byte 1
-    .byte 0x38 
-    .byte 0
-    .byte 0x1C
-    .byte 0x9B
-    .byte 0xF7
-    .byte 0x96
-    .byte 0xF8
-    .byte 0
-    .byte 0x20
-    .byte 0xF3
-    .byte 0xBD
-    .byte 0x78 
-    .byte 1
-    .byte 0
-    .byte 0
-    .byte 0xC8
-    .byte 0x9E
-    .byte 8
-    .byte 8
-    .byte 3
-    .byte 0xB5
-    .byte 0xF0
-    .byte 0xB4
-    .byte 0x40 
-    .byte 0x46 
-    .byte 1
-    .byte 0xB4
-    .byte 0x15
-    .byte 0xF0
-    .byte 0x14
-    .byte 0xFA
-    .byte 0x19
-    .byte 0x48 
-    .byte 0x7F 
-    .byte 0
-    .byte 0xC0
-    .byte 0x5B 
-    .byte 1
-    .byte 0x22 
-    .byte 0x88
-    .byte 0x46 
-    .byte 0
-    .byte 0x1C
-    .byte 0x9B
-    .byte 0xF7
-    .byte 0xAC
-    .byte 0xF8
-    .byte 0xC
-    .byte 0xD1
-    .byte 0x41 
-    .byte 0x46 
-    .byte 0x66 
-    .byte 0x1A
-    .byte 8
-    .byte 0x48 
-    .byte 0x7F 
-    .byte 0
-    .byte 0xC0
-    .byte 0x59 
-    .byte 0x86
-    .byte 0x5D 
-    .byte 0x15
-    .byte 0xF0
-    .byte 0xE9
-    .byte 0xF9
-    .byte 0x67 
-    .byte 0x1A
-    .byte 1
-    .byte 0x22 
-    .byte 0xB7
-    .byte 0x42 
-    .byte 0
-    .byte 0xDA
-    .byte 0
-    .byte 0x22 
-    .byte 2
-    .byte 0xBC
-    .byte 0x88
-    .byte 0x46 
-    .byte 0xF0
-    .byte 0xBC
-    .byte 0x6A 
-    .byte 0x72 
-    .byte 0
-    .byte 0x20
-    .byte 3
-    .byte 0xBD
-    .byte 0xC8
-    .byte 0x9E
-    .byte 8
-    .byte 8
+    .word 0x8089F01, 0x1081B, 0x3A08089E, 0x87AC6C0, 0x1400FF36
+    .word 0x8089E1D, 0x7AC8DC3A, 0x9F254708, 0x7360808, 0x89E1D14
+    .word 0xD6F03A08, 0x3947087A, 0x3608089F, 0x2800407, 0x59471EFF
+    .word 0x1608089E, 0x510141FF, 0x2408089E, 0x7080CFF, 0x140FF26
+    .word 0x4701FF02, 0x809F4E5, 0x9F1BD47, 0x2015008, 0xFF241EFF
+    .word 0x3B070808, 0x41FF2704, 0x1, 0xF015B5F3, 0x1A66FA2B
+    .word 0xBF4806, 0x5D8659C0, 0x19804803, 0x1C003801, 0xF896F79B
+    .word 0xBDF32000, 0x178, 0x8089EC8, 0xB4F0B503, 0xB4014640
+    .word 0xFA14F015, 0x7F4819, 0x22015BC0, 0x1C004688, 0xF8ACF79B
+    .word 0x4641D10C, 0x48081A66, 0x59C0007F, 0xF0155D86, 0x1A67F9E9
+    .word 0x42B72201, 0x2200DA00, 0x4688BC02, 0x726ABCF0, 0xBD032000
+    .word 0x8089EC8
 off_8089EC8:    .word dword_8089ED8
     .word dword_8089EDC
     .word off_8089EE0

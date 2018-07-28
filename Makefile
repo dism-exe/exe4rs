@@ -18,7 +18,7 @@ EXTERNS = externs
 INC = inc
 
 # project files
-SFILES = $(SRCDIR)/_link.s
+SFILES = $(SRCDIR)/_rom.s
 OFILES = $(addprefix $(OBJ),$(notdir $(SFILES:.s=.o)))
 ROM = exe4rs
 

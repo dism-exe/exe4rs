@@ -1,13 +1,12 @@
 .ifndef INC_ASM28
 .equ INC_ASM28, 0
 
-/* Public Interface */
+/* Public Symbols */
 .extern sub_80ADDC8
 .extern sub_80ADDDC
 .extern sub_80ADE98
 .extern sub_80ADFBC
 .extern sub_80AE02C
-.extern locret_80AE962
 .extern sub_80AFDC6
 .extern sub_80B038C
 .extern sub_80B0748
@@ -38,7 +37,6 @@
 .extern sub_80D8A8E
 .extern sub_80DB14E
 .extern sub_80DBEF6
-.extern locret_80DCA76
 .extern sub_80DD62C
 .extern sub_80E069A
 .extern sub_80E148C
@@ -56,7 +54,6 @@
 .extern sub_80E5316
 .extern sub_80E649A
 .extern sub_80E64B2
-.extern loc_80E6664
 .extern sub_80E67D0
 .extern sub_80E680A
 .extern sub_80E6894
@@ -64,8 +61,7 @@
 .extern sub_80E6D24
 .extern sub_80E9860
 .extern sub_80EA2AE
-.extern loc_80EB0B0
-.extern loc_80EC58E
+.extern sub_80EB0B0
 .extern loc_80F0804
 .extern sub_80F2F6C
 .extern sub_80F3EA4
@@ -82,7 +78,7 @@
 /* External Symbols */
 .include "start.inc"
 // .extern start_
-// .extern dword_8000004
+// .extern start_header
 
 .include "asm18.inc"
 // .extern sub_808547C
@@ -97,7 +93,7 @@
 // .extern sub_8022802
 // .extern sub_8022830
 // .extern sub_8022AFA
-// .extern loc_8022B1C
+// .extern sub_8022B1C
 // .extern ho_8022B58
 // .extern sub_8022C26
 // .extern sub_8022CBC
@@ -527,13 +523,17 @@
 // .extern sub_801680C
 
 .include "asm30.inc"
-// .extern loc_81116F4
+// .extern sub_81116F4
 
 
 /* Undeclared Symbols */
 .equ unk_2000000, 0x2000000
 .equ unk_20001B0, 0x20001B0
 .equ unk_20005E0, 0x20005E0
+.equ unk_2000A02, 0x2000A02
+.equ unk_2000F06, 0x2000F06
+.equ unk_2001400, 0x2001400
+.equ unk_2001904, 0x2001904
 .equ byte_2006140, 0x2006140
 .equ dword_2009440, 0x2009440
 .equ word_200A220, 0x200A220
@@ -582,7 +582,6 @@
 .equ byte_2010BC9, 0x2010BC9
 .equ byte_2010BCA, 0x2010BCA
 .equ byte_2010C40, 0x2010C40
-.equ unk_2020014, 0x2020014
 .equ unk_2020100, 0x2020100
 .equ unk_2030000, 0x2030000
 .equ dword_2033000, 0x2033000
@@ -600,6 +599,11 @@
 .equ dword_203E7DC, 0x203E7DC
 .equ dword_203F664, 0x203F664
 .equ dword_203F670, 0x203F670
+.equ unk_3000508, 0x3000508
+.equ unk_3000A0A, 0x3000A0A
+.equ unk_3000F0E, 0x3000F0E
+.equ unk_3001408, 0x3001408
+.equ unk_300190C, 0x300190C
 .equ unk_3002840, 0x3002840
 .equ unk_3002C50, 0x3002C50
 .equ unk_3003D0C, 0x3003D0C
